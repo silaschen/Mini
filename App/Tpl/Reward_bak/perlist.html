@@ -1,0 +1,214 @@
+<extend name="Sys:base" />
+<block name="main">
+  <!-- 搜索 -->
+  <div class="box box-danger">
+    <div class="box-header with-border">
+      <h3 class="box-title">人员列表</h3>
+      <a href="{:U('Reward/peradd')}" class='btn btn-success btn-xs pull-right'>添加人员</a>
+    </div>
+    <div class="box-body">
+    <div class="row">
+      <form method="GET" action="{:U('Reward/perlist')}" id='form'>
+        <div class="col-xs-4 col-md-3">
+          <div class="input-group">
+            <input name="word" type='text' class='form-control' value="{:I('word')}" placeholder='输入人员姓名进行搜索..'>
+            <span class="input-group-addon" onclick="$('#form').submit();"><i class="fa fa-search"></i></span>
+            <if condition="$_GET['word'] neq ''">
+            <a title='清除条件' class="input-group-addon" href="{:U('Reward/perlist')}"><i class="fa fa-remove"></i></a>
+            </if>
+          </div>
+        </div>
+        <div class="col-xs-4 col-md-3">
+       
+        </div>
+      </form>
+      </div>
+       
+     
+    </div><!-- /.box-body -->
+  </div>
+  <!-- 列表 -->
+  <div class="box box-solid">
+    <div class="box-body">
+      <table class="table table-bordered">
+        <tbody>
+          <tr>
+            <th>ID</th>
+            <th>头像</th>
+            <th>姓名</th>
+            <th>微信昵称</th>
+            <th>所属分组</th>
+            <th>费率</th>
+            <th>累计金额</th>
+            <th>余额</th>
+            <th>添加时间</th>
+            <th>状态</th>
+            <th>操作</th>
+          </tr>
+          <volist name="list" id="vo">
+          <tr>
+            <td>{$vo.id}</td>
+            <td><img width="30" src="{$vo.avatar}" class="img-circle" alt="User Image"></td>
+            <td>{$vo.name}</td>
+            <td>{$vo.nickname|default=未绑定}</td>
+            <td>{$vo.groupname}</td>
+            <td><span class="label label-danger">{$vo.cost|default=0}</span></td>
+            <td><span class="label label-danger">{$vo.total|default=0}</span></td>
+            <td><span class="label label-success">{$vo.money|default=0}</span>
+             <notempty name="vo.openid">&nbsp;<a href="javascript:cash('{$vo.openid}','{$vo.avatar}','{$vo.nickname}','{$vo.money}')">提现</a></notempty></td>
+           <td>{$vo.addtime|date='Y-m-d H:i',###}</td>
+            <td><if condition="$vo.status eq '1'"><span class="label label-success">正常</span><elseif condition="$vo.status eq '0'" /><span class="label label-warning">禁用</span></if></td>
+              <td>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown">
+                  管理
+                  <span class="caret"></span>
+                  <span class="sr-only">+</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="{:U('Reward/peradd',array('id'=>$vo['id']))}">编辑</a></li>
+                  <li><a href="javascript:setstat('{$vo.id}',-1);">删除</a></li>
+                  <notempty name="vo.openid"><li><a href="javascript:setstat('{$vo.id}',-2);">解除绑定</a></li></notempty>
+                  
+                  <li><a href="javascript:model('{$vo.id}');">查看二维码</a></li>
+                  <li class="divider"></li>
+                  <if condition="$vo.status eq '1'">
+                  <li><a href="javascript:setstat({$vo.id},0);">禁用</a></li>
+                  <else/>
+                  <li><a href="javascript:setstat({$vo.id},1);">恢复</a></li>
+                  </if>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          </volist>
+        </tbody>
+      </table>
+
+<!-- Modal-->
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="jfModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body form-horizontal">
+          <div class="form-group">
+            <label class="col-sm-12">关注二维码：<a id="wxqrd" download target="_blank" href="">下载</a></label>
+            <div class="col-sm-12 text-center">
+          <img id="wxqr" src="" alt="..." width="430px" class="img-thumbnail">
+          </div>
+          </div>
+          <div  class="form-group">
+          <label class=" col-sm-12">页面二维码：<a id="pageqrd" download target="_blank" href="">下载</a></label> 
+          <div class="col-sm-12 text-center">
+          <img id="pageqr" width="430px" src="" alt="..." class="img-thumbnail">
+          </div>
+
+          </div>
+      </div>
+      <div class="modal-footer">
+      
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal-->
+<div class="modal fade" id="cash" tabindex="-1" role="dialog" aria-labelledby="jfModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4>余额提现：</h4>
+      </div>
+      <div class="modal-body form-horizontal ">
+      <input type="hidden" name="openid" id="openid" value=""  >
+        <div class="form-group">
+        <label class="col-sm-2 control-label">微信头像：</label>
+          <div class="col-sm-10  ">
+          <img id="avatar"  class="img-circle" width="60px" src="">
+          </div>
+           </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">微信昵称：</label>
+            <div class="col-sm-10">
+            <input type="text" id="name" disabled="" class="form-control "  >
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">账户余额：</label>
+            <div class="col-sm-10">
+            <input type="text" id="money" disabled="" class="form-control "  >
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">提取金额：</label>
+            <div class="col-sm-10">
+            <input type="number" name="money"  class="form-control "  >
+            </div>
+          </div>
+      </div>
+      <div class=" modal-footer "  >
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" onclick="action();" class="btn btn-primary">提取</button>
+      </div>
+    </div>
+  </div>
+</div>
+    </div><!-- /.box-body -->
+    <div class="box-footer clearfix">
+	    <ul class="pagination pagination-sm no-margin pull-right">{$page}</ul>
+	  </div>    
+  </div>
+<script type="text/javascript">
+function cash(o,avatar,nickname,money){
+  $('#openid').val(o);
+  $('#avatar').attr('src',avatar);
+  $('#name').val(nickname);
+  $('#money').val(money);
+  $('#cash').modal('show');
+}
+function action(openid){
+  var money = vr('money');
+  var openid = $('#openid').val();
+  var total =  $('#money').val();
+  if(money<1){
+    alert("提现金额必须大于1元！");
+    return false;
+  }
+  if(money>total){
+    alert("余额不足！");
+    return false;
+  }
+  if(openid==''){
+    alert("请先选择用户后再重新进入！");
+    return false;
+  }
+  var r = confirm("是否确认该操作？");
+  if(r){
+    $.post("{:U('Reward/CashOutByHand')}",{'openid':openid,'money':money},function(data){
+      alert(data.msg);
+      if(data.ret==1){
+        window.location.reload();
+      }
+    },'json');
+  }
+}
+function model(id){
+  $('#wxqr').attr('src','Public/uploads/ercode/reward/wx-'+id+".jpg");
+  $('#wxqrd').attr('href','Public/uploads/ercode/reward/wx-'+id+".jpg");
+  $('#pageqr').attr('src','Public/uploads/ercode/reward/page-'+id+".jpg");
+   $('#pageqrd').attr('href','Public/uploads/ercode/reward/page-'+id+".jpg");
+  $('#modal').modal('show');
+}
+function setstat(id,t){
+  var r = confirm("确认操作？");
+  if(r == true){
+    $.post(location.href,{"id":id,"t":t},function(data){
+      alert(data.msg);
+      if(data.ret == 1) location.reload();
+    },'JSON');
+  }
+}
+</script>
+</block>

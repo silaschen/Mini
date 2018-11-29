@@ -1,0 +1,176 @@
+<?php 
+/**
+* 项目预约.
+*/
+class ProAction extends CommonAction
+{
+	#项目管理.后台#
+	public function itemlist(){
+		$this->IsAdm(true);
+		if (IS_GET) {
+			$this->title = "项目列表";
+			$this->eq = "服务项目";
+			$p = I('p',1);
+			$id = I('id');
+			$word = I('word');
+			$type = I('type');
+			$status = I('status');
+			$map = array();
+			if($type != ''){
+				$map['type'] = $type;
+			}else{
+				$map['type'] = array('EGT',1);
+			}
+			if($id) $map['id'] = $id;
+			if($word) $map['title|intro'] = array('like',"%".$word."%");
+			if($status != ''){
+				$map['status'] = $status;
+			}else{
+				$map['status'] = array('EGT',0);
+			}
+			import('@.ORG.Util.Page');
+			$model = M('item_list');
+			$list = M('item_list')->where($map)->order('addtime desc')->page($p.',15')->select();
+			$this->assign('list',$list);
+			$count	= $model->where($map)->count();// 查询满足要求的总记录数
+			$this->total = $count;
+			$page 	= new Page($count,15);// 实例化分页类 传入总记录数和每页显示的记录数
+			$page->setConfig('theme','%upPage%  %linkPage%  %downPage%');
+			$page->rollPage = 5 ;
+			$show	= $page->show();// 分页显示输出
+			$this->assign('page',$show);// 赋值分页输出
+			//分页跳转的时候保证查询条件
+			foreach($map as $key=>$val) {
+				$page->parameter   .=   "$key=".urlencode($val).'&';
+			}
+			$this->display();
+		}else{
+			$id = I('id');
+			$t = I('t');
+			$info = M('item_list')->where(array('id'=>$id))->find();
+			if(!$info) json('项目不存在');
+			$res = M('item_list')->where(array('id'=>$id))->setField('status',$t);
+			if($res){
+				json('操作成功',1);
+			}else{
+				json('操作失败，请稍后再试');
+			}
+
+
+		}
+	}
+
+	#添加、修改项目信息#
+	public function additem(){
+		$this->IsAdm(true);
+		if (IS_GET) {
+			$this->eq = '服务项目';
+			$this->title = "编辑项目信息";
+			$id = I('id');
+			if ($id) {
+				$info = M('item_list')->where(array('id'=>$id))->find();
+				$this->assign('info',$info);
+			}
+			$this->display();
+		}else{
+			$data = $_POST;
+			if ($data['id'] > 0) {
+				$r = M("item_list")->where(array('id'=>$data['id']))->save($data);
+			}else{
+				$data['addtime'] = NOW_TIME;
+				$data['status'] = 1;
+				$r = M('item_list')->add($data);
+			}
+			if ($r) {
+				json('数据保存成功',1);
+			}else{
+				json('数据保存错误');
+			}
+		}
+	}
+
+	#预约列表#
+	public function orderlist(){
+		$this->IsAdm(true);
+		if(IS_GET){
+			if (IS_AJAX) {
+				$id = I('id');
+				$info = M('item_order')->where(array('id'=>$id))->find();
+				if(!$info) json('订单信息有误');
+				if(M('item_order')->where(array('id'=>$id))->setField('status',-1)){
+					json('订单已删除',1);
+				}else{
+					json('订单删除失败');
+				}
+			}
+			$this->eq = "会员管理";
+			$this->title = "预约列表";
+			$p = I('p',1);
+			$word = I('word');
+			$status = I('status');
+			$type = I('type');
+			$code = I('code');
+			$map = array();
+			if($status != ''){
+				$map['a.status'] = $status;
+			}else{
+				$map['a.status'] = array('EGT',0);
+			}
+			if($type != ''){
+				$map['b.type'] = $type;
+			}else{
+				$map['b.type'] = array('EGT',1);
+			}
+			if($code) $map['a.code'] = $code;
+			if($word) $map['a.name|b.title|c.nickname'] =  array('like',"%".$word."%");
+			$model = M('item_order');
+			import('@.ORG.Util.Page');
+			$list = $model->alias('a')
+			->join('bingo_item_list b ON a.sid=b.id')
+			->join('bingo_user_list c ON a.openid=c.openid')
+			->where($map)
+			->page($p.',15')
+			->field('a.id,a.sid,a.name,a.tel,a.openid,a.addtime,a.status,a.code,b.title,c.headimgurl,c.nickname,b.price')
+			->order('addtime desc')
+			->select();
+			foreach ($list as $key => $value) {
+				if($value['code']){
+					$list[$key]['reco'] = M('user_list')->where(array('recode'=>$value['code']))->find();
+				}
+			}
+			$this->assign('list',$list);
+			$count	=$model->alias('a')
+			->join('bingo_item_list b ON a.sid=b.id')
+			->join('bingo_user_list c ON a.openid=c.openid')
+			->where($map)
+			->field('a.id,a.sid,a.name,a.tel,a.addtime,a.openid,a.status,a.code,b.title,c.nickname,b.price')->count();// 查询满足要求的总记录数
+			$this->total = $count;
+			$page 	= new Page($count,15);// 实例化分页类 传入总记录数和每页显示的记录数
+			$page->setConfig('theme','%upPage%  %linkPage%  %downPage%');
+			$page->rollPage = 5 ;
+			$show	= $page->show();// 分页显示输出
+			$this->assign('page',$show);// 赋值分页输出
+			//分页跳转的时候保证查询条件
+			foreach($map as $key=>$val) {
+				$page->parameter   .=   "$key=".urlencode($val).'&';
+			}
+			
+			$this->display();
+		}else{
+			//标记处理
+			$data = I('post.');
+			$info = M('item_order')->where(array('id'=>$data['id'],'status'=>1))->find();
+			if(!$info) json('订单信息有误');
+			$r = M('item_order')->where(array('id'=>$data['id']))->save(array('status'=>$data['res'],'remark'=>$data['remark']));
+			if($r){
+				json('操作已成功',1);
+			}else{
+				json('喔！操作失败了，稍后再试');
+			}
+
+		}
+	}
+
+
+}
+ ?>

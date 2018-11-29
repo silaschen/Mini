@@ -1,0 +1,39 @@
+<view class="wrap" wx:if="{{stat == 0}}">
+
+    <view class="price"><text>代办审车费</text><text class='pull-right'>￥{{info.total}}</text></view>
+    <view class="tinyline"></view>
+
+    <!--说明-->
+    <view id="intro">
+        <text>1.仅办理郑州号牌符合免检的机动车</text>
+        <text>2.需准备以下材料交给快递人员:</text>
+        <text class="child">*行驶证原件正副本</text>
+        <text class="child">*有效交强险副本单原件</text>
+        <text class="child">*有效车船税原件</text>
+        <text class="child">*车主身份证正反面复印件</text>
+        <text>3.快递人员取件时需核对申请人的身份证，行驶证及保险单副本原件，请您给予配合</text>
+        <text>4.身份证与机动车行驶证所有人必须一致</text>
+        <text>5.信息审核无误后三个工作日内客服办理完成会向您所填写的地址寄出快递（含环保标，年检标）</text>
+        <text>6.代办审车快递往返邮寄费全免，因客户手续或其他原因无法代审，邮寄费由客户自行承担！</text>
+    </view>
+    <view class="tinyline"></view>
+    <navigator url="index" class="pull-left link" open-type="navigateBack">返回</navigator>
+    <contact-button type="default-light" size="20" session-from="dbsc" class="pull-right link">客服</contact-button>
+    <view class="tinyline"></view>
+</view>
+
+<view class="form-group" wx:if="{{stat == 0}}">
+<button type="primary" bindtap="PayOrder">立即支付</button>
+</view>
+
+<view class="wrap" wx:if="{{stat == 1}}">
+  <view id='ShowMsg'>
+  <icon type="success" size="100"/>
+  <text>恭喜您已成功支付，请尽快准备您的相关材料进行寄送。</text>
+  </view>
+  <view class="form-group">
+  <button bindtap="OrderList">查看代办记录</button>
+  </view>
+</view>
+
+<include src="../footer.wxml"/>

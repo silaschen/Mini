@@ -1,0 +1,10 @@
+<table class='table table-bordered'>
+	<tbody>
+		<tr><td>姓名:</td><td>{$info.name}</td><td>电话:</td><td>{$info.tel}</td></tr>
+		<tr><td>地址:</td><td colspan='3'>{:area($info['a3'])} {$info.adr}</td></tr>
+		<tr><td>快递:</td><td>{$info.kdname}</td><td>单号:</td><td>{$info.kdno}</td></tr>
+		<tr><td>申请时间:</td><td>{$info.addtime|date='Y-m-d H:i:s',###}</td><td>处理时间:</td><td><if condition="$info.donetime neq ''">{$info.donetime|date='Y-m-d H:i:s',###}</if></td></tr>
+		<tr><td>支付时间:</td><td><if condition="$info.paytime neq ''">{$info.paytime|date='Y-m-d H:i:s',###}</if></td><td>微信流水:</td><td>{$info.wxpayid}</td></tr>
+		<tr><td>备注:</td><td colspan='3'>{$info.res}</td></tr>
+	</tbody>
+</table>

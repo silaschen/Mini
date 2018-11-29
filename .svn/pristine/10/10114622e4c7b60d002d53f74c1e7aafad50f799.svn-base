@@ -1,0 +1,21 @@
+<!-- player -->
+<div class="modal fade" id="player" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-body mtext">
+        <div class='playarea'></div>
+    </div>
+  </div>
+</div><!-- /.player -->
+
+<script type="text/javascript">
+function playaudio(id){
+  callme(url[25],1,"id="+id,function(data){
+    if(data){
+      $(".playarea").html('<object type="application/x-shockwave-flash" data="Public/com/player/dewplayer.swf?mp3='+data.wlink+'" width="200" height="20" id="dewplayer"><param name="wmode" value="transparent" /><param name="movie" value="Public/com/player/dewplayer.swf?mp3='+data.wlink+'" /></object>');
+      $("#player").modal('show');
+    }
+  })
+}
+</script>

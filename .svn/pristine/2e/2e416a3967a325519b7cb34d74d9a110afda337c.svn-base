@@ -1,0 +1,1314 @@
+[ 2017-08-17T14:46:46+08:00 ] 0.0.0.0 /car/?m=Mini&a=myorder
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001118s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001201s ]
+
+[ 2017-08-17T15:27:23+08:00 ] 192.168.31.210 /car/?m=Mini&a=UloadFile
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001160s ]
+
+[ 2017-08-17T15:29:57+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=0016WXy52gRVqN0bSEv52qtez526WXyY
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001135s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001220s ]
+NOTIC: [8] Undefined index: session_key E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 15 行.
+
+[ 2017-08-17T15:30:22+08:00 ] 192.168.31.210 /car/?m=Mini&a=UloadFile
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000994s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001076s ]
+
+[ 2017-08-17T15:30:40+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=02137mdc1pmu8s0HOTac1Idwdc137mdE
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001694s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001829s ]
+NOTIC: [8] Undefined index: session_key E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 15 行.
+
+[ 2017-08-17T15:31:20+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=0616fjGN0A0mO52Ky8HN0OI4GN06fjGc
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001467s ]
+NOTIC: [8] Undefined index: session_key E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 15 行.
+
+[ 2017-08-17T15:34:29+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=061NDlYd1xl1dv0ebFWd16X4Yd1NDlYX
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001143s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001227s ]
+NOTIC: [8] Undefined index: session_key E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 15 行.
+
+[ 2017-08-17T15:34:44+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=0012k0Cp0GCQOr1B3bCp079YBp02k0Cu
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001101s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001186s ]
+NOTIC: [8] Undefined index: session_key E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 15 行.
+
+[ 2017-08-17T15:35:06+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=071Szlog0iusNB1dibrg0rTzog0Szloy
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001348s ]
+NOTIC: [8] Undefined index: session_key E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 15 行.
+
+[ 2017-08-17T15:35:21+08:00 ] 192.168.31.210 /car/?m=Mini&a=UloadFile
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001126s ]
+
+[ 2017-08-17T15:35:50+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=021c808Q1fV1l71fDB9Q1wm08Q1c808v
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001170s ]
+NOTIC: [8] Undefined index: session_key E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 15 行.
+
+[ 2017-08-17T15:35:58+08:00 ] 192.168.31.210 /car/?m=Mini&a=UploadFile
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001116s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001214s ]
+
+[ 2017-08-17T15:36:12+08:00 ] 192.168.31.210 /car/?m=Mini&a=UploadFile
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001080s ]
+
+[ 2017-08-17T15:38:15+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=011FXXR92cMZsO0T4jT92OgYR92FXXRg
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001549s ]
+NOTIC: [8] Undefined index: session_key E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 15 行.
+
+[ 2017-08-17T15:38:17+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=021kfLDx0Hyhrf1W6rFx0BAuDx0kfLD6
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001169s ]
+NOTIC: [8] Undefined index: session_key E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 15 行.
+
+[ 2017-08-17T15:38:27+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=081UJF8E1pirq00SJD8E1VLl8E1UJF8I
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001206s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001295s ]
+NOTIC: [8] Undefined index: session_key E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 15 行.
+
+[ 2017-08-17T15:38:33+08:00 ] 127.0.0.1 /car/?m=Mini&a=UploadFile
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001411s ]
+
+[ 2017-08-17T15:39:17+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=071u6pCJ1JNum806qXDJ17JFCJ1u6pC1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001087s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001178s ]
+NOTIC: [8] Undefined index: session_key E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 15 行.
+
+[ 2017-08-17T15:41:35+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=021pXTpX0UalC02umEoX04aUpX0pXTpq
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001132s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001215s ]
+NOTIC: [8] Undefined index: session_key E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 15 行.
+
+[ 2017-08-17T15:41:39+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=081Xiw6T0MyIlV1PR75T0keA6T0Xiw6I
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001101s ]
+NOTIC: [8] Undefined index: session_key E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 15 行.
+
+[ 2017-08-17T15:41:46+08:00 ] 127.0.0.1 /car/?m=Mini&a=UploadFile
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001127s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001215s ]
+
+[ 2017-08-17T15:42:04+08:00 ] 127.0.0.1 /car/?m=Mini&a=UploadFile
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001131s ]
+
+[ 2017-08-17T15:42:41+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=001vQRqv0I7bcd1mloqv0wENqv0vQRqZ
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001152s ]
+NOTIC: [8] Undefined index: session_key E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 15 行.
+
+[ 2017-08-17T15:42:54+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=0813dBOq0jo0Cq1qXmOq0d6zOq03dBOc
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001144s ]
+NOTIC: [8] Undefined index: session_key E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 15 行.
+
+[ 2017-08-17T15:43:04+08:00 ] 127.0.0.1 /car/?m=Mini&a=UploadFile
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001619s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001737s ]
+
+[ 2017-08-17T15:43:47+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=0715iR4417ck9P1IoC7415AR4415iR4v
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001099s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001179s ]
+NOTIC: [8] Undefined index: session_key E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 15 行.
+
+[ 2017-08-17T15:46:43+08:00 ] 0.0.0.0 /car/?m=Little&a=SaveDbscOrder&sessionkey=
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001193s ]
+
+[ 2017-08-17T15:46:49+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=081fXGus1cAj9p0kBSus1Hcxus1fXGuQ
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001589s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001699s ]
+NOTIC: [8] Undefined index: session_key E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 15 行.
+
+[ 2017-08-17T15:46:57+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=011Th6O3050K6F1M8IM30OHbO30Th6Oq
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001004s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001090s ]
+NOTIC: [8] Undefined index: session_key E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 15 行.
+
+[ 2017-08-17T15:46:58+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=021hYTYc1tFvmv0IbSZc18N3Zc1hYTYJ
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001242s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001339s ]
+NOTIC: [8] Undefined index: session_key E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 15 行.
+
+[ 2017-08-17T15:47:13+08:00 ] 0.0.0.0 /car/?m=Mini&a=SaveDbscOrder&sessionkey=
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000997s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001075s ]
+
+[ 2017-08-17T15:51:02+08:00 ] 0.0.0.0 /car/?m=Mini&a=SaveDbscOrder&sessionkey=
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001161s ]
+
+[ 2017-08-17T15:57:24+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=061JQQjk1lyKoj0lT2kk1KGOjk1JQQjd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001117s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001202s ]
+
+[ 2017-08-17T15:57:51+08:00 ] 127.0.0.1 /car/?m=Mini&a=UploadFile
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001161s ]
+
+[ 2017-08-17T15:57:53+08:00 ] 0.0.0.0 /car/?m=Mini&a=SaveDbscOrder&sessionkey=
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000981s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001059s ]
+
+[ 2017-08-17T15:58:18+08:00 ] 0.0.0.0 /car/?m=Mini&a=SaveDbscOrder&sessionkey=
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001113s ]
+
+[ 2017-08-17T15:59:29+08:00 ] 0.0.0.0 /car/?m=Mini&a=SaveDbscOrder&sessionkey=
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001075s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001155s ]
+
+[ 2017-08-17T15:59:51+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=001qfeib0Rr1it105vib0Jdcib0qfeiN
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001093s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001179s ]
+NOTIC: [8] Undefined index: session_key E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 15 行.
+
+[ 2017-08-17T16:02:09+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=071QDSs22BHmp01sExs223zbt22QDSsO
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001488s ]
+NOTIC: [8] Undefined index: session_key E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 15 行.
+
+[ 2017-08-17T16:02:44+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=081D40b00tDfTD10jy900tG7b00D40b4
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000816s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000919s ]
+NOTIC: [8] Undefined index: session_key E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 16 行.
+
+[ 2017-08-17T16:09:17+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=071pAiEh0gEtMz1YcSDh0Wb4Eh0pAiET
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000951s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001041s ]
+NOTIC: [8] Undefined index: session_key E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 16 行.
+
+[ 2017-08-17T16:09:19+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=001fT1aP19Rj841Kal7P1lKZ9P1fT1a1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000922s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001018s ]
+NOTIC: [8] Undefined index: session_key E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 16 行.
+
+[ 2017-08-17T16:09:28+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=081fkhYc1we0jv0bojZc1pxeYc1fkhYY
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001824s ]
+NOTIC: [8] Undefined index: session_key E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 16 行.
+
+[ 2017-08-17T16:09:34+08:00 ] 127.0.0.1 /car/?m=Mini&a=UploadFile
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001140s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001265s ]
+
+[ 2017-08-17T16:10:21+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=0211nYMT1VpIz81SLfMT1j1BMT11nYMG
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000772s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000858s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.005533s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000366s ]
+SQL: INSERT INTO `bingo_user_list` (`nickname`,`openid`,`addtime`) VALUES ('微信用户-1502957420','ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ',1502957420) [ RunTime:0.000341s ]
+
+[ 2017-08-17T16:10:43+08:00 ] 0.0.0.0 /car/?m=Mini&a=SaveDbscOrder&sessionkey=97b483ad4f7637f8
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000770s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000866s ]
+SQL: SHOW COLUMNS FROM `bingo_car_dblist` [ RunTime:0.005691s ]
+SQL: INSERT INTO `bingo_car_dblist` (`cphm`,`tel`,`adr`,`name`,`a1`,`a2`,`a3`,`status`,`addtime`,`openid`) VALUES (22668,'18855889696','sadfasdfsdfsd','jack',11,1101,110101,1,1502957442,'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ') [ RunTime:0.000410s ]
+
+[ 2017-08-17T16:11:37+08:00 ] 0.0.0.0 /car/Sys
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001145s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001225s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000943s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001021s ]
+SQL: SHOW COLUMNS FROM `bingo_item_order` [ RunTime:0.005350s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_item_order` WHERE (  (`addtime` BETWEEN 1502121600 AND 1502208000 ) ) LIMIT 1   [ RunTime:0.000210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_item_order` WHERE (  (`addtime` BETWEEN 1502208000 AND 1502294400 ) ) LIMIT 1   [ RunTime:0.000163s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_item_order` WHERE (  (`addtime` BETWEEN 1502294400 AND 1502380800 ) ) LIMIT 1   [ RunTime:0.000249s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_item_order` WHERE (  (`addtime` BETWEEN 1502380800 AND 1502467200 ) ) LIMIT 1   [ RunTime:0.000171s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_item_order` WHERE (  (`addtime` BETWEEN 1502467200 AND 1502553600 ) ) LIMIT 1   [ RunTime:0.000175s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_item_order` WHERE (  (`addtime` BETWEEN 1502553600 AND 1502640000 ) ) LIMIT 1   [ RunTime:0.000175s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_item_order` WHERE (  (`addtime` BETWEEN 1502640000 AND 1502726400 ) ) LIMIT 1   [ RunTime:0.000169s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_item_order` WHERE (  (`addtime` BETWEEN 1502726400 AND 1502812800 ) ) LIMIT 1   [ RunTime:0.000161s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_item_order` WHERE (  (`addtime` BETWEEN 1502812800 AND 1502899200 ) ) LIMIT 1   [ RunTime:0.000178s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_item_order` WHERE (  (`addtime` BETWEEN 1502899200 AND 1502985600 ) ) LIMIT 1   [ RunTime:0.000170s ]
+SQL: SHOW COLUMNS FROM `bingo_sys_logs` [ RunTime:0.004975s ]
+SQL: SELECT * FROM `bingo_sys_logs` WHERE ( `uid` = 1 ) ORDER BY addtime desc LIMIT 0,10   [ RunTime:0.000689s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_sys_logs` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000270s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004737s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000197s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_item_order` LIMIT 1   [ RunTime:0.000177s ]
+SQL: SHOW COLUMNS FROM `bingo_recommend_list` [ RunTime:0.004904s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_recommend_list` WHERE ( `status` = 2 ) LIMIT 1   [ RunTime:0.000191s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_item_order` WHERE ( `status` = 1 ) LIMIT 1   [ RunTime:0.000201s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000973s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001034s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\24539e01efa74fdc9f80ef35de491fbf.php 第 57 行.
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\24539e01efa74fdc9f80ef35de491fbf.php 第 64 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.016583s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016648s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000641s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000598s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000500s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000673s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002574s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000850s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000910s ]
+
+[ 2017-08-17T16:11:40+08:00 ] 0.0.0.0 /car/User-userlist.html
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000915s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000998s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000727s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004846s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) ORDER BY type desc,addtime desc LIMIT 0,15   [ RunTime:0.000544s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) LIMIT 1   [ RunTime:0.000260s ]
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000999s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001063s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 57 行.
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 64 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 169 行.
+NOTIC: [8] Undefined index: word E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 169 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 268 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.018691s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018755s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000579s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000499s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000388s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000581s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002201s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000721s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000777s ]
+
+[ 2017-08-17T16:11:45+08:00 ] 0.0.0.0 /car/User-userlist.html
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000973s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001062s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000713s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004936s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) ORDER BY type desc,addtime desc LIMIT 0,15   [ RunTime:0.000399s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) LIMIT 1   [ RunTime:0.000205s ]
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000760s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000820s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 57 行.
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 64 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 169 行.
+NOTIC: [8] Undefined index: word E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 169 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 268 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.018379s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018449s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000593s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000511s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000405s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000593s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002256s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001164s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001251s ]
+
+[ 2017-08-17T16:12:19+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=061GHFPk2A7fgH07GgNk2jZMPk2GHFP1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000940s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001023s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004758s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000398s ]
+SQL: UPDATE `bingo_user_list` SET `nickname`='微信用户-1502957538' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000255s ]
+
+[ 2017-08-17T16:12:35+08:00 ] 0.0.0.0 /car/User-userlist.html
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001045s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001133s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000724s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.005536s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) ORDER BY type desc,addtime desc LIMIT 0,15   [ RunTime:0.000563s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) LIMIT 1   [ RunTime:0.000208s ]
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001062s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001121s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 57 行.
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 64 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 169 行.
+NOTIC: [8] Undefined index: word E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 169 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 268 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.019388s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019450s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000651s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000599s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000492s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000779s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002675s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000831s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000886s ]
+
+[ 2017-08-17T16:12:37+08:00 ] 0.0.0.0 /car/User-userlist.html
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000977s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001057s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000727s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.005396s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) ORDER BY type desc,addtime desc LIMIT 0,15   [ RunTime:0.000496s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) LIMIT 1   [ RunTime:0.000212s ]
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000659s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000717s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 57 行.
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 64 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 169 行.
+NOTIC: [8] Undefined index: word E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 169 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 268 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.018156s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018224s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000573s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000489s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000387s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000568s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002169s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000709s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000765s ]
+
+[ 2017-08-17T16:13:01+08:00 ] 0.0.0.0 /car/User-userlist.html
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000913s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000992s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000659s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000717s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.005035s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) ORDER BY type desc,addtime desc LIMIT 0,15   [ RunTime:0.000470s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) LIMIT 1   [ RunTime:0.000212s ]
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000830s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000911s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 57 行.
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 64 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 169 行.
+NOTIC: [8] Undefined index: word E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 169 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 268 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.018409s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018475s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000531s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000488s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000394s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000570s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002135s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000723s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000780s ]
+
+[ 2017-08-17T16:15:24+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=071t1Y5O0wBls92dps2O0PV36O0t1Y5e
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001452s ]
+NOTIC: [8] Undefined index: userdata E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 23 行.
+NOTIC: [8] Undefined index: userdata E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 24 行.
+NOTIC: [8] Undefined index: userdata E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 25 行.
+NOTIC: [8] Undefined index: userdata E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 26 行.
+NOTIC: [8] Undefined index: userdata E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 27 行.
+NOTIC: [8] Undefined index: userdata E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.005761s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000594s ]
+SQL: UPDATE `bingo_user_list` SET `nickname`='微信用户-1502957723' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000239s ]
+
+[ 2017-08-17T16:15:29+08:00 ] 0.0.0.0 /car/User-userlist.html
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001198s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001281s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000758s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000818s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004978s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) ORDER BY type desc,addtime desc LIMIT 0,15   [ RunTime:0.000406s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) LIMIT 1   [ RunTime:0.000206s ]
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001166s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001226s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 57 行.
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 64 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 169 行.
+NOTIC: [8] Undefined index: word E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 169 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 268 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.020585s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020657s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000906s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000601s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000495s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000699s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002857s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000829s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000886s ]
+
+[ 2017-08-17T16:15:32+08:00 ] 0.0.0.0 /car/User-userlist.html
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001225s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001320s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000888s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000948s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.005121s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) ORDER BY type desc,addtime desc LIMIT 0,15   [ RunTime:0.000564s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) LIMIT 1   [ RunTime:0.000300s ]
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001329s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001405s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 57 行.
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 64 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 169 行.
+NOTIC: [8] Undefined index: word E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 169 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 268 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.019117s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019183s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000650s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000593s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000491s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000673s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002557s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000822s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000878s ]
+
+[ 2017-08-17T16:15:34+08:00 ] 0.0.0.0 /car/User-userlist.html
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000902s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000980s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000651s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000709s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.005487s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) ORDER BY type desc,addtime desc LIMIT 0,15   [ RunTime:0.000498s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) LIMIT 1   [ RunTime:0.000209s ]
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000701s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000760s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 57 行.
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 64 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 169 行.
+NOTIC: [8] Undefined index: word E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 169 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 268 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.019404s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019473s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000598s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000497s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000727s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000680s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002687s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000787s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000843s ]
+
+[ 2017-08-17T16:16:10+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=071sxw5I07Uluk2XCh8I0zZL5I0sxw5-
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001202s ]
+NOTIC: [8] Undefined index: userdata E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 21 行.
+NOTIC: [8] Undefined index: userdata E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 22 行.
+NOTIC: [8] Undefined index: userdata E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 23 行.
+NOTIC: [8] Undefined index: userdata E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 24 行.
+NOTIC: [8] Undefined index: userdata E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 25 行.
+NOTIC: [8] Undefined index: userdata E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 26 行.
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.005085s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000412s ]
+SQL: UPDATE `bingo_user_list` SET `nickname`='微信用户-1502957769' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000221s ]
+
+[ 2017-08-17T16:16:50+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=011ELc031ovEWL1Ngu331XLv031ELc0D
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000982s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001067s ]
+NOTIC: [8] Undefined index: userdata E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 21 行.
+NOTIC: [8] Undefined index: userdata E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 22 行.
+NOTIC: [8] Undefined index: userdata E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 23 行.
+NOTIC: [8] Undefined index: userdata E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 24 行.
+NOTIC: [8] Undefined index: userdata E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 25 行.
+NOTIC: [8] Undefined index: userdata E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 26 行.
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004899s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000354s ]
+SQL: INSERT INTO `bingo_user_list` (`nickname`,`openid`,`addtime`) VALUES ('微信用户-1502957809','ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ',1502957808) [ RunTime:0.000202s ]
+
+[ 2017-08-17T16:17:33+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=071o40rW1sUkvW0EoVqW1ILarW1o40rY
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001021s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001116s ]
+NOTIC: [8] Undefined index: userdata E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 22 行.
+NOTIC: [8] Undefined index: userdata E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 23 行.
+NOTIC: [8] Undefined index: userdata E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 24 行.
+NOTIC: [8] Undefined index: userdata E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 25 行.
+NOTIC: [8] Undefined index: userdata E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 26 行.
+NOTIC: [8] Undefined index: userdata E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 27 行.
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004961s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000386s ]
+SQL: UPDATE `bingo_user_list` SET `nickname`='微信用户-1502957852' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000206s ]
+
+[ 2017-08-17T16:19:11+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=0818kvI91J8ZES1lmuG91hzJI918kvIY
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.004187s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004368s ]
+NOTIC: [8] Array to string conversion E:\phpStudy\WWW\car\App\Lib\Action\MiniAction.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.005004s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000476s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqwP7B7ibHWnmRITnSfLZwgcKU1xx8CaC5ibqNqK5uIAxibQK6iciaPuibwtXYcMYruVdaVBvZ8SQQ78e9w/0',`nickname`='飞过天空',`sex`=1,`city`='',`province`='California',`country`='United States' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000256s ]
+
+[ 2017-08-17T16:19:20+08:00 ] 0.0.0.0 /car/User-userlist.html
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001038s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001123s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000712s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.005071s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) ORDER BY type desc,addtime desc LIMIT 0,15   [ RunTime:0.000554s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) LIMIT 1   [ RunTime:0.000199s ]
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001092s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001150s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 57 行.
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 64 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 169 行.
+NOTIC: [8] Undefined index: word E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 169 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 268 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.019103s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019163s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000635s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000592s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000489s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000683s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002559s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001051s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001128s ]
+
+[ 2017-08-17T16:19:58+08:00 ] 0.0.0.0 /car/User-userlist.html
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001177s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001265s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000777s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000840s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004888s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) ORDER BY type desc,addtime desc LIMIT 0,15   [ RunTime:0.000391s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) LIMIT 1   [ RunTime:0.000195s ]
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001131s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001192s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 57 行.
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 64 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 169 行.
+NOTIC: [8] Undefined index: word E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 169 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 266 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.018273s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018330s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000631s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000591s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000495s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000684s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002553s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000822s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000877s ]
+
+[ 2017-08-17T16:20:05+08:00 ] 0.0.0.0 /car/index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000896s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000972s ]
+SQL: SHOW COLUMNS FROM `bingo_sys_advs` [ RunTime:0.018753s ]
+SQL: SELECT `id`,`pic`,`url` FROM `bingo_sys_advs` WHERE ( `status` = 1 ) AND ( `type` = 1 )  [ RunTime:0.000385s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001167s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001243s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.011748s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011817s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000610s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000592s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000492s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000744s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002590s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000806s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000862s ]
+
+[ 2017-08-17T16:30:00+08:00 ] 0.0.0.0 /car/User-userlist.html
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001159s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001244s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000754s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000813s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.005099s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) ORDER BY type desc,addtime desc LIMIT 0,15   [ RunTime:0.000472s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) LIMIT 1   [ RunTime:0.000203s ]
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001151s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001212s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 57 行.
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 64 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 169 行.
+NOTIC: [8] Undefined index: word E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 169 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 266 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.018372s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018433s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000666s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000594s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000490s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000675s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002577s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000857s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000913s ]
+
+[ 2017-08-17T16:30:06+08:00 ] 0.0.0.0 /car/Pro-orderlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000922s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001004s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000659s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000717s ]
+
+[ 2017-08-17T16:30:32+08:00 ] 0.0.0.0 /car/Pro-orderlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000953s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001049s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000734s ]
+SQL: SHOW COLUMNS FROM `bingo_car_dblist` [ RunTime:0.004955s ]
+SQL: SELECT a.id,b.nickname,a.name,a.tel,a.adr,a.cphm,a.status,a.addtime,a.paytime FROM bingo_car_dblist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( `status` >= 0 ) ORDER BY a.addtime desc LIMIT 0,15   [ RunTime:0.000220s ]
+ERR: 1052:Column 'status' in where clause is ambiguous
+ [ SQL语句 ] : SELECT a.id,b.nickname,a.name,a.tel,a.adr,a.cphm,a.status,a.addtime,a.paytime FROM bingo_car_dblist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( `status` >= 0 ) ORDER BY a.addtime desc LIMIT 0,15  
+SQL: SELECT COUNT(*) AS tp_count FROM bingo_car_dblist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( `status` >= 0 ) LIMIT 1   [ RunTime:0.000166s ]
+ERR: 1052:Column 'status' in where clause is ambiguous
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM bingo_car_dblist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( `status` >= 0 ) LIMIT 1  
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\ProAction.class.php 第 41 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000857s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000927s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 57 行.
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 64 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 177 行.
+NOTIC: [8] Undefined index: word E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 177 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 177 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 301 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 302 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.018333s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018392s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000539s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000492s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000384s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000565s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002134s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000733s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000790s ]
+
+[ 2017-08-17T16:30:36+08:00 ] 0.0.0.0 /car/Pro-orderlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000973s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001071s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000741s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000804s ]
+SQL: SHOW COLUMNS FROM `bingo_car_dblist` [ RunTime:0.004903s ]
+SQL: SELECT a.id,b.nickname,a.name,a.tel,a.adr,a.cphm,a.status,a.addtime,a.paytime FROM bingo_car_dblist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( `status` >= 0 ) ORDER BY a.addtime desc LIMIT 0,15   [ RunTime:0.000223s ]
+ERR: 1052:Column 'status' in where clause is ambiguous
+ [ SQL语句 ] : SELECT a.id,b.nickname,a.name,a.tel,a.adr,a.cphm,a.status,a.addtime,a.paytime FROM bingo_car_dblist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( `status` >= 0 ) ORDER BY a.addtime desc LIMIT 0,15  
+SQL: SELECT COUNT(*) AS tp_count FROM bingo_car_dblist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( `status` >= 0 ) LIMIT 1   [ RunTime:0.000167s ]
+ERR: 1052:Column 'status' in where clause is ambiguous
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM bingo_car_dblist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( `status` >= 0 ) LIMIT 1  
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\ProAction.class.php 第 41 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000665s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000734s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 57 行.
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 64 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 177 行.
+NOTIC: [8] Undefined index: word E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 177 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 177 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 301 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 302 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.018653s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018716s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000594s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000510s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000388s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000569s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002213s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000913s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000989s ]
+
+[ 2017-08-17T16:31:02+08:00 ] 0.0.0.0 /car/Pro-orderlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001398s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001514s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000859s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000919s ]
+SQL: SHOW COLUMNS FROM `bingo_car_dblist` [ RunTime:0.004851s ]
+SQL: SELECT a.id,b.nickname,a.name,a.tel,a.adr,a.cphm,a.status,a.addtime,a.paytime FROM bingo_car_dblist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( a.status >= 0 ) ORDER BY a.addtime desc LIMIT 0,15   [ RunTime:0.000337s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bingo_car_dblist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( a.status >= 0 ) LIMIT 1   [ RunTime:0.000218s ]
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\ProAction.class.php 第 40 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001060s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001130s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 57 行.
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 64 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 177 行.
+NOTIC: [8] Undefined index: word E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 177 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 177 行.
+NOTIC: [8] Undefined index: openid E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 199 行.
+NOTIC: [8] Undefined index: headimgurl E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 199 行.
+NOTIC: [8] Undefined index: sid E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 201 行.
+NOTIC: [8] Undefined index: title E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 201 行.
+NOTIC: [8] Undefined index: price E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 203 行.
+NOTIC: [8] Undefined index: reco E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 206 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 301 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 302 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.019667s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019726s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000673s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000595s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000501s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000684s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002604s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000826s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000881s ]
+
+[ 2017-08-17T16:31:08+08:00 ] 0.0.0.0 /car/User-userlist.html?openid=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001147s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001228s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000751s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000811s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004897s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) ORDER BY type desc,addtime desc LIMIT 0,15   [ RunTime:0.000418s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) LIMIT 1   [ RunTime:0.000469s ]
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001162s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001223s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 57 行.
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 64 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 169 行.
+NOTIC: [8] Undefined index: word E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 169 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 266 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.018084s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018250s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000635s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000593s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000489s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000677s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002545s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000822s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000878s ]
+
+[ 2017-08-17T16:31:24+08:00 ] 0.0.0.0 /car/Pro-orderlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001162s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001252s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000816s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000879s ]
+SQL: SHOW COLUMNS FROM `bingo_car_dblist` [ RunTime:0.004804s ]
+SQL: SELECT a.id,b.nickname,a.name,a.tel,a.adr,a.cphm,a.status,a.addtime,a.paytime,a.headimgurl FROM bingo_car_dblist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( a.status >= 0 ) ORDER BY a.addtime desc LIMIT 0,15   [ RunTime:0.000214s ]
+ERR: 1054:Unknown column 'a.headimgurl' in 'field list'
+ [ SQL语句 ] : SELECT a.id,b.nickname,a.name,a.tel,a.adr,a.cphm,a.status,a.addtime,a.paytime,a.headimgurl FROM bingo_car_dblist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( a.status >= 0 ) ORDER BY a.addtime desc LIMIT 0,15  
+SQL: SELECT COUNT(*) AS tp_count FROM bingo_car_dblist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( a.status >= 0 ) LIMIT 1   [ RunTime:0.000238s ]
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\ProAction.class.php 第 40 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001176s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001246s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 57 行.
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 64 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 177 行.
+NOTIC: [8] Undefined index: word E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 177 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 177 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 301 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 302 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.019678s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019740s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000636s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000591s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000498s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000679s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002557s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000909s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000964s ]
+
+[ 2017-08-17T16:31:48+08:00 ] 0.0.0.0 /car/Pro-orderlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000919s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001003s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000786s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000845s ]
+SQL: SHOW COLUMNS FROM `bingo_car_dblist` [ RunTime:0.004878s ]
+SQL: SELECT a.id,b.nickname,a.name,a.tel,a.adr,a.cphm,a.status,a.addtime,a.paytime,b.headimgurl FROM bingo_car_dblist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( a.status >= 0 ) ORDER BY a.addtime desc LIMIT 0,15   [ RunTime:0.000350s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bingo_car_dblist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( a.status >= 0 ) LIMIT 1   [ RunTime:0.000224s ]
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\ProAction.class.php 第 40 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001006s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001080s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 57 行.
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 64 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 177 行.
+NOTIC: [8] Undefined index: word E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 177 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 177 行.
+NOTIC: [8] Undefined index: openid E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 199 行.
+NOTIC: [8] Undefined index: sid E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 201 行.
+NOTIC: [8] Undefined index: title E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 201 行.
+NOTIC: [8] Undefined index: price E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 203 行.
+NOTIC: [8] Undefined index: reco E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 206 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 301 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 302 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.018434s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018494s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000540s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000495s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000395s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000668s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002252s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000728s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000785s ]
+
+[ 2017-08-17T16:32:47+08:00 ] 0.0.0.0 /car/Pro-orderlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000923s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001007s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000715s ]
+SQL: SHOW COLUMNS FROM `bingo_car_dblist` [ RunTime:0.005258s ]
+SQL: SELECT a.id,b.nickname,a.name,a.tel,a.adr,a.cphm,a.status,a.addtime,a.paytime,b.headimgurl FROM bingo_car_dblist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( a.status >= 0 ) ORDER BY a.addtime desc LIMIT 0,15   [ RunTime:0.000531s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bingo_car_dblist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( a.status >= 0 ) LIMIT 1   [ RunTime:0.000380s ]
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\ProAction.class.php 第 40 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001011s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001088s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 57 行.
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 64 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 169 行.
+NOTIC: [8] Undefined index: word E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 169 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 169 行.
+NOTIC: [8] Undefined index: fee E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 193 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 266 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 267 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.017824s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017888s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000529s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000488s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000406s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000570s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002146s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000873s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000928s ]
+
+[ 2017-08-17T16:33:08+08:00 ] 127.0.0.1 /car/?m=Mini&a=UploadFile
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000922s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001005s ]
+
+[ 2017-08-17T16:34:19+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=001lsnFd1FFpSu0rp1Gd1uxjFd1lsnFB
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000719s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000811s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.005197s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000454s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqwP7B7ibHWnmRITnSfLZwgcKU1xx8CaC5ibqNqK5uIAxibQK6iciaPuibwtXYcMYruVdaVBvZ8SQQ78e9w/0',`nickname`='飞过天空',`sex`=1,`city`='',`province`='California',`country`='United States' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000216s ]
+
+[ 2017-08-17T16:34:37+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=071oZi7u05eZ9e1EMm8u0Pmi7u0oZi71
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000673s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000752s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004907s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000392s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqwP7B7ibHWnmRITnSfLZwgcKU1xx8CaC5ibqNqK5uIAxibQK6iciaPuibwtXYcMYruVdaVBvZ8SQQ78e9w/0',`nickname`='飞过天空',`sex`=1,`city`='',`province`='California',`country`='United States' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000208s ]
+
+[ 2017-08-17T16:34:55+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=011SH0VF1Erhm20q5uUF1d4ZUF1SH0Vz
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000782s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000871s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004857s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000384s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqwP7B7ibHWnmRITnSfLZwgcKU1xx8CaC5ibqNqK5uIAxibQK6iciaPuibwtXYcMYruVdaVBvZ8SQQ78e9w/0',`nickname`='飞过天空',`sex`=1,`city`='',`province`='California',`country`='United States' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000208s ]
+
+[ 2017-08-17T16:35:07+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=011qBGuF1iEc430dSXsF1HOAuF1qBGu2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000786s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000885s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004821s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000386s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqwP7B7ibHWnmRITnSfLZwgcKU1xx8CaC5ibqNqK5uIAxibQK6iciaPuibwtXYcMYruVdaVBvZ8SQQ78e9w/0',`nickname`='飞过天空',`sex`=1,`city`='',`province`='California',`country`='United States' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000205s ]
+
+[ 2017-08-17T16:35:20+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=081lQ7790vajCu1NUj890ZTS690lQ77A
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001094s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001195s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.005218s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000431s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqwP7B7ibHWnmRITnSfLZwgcKU1xx8CaC5ibqNqK5uIAxibQK6iciaPuibwtXYcMYruVdaVBvZ8SQQ78e9w/0',`nickname`='飞过天空',`sex`=1,`city`='',`province`='California',`country`='United States' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000357s ]
+
+[ 2017-08-17T16:35:21+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=001nPvlx1B6PPb0xIEmx18Tilx1nPvlP
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000717s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000812s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004900s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000385s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqwP7B7ibHWnmRITnSfLZwgcKU1xx8CaC5ibqNqK5uIAxibQK6iciaPuibwtXYcMYruVdaVBvZ8SQQ78e9w/0',`nickname`='飞过天空',`sex`=1,`city`='',`province`='California',`country`='United States' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000206s ]
+
+[ 2017-08-17T16:35:45+08:00 ] 127.0.0.1 /car/?m=Mini&a=UploadFile
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000814s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000918s ]
+
+[ 2017-08-17T16:35:49+08:00 ] 0.0.0.0 /car/?m=Mini&a=SaveDbscOrder&sessionkey=b7cdda911fb0275a
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000799s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000899s ]
+SQL: SHOW COLUMNS FROM `bingo_car_dblist` [ RunTime:0.004821s ]
+SQL: INSERT INTO `bingo_car_dblist` (`cphm`,`tel`,`adr`,`name`,`a1`,`a2`,`a3`,`status`,`addtime`,`openid`) VALUES (58987,'15898745588','asfasf','jerry',46,4601,460105,1,1502958948,'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ') [ RunTime:0.000316s ]
+
+[ 2017-08-17T16:36:15+08:00 ] 127.0.0.1 /car/?m=Mini&a=UploadFile
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000795s ]
+
+[ 2017-08-17T16:37:10+08:00 ] 0.0.0.0 /car/Pro-orderlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001039s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001122s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000713s ]
+SQL: SHOW COLUMNS FROM `bingo_car_dblist` [ RunTime:0.005030s ]
+SQL: SELECT a.id,b.nickname,a.name,a.tel,a.adr,a.cphm,a.status,a.addtime,a.paytime,b.headimgurl FROM bingo_car_dblist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( a.status >= 0 ) ORDER BY a.addtime desc LIMIT 0,15   [ RunTime:0.000557s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bingo_car_dblist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( a.status >= 0 ) LIMIT 1   [ RunTime:0.000249s ]
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\ProAction.class.php 第 40 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001134s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001213s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 57 行.
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 64 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 169 行.
+NOTIC: [8] Undefined index: word E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 169 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 169 行.
+NOTIC: [8] Undefined index: fee E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 193 行.
+NOTIC: [8] Undefined index: fee E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 193 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 266 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\b59988f482b209dde3bb1c1bfaefb8e3.php 第 267 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.018150s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018208s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000639s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000593s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000491s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000674s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002548s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000819s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000875s ]
+
+[ 2017-08-17T16:38:48+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=071ux1K928xGnO06TvH92vr2K92ux1KC
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000979s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001076s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.005879s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000675s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqwP7B7ibHWnmRITnSfLZwgcKU1xx8CaC5ibqNqK5uIAxibQK6iciaPuibwtXYcMYruVdaVBvZ8SQQ78e9w/0',`nickname`='飞过天空',`sex`=1,`city`='',`province`='California',`country`='United States' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000404s ]
+
+[ 2017-08-17T16:38:53+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=011TSCcM1POIg21eRaaM1p0qcM1TSCcj
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001142s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004783s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000383s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqwP7B7ibHWnmRITnSfLZwgcKU1xx8CaC5ibqNqK5uIAxibQK6iciaPuibwtXYcMYruVdaVBvZ8SQQ78e9w/0',`nickname`='飞过天空',`sex`=1,`city`='',`province`='California',`country`='United States' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000205s ]
+
+[ 2017-08-17T16:39:10+08:00 ] 127.0.0.1 /car/?m=Mini&a=UploadFile
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000725s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000802s ]
+
+[ 2017-08-17T16:39:15+08:00 ] 127.0.0.1 /car/?m=Mini&a=UploadFile
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000661s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000734s ]
+
+[ 2017-08-17T16:41:13+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=011d68a411cwkP1mdha41qv9a41d68aX
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001113s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001219s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.005315s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000469s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqwP7B7ibHWnmRITnSfLZwgcKU1xx8CaC5ibqNqK5uIAxibQK6iciaPuibwtXYcMYruVdaVBvZ8SQQ78e9w/0',`nickname`='飞过天空',`sex`=1,`city`='',`province`='California',`country`='United States' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000253s ]
+
+[ 2017-08-17T16:41:15+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=061sNWp12rUwr11Yuis12YAAp12sNWpj
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000701s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000793s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004900s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000392s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqwP7B7ibHWnmRITnSfLZwgcKU1xx8CaC5ibqNqK5uIAxibQK6iciaPuibwtXYcMYruVdaVBvZ8SQQ78e9w/0',`nickname`='飞过天空',`sex`=1,`city`='',`province`='California',`country`='United States' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000207s ]
+
+[ 2017-08-17T16:41:19+08:00 ] 127.0.0.1 /car/?m=Mini&a=UploadFile
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000952s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001032s ]
+
+[ 2017-08-17T16:43:21+08:00 ] 0.0.0.0 /car/User-userlist.html
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001205s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001306s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000774s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000832s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004987s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) ORDER BY type desc,addtime desc LIMIT 0,15   [ RunTime:0.000475s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) LIMIT 1   [ RunTime:0.000223s ]
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001112s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001172s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 57 行.
+NOTIC: [8] Undefined index: sys_user E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 64 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 169 行.
+NOTIC: [8] Undefined index: word E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 169 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 266 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.018375s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018435s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000639s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000890s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000758s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000823s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003326s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000864s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000921s ]
+
+[ 2017-08-17T16:44:15+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=021bahnb22eu0R0j0ynb2cHsnb2bahnS
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001090s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004923s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000388s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqwP7B7ibHWnmRITnSfLZwgcKU1xx8CaC5ibqNqK5uIAxibQK6iciaPuibwtXYcMYruVdaVBvZ8SQQ78e9w/0',`nickname`='飞过天空',`sex`=1,`city`='',`province`='California',`country`='United States' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000208s ]
+
+[ 2017-08-17T16:48:15+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=001egqr30EGTSE1CGzr30TOPr30egqr0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000962s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001058s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004892s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000386s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqwP7B7ibHWnmRITnSfLZwgcKU1xx8CaC5ibqNqK5uIAxibQK6iciaPuibwtXYcMYruVdaVBvZ8SQQ78e9w/0',`nickname`='飞过天空',`sex`=1,`city`='',`province`='California',`country`='United States' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000205s ]
+
+[ 2017-08-17T16:48:22+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=0817jvlW1WzrYS0YK6kW19XulW17jvlW
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000793s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000887s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.005814s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000805s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqwP7B7ibHWnmRITnSfLZwgcKU1xx8CaC5ibqNqK5uIAxibQK6iciaPuibwtXYcMYruVdaVBvZ8SQQ78e9w/0',`nickname`='飞过天空',`sex`=1,`city`='',`province`='California',`country`='United States' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000288s ]
+
+[ 2017-08-17T16:48:24+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=021HZFGc0w3sVv1Ef8Hc0u6VGc0HZFGS
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000799s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000889s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.005683s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000563s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqwP7B7ibHWnmRITnSfLZwgcKU1xx8CaC5ibqNqK5uIAxibQK6iciaPuibwtXYcMYruVdaVBvZ8SQQ78e9w/0',`nickname`='飞过天空',`sex`=1,`city`='',`province`='California',`country`='United States' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000249s ]
+
+[ 2017-08-17T16:48:26+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=081ZOwam0IsH6m1vsZ9m0Nrzam0ZOwaW
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000992s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001123s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004876s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000385s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqwP7B7ibHWnmRITnSfLZwgcKU1xx8CaC5ibqNqK5uIAxibQK6iciaPuibwtXYcMYruVdaVBvZ8SQQ78e9w/0',`nickname`='飞过天空',`sex`=1,`city`='',`province`='California',`country`='United States' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000206s ]
+
+[ 2017-08-17T16:48:31+08:00 ] 127.0.0.1 /car/?m=Mini&a=UploadFile
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001136s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001255s ]
+
+[ 2017-08-17T16:49:18+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=011eh7Nd2TLrfB0Q0vMd2BM7Nd2eh7NY
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001148s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001265s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004886s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000388s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqwP7B7ibHWnmRITnSfLZwgcKU1xx8CaC5ibqNqK5uIAxibQK6iciaPuibwtXYcMYruVdaVBvZ8SQQ78e9w/0',`nickname`='飞过天空',`sex`=1,`city`='',`province`='California',`country`='United States' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000206s ]
+
+[ 2017-08-17T16:50:10+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=0716Uqkl0y05zn1jAvjl0mFzkl06Uqkb
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000840s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000941s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004891s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000387s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqwP7B7ibHWnmRITnSfLZwgcKU1xx8CaC5ibqNqK5uIAxibQK6iciaPuibwtXYcMYruVdaVBvZ8SQQ78e9w/0',`nickname`='飞过天空',`sex`=1,`city`='',`province`='California',`country`='United States' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000207s ]
+
+[ 2017-08-17T16:51:18+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=081Bh8Cb276lfR0aPBDb25o2Cb2Bh8CW
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001013s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001098s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004917s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000387s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqwP7B7ibHWnmRITnSfLZwgcKU1xx8CaC5ibqNqK5uIAxibQK6iciaPuibwtXYcMYruVdaVBvZ8SQQ78e9w/0',`nickname`='飞过天空',`sex`=1,`city`='',`province`='California',`country`='United States' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000207s ]
+
+[ 2017-08-17T16:51:24+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=071IqVSz16yRKh0WkMUz1RYkTz1IqVSL
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000701s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000788s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.005442s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000625s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqwP7B7ibHWnmRITnSfLZwgcKU1xx8CaC5ibqNqK5uIAxibQK6iciaPuibwtXYcMYruVdaVBvZ8SQQ78e9w/0',`nickname`='飞过天空',`sex`=1,`city`='',`province`='California',`country`='United States' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000251s ]
+
+[ 2017-08-17T16:51:33+08:00 ] 0.0.0.0 /car/?m=Mini&a=UploadFile&x=a&y=s
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000694s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000777s ]
+
+[ 2017-08-17T16:52:38+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=011f7pDP1VelP71eb2CP18DzDP1f7pD5
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000810s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000909s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.005065s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000422s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqwP7B7ibHWnmRITnSfLZwgcKU1xx8CaC5ibqNqK5uIAxibQK6iciaPuibwtXYcMYruVdaVBvZ8SQQ78e9w/0',`nickname`='飞过天空',`sex`=1,`city`='',`province`='California',`country`='United States' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000210s ]
+
+[ 2017-08-17T16:54:05+08:00 ] 0.0.0.0 /car/?m=Mini&a=OnLogin&code=021kcble2ie3DA06xgje2hm9le2kcblP
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000927s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001004s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004754s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000387s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqwP7B7ibHWnmRITnSfLZwgcKU1xx8CaC5ibqNqK5uIAxibQK6iciaPuibwtXYcMYruVdaVBvZ8SQQ78e9w/0',`nickname`='飞过天空',`sex`=1,`city`='',`province`='California',`country`='United States' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000207s ]
+

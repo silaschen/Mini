@@ -1,0 +1,81 @@
+<extend name="Sys:base" />
+<block name="main">
+  <!-- 列表 -->
+  <div class="box box-solid">
+    <div class="box-body">
+     <div class="box-header with-border">
+      <h3 class="box-title">车务助理列表</h3>
+    </div>
+      <table class="table table-bordered">
+        <tbody>
+          <tr>
+            <th>ID</th>
+            <th>头像</th>
+            <th>姓名</th>
+            <th>电话</th>
+            <th>微信号</th>
+            <th>添加时间</th>
+            <th>状态</th>
+            <th>操作</th>
+          </tr>
+          <volist name="list" id="vo">
+          <tr>
+            <td>{$vo.id}</td>
+            <td><img src="{$vo.cover}" width="50" height="50"></td>
+            <td>{$vo.name}</td>
+            <td>{$vo.tel}</td>
+            <td>{$vo.wechat}</td>
+            <td>{$vo.addtime|date="Y-m-d",###}</td>
+            <td><if condition="$vo.status eq '1'"><span class="label label-success">正常</span><elseif condition="$vo.status eq '0'"/><span class="label label-danger">禁用</span></if></td>
+            <td>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown">
+                  管理
+                  <span class="caret"></span>
+                  <span class="sr-only">+</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="{:U('Serve/addserveuser',array('id'=>$vo['id']))}">编辑</a></li>
+                  <if condition="$vo.status eq '1'">
+                  <li><a href="javascript:setstat({$vo.id},0);">禁用</a></li>
+                  <else/>
+                  <li><a href="javascript:setstat({$vo.id},1);">启用</a></li>
+                  </if>
+                  <li class="divider"></li>
+                  <li><a href="javascript:setstat({$vo.id},-1);">删除</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          </volist>
+        </tbody>
+      </table>
+    </div><!-- /.box-body -->
+    <div class="box-footer clearfix">
+	    <ul class="pagination pagination-sm no-margin pull-left">{$page}</ul>
+         <a href="{:U('Serve/addserveuser')}" class='btn btn-success  pull-right'>添加车务助理</a>
+	  </div>    
+  </div>
+<script type="text/javascript">
+function setstat(id,t){
+  if(t == -1){
+    var r = confirm("确定删除该车务助理？");
+  }else if(t == 1){
+    var r = confirm("确定启用该车务助理？");
+  }else if(t == 0){
+    var r = confirm("确定禁用该车务助理？");
+  }
+  if(r == true){
+    loading2("操作中...");
+    $.post(location.href,{"id":id,"t":t},function(data){
+      alert(data.msg);
+      if(data.ret == 1){
+        location.reload();
+      }else{
+        loading2("",0);
+      }
+    },'JSON');
+  }
+}
+</script>
+</block>

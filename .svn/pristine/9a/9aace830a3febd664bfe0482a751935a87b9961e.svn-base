@@ -1,0 +1,101 @@
+<extend name="base" />
+<block name="main">
+<script src="Public/com/Highcharts/highcharts.js"></script>
+<div class='row'>
+    <div class="col-md-3 col-sm-6 col-xs-12">
+      <div class="info-box">
+        <span class="info-box-icon bg-green"><i class="fa fa-calendar-check-o"></i></span>
+        <div class="info-box-content">
+          <span class="info-box-text">预约</span>
+          <span class="info-box-number">{$orders}</span>
+        </div><!-- /.info-box-content -->
+      </div><!-- /.info-box -->
+    </div>
+
+    <div class="col-md-3 col-sm-6 col-xs-12">
+      <div class="info-box">
+        <span class="info-box-icon bg-blue"><i class="fa fa-area-chart"></i></span>
+        <div class="info-box-content">
+          <span class="info-box-text">会员</span>
+          <span class="info-box-number">{$users}</span>
+        </div><!-- /.info-box-content -->
+      </div><!-- /.info-box -->
+    </div>
+
+    <div class="col-md-3 col-sm-6 col-xs-12">
+      <div class="info-box">
+        <span class="info-box-icon bg-red"><i class="fa fa-cny"></i></span>
+        <div class="info-box-content">
+          <span class="info-box-text">推荐人</span>
+          <span class="info-box-number">{$recommend}</span>
+        </div><!-- /.info-box-content -->
+      </div><!-- /.info-box -->
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12">
+      <div class="info-box">
+        <span class="info-box-icon bg-yellow"><i class="fa fa-money"></i></span>
+        <div class="info-box-content">
+          <span class="info-box-text">待处理</span>
+          <span class="info-box-number">{$deal}</span>
+        </div><!-- /.info-box-content -->
+      </div><!-- /.info-box -->
+    </div>
+</div>
+
+<!-- 曲线图 -->
+<div class="box box-solid">
+<div class="box-body">
+	<div id="container" style="min-width: 310px; height: 250px; margin: 0 auto"></div>
+</div>
+</div>
+
+  <!-- 列表 -->
+<div class="box box-solid">
+    <div class="box-body">
+    <table class="table table-bordered">
+        <tbody>
+          <tr>
+            <th>ID</th>
+            <th>事件</th>
+            <th>时间</th>
+            <th>IP</th>
+          </tr>
+          <volist name="list" id="vo">
+          <tr>
+            <td>{$vo.id}</td><td>{$vo.event}</td>
+         	<td>{$vo.addtime|date='Y-m-d H:i:s',###}</td>
+         	<td>{$vo.addip}</td>
+          </tr>
+          </volist>
+        </tbody>
+      </table>
+    </div><!-- /.box-body -->
+    <div class="box-footer clearfix">
+      <ul class="pagination pagination-sm no-margin pull-right">{$page}</ul>
+    </div>  
+</div>
+<script type="text/javascript">
+$(function () {
+    $('#container').highcharts({
+        title: {
+            text: ' '
+        },
+        subtitle: {
+            text: ' '
+        },
+        xAxis: {
+            categories: [{$dates}]
+        },
+        yAxis: {
+            title: {
+                text: ''
+            }
+        },
+        series: [{
+            name: '预约订单',
+            data: [{$data1}]
+        }]
+    });
+});
+</script>
+</block>

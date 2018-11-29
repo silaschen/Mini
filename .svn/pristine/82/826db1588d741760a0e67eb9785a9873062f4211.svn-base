@@ -1,0 +1,160 @@
+<extend name="Sys:base" />
+<block name="main">
+<link rel="stylesheet" href="Public/com/jQuery-File-Upload-9.9.3/css/jquery.fileupload.css">
+<div class="box box-solid">
+  <div class="box-header with-border">
+    <h3 class="box-title">轮播图管理</h3>
+  </div><!-- /.box-header -->
+  <div class="box-body">
+    <table class='table table-bordered'>
+      <thead><th>ID</th><th>图片</th><th>链接</th><th>排序</th><th>添加时间</th><th>管理</th></thead>
+      <tbody>
+        <volist name="list" id="vo">
+          <tr><td>{$vo.id}</td><td><img src='{$vo.pic}' width='120'></td><td>{$vo.url}</td><td>{$vo.px}</td><td>{$vo.addtime|date='Y-m-d H:i:s',###}</td>
+          <td>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                管理
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="javascript:ModifyInfo({$vo.id},'{$vo.pic}','{$vo.url}',{$vo.px});">修改</a></li>
+                <li><a href="javascript:SetStat({$vo.id},-1);">删除</a></li>
+              </ul>
+            </div>
+          </td>
+          </tr>
+        </volist>
+      </tbody>
+    </table>
+  </div><!-- /.box-body -->
+  <div class="box-footer">
+    <ul class="pagination pagination-sm no-margin pull-left">{$page}</ul>
+    <a href="javascript:ModifyInfo('','','',0);"  class="btn btn-success pull-right">添加轮播图</a>
+  </div>
+</div>
+<!-- 添加修改轮播图 -->
+<div class="modal" id='AddAdv'>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <b class="modal-title">编辑轮播图</b>
+      </div>
+      <div class="modal-body">
+        <form id='AdvInfo'>
+        <div class='form-group'>
+              <button type='button' class='btn btn-success btn-sm fileinput-button'><i class="glyphicon glyphicon-picture"></i> <small>推荐尺寸 520*290 点击上传</small><input  id="uploadcover" type="file" name="files" accept="image/*" ></button>
+            <div id="progress" class="progress">
+                <div class="progress-bar progress-bar-success"></div>
+            </div>
+            <div id="files" class="files"></div>
+            <div class='showcover'></div>
+            <input type='hidden' name='id'>
+            <input type='hidden' name='pic'>
+            <input type='hidden' name='type' value='1'>
+        </div>
+        <div class="form-group">
+          <label>链接地址</label>
+          <input type="url" name='url' class="form-control" placeholder="如：http://www.qq.com">
+        </div>
+        <div class="form-group">
+          <label>排序</label>
+          <input type="number" name='px' class="form-control" placeholder="数值越大越靠前">
+        </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">取消</button>
+        <button type="button" onclick="SavePic();" class="btn btn-success SavePic">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/vendor/jquery.ui.widget.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/load-image.all.min.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/canvas-to-blob.min.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.iframe-transport.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload-process.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload-image.js"></script>
+<script type="text/javascript">
+$(function(){
+    $('#uploadcover').fileupload({
+        url: "{:U('Common/loadimg')}",
+        dataType: 'JSON',
+        acceptFileTypes: 'jpg,png,gif,jpeg,bmp',
+        maxFileSize: 8000000, // 800kb
+        done: function (e, data) {
+          if(data.result.ret == 1){
+              IptVal('pic',data.result.file);
+              $(".showcover").html("<img width='120' src='"+data.result.file+"'>");
+            }else{
+              alert(data.result.msg);
+            }
+        },
+        progressall: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            $('#progress .progress-bar').css(
+                'width',
+                progress + '%'
+            );
+        }
+    }).prop('disabled', !$.support.fileInput)
+        .parent().addClass($.support.fileInput ? undefined : 'disabled');
+
+});
+
+// 打开编辑模态框
+function ModifyInfo(id,pic,url,px){
+  IptVal('id',id);
+  IptVal('pic',pic);
+  if(pic != '' && pic != undefined){
+    $(".showcover").html("<img width='120' src='"+pic+"'>");
+  }else{
+    $(".showcover").html("");
+  }
+  IptVal('url',url);
+  IptVal('px',px);
+  $("#AddAdv").modal('show');
+}
+
+// 保存轮播图
+function SavePic(){
+  var pic = IptVal('pic');
+  if(pic == ''){
+    alert('请上传轮播图片!');
+  }else{
+    $(".SavePic").attr('disabled',true);
+    $.post("{:U('Sys/AddAdvs')}",$("#AdvInfo").serialize(),function(data){
+      alert(data.msg);
+      if(data.ret == 1){
+        location.reload();
+      }else{
+        $(".SavePic").attr('disabled',false);
+      }
+    },'JSON');
+  }
+}
+
+// 删除
+function SetStat(id,t){
+  if(t == -1){
+    var r = confirm('确定删除?');
+  }else{
+    var r = true;
+  }
+  if(r == true){
+    loading2('处理中');
+    $.post(location.href,{"id":id,"t":t},function(data){
+      alert(data.msg);
+      if(data.ret == 1){
+        location.reload();
+      }else{
+        loading2('',0);
+      }
+    },'JSON');
+  }
+}
+</script>
+</block>

@@ -1,0 +1,213 @@
+<extend name="base" />
+<block name="main">
+<style type="text/css">
+.weui-article {  font-size: 14px;   color: #999;}
+#remind .weui-form-preview__label{text-align: left; text-align-last: left; margin-bottom: 8px;line-height: 16px;}
+</style>
+<div id="step1">
+<img style="max-width:100%;" src="Public/res/dbsc/guide.jpg" />
+<form id='form' class="weui-cells weui-cells_form" style="margin-top:0">
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+      	 <select name="cpzm" style="border:0;background:#fff;padding-right:75px;font-size:18px;color:#3879D9">
+           <option value='豫A'>豫A</option><option value='豫B'>豫B</option><option value='豫C'>豫C</option><option value='豫D'>豫D</option><option value='豫E'>豫E</option><option value='豫F'>豫F</option><option value='豫G'>豫G</option><option value='豫H'>豫H</option><option value='豫J'>豫J</option><option value='豫K'>豫K</option><option value='豫L'>豫L</option><option value='豫M'>豫M</option><option value='豫N'>豫N</option><option value='豫P'>豫P</option><option value='豫Q'>豫Q</option><option value='豫R'>豫R</option><option value='豫S'>豫S</option><option value='豫U'>豫U</option>
+          </select>
+      	</div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="url" name='cphm' maxlength="5" placeholder="车牌号码" style="text-transform:uppercase;">
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">车主</label></div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="text" name='name' placeholder="请输入车主名字">
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            <label class="weui-label">手机号</label>
+        </div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="tel" name='tel' maxlength='11' placeholder="请输入手机号">
+        </div>
+    </div>
+    <div class="weui-cell weui-cell_select weui-cell_select-after">
+        <div class="weui-cell__hd">
+            <label class="weui-label">省份</label>
+        </div>
+        <div class="weui-cell__bd">
+            <select class="weui-select" name="a1" onchange="GetArea('a1','a2');"></select>
+        </div>
+    </div>
+    <div class="weui-cell weui-cell_select weui-cell_select-after">
+        <div class="weui-cell__hd">
+            <label class="weui-label">城市</label>
+        </div>
+        <div class="weui-cell__bd">
+            <select class="weui-select" name="a2" onchange="GetArea('a2','a3');"></select>
+        </div>
+    </div>
+    <div class="weui-cell weui-cell_select weui-cell_select-after">
+        <div class="weui-cell__hd">
+            <label class="weui-label">区县</label>
+        </div>
+        <div class="weui-cell__bd">
+            <select class="weui-select" name="a3"></select>
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            <label class="weui-label">详细地址</label>
+        </div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="address" name='adr' placeholder="详细收件地址">
+        </div>
+    </div>
+</form>
+<p class="weui-btn-area">
+    <a href="javascript:ApplyForm();" class="weui-btn weui-btn_primary">确认提交</a>
+</p>
+
+<article class="weui-article">
+    <section>
+        <h3>审车收件地址:<A style='float:right;' href="http://gab.122.gov.cn/views/inquiryjyqz.html">六年免检车计算器</A></h3>
+        <p>
+            郑州市二七区候寨乡麦秸垛沟村郑州浩磊车友俱乐部<BR>
+            小磊收&nbsp;&nbsp;电话:<a href="tel:037168901001">0371-68901001</a>  <a href="tel:18318555555">18318555555</a>
+        </p>
+    </section>
+</article>
+
+<!-- <p>
+温馨提醒：<BR>
+1.仅办理郑州号牌符合免检的机动车<BR>
+2.需准备以下材料交给快递人员：<BR>
+    *行驶证原件正副本<BR>
+    *有效交强险副本单原件<BR>
+    *有效车船税原件<BR>
+    *车主身份证正反面复印件<BR>
+3.快递人员取件时需核对申请人的身份证，行驶证及保险单副本原件，请您给予配合<BR>
+4.身份证与机动车行驶证所有人必须一致<BR>
+5.信息审核无误后三个工作日内客服办理完成会向您所填写的地址寄出快递（含环保标，年检标）<BR>
+6.代办审车快递往返邮寄费全免，因客户手续或其他原因无法代审，邮寄费由客户自行承担！
+</p> -->
+</div>
+<div id="step2" style='display:none;'>
+    <div class="weui-form-preview">
+        <div class="weui-form-preview__hd">
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">代办审车费</label>
+                <em class="weui-form-preview__value" id='total'>¥0</em>
+            </div>
+        </div>
+        <div class="weui-form-preview__bd" id='remind'>
+            <div class="weui-form-preview__item"><label class="weui-form-preview__label">1.仅办理河南豫牌符合免检的机动车</label></div>
+            <div class="weui-form-preview__item"> <label class="weui-form-preview__label">2.需准备以下材料交给快递人员:</label></div>
+            <div class="weui-form-preview__item"><label class="weui-form-preview__label">*行驶证原件正副本</label></div>
+            <div class="weui-form-preview__item"><label class="weui-form-preview__label">*有效交强险副本单原件</label></div>
+            <div class="weui-form-preview__item"><label class="weui-form-preview__label">*有效车船税原件</label></div>
+            <div class="weui-form-preview__item"> <label class="weui-form-preview__label">*车主身份证正反面复印件</label></div>
+            <div class="weui-form-preview__item"> <label class="weui-form-preview__label">*要把当前车辆的所有违法记录处理完毕</label></div>
+            <div class="weui-form-preview__item"><label class="weui-form-preview__label">3.快递人员取件时需核对申请人的身份证，行驶证及保险单副本原件，请您给予配合</label></div>
+            <div class="weui-form-preview__item"><label class="weui-form-preview__label">4.身份证与机动车行驶证所有人必须一致</label></div>
+            <div class="weui-form-preview__item"><label class="weui-form-preview__label">5.信息审核无误后三个工作日内客服办理完成会向您所填写的地址寄出快递（含环保标，年检标）</label></div>
+            <div class="weui-form-preview__item"><label class="weui-form-preview__label">6.代办审车快递往返邮寄费全免，因客户手续或其他原因无法代审，邮寄费由客户自行承担！</label>
+            </div>
+        </div>
+        <div class="weui-form-preview__ft">
+            <a class="weui-form-preview__btn weui-form-preview__btn_default" href="javascript:GoStep(1);">返回</a>
+            <a class="weui-form-preview__btn weui-form-preview__btn_default" href="tel:{:C('SITE_TEL')}">客服</a>
+        </div>
+    </div>
+    <p class="weui-btn-area">
+    <a href="javascript:TempCallPay();" class="weui-btn weui-btn_primary">立即支付</a>
+    </p>
+</div>
+<div class="weui-msg" id='step3' style='display:none;'>
+    <div class="weui-msg__icon-area"><i class="weui-icon-success weui-icon_msg"></i></div>
+    <div class="weui-msg__text-area">
+        <h2 class="weui-msg__title">支付成功</h2>
+        <p class="weui-msg__desc">恭喜您的车辆年检代办申请已成功提交，请准备好行车证正副本原件，有效期内交强险副本原件（含车船税）身份证复印件后尽快通知快递人员上门取件即可！</p>
+    </div>
+    <div class="weui-msg__opr-area">
+        <p class="weui-btn-area">
+            <a href="{:U('Index/index')}" class="weui-btn weui-btn_default">更多车友服务</a>
+        </p>
+    </div>
+</div>
+<!-- <div class='navbar'>
+    <a class='back' href="{:U('Index/index')}">返回</a>
+    <a class='next' href='javascript:ApplyForm();'>确认并支付</a>
+</div> -->
+</block>
+<block name="js">
+<include file="Index:TempCallPay" />
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<load href="Public/com/area.js" />
+<script type="text/javascript">
+$(function(){
+    AreaInit(false,41);
+});
+
+function GoStep(i){
+    $("*[id^='step']").hide();
+    $("#step"+i).fadeIn('slow');
+}
+
+TempPayDone = function(){
+   // 显示第三步 支付完成
+   GoStep(3);
+}
+
+function ApplyForm(){
+	if(IptVal('name') == ''){
+		alert('请填写车主名字!');
+	}else if(IptVal('tel') == ''){
+		alert('请填写手机号码!');
+	}else if(IptVal('cphm') == ''){
+        alert('请填写车牌号码!');
+    }else{
+		loading('处理中');
+		$.post(location.href,$("#form").serialize(),function(data){
+			if(data.ret == 1){
+                TempPayJSApi = data.js;
+                $("#total").html('￥'+data.total);
+                // 显示第二步 支付界面
+                GoStep(2);
+			}else{
+				alert(data.msg);
+			}
+			loading('',0);
+		},'JSON');
+	}
+}
+var sharedata1 = {
+    title: "新手车主朋友们，爱车还需要年审你造吗？到底要准备什么手续呢？真是一头雾水吧！不要急，小磊来帮你，坐在家里，办公室里把车审！快快分享给好友吧！", // 分享描述
+    link: "{:U('Dbsc/index','','','',true)}?fromuser={:$_SESSION['openid']}", // 分享链接
+    imgUrl: "{:get_page_url(true)}Public/res/dbsc/cover.jpg"
+}
+var sharedata2 = {
+    title: "{:C('SITE_NAME')}代办审车服务", // 分享标题
+    desc: "新手车主朋友们，爱车还需要年审你造吗？到底要准备什么手续呢？真是一头雾水吧！不要急，小磊来帮你，坐在家里，办公室里把车审！快快分享给好友吧！", // 分享描述
+    link: "{:U('Dbsc/index','','','',true)}?fromuser={:$_SESSION['openid']}", // 分享链接
+    imgUrl: "{:get_page_url(true)}Public/res/dbsc/cover.jpg"
+}
+wx.config({
+  debug: false,
+  appId: '{$SDK.appId}',
+  timestamp: '{$SDK.timestamp}',
+  nonceStr: '{$SDK.nonceStr}',
+  signature: '{$SDK.signature}',
+  jsApiList: [
+    // 所有要调用的 API 都要加到这个列表中
+    'onMenuShareTimeline',
+    'onMenuShareAppMessage',
+  ]
+});
+wx.ready(function () {
+  // 在这里调用 API
+  wx.onMenuShareTimeline(sharedata1);
+  wx.onMenuShareAppMessage(sharedata2);
+});
+</script>
+</block>

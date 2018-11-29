@@ -1,0 +1,51 @@
+<div class='form-group clearfix'>
+	<div class="col-xs-4">
+	<select class='form-control' name='event'>
+		<option value='1'>当用户关注时回复</option>
+		<option value='2'>当用户点击菜单时回复</option>
+		<option value='0'>当无法匹配命令时</option>
+	</select>
+	</div>
+	<div class="col-xs-3">
+		<select class='form-control' style='display:none;' name='click' onchange="putkey();">
+			<option value=''>--自定义</option>
+			{:W('ShowMenu')}
+		</select>
+	</div>
+	<div class="col-xs-3">
+	<input class='form-control' name='eventkey' id="eventkey" style='display:none;' placeholder="输入对应的菜单按钮值..." />
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	cmdcontent = '{"event":"subscribe","eventkey":""}'; //赋值容器
+	$("select[name='event']").change(function(){
+		var i = $(this).val();
+		if(i == 1){
+			$("#eventkey").val('').hide();
+			$("select[name='click']").hide();
+			cmdcontent = '{"event":"subscribe","eventkey":""}'; //赋值容器
+		}else if(i == 2){
+			$("#eventkey").show();
+			$("select[name='click']").val('');
+			$("select[name='click']").show();
+			cmdcontent = '{"event":"CLICK","eventkey":""}'; //赋值容器
+		}else if(i == 0){
+			$("select[name='click']").hide();
+			cmdcontent = '{"event":"notfound","eventkey":""}'; //赋值容器
+		}
+	})
+
+	$("input[name='eventkey']").bind('input propertychange', function() {
+		if($(this).val().length > 100){
+			alert('请勿超过100字，超出部分将被截断。');
+		}
+		cmdcontent = '{"event":"CLICK","eventkey":"'+$("input[name='eventkey']").val()+'"}'; //赋值容器
+	})
+})
+function putkey(){
+	var i = sr('click');
+	cmdcontent = '{"event":"CLICK","eventkey":"'+i+'"}'; //赋值容器
+	$("input[name='eventkey']").val(i);
+}
+</script>

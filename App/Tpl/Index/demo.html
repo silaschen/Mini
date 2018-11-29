@@ -1,0 +1,52 @@
+<extend name="Index:base" />
+<block name="style">
+<style type="text/css">
+.container{margin-top: 55px;}
+
+</style>
+</block>
+<block name="top">
+  <nav id='top'>
+    <a href="{:back(U('Index/index'))}" class='lb'><i class='icon iconfont'>&#xe6b0;</i> 返回</a>
+    <span class='title'>前端示例</span>
+    <a href="tel:{:C('SITE_TEL')}" class='rb'>客服 <i class='icon iconfont'>&#xe61c;</i></a>
+  </nav>
+</block>
+<block name="main">
+<div class='container'>
+    <div class='box'>
+      <div class='form-group'>
+        <input class='form-control' type='text' placeholder="填写提示..">
+      </div>
+      <div class='form-group'>
+        <select class='form-control'><option value='1'>选项一</option><option value='1'>选项二</option></select>
+      </div>
+      <div class='form-group'>
+        <div class="input-group">
+          <div class="input-group-addon"><i class='glyphicon glyphicon-user'></i></div>
+          <input type="text" class="form-control" placeholder="请输入姓名">
+          <div class="input-group-addon"><b class='text-danger'>*</b></div>
+        </div>
+      </div>
+      <div class='form-group'>
+        <div class="input-group">
+          <div class="input-group-addon"><i class='glyphicon glyphicon-phone'></i></div>
+          <input type="tel" class="form-control" placeholder="请输入电话">
+        </div>
+      </div>
+      <div class='form-group'>
+        <button class='btn btn-block btn-danger btn-lg'>确定</button>
+      </div>
+      <div class='form-group'>
+        <button class='btn btn-block btn-default btn-lg'>取消</button>
+      </div>
+      <div class='form-group'>
+        <button class='btn btn-block btn-success btn-lg' onclick="loading(1);">Loading</button>
+      </div>
+      <div class='form-group'>
+        <button class='btn btn-block btn-success btn-lg' onclick="loading(1,'请稍后..')">自定义内容</button>
+      </div>
+      <p> 内容BOX<br>内容BOX<br>内容BOX<br>内容BOX<br>内容BOX<br>内容BOX</p>
+    </div>
+</div>
+</block>

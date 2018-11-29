@@ -1,0 +1,38 @@
+<view class="wrap">
+    <view class="section">
+        <view class="section__title">车辆类型</view>
+        <picker bindchange="CarChange" range-key='name' value="{{carindex}}" range="{{cartype}}">
+        <view class="picker box">
+            {{cartype[carindex].name}}
+        </view>
+        </picker>
+    </view>
+    <view class="section">
+        <view class="section__title">注册登记日期</view>
+        <picker bindchange="DateChange" mode="date" start='2000-01-01' end="{{end}}">
+        <view class="picker box">
+            {{date}}
+        </view>
+        </picker>
+    </view>
+    <view class="section">
+        <radio-group class="radio-group"  bindchange="SetAcc">
+
+        <label class="radio">
+            <radio value="0" checked="true"/> 未发生过致人伤亡事故
+        </label>
+        <label class="radio">
+            <radio value="1" /> 发生过致人伤亡事故
+        </label>
+        </radio-group>
+    </view>
+    <view class="section">
+        <button type="primary" bindtap="Count" class='btn'>查询</button>
+    </view>
+
+</view>
+<view class="form-group remark">
+<view>备注：</view>
+<view>一、如果购车后4年未登记的，不属于免检范围。</view>
+<view>二、办理车检时需提供：1）机动车行驶证；2）交通事故责任强制保险 、车船税证明；3）请处理完交通违法和交通事故。（查询结果供参考）</view>
+</view>

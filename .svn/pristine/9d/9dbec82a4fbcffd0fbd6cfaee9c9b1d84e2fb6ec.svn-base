@@ -1,0 +1,131 @@
+<extend name="Sys:base" />
+<block name="main">
+  <div class="box box-solid">
+    <div class="box-header with-border">
+      <h3 class="box-title">用户列表  共:{$total}</h3>
+    </div><!-- /.box-header -->
+    <div class="box-body">
+      <form method="GET" action="{:U('User/userlist')}" id='search' style="margin-bottom:15px;">
+      <div class="row">
+        <div class="col-xs-4 col-md-2">
+          <select name='type' class='form-control'>
+            <option value=''>全部会员</option>
+            <option value='1'>普通会员</option>
+            <option value='2'>推荐人</option>
+            <option value="3">管理员</option>
+          </select>
+        </div>
+
+        <div class="col-xs-8 col-md-6">
+          <div class="input-group">
+            <input name="word" type='text' class='form-control' value="{:I('word')}" placeholder='帐号/ID/昵称/姓名/电话 关键词搜索..'>
+            <span class="input-group-addon" onclick="$('#search').submit();"><i class="fa fa-search"></i></span>
+            <if condition="$_GET['type'] gt '0' OR $_GET['word'] neq ''">
+            <a title='清除条件' class="input-group-addon" href="{:U('User/userlist')}"><i class="fa fa-remove"></i></a>
+            </if>
+          </div>
+        </div>
+      </div>
+      </form>
+      <table class="table table-bordered">
+        <thead>
+          <th>ID</th>
+          <th>头像</th>
+          <th>角色</th>
+          <th>昵称</th>
+          <th>性别</th>
+          <th>推荐码</th>
+          <th>推荐</th>
+          <th>注册时间</th>
+          <th>操作</th>
+        </thead>
+        <tbody>
+      <volist name="list" id='vo'>
+        <tr>
+          <td>{$vo.id}</td>
+          <td><if condition="$vo.headimgurl neq ''"><img src='{$vo.headimgurl}' class='img-rounded' width='40'></if></td>
+          <td><if condition="$vo.type eq 1">普通会员<elseif condition="$vo.type eq 2"/>推荐人<elseif condition="$vo.type eq 3"/><span style="color: red
+          ">管理员</span></if></td>
+          <td width="100">{$vo.nickname}</td>
+          <td><if condition="$vo.sex eq '1'"><small class="badge bg-blue">男</small><elseif condition="$vo.sex eq '2'"/><small class="badge bg-danger">女</small><else/><small class="badge bg-gray">-</small></if></td>
+          <td><span class="label label-info">{$vo.recode}</span></td>
+          <td><a href="{:U('Pro/orderlist',array('code'=>$vo['recode']))}"><span class="badge bg-green">{$vo.recommend}</span></a></td>
+          <td>{$vo.addtime|date='Y-m-d H:i:s',###}</td>
+          <td>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown">
+                管理
+                <span class="caret"></span>
+                <span class="sr-only">+</span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+               <if condition="$vo.type eq 3">
+                <li><a href="javascript:SetType({$vo.id},1);">撤销管理员</a></li><else/>
+                <li><a href="javascript:SetType({$vo.id},3);">设为管理员</a>
+               </if>
+                <!-- <li><a href="javascript:setstat({$vo.id},-1);">删除会员</a></li> -->
+              </ul>
+            </div>
+          </td>
+        </tr>
+      </volist>
+        </tbody>
+      </table>
+    </div><!-- /.box-body -->
+    <div class="box-footer clearfix">
+      <ul class="pagination pagination-sm no-margin pull-right">{$page}</ul>
+    </div>  
+  </div>
+<!-- 查看详情 -->
+<div class="modal" id='detail'>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title">会员详情</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered" id='showuser'>
+          
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">关闭</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+
+<script type="text/javascript">
+function SetType(uid,type){
+
+  if(type == 1){
+    var r = confirm('您确定撤销管理员吗?');
+  }else if(type == 3){
+    var r = confirm('您确认将该会员设为管理员吗?');
+  }
+  if(r == true){
+      loading2('操作中...');
+    $.post(location.href,{'id':uid,'t':type},function(data){
+
+          alert(data.msg);
+          if(data.ret == 1){
+            location.reload();
+          }else{
+            loading2('',0);
+          }
+
+
+    },'JSON');
+
+  }
+
+
+
+}
+</script>
+<script type="text/javascript">
+    SelVal('type',{$_GET['type']});
+
+</script>
+</block>

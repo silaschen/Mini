@@ -1,0 +1,20 @@
+<load href="Public/com/qqFace.js" />
+<load href="Public/com/jquery.shortcuts.js" />
+<div class='form-group'>
+<button type="button" class="btn btn-default emotion"><span class="glyphicon glyphicon-star"></span> 表情
+</button>
+<br><br>
+<input class='form-control' name='textset' id="textbox" placeholder="输入触发回复此素材的文本内容..." />
+</div>
+<script type="text/javascript">
+$(function(){
+	$('.emotion').qqFace(); //表情
+	$("input[name='textset']").bind('input propertychange', function() {
+		if($(this).val().length > 600){
+			alert('请勿超过600字，超出部分将被截断。');
+		}
+		cmdcontent = $("input[name='textset']").val(); //赋值容器
+	})
+	$("input[name='textset']").shortcuts();
+})
+</script>

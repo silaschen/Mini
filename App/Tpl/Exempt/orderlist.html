@@ -1,0 +1,261 @@
+<extend name="Sys:base" />
+<block name="main">
+  <div class="box box-solid">
+    <div class="box-header with-border">
+      <h3 class="box-title">{$title}</h3>
+    </div><!-- /.box-header -->
+    <div class="box-body">
+      <form method="GET" action="{:U('Exempt/orderlist')}" id='search' style="margin-bottom:15px;">
+      <div class="row">
+
+        <div class="col-xs-3 col-md-2">
+          <select name='status' class='form-control'>
+            <option value=''>全部</option>
+            <option value='1'>待支付</option>
+            <option value='2'>已支付</option>
+            <option value="3">已发货</option>
+            <option value="4">已成功</option>
+            <option value="0">已取消</option>
+          </select>
+        </div>
+
+        <div class="col-xs-6 col-md-6">
+          <div class="input-group">
+            <input name="word" type='text' class='form-control' value="{:I('word')}" placeholder='姓名/昵称/车牌号 关键词搜索..'>
+            <span class="input-group-addon" onclick="$('#search').submit();"><i class="fa fa-search"></i></span>
+            <if condition="$_GET['type'] neq '' OR $_GET['word'] neq '' OR $_GET['status'] neq ''">
+            <a title='清除条件' class="input-group-addon" href="{:U('Exempt/orderlist')}"><i class="fa fa-remove"></i></a>
+            </if>
+          </div>
+        </div>
+      </div>
+      </form>
+      <table class="table table-bordered">
+        <thead>
+          <th>ID</th>
+          <th>用户</th>
+          <th>车牌</th>
+          <th>车主</th>
+          <th>电话</th>
+          <th>金额</th>
+          <th>身份证正</th>
+          <th>身份证反</th>
+          <th>行车证正</th>
+          <th>行车证副</th>
+          <th>交强险</th>
+          <th>邮寄信息</th>
+          <th>付款时间</th>
+          <th>添加时间</th>
+          <th>状态</th>
+          <th>操作</th>
+        </thead>
+        <tbody>
+      <volist name="list" id='vo'>
+        <tr>
+        <td>{$vo.id}</td>
+         <td><if condition="$vo.headimgurl neq ''"><a href="{:U('User/userlist')}?openid={$vo['openid']}"><img src='{$vo.headimgurl}' class='img-rounded' width='40'></a></if></td>
+          <td>{$vo.cphm}</td>
+          <td>{$vo.name}</td><td>{$vo.tel}</td>
+          <td><span class="badge bg-blue">￥{$vo.fee}</span></td>
+      
+          <td><if condition="$vo.sfz1 neq ''"><img src="{$vo['sfz1']}" width="35" onclick="ShowImg('{$vo['sfz1']}')"></if></td>
+           <td><if condition="$vo.sfz2 neq ''"><img src="{$vo['sfz2']}" width="35" onclick="ShowImg('{$vo['sfz2']}')"></if></td>
+          <td><if condition="$vo.xcz1 neq ''"><img src="{$vo['xcz1']}" width="35" onclick="ShowImg('{$vo['xcz1']}')"></if></td>
+           <td><if condition="$vo.xcz2 neq ''"><img src="{$vo['xcz2']}" width="35" onclick="ShowImg('{$vo['xcz2']}')"></if></td>
+           <td><if condition="$vo.insuimg neq ''"><img src="{$vo['insuimg']}" width="35" onclick="ShowImg('{$vo['insuimg']}')"></if></td>
+           <td><span onclick="ShowPost({$vo['id']})" class="label label-default">邮寄</span></td>
+          <td><if condition="$vo['paytime'] neq ''">{$vo.paytime|date='Y-m-d H:i:s',###}</if></td>
+          <td>{$vo.addtime|date='Y-m-d H:i:s',###}</td>
+          <td><if condition="$vo.status eq 1"><span class="label label-warning">代付款</span><elseif condition="$vo.status eq 2"/><span class="label label-success">已支付</span><elseif condition="$vo.status eq 3"/><span class="label label-info">已发货</span><elseif condition="$vo.status eq 4"/><span class="label label-success">已成功</span><elseif condition="$vo.status eq 0"/><span class="label label-default">已取消</span></if></td>
+          <td>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown">
+                管理
+                <span class="caret"></span>
+                <span class="sr-only">+</span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+               <if condition="$vo.status eq 2">
+                <li><a href="javascript:Express({$vo['id']})">发货</a></li>
+              </if>
+
+              <if condition="$vo.status eq 3">
+                  <li><a href="javascript:DoneOrder({$vo['id']})">完成订单</a></li>
+              </if>
+              <if condition="$vo.status neq 0">
+                <li><a href="javascript:CancelOrder({$vo['id']})">取消</a></li>
+              </if>
+              </ul>
+            </div>
+          </td>
+        </tr>
+      </volist>
+        </tbody>
+      </table>
+    </div><!-- /.box-body -->
+    <div class="box-footer clearfix">
+      <ul class="pagination pagination-sm no-margin pull-left">{$page}</ul>
+    </div>  
+  </div>
+<!-- 查看图片 -->
+<div class="modal fade" id="img" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <b>图片详情</b>
+      </div>
+      <div class="modal-body">
+          
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- 发货 -->
+<div class="modal fade" id="express" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <b>填写发货单</b>
+      </div>
+      <div class="modal-body">
+          <input type="hidden" name="id">
+          <div class="form-group">   
+              <label>快递公司</label>
+              <input type="text" name="express" class="form-control">
+          </div>  
+
+          <div class="form-group">   
+              <label>快递单号</label>
+              <input type="text" name="expressnum" class="form-control">
+          </div>   
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary" onclick="Make()">确认</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div class="modal fade" id="post" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <b class="modal-title">邮寄信息</b>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered">
+          
+            <tbody>
+              <tr>
+                <td>地址：</td><td id="postadr"></td>
+              </tr>
+              <tr>
+                <td>姓名</td>
+                <td id="postname"></td>
+              </tr>
+                    <tr>
+                <td>电话</td>
+                <td id="posttel"></td>
+              </tr>
+            </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script type="text/javascript">
+function ShowPost(id){
+    $.post("{:U('Exempt/GetPost')}",{'id':id},function(data){
+
+          $("#postadr").html(data.a1+data.a2+data.a3+data.adr);
+          $("#postname").html(data.name);
+          $("#posttel").html(data.tel);
+          $("#post").modal('show');
+
+
+    },'JSON');
+
+}
+function CancelOrder(id){
+  if(confirm('您确定取消此订单吗?') == true){
+      loading2('操作中...');
+      $.post(location.href,{'id':id},function(data){
+
+            alert(data.msg);
+            if(data.ret == 1){
+              location.reload();
+            }else{
+              loading2('',0);
+            }
+      },'JSON');
+  }
+}
+
+//完成订单
+function DoneOrder(id){
+    if(confirm('您确认要完成此订单吗?') == true){
+      loading2('操作中...');
+      $.post("{:U('Exempt/MakeOrderDone')}",{'id':id},function(data){
+          alert(data.msg);
+          if(data.ret == 1){
+              location.reload();
+          }else{
+            loading2('',0);
+          }
+
+      },'JSON')
+    }
+  }
+</script>
+<script type="text/javascript">
+   function ShowImg(img){
+      $("#img .modal-body").empty();
+      var imgs = '<img src="'+img+'" style="width:100%;">';
+      $("#img .modal-body").append(imgs);
+      $("#img").modal('show');
+
+   }
+
+   //发货
+   function Express(id){
+    IptVal('id',id);
+    $('#express').modal('show');
+   }
+   //寄出
+   function Make(){
+      var id = IptVal('id');
+      var express = IptVal('express');
+      var expressnum = IptVal('expressnum');
+      loading2('操作中...');
+      $.post("{:U('Exempt/Post')}",{'id':id,'express':express,'expressnum':expressnum},function(data){
+
+            alert(data.msg);
+            if(data.ret == 1){
+              location.reload();
+            }else{
+              loading2('',0);
+            }
+      },'JSON');
+
+
+   }
+<if condition="$_GET['status'] egt 0">
+    SelVal('status',{$_GET['status']});
+</if>
+</script>
+</block>

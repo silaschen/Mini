@@ -1,0 +1,273 @@
+<?php
+/**
+##小程序接口
+**/
+define('APPID', 'wx3412a62a9fb0d035');
+define('SECRET', 'b8fa77366153d37836bb1a96c4f9e1e3');
+class MiniAction extends CommonAction{
+	public $openid;
+
+	#登录#
+	public function OnLogin(){
+		$code = I('get.code');
+		$url = 'https://api.weixin.qq.com/sns/jscode2session?appid='.APPID.'&secret='.SECRET.'&js_code='.$code.'&grant_type=authorization_code';
+		$r = json_decode(file_get_contents($url),true);
+		if(!$r['session_key']) json('登录失败,请重新进入!');
+		$session = substr(md5(NOW_TIME.$r['openid']),8,16);
+		//$r['session_key'].$r['openid']
+		S($session,$r,9000,'memcache');
+		//保存用户·信息
+		$data = json_decode(file_get_contents("php://input"),true);
+		$user['headimgurl'] = $data['userdata']['avatarUrl'];
+		$user['nickname'] = $this->WxDelName($data['userdata']['nickName']);
+		$user['sex'] = $data['userdata']['gender'];
+		$user['city'] = $data['userdata']['city'];
+		$user['province'] = $data['userdata']['province'];
+		$user['country'] = $data['userdata']['country'];
+		if(!(M('user_list')->where(array('openid'=>$r['openid']))->find())){
+			$user['openid'] = $r['openid'];
+			$user['addtime'] = NOW_TIME;
+			M('user_list')->add($user);
+		}else{
+			//update
+			M('user_list')->where(array('openid'=>$r['openid']))->save($user);
+		}
+		json(array('sessionkey'=>$session),1);
+	}
+
+	#过滤字符#
+	public function WxDelName($str) {
+	    if($str){
+	        $tmpStr = json_encode($str);
+	        $tmpStr2 = preg_replace("#(\\\ud[0-9a-f]{3})#ie","",$tmpStr);
+	        $return = json_decode($tmpStr2);
+	        if(!$return){
+	            return jsonName($return);
+	        }
+	    }else{
+	        $return = '微信用户-'.time();
+	    }    
+	    return $return;
+	}
+
+	#登陆状态检查#
+	protected function IsCached($sk = false){
+		if(!$sk) $sk = I('get.sessionkey');
+		$info = S($sk);
+		if(!$info) json('LoginError!');
+		$this->openid = $info['openid'];
+		if(!$info['openid']) json('缺少openid');
+		S($sk,$info,9000,'memcache');
+		return $info;
+	}
+
+	//申请代办
+	public function SaveDbscOrder(){
+		$this->IsCached();
+		$data = json_decode(file_get_contents("php://input"),true);
+		//do something...
+		$data['status'] = 1;
+		$data['addtime'] = NOW_TIME;
+		$data['cphm'] = '豫A'+$data['cphm'];
+		$data['openid'] = $this->openid;
+		$r = M('car_dblist')->add($data);
+		if($r){
+			exit(json_encode(array('ret'=>1)));
+		}
+
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+	#上传图片#
+	public function UploadFile(){
+		$data = $_FILES['file'];
+		$r = $this->upload('images/'.date('Y-m-d'),array('ext'=>'png,jpg,gif,jpeg,mp4,avi'));
+		if($r['file']){
+			exit(json_encode(array('code'=>1,'file'=>$r['file'])));
+		}else{
+			exit(json_encode(array('code'=>0)));
+		}
+	}
+
+
+
+	#轮播图#
+	public function SlidePhoto(){
+		$imgs = M('sys_advs')->where(array('type'=>1,'status'=>1))->select();
+		foreach ($imgs as $key => $value) {
+			$imgs[$key]['pic'] = "https://ljl.vhost.binguo.me/".$value['pic'];
+		}
+		exit(json_encode($imgs));
+	}
+
+	#服务列表#
+	public function servelist(){
+		//服务列表
+		$p = I('p',1);
+		$list = M('item_list')->where(array('status'=>1))->page($p.',6')->order("addtime desc")->select();
+		if(!$list) $list = array();
+		exit(json_encode($list));
+	}
+
+	#申请成推荐人#
+	public function ApplyRecommend(){
+		$this->IsCached();
+		$data = json_decode(file_get_contents("php://input"),true);
+		if(!$data['name'] || !$data['tel']) json('请填写姓名及电话');
+		$flag = M('user_list')->where(array('openid'=>$this->openid))->getField('recode');
+		if($flag) json('您已经是推荐人啦!');
+		$data['addtime'] = NOW_TIME;
+		$data['status'] = 1;
+		$data['openid'] = $this->openid;
+		$r = M('recommend_list')->add($data);
+		if($r){
+			json('您的申请已经发出，请等待审核',1);
+		}else{
+			json('申请失败了，客官您稍后再试');
+		}
+
+	}
+
+
+	#服务申请#
+	public function orderserve(){
+		$this->IsCached();
+		$data = json_decode(file_get_contents("php://input"),true);
+		if($data['code']){
+			$codeman = M('user_list')->where(array('recode'=>$data['code']))->find();
+			if(!$codeman) json('推荐码错误，请检查您填写的推荐码');
+			M("user_list")
+			->where(array('recode'=>$data['code']))
+			->setInc('recommend',1);
+		}
+		$data['addtime'] = NOW_TIME;
+		$data['status'] = 1;
+		$data['openid'] = $this->openid;
+		$r = M('item_order')->add($data);
+		if($r){
+			$msg = array(
+				'name'=>$data['name'],
+				'tel'=>$data['tel'],
+				'addr'=>$data['addr'],
+				'formId'=>$data['formId'],
+				'openid'=>$this->openid,
+				);
+			$this->NotifyOrder($msg);
+		
+			json('已成功预约服务，等待工作人员与您联系',1);
+		}else{
+			json('幸运还是悲伤，不可预知的错误');
+		}
+
+	}
+
+	#检查推荐人#
+	public function CheckRecommend(){
+		$this->IsCached();
+		$isre = M('user_list')->where(array('openid'=>$this->openid))->find();
+		$had = M('recommend_list')->where(array('openid'=>$this->openid,'status'=>1))->find();
+		if($isre['recode']){
+			exit(json_encode(array('code'=>1,'recode'=>$isre['recode'],'num'=>$isre['recommend'])));
+		}else if(!$isre['code'] && $had){
+			exit(json_encode(array('code'=>2)));//待审核
+		}else if(!$isre['code'] && !$had){
+			//未申请
+			exit(json_encode(array('code'=>3)));
+		}
+
+	}
+
+	#我的预约列表#
+	public function myorder(){
+		$this->IsCached();
+		$p = I('p',1);
+		$num = I('num');
+		$list = M('item_order')->where(array('openid'=>$this->openid))->page($p.','.$num)->select();
+		exit(json_encode($list));
+	}
+
+	
+	#获取支付参数#
+	protected function PayConf($orderid,$total,$body,$attch,$url){
+		import("@.ORG.WeiXin");
+        $WX = new WeiXin();
+        $WX->appId = APPID;
+        $WX->openid = $this->openid;
+       	$payinfo = $WX->payconfig($orderid,$total*100,$body,$attch,$url);
+        $r = $WX->payjsapi($payinfo['prepay_id']);
+        if($payinfo['prepay_id']){
+        	if($attch = 'Dbsc/PayCallBack'){
+        		M('dbsc_order')->where(array('orderid'=>$orderid))->setField('prepayid',$payinfo['prepay_id']); //用于发送模版消息提醒
+        	}
+        }else{
+        	return false;
+        }
+		//file_put_contents('pay.txt',$r."\r\n".json_encode($payinfo)."\r\n".json_encode($info));
+		return $r;
+	}
+
+  	
+
+    #预约通知#
+     public function NotifyOrder($info){
+      $this->openid = $info['openid'];
+      $data['touser'] = $this->openid;
+      $data['template_id'] = 'cf8K20jkftGusLPuosd6HU-Wg-vAfNGQ6c8actUDg-c';
+      $data['page'] = '';
+      $data['form_id'] = $info['formId'];
+      // file_put_contents("formid.txt", $data['form_id']);
+      $data['data']['keyword1']['value'] = $info['name'];
+      $data['data']['keyword1']['color'] = '#173177';
+      $data['data']['keyword2']['value'] = $info['tel'];
+      $data['data']['keyword2']['color'] = '#173177';
+      $data['data']['keyword3']['value'] = $info['addr'];
+      $data['data']['keyword3']['color'] = '#173177';
+      $data['data']['keyword4']['value'] = "您的预约已经成功，请等待专员与您联系";
+      $data['data']['keyword4']['color'] = '#173177';
+      return $this->LittleTplMsg($data);
+    }
+
+
+	
+	#小程序模版消息#
+	protected function LittleTplMsg($data){
+		import('@.ORG.WeiXin');
+		$weixin = new WeiXin(APPID,SECRET); //使用小程序的APPI 获取参数
+		$url = 'https://api.weixin.qq.com/cgi-bin/message/wxopen/template/send?access_token='.$weixin->accesstoken;
+		$curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 1);
+        curl_setopt($curl, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+        curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
+        curl_setopt($curl, CURLOPT_AUTOREFERER, 1);
+        curl_setopt($curl, CURLOPT_TIMEOUT, 0);
+        curl_setopt($curl, CURLOPT_HEADER, 0);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));
+        $tmpInfo = curl_exec($curl);
+        if (curl_errno($curl)) {
+            return false;
+        }
+        curl_close($curl);
+        $r = json_decode($tmpInfo, true);
+        // file_put_contents("check.txt", $r);
+        if ($r['errmsg'] == 'ok') {
+            return $r;
+        }
+      	return false;
+	}
+
+
+
+}

@@ -1,0 +1,153 @@
+<extend name="Sys:base" />
+<block name="main">
+<link rel="stylesheet" href="Public/com/jQuery-File-Upload-9.9.3/css/jquery.fileupload.css">
+  <div class="box box-solid">
+    <div class="box-header with-border">
+      <h3 class="box-title">添加/编辑车务助理</h3><a href="{:U('Serve/userlist')}" class='btn btn-default btn-xs pull-right'>返回列表</a>
+    </div><!-- /.box-header -->
+    <div class="box-body">
+         <form method="POST" id='form'>
+          <input name='id' class='hide' value='{$info.id}'>
+            <div class='form-group'>
+              <label>姓名</label>
+              <input type='text' name='name' class='form-control' value='{$info.name}'>
+            </div>
+
+            <div class="form-group">
+              <label>电话</label>
+              <input type="tel" name="tel" class="form-control" value="{$info['tel']}">
+            </div>
+
+                 <div class='form-group'>
+              <label>头像：</label>
+                <a href="javascript:$('#cover').val('');$('.showcover').html('');" onclick="return confirm('确定清除封面？');" class='pull-right'>清除头像</a> <br>
+                  <button type='button' class='btn btn-success btn-sm fileinput-button'><i class="glyphicon glyphicon-picture"></i> <small>推荐尺寸 400*300 点击上传</small><input  id="uploadcover" type="file" name="files" accept="image/*" ></button>
+                    <div id="progress" class="progress">
+                        <div class="progress-bar progress-bar-success"></div>
+                    </div>
+                    <div id="files" class="files">
+                    </div>
+                    <div class='showcover'>
+                    <if condition="$info.cover neq ''">
+                    <img src='{$info.cover}'>
+                    </if>
+                    </div>
+                <input class='hide' name='cover' id='cover' value='{$info.cover}'>
+            </div>
+
+                    <div class='form-group'>
+              <label>二维码：</label>
+                <a href="javascript:$('#cover').val('');$('.showcover').html('');" onclick="return confirm('确定清除封面？');" class='pull-right'>清除头像</a> <br>
+                  <button type='button' class='btn btn-success btn-sm fileinput-button'><i class="glyphicon glyphicon-picture"></i> <small>推荐尺寸 400*300 点击上传</small><input  id="uploadcover1" type="file" name="files" accept="image/*" ></button>
+                    <div id="progress" class="progress">
+                        <div class="progress-bar progress-bar-success"></div>
+                    </div>
+                    <div id="files" class="files">
+                    </div>
+                    <div class='showcover1'>
+                    <if condition="$info.ercodeimg neq ''">
+                    <img src='{$info.ercodeimg}'>
+                    </if>
+                    </div>
+                <input class='hide' name='ercodeimg' id='ercodeimg' value='{$info.ercodeimg}'>
+            </div>
+       
+
+         </form>
+    </div><!-- /.box-body -->
+    <div class="box-footer clearfix">
+      <button type="button" onclick="SaveInfo();" class="btn btn-success pull-right SaveInfo">确定</button>
+    </div>   
+  </div>
+<script type="text/javascript">
+
+function SaveInfo(){
+  if(IptVal('name') == ''){
+    alert('请填写姓名!');
+  }else if(IptVal('tel') == ''){
+    alert("请填写电话");
+  }else{
+    $(".SaveInfo").addClass('disabled');
+    loading2("操作中...");
+    $.post(location.href,$("#form").serializeArray(),function(data){
+        alert(data.msg);
+        if (data.ret == 1) {
+          location.href = "{:U('Serve/userlist')}";
+        }else{
+            loading2("",0);
+        }
+    },'JSON');
+  }
+}
+</script>
+
+
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/vendor/jquery.ui.widget.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/load-image.all.min.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/canvas-to-blob.min.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.iframe-transport.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload-process.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload-image.js"></script>
+<script type="text/javascript">
+$(function(){
+    $('#uploadcover').fileupload({
+        url: "{:U('Common/loadimg')}",
+        dataType: 'JSON',
+        acceptFileTypes: 'jpg,png,gif,jpeg,bmp',
+      maxFileSize: 8000000, // 800kb
+      disableImageResize: /Android(?!.*Chrome)|Opera/.test(window.navigator && navigator.userAgent),
+        imageMaxWidth: 200, //自动裁剪保持该宽度
+        imageMaxHeight: 200,
+        imageCrop: true,
+        done: function (e, data) {
+          if(data.result.ret == 1){
+              $("input[name='cover']").val(data.result.file);
+              $(".showcover").html("<img src='"+data.result.file+"'>");
+            }else{
+              alert(data.result.msg);
+            }
+        },
+        progressall: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            $('#progress .progress-bar').css(
+                'width',
+                progress + '%'
+            );
+        }
+    }).prop('disabled', !$.support.fileInput)
+        .parent().addClass($.support.fileInput ? undefined : 'disabled');
+
+});
+
+$(function(){
+    $('#uploadcover1').fileupload({
+        url: "{:U('Common/loadimg')}",
+        dataType: 'JSON',
+        acceptFileTypes: 'jpg,png,gif,jpeg,bmp',
+      maxFileSize: 8000000, // 800kb
+      disableImageResize: /Android(?!.*Chrome)|Opera/.test(window.navigator && navigator.userAgent),
+        imageMaxWidth: 200, //自动裁剪保持该宽度
+        imageMaxHeight: 200,
+        imageCrop: true,
+        done: function (e, data) {
+          if(data.result.ret == 1){
+              $("input[name='ercodeimg']").val(data.result.file);
+              $(".showcover1").html("<img src='"+data.result.file+"'>");
+            }else{
+              alert(data.result.msg);
+            }
+        },
+        progressall: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            $('#progress .progress-bar').css(
+                'width',
+                progress + '%'
+            );
+        }
+    }).prop('disabled', !$.support.fileInput)
+        .parent().addClass($.support.fileInput ? undefined : 'disabled');
+
+});
+</script>
+</block>

@@ -1,0 +1,41 @@
+<view class="page">
+  <view class="clear">
+    <view class="pull-left">
+      <view>
+        <image src="../../res/2.png"></image>补换行驶证</view>
+    </view>
+    <view class="pull-right">
+      <text>￥ {{money}}</text>
+    </view>
+  </view>
+  <view class="tinyline"></view>
+  <view class="info">
+    <view class="name com">
+      <i class="iconfont icon-gerenxinxi"></i><text>{{name}}</text>
+    </view>
+    <view class="tinyline"></view>
+    <view class="code com">
+      <i class="iconfont icon-shijianrili"></i><text>{{code}}</text>
+    </view>
+    <view class="tinyline"></view>
+    <view class="tel com">
+      <i class="iconfont icon-shouji"></i><text>{{tel}}</text>
+    </view>
+    <view class="tinyline"></view>
+    <view class="addr com">
+      <i class="iconfont icon-weizhi"></i><text>{{addr}}</text>
+    </view>
+    <view class="tinyline"></view>
+  </view>
+   <view class="foot" wx:if="{{stat==3}}">
+     <button type="primary" disabled>订单已取消</button>
+  </view>
+  <view class="foot" wx:if="{{stat==1}}">
+    <view class="cancelOrder">取消订单</view>
+    <button type="primary" class="toPay" bindtap="ToPay"><text>￥{{money}} 确认支付</text></button>
+  </view>
+  <view class="foot" wx:if="{{stat==2}}">
+     <button type="primary" disabled>订单已支付</button>
+  </view>
+
+</view>

@@ -1,0 +1,112 @@
+<extend name="base" />
+<block name="main">
+  <link rel="stylesheet" href="Public/com/jQuery-File-Upload-9.9.3/css/jquery.fileupload.css">
+  <div class="box box-danger">
+    <form role="form" id='form' action="{:U('Sys/vendor')}" method="POST">
+    <div class="box-header with-border">
+      <h3 class="box-title">微信平台参数配置</h3>
+    </div><!-- /.box-header -->
+    <div class="box-body">
+      
+        <div class='form-group'>
+          <label>AppId：</label>
+          <input type='text' class='form-control' name='AppId' value='<?php echo C('AppId');?>'>
+        </div>
+        <div class='form-group'>
+          <label>AppSecret：</label>
+          <input type='text' class='form-control' name='AppSecret' value='<?php echo C('AppSecret');?>'>
+        </div>
+        <div class='form-group'>
+          <label>微信支付商户号：</label>
+          <input type='text' class='form-control' name='MCHID' value='<?php echo C('MCHID');?>'>
+        </div>
+        <div class='form-group'>
+          <label>微信支付密钥：</label>
+          <input type='text' class='form-control' name='SIGNKEY' value='<?php echo C('SIGNKEY');?>'>
+        </div>
+         <div class="form-group">
+          <label>微信支付证书：</label>
+          <br/>
+          <button style="margin-bottom:8px;" type='button' class='btn btn-default fileinput-button'><i class="glyphicon glyphicon-file"></i> <small>cert证书上传</small><input data-id="cert" class="upload" type="file" name="files" accept="*" ></button>
+            <div class='cert'>{$cert}</div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-success progresscert"></div>
+            </div>
+            <button style="margin-bottom:8px;" type='button' class='btn btn-default fileinput-button'><i class="glyphicon glyphicon-file"></i> <small>key证书上传</small><input data-id="key" class="upload" type="file" name="files" accept="*" ></button>
+            <div class='key'>{$key}</div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-success progresskey"></div>
+            </div>
+        </div>
+         <div class='form-group'>
+          <label>TOKEN：</label>
+          <input type='text' class='form-control' name='WXTOKEN' value='<?php echo C('WXTOKEN');?>'>
+        </div>
+   
+        <div class='form-group'>
+          <label>是否启用授权模式：</label>
+        </div>
+        <div class='form-group'>
+          <label class="radio-inline ">
+            <input type="radio"  name="WX_MODEL" id="inlineRadio1" <if condition="C('WX_MODEL') eq 1"> checked </if> value="1"> 是
+          </label>
+          <label class="radio-inline ">
+            <input type="radio" <if condition="C('WX_MODEL') eq 0"> checked </if>  name="WX_MODEL" id="inlineRadio2" value="0"> 否
+          </label>
+        </div>
+         <div class='form-group'>
+          <label>服务方URL：</label><small>授权模式下填写</small>
+          <input type='text' class='form-control' name='WXOPEN_URL' value='<?php echo C('WXOPEN_URL');?>'>
+        </div>
+        <div class='form-group'>
+          <label>备用处理接口地址：</label><small>需与上方TOKEN设置一致</small>
+          <input type='text' class='form-control' name='BAKAPI' value='<?php echo C('BAKAPI');?>'>
+        </div>
+    </div><!-- /.box-body -->
+    <div class="box-footer">
+	    <button type="submit" class="btn btn-success pull-right">确定修改</button>
+	  </div>
+    </form>
+  </div>
+  </script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/vendor/jquery.ui.widget.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/load-image.all.min.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/canvas-to-blob.min.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.iframe-transport.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload-process.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload-image.js"></script>
+<script type="text/javascript">
+ $('.upload').click(function(){
+  var w = $(this).attr('data-id');
+  // 上传图片
+    $(this).fileupload({
+        url: "{:U('Sys/upwxpem')}",
+        dataType: 'JSON',
+        acceptFileTypes: 'jpg,png,gif,jpeg,bmp,pem',
+        maxFileSize: 8000000, // 800kb
+        disableImageResize: /Android(?!.*Chrome)|Opera/.test(window.navigator && navigator.userAgent),
+        imageMaxWidth: 800,
+        // imageMaxHeight: 800,
+        // imageCrop: true,
+        done: function (e, data) {
+          console.log($(this).attr('name'));
+          if(data.result.ret == 1){
+            console.log(data.result);
+              $("."+w).text(data.result[0].name);
+            }else{
+              alert(data.result.msg);
+            }
+        },
+        progressall: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            $('.progress'+w).css(
+                'width',
+                progress + '%'
+            );
+        }
+    }).prop('disabled', !$.support.fileInput)
+        .parent().addClass($.support.fileInput ? undefined : 'disabled');
+});
+</script>
+</block>

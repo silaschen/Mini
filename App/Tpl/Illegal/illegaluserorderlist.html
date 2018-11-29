@@ -1,0 +1,47 @@
+<extend name="Index:base" />
+<block name="main">
+<style type="text/css">
+.glyphicon-gift{color: #999;}
+</style>
+<div id='member-top'>
+	<div style="height:45px">
+		<center>
+			<span style="line-height:45px;margin-left:20px" class="pull-left"><a style="color:#fff" href="{:U('User/index')}">返回</a></span>
+			<span  style="color:#fff;line-height:45px">{$title}</span>
+			<a href="tel:{:C('SITE_TEL')}" style="margin-right:20px;color:#fff;line-height:45px" class='pull-right'>客服</a>
+		</center>
+	</div>
+</div>
+<div class='box1' style='padding:5px'>
+	<table class="table table-bordered">
+		<tr >
+			<td>缴费金额</td><td>申请时间</td><td>状态</td>
+		</tr>
+		<if condition="$list neq ''">
+		<volist name="list" id="vo">
+			<tr onclick="tiaozhuan('{:U('Illegal/illegaluserorder',array('id'=>$vo['id']))}')">
+				<td>{$vo.total}</td>
+				<td>{$vo.addtime|date="y-m-d H:i:s",###}</td>
+				<td>
+					<if condition="$vo.status eq 0"><span class="label label-default">已取消</span></if>
+			 		<if condition="$vo.status eq 1"><span class="label label-danger">待支付</span></if>
+			 		<if condition="$vo.status eq 2"><span class="label label-info">待处理</span></if>
+			 		<if condition="$vo.status eq 3"><span class="label label-success">已完成</span></if>
+				</td>
+			</tr>
+		</volist>
+		<else/>
+			<tr><td colspan='4' align="center">暂时没有相关记录</td></tr>
+	</if>
+	</table>
+	<div>
+		<center><ul class="pagination pagination-sm no-margin">{$page}</ul></center>
+	</div>
+</div>
+<script type="text/javascript">
+// 页面跳转
+	function tiaozhuan(url){
+		location.href = url;
+	}
+</script>
+</block>

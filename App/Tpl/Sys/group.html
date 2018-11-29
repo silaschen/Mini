@@ -1,0 +1,69 @@
+<extend name="Sys:base" />
+<block name="main">
+  <div class="nav-tabs-custom">
+    <ul class="nav nav-tabs pull-right">
+      <li><a href="{:U('Sys/accesslist')}">权限列表</a></li>
+      <li class="active"><a href="{:U('Sys/group')}">管理组</a></li>
+      <li class="pull-left header" style="font-size: 15px;"><i class="fa fa-th"></i> {$title}</li>
+    </ul>
+    <div class="tab-content">
+    <div class="tab-pane active">
+       <table class="table table-bordered">
+        <thead><th>ID</th><th>管理组</th><th>成员</th><th>创建时间</th><th>状态</th><th>操作</th></thead>
+        <tbody>
+      <volist name="list" id='vo'>
+        <tr>
+          <td>{$vo.id}</td>
+          <td>{$vo.title}</td>
+          <td><a href="{:U('Sys/LookPre',array('id'=>$vo['id']))}"class=' label label-success'>{$vo.count}人</a></td>
+          <td>{$vo.addtime|date="Y-m-d H:i:s",###}</td>
+          <td><if condition="$vo.status eq '1'"><span class='badge bg-green'>正常</span><else/><span class='badge bg-red'>禁用</span></if></td>
+          <td>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown">
+                管理
+                <span class="caret"></span>
+                <span class="sr-only">+</span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="{:U('Sys/LookRule',array('id'=>$vo['id']))}">查看组权限</a></li>
+                <li><a href="{:U('Sys/GroupAdd',array('id'=>$vo['id']))}">修改组权限</a></li>
+                <if condition="$vo.status eq '1'">
+                <li><a href="javascript:setstat({$vo.id},0);">禁用</a></li>
+                <else/>
+                <li><a href="javascript:setstat({$vo.id},1);">启用</a></li>
+                </if>
+                <li class="divider"></li>
+                <li><a href="javascript:setstat({$vo.id},-1);">删除</a></li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+      </volist>
+        </tbody>
+      </table>
+    </div><!-- /.tab-pane -->
+    <div class="clearfix">
+      <a href="{:U('Sys/GroupAdd')}" class="btn btn-success pull-left">创建管理组</a>
+      <ul class="pagination pagination-sm no-margin pull-right">{$page}</ul>
+    </div>
+    </div><!-- /.tab-content -->
+</div>
+<script type="text/javascript">
+function setstat(id,t){
+  if(t == -1){
+    var r = confirm("确定删除该组？");
+  }else if(t == 1){
+    var r = confirm("确定启用该组？");
+  }else if(t == 0){
+    var r = confirm("确定禁用该组？");
+  }
+  if(r == true){
+    $.post(location.href,{"id":id,"t":t},function(data){
+      alert(data.msg);
+      if(data.ret == 1) location.reload();
+    },'JSON');
+  }
+}
+</script>
+</block>

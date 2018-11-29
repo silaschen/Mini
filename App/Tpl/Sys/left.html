@@ -1,0 +1,79 @@
+<aside class="main-sidebar">
+  <section class="sidebar">
+    <ul class="sidebar-menu">
+      <li><a href="{:U('Sys/index')}"><i class="fa fa-bar-chart"></i> <span>管理概况</span></a></li>
+
+
+    <li class="treeview">
+      <a href="#"><i class="fa fa-clone"></i> <span>会员管理</span><i class="fa fa-angle-left pull-right"></i></a>
+      <ul class="treeview-menu">
+          <li><a href="{:U('User/userlist')}">会员列表</a></li>
+
+        </ul>
+      </li>
+
+      <li class="treeview">
+      <a href="#"><i class="fa fa-clone"></i> <span>订单管理</span><i class="fa fa-angle-left pull-right"></i></a>
+      <ul class="treeview-menu">
+          <li><a href="{:U('Drive/orderlist')}">驾驶证代办</a></li>
+          <li><a href="{:U('Travel/orderlist')}">行驶证代办</a></li>
+          <li><a href="{:U('Inspect/orderlist')}">委托书订单</a></li>
+          <li><a href="{:U('RePlate/orderlist')}">补办车牌照</a></li>
+          <li><a href="{:U('Exempt/orderlist')}">免检标领取</a></li>
+          <li><a href="{:U('Green/orderlist')}">环保标办理</a></li>
+          <li><a href="{:U('Check/orderlist')}">代驾审车办理</a></li>
+        </ul>
+      </li>
+
+       <li><a href="{:U('Dbsc/orderlist')}"><i class="fa fa-automobile "></i> <span>代办审车</span></a></li>
+
+        <li><a href="{:U('Serve/userlist')}"><i class="fa fa-automobile "></i> <span>车务助理</span></a></li>
+       <li class="treeview">
+      <a href="#"><i class="fa fa-automobile"></i> <span>违章服务</span><i class="fa fa-angle-left pull-right"></i></a>
+      <ul class="treeview-menu">
+          <li><a href="{:U('Illegal/illegalorder')}">违章代缴</a></li>
+          <li><a href="{:U('Illegal-illegallist')}">车辆列表</a></li>
+        </ul>
+      </li>
+<!-- <li class="treeview hide">
+      <a href="#"><i class="fa fa-clone"></i> <span>文章管理</span><i class="fa fa-angle-left pull-right"></i></a>
+      <ul class="treeview-menu">
+          <li><a href="{:U('Sys/artlist')}">文章列表</a></li>
+          <li><a href="{:U('Sys/artcategory')}">分类管理</a></li>
+        </ul>
+  </li> -->
+
+
+      <li class="treeview">
+        <a href="#"><i class="fa fa-cog"></i> <span>系统设置</span> <i class="fa fa-angle-left pull-right"></i></a>
+        <ul class="treeview-menu">
+        <li><a href="{:U('Sys/EditPrice')}">价格设置</a></li>
+          <li><a href="{:U('Mate/text')}">微信素材</a></li>
+          <li><a href="{:U('Cmd/text')}">回复规则</a></li>
+          <li><a href="{:U('ModMenu/edit')}">微信菜单</a></li>
+          <li><a href="{:U('Sys/site')}">站点设置</a></li>
+          <li><a href="{:U('Sys/advs')}">轮播广告</a></li>
+          <li><a href="{:U('Sys/vendor')}">微信配置</a></li>
+          <li><a href="{:U('Sys/group')}">权限控制</a></li>
+          <li><a href="{:U('Sys/admin')}">系统管理员</a></li>
+        </ul>
+      </li>
+    </ul><!-- /.sidebar-menu -->
+  </section>
+  <!-- /.sidebar -->
+</aside>
+<if condition="$eq egt '0' OR $eq neq ''">
+<script type="text/javascript">
+if(!isNaN('{$eq}')){
+  $(".sidebar-menu > li").eq({$eq}).addClass('active');
+}else{
+  $(".sidebar-menu > li").each(function(){
+    var txt = $.trim($(this).children('a').text());
+    if(txt == '{$eq}'){
+      $(this).addClass('active');
+      return;
+    }
+  });
+}
+</script>
+</if>

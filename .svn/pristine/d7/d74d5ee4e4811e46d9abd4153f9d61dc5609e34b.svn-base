@@ -1,0 +1,80 @@
+<view class="guide">
+<image mode="widthFix" src="../../res/guide.jpg"></image>
+</view>
+<form report-submit="true" id="form" class="box" bindsubmit="SubmitData">
+    <view class="form-group">
+        <label class="addon">豫A</label>
+        <input maxlength="5" type="text" name='cphm' class="upper" placeholder="车牌号码" confirm-type='next' />
+    </view>
+    <view class="tinyline"></view>
+    <view class="form-group">
+        <label class="addon">车主</label>
+        <input type="text" name='name' placeholder="姓名" confirm-type='next' />
+    </view>
+    <view class="tinyline"></view>
+    <view class="form-group">
+        <label class="addon">手机</label>
+        <input type="number" name='tel' placeholder="联系手机号码" confirm-type='next' />
+    </view>
+    <view class="tinyline"></view>
+    <view class="form-group">
+        <label class="addon">省份</label>
+        <picker bindchange="SetArea" data-id="1" value="{{A1}}" range="{{Province}}" range-key="name">
+            <view class="picker">
+            {{Province[A1].name}}
+            </view>
+        </picker>
+    </view>
+    <view class="form-group">
+        <label class="addon">城市</label>
+        <picker bindchange="SetArea" data-id="2" value="{{A2}}" range="{{City}}" range-key="name">
+            <view class="picker">
+            {{City[A2].name}}
+            </view>
+        </picker>
+    </view>
+    <view class="form-group">
+        <label class="addon">区县</label>
+        <picker bindchange="SetArea" data-id="3" value="{{A3}}" range="{{Area}}" range-key="name">
+            <view class="picker">
+            {{Area[A3].name}}
+            </view>
+        </picker>
+    </view>
+    <view class="form-group">
+        <label class="addon">地址</label>
+        <input type="text" name='adr' placeholder="详细收件地址" confirm-type='done' />
+    </view>
+    <!-- <view class="tinyline"></view> -->
+    <!--添加身份证  -->
+    <view class="addimg">
+      <view class="title clear">
+        <text class="pull-left">上传身份证正反面</text>
+        <text class="pull-right fontcolor">示例图片</text>
+      </view>
+      <view class="sfz com"> 
+        <block wx:for="{{sfz}}">
+          <view class="sfzpic">
+            <image src="{{item}}" id="{{index}}" bindtap="PreviewImg"></image>
+            <text data-id="{{index}}" bindtap="DelSfz">删除</text>
+          </view>
+        </block>
+        <view class="addicon" bindtap="ChooseSfz">
+          <image src="../../res/add.png"></image>
+        </view>
+      </view>
+    </view>
+    <!--提交订单底脚  -->
+    <view class="pay">
+      <view class="money">￥ <text>200</text></view>
+      <button type="primary" form-type="submit">确认提交</button>
+    </view>
+    
+</form>
+<!-- <view class="address" bindtap="CallUs">
+    <text>审车收件地址:</text>
+    <text>郑州市二七区候寨乡麦秸垛沟村郑州浩磊车友俱乐部</text>
+    <text>小磊收  电话:0371-68901001 18318555555</text>
+</view> -->
+
+<include src="../footer.wxml"/>

@@ -1,0 +1,261 @@
+<extend name="Index:base" />
+<block name="style">
+<link href="Public/res/insurance/weui/weui.css" rel="stylesheet">
+<style type="text/css">
+.item{background: #fff;overflow: hidden;width: 100%;margin: 0 0 15px 0;padding:10px;position: relative;}
+.item b{font-size: 18px;display: block;clear: both;overflow: hidden;margin-bottom: 5px;margin-top: 5px;}
+.item p{line-height: 23px;margin: 0;color: #999;}
+.item p span{color: #ff6600;width: 14%;overflow: hidden;height: 23px;display: inline-block; line-height: 36px;}
+.item .wz{position: absolute;display: block;right: 10px;top:8px;line-height: 15px;height: 60px;width: 60px;border-radius: 50%;border:1px solid green;text-align: center;color: #FFF;background: #5cb85c;}
+.item .wz b{color: #fff;font-size: 18px;line-height: 25px;}
+.item .edit{position: absolute;display: block;top: 0;bottom: 0;width: 120px;overflow: hidden;right: -120px;z-index: 99;}
+.item .edit a{display: block;float: left;color: #fff;height: 100%;width: 60px;display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;}
+.item .edit .e{background: #4676cc;}
+.item .edit .s{background: #1AAD19;}
+.item .edit .d{background: #D3655B;}
+#selecter{padding: 0}
+#selecter select{padding: 5px 11px;border-bottom: 0;background: #fff url('Public/res/select.png') no-repeat right;color: #1AAD19;padding-right: 10px; height: 30px;background-size: 12px;}
+</style>
+</block>
+<block name="main">
+<div class='container'>
+	<volist name="list" id="vo">
+		<div class='item' id='car{$vo.id}'>
+	        <b onclick="location.href='{:U('Illegal/reslist',array('id'=>$vo['id']))}';">{$vo.hpzm}{$vo.hphm}</b>
+	        <p onclick="location.href='{:U('Illegal/reslist',array('id'=>$vo['id']))}';">扣分:<span style='width:35px !important;'><if condition="$vo.kf eq ''">0<else/>{$vo.kf}</if></span>罚款:<span><if condition="$vo.fk eq ''">0<else/>{$vo.fk}</if></span>年检:{:trim(str_replace(' 00:00:00','',$vo['yxqz']),'.')}</p>
+	        <a href="{:U('Illegal/reslist',array('id'=>$vo['id']))}" class='wz'><b><if condition="$vo.wz eq ''">0<else/>{$vo.wz}</if></b>违章</a>
+	        <div class='edit'>
+	        	<if condition="$vo.remind eq '1'">
+	        		<a href="javascript:SetCar({$vo.id},1);" class='e'>取消提醒</a>
+	        	<else/>
+	        		<a href="javascript:SetCar({$vo.id},2);" class='s'>开启提醒</a>
+	        	</if>
+	            <a href="javascript:SetCar({$vo.id},0);" class='d'>删除</a>
+	        </div>
+	    </div>
+    </volist>
+    <div class='form-group' style='padding:5px;'>
+    <a href="#" data-toggle="modal" data-target="#addcar" class='btn btn-block btn-default btn-lg'>添加车辆</a>
+     <a href="javascript:reload()"  style="margin-top:10px" class='btn btn-block btn-default btn-lg'>刷新</a>
+    </div>
+    <center><ul class="pagination pagination-sm">{$page}</ul></center>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" id="addcar">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <b>添加车辆</b>
+      </div>
+      <div class="modal-body">
+      <form method="POST" id='form' action="{:U('Illegal/reslist')}" style="overflow: hidden;">
+        <div class='form-group'>
+            <div class="input-group">
+            <div class="input-group-addon" id='selecter'>
+                <select id='province' name="province" style="padding-right:15px;"></select>  <select style="padding-right: 20px;margin-right: 10px;" id='cpzm' name="cpzm" ></select>
+            </div>
+            <input type='url' class='form-control' style="text-transform: uppercase;" maxlength='5' name='cphm' placeholder="5位车牌号码" value="">
+            </div>
+        </div>
+        <div class='form-group'>
+            <div class="input-group">
+            <div class="input-group-addon">车辆类型</div>
+            <select class='form-control' name='type'>
+                <option value='02'>小车</option>
+                <option value='01'>大车</option>
+            </select>
+            </div>
+        </div>
+        <div class='form-group'>
+            <div class="input-group">
+                <div class="input-group-addon">
+                    识别代号
+                </div>
+                <input type='url' class='form-control' style="text-transform: uppercase;"  name='clsbdh' placeholder="车辆识别代号后6位" value="" maxlength="6">
+                <a href="#" data-toggle="modal" data-target=".example1" class="input-group-addon"><i class='glyphicon glyphicon-question-sign'></i></a>
+            </div>
+        </div>
+        <div class='form-group'  id="zcdate">
+            <div class="input-group">
+                <div class="input-group-addon">
+                    注册日期
+                </div>
+                <input type="date" name="appDate" id="appDate" class='form-control'>
+            </div>
+        </div>
+        <input type='hidden' name='remind' value='1'>
+        <input type='hidden' name='save' value='1'>
+    </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">取消</button>
+        <a href="javascript:Illegal()" class="btn btn-primary">保存</a>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<!-- 示例 -->
+<div class="modal fade example1" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+     <center><img src='Public/res/illegal/se12557269.jpg'></center>
+     <button type="button" class="btn btn-default btn-lg btn-block" data-dismiss="modal">关闭</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade example2" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+     <center><img src='Public/res/illegal/se12557266.jpg'></center>
+     <button type="button" class="btn btn-default btn-lg btn-block" data-dismiss="modal">关闭</button>
+    </div>
+  </div>
+  <div id="loading" style='display:none;'><div class="lllcontent"><div class="loader-inner ball-clip-rotate"><div></div></div><p>加载中..</p></div></div>
+  <input type="hidden" value="{$isvip}" name="isvip">
+</div>
+<block name="nav">
+<nav id='navbar'>
+	<a href="{:U('Illegal/index')}" class='back'> 返回</a>
+	<a href="javascript:ShowEdit();" data-switch='0' id='edit' class='next'>编辑车辆</a>
+</nav>
+</block>
+<block name="js">
+<script type="text/javascript">
+
+// 检查设置
+function CheckSet(){
+    if(IptVal('save') == 0){
+        IptVal('remind',0);
+        $("#remind").hide();
+        $("#remind").bootstrapSwitch('setState',false);
+    }else{
+        $("#remind").show();
+    }
+}
+function ShowEdit(){
+	var i = $('#edit').attr('data-switch');
+    if(i == 0){
+        $('#edit').attr('data-switch',1);
+        $(".edit").animate({"right":0},300);
+        $("#edit").html('取消编辑');
+    }else{
+        $('#edit').attr('data-switch',0);
+        $(".edit").animate({"right":'-120px'},300);
+        $("#edit").html('编辑车辆');
+    }
+}
+
+function SetCar(id,t){
+    if(t == 0){
+        var r = confirm('注意','确定删除车辆信息？',function(){
+       loading(1);
+        $.post(location.href,{"id":id,"t":t},function(data){
+            loading(0);
+            if(data.ret == 1){
+                if(t == 0){
+                    $("#car"+id).fadeOut('slow');
+                }else{
+                    location.reload();
+                }
+            }else{
+                alert(data.msg);
+            }
+        },'JSON');
+     });
+    }
+    if(t == 1){
+          $.post(location.href,{"id":id,"t":t},function(data){
+            loading(0);
+                alert(data.msg);
+            if(data.ret ==1){
+                location.reload();
+            }
+          },'JSON');
+    }
+      if(t == 2){
+          $.post(location.href,{"id":id,"t":t},function(data){
+            loading(0);
+                alert(data.msg);
+            if(data.ret ==1){
+                location.reload();
+            }
+          },'JSON');
+    }
+    
+        
+}
+
+$(function(){
+    $(".wz").click(function(){
+        loading(1);
+    });
+});
+
+function Illegal(){
+    var isvip = IptVal('isvip');
+    if(isvip < 1){
+        alert('请加入会员后绑定车辆');
+    }else if(IptVal('cphm') == ''){
+        alert('请输入车牌号！');
+    }else if(IptVal('clsbdh') == ''){
+        alert('请输入车辆识别代号！');
+    }else{
+        if(IptVal('save') == 1){
+         $.post("{:U('Illegal/reslist')}",$('#form').serialize(),function(data){ 
+            if(data.ret == 1){
+                location.href = data.msg;
+            }
+            if(data.ret == 0){
+                alert(data.msg);
+            }
+         },'JSON')
+        }else{
+             $("#form").submit();
+            }
+        }
+    }
+
+var province = ['豫','鲁','京','陕','晋','浙','沪','川','粤','津','渝','鄂','赣','冀','蒙','苏','辽','吉','皖','湘','黑','琼','贵','桂','云','藏','甘','宁','青','闽','新'];
+var cpzm = ['E','A','B','C','D','F','G','H','J','K','L','M','N','O','P','Q','R','S','T','U','W','X','Y','Z'];
+$(function(){
+    $(province).each(function(){
+        $("#province").append("<option value='"+this+"'>"+this+"</option>");
+    });
+    $(cpzm).each(function(){
+        $("#cpzm").append("<option value='"+this+"'>"+this+"</option>");
+    });
+
+    window.confirm = function (title,msg, callBack){
+    if(title == undefined) title = '';
+    if(msg == undefined) msg = '';
+    $("body").append('<div id="dialog1" style="opacity: 1;"><div class="weui-mask"></div><div class="weui-dialog"><div class="weui-dialog__hd"><strong class="weui-dialog__title">'+title+'</strong></div><div class="weui-dialog__bd">'+msg+'</div><div class="weui-dialog__ft"><a href="javascript:$(\\\'#dialog1\\\').remove();" class="weui-dialog__btn weui-dialog__btn_default">取消</a><a href="javascript:;" id="JScallBack" class="weui-dialog__btn weui-dialog__btn_primary">继续</a></div></div></div>');
+    $("#JScallBack").on('click',function(){
+        $("#dialog1").remove();
+        callBack();
+    });
+}
+});
+
+function reload(){
+    loading(1,'正在刷新');
+    setTimeout(function(){
+         location.reload();
+    },2000);
+}
+
+</script>
+</block>

@@ -1,0 +1,94 @@
+<!-- eventmodify -->
+<div class="modal fade" id="eventmodify" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <b>修改事件规则</b>
+      </div>
+      <div class="modal-body mtext">
+
+        <div class='tip_b'></div>
+        <div class="col-xs-4">
+<select class='form-control' name='event'>
+  <option value='1'>当用户关注时回复</option>
+  <option value='2'>当用户点击菜单时回复</option>
+  <option value='0'>当无法匹配命令时</option>
+</select>
+</div>
+<div class="col-xs-3">
+  <select class='form-control' style='display:none;' name='click' onchange="putkey();">
+    <option value=''>--自定义</option>
+    {:W('ShowMenu')}
+  </select>
+</div>
+<div class="col-xs-3">
+<input class='form-control' name='eventkey' id="eventkey" style='display:none;' placeholder="输入对应的菜单按钮值..." />
+</div>
+      </div>
+      <br>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" onclick='saveeventcmd();'>确定</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /.eventmodify -->
+<script type="text/javascript">
+var editid = '';
+function eventmodify(id){
+  callme(url[28],1,"id="+id+"&type=3",function(data){
+    if(data){
+      editid = id;
+      if(data.event == 'subscribe'){
+        $("select[name='event']").val(1);
+         $("input[name='eventkey']").val('').hide();
+        $("select[name='click']").hide(); //显示
+      }else if(data.event == 'CLICK'){
+        $("select[name='event']").val(2);
+        $("input[name='eventkey']").val(data.value).show();
+        $("select[name='click']").show(); //显示
+      }
+
+      $("#eventmodify").modal('show');
+    }
+  })
+}
+$("select[name='event']").change(function(){
+    var i = $(this).val();
+    if(i == 1){
+      $("#eventkey").val('').hide();
+      $("select[name='click']").hide();
+    }else if(i == 2){
+      $("#eventkey").show();
+      $("select[name='click']").val('');
+      $("select[name='click']").show();
+    }
+})
+function putkey(){
+  var i = sr('click');
+  $("input[name='eventkey']").val(i);
+}
+function saveeventcmd(){
+  if(editid != ''){
+    var e = sr('event');
+    var v = vr('eventkey');
+    if((e == 2) && (v == '')){
+      alert("请填写菜单按钮的值!");
+    }else{
+      if(e == 1){
+        var et = 'subscribe'; //订阅
+      }else if(e == 2){
+        var et = 'CLICK'; //点击
+      }
+      callme(url[29],2,"id="+editid+"&type=3&cmd="+et+"|||||"+v,function(data){
+        if(data.ret == 1){
+          location.reload();
+        }else{
+          alert(lang[data.msg]);
+        }
+      })
+    }
+  }
+}
+</script>

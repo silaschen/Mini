@@ -1,0 +1,176 @@
+<extend name="Sys:base" />
+<block name="head">
+<include file="Sys:head" />
+</block>
+<block name="left">
+<include file="Sys:left" />
+</block>
+<block name="main">
+<include file="Mate:js" />
+ <div class="box box-solid">
+    <div class="box-header with-border">
+      <span class="box-title" style="font-size: 15px;"><i class="fa fa-th"></i> {$title}</span> 
+    </div><!-- /.box-header -->
+    <div class="box-body">
+    	<div class='col-md-5 editarea'>
+			<table class="table">
+				<tbody>
+					<volist name='list' id='vo'>
+						<tr><td>{$vo.name}</td><td align="right">
+							<if condition="$vo.type eq 'SON' AND count($vo['son']) lt '5'">
+							<a href="javascript:srcson({$vo.id});" class='tips' data-toggle="tooltip" data-placement="top" title="创建子菜单"><i class='glyphicon glyphicon-plus'></i></a>
+							&nbsp;&nbsp;
+							</if>
+							<a href="javascript:delmenu({$vo.id});" class='tips' data-toggle="tooltip" data-placement="top" title="删除"><i class='glyphicon glyphicon-remove'></i></a>
+							&nbsp;&nbsp;
+							<a href="javascript:modify({$vo.id},{$vo.pid},'{$vo.type}','{$vo.name}','{$vo.value}');" class='tips' data-toggle="tooltip" data-placement="top" title="编辑"><i class='glyphicon glyphicon-pencil'></i></a>
+						</td></tr>
+					<if condition="$vo.son neq ''">
+						<volist name="vo['son']" id='sn'>
+						<tr><td>╚ {$sn.name}</td><td align="right">
+							<a href="javascript:delmenu({$sn.id});" class='tips' data-toggle="tooltip" data-placement="top" title="删除"><i class='glyphicon glyphicon-remove'></i></a>
+							&nbsp;&nbsp;
+							<a href="javascript:modify({$sn.id},{$sn.pid},'{$sn.type}','{$sn.name}','{$sn.value}');" class='tips' data-toggle="tooltip" data-placement="top" title="编辑"><i class='glyphicon glyphicon-pencil'></i></a></td></tr>
+						</volist>
+					</if>
+					</volist>
+				</tbody>
+			</table>
+		</div>
+		<div class='col-md-7'>
+			<div class='form-group'>
+				<label>按钮名称</label>
+				<input type='text' class='form-control' name='name' placeholder="建议6个汉字以内">
+			</div>
+			<div class='form-group'>
+				<label>按钮类型</label>
+				<select class='form-control' name='type'><option value='1'>链接</option><option value='2'>事件</option><option value='0'>打开子菜单</option></select>
+			</div>
+			<div class='form-group'>
+				<label>链接/事件值</label>
+				<input type='text' class='form-control' name='val' placeholder="链接请以http://开头">
+			</div>
+			<div class='form-group'>
+				<label>上级菜单</label>
+				<select class='form-control' name='pid'><option value='0'>-</option>
+					<volist name='par' id='pa'>
+						<option value='{$pa.id}'>{$pa.name}</option>
+					</volist>
+				</select>
+			</div>
+			<div class='form-group'>
+				<center>
+					<input class='hide' name='id' value=''>
+					<button class='btn btn-success submit' onclick="save();">确定</button>&nbsp;&nbsp;
+					<button class='btn btn-danger cancal' onclick="caled();" style="display:none;">放弃修改</button>
+				</center>
+			</div>
+		</div>
+		<!-- EDIT END -->
+    </div>
+    <div class='box-footer'>
+    	<button type="button" class="btn btn-info pull-right syncmenu">同步生成</button>
+    </div>
+ </div>
+
+<script type="text/javascript">
+function modify(id,pid,type,name,value){
+	$("input[name='id']").val(id);
+	$("input[name='name']").val(name);
+	$("input[name='val']").val(value);
+	$("select[name='pid']").val(pid);
+	if(type == 'SON'){
+		$("select[name='type']").val(0);
+	}else if(type == 'VIEW'){
+		$("select[name='type']").val(1);
+	}else{
+		$("select[name='type']").val(2);
+	}
+	$(".cancal").show();
+}
+
+function caled(){
+	$("input[name='id']").val('');
+	$("input[name='name']").val('');
+	$("input[name='val']").val('');
+	$("select[name='pid']").val(0);
+	$("select[name='type']").val(1);
+	$(".cancal").hide();
+}
+// 添加子菜单
+function srcson(id){
+	caled();
+	$("select[name='pid']").val(id);
+	alert('请在右侧输入按钮信息并确定保存!');
+}
+
+// 删除
+function delmenu(id){
+	var r = confirm("确定删除此菜单按钮？");
+	if(r == true){
+		$.post("{:U('ModMenu/remove')}",{"id":id},function(data){
+			alert(data.msg);
+			if(data.ret == 1) window.location.reload();
+		},'JSON')
+	}
+}
+function save(){
+	var name = vr('name');
+	var type = sr('type');
+	var val = vr('val');
+	var pid = sr('pid');
+	var id = vr('id');
+	if(name == ''){
+		alert('请填写按钮名称!');
+	}else if(val == ''){
+		if(type == 1){
+			alert('请填写链接网址!');
+		}else{
+			alert('请填写事件值!');
+		}
+	}else if(pid > 0 && type == 0){
+		alert('请先将上级菜单设为空！');
+	}else{
+		$(".submit").addClass('disabled');
+		$.post("{:U('ModMenu/save')}",{"id":id,"type":type,"val":val,"pid":pid,"name":name},function(data){
+			alert(data.msg);
+			if(data.ret == 1) window.location.reload();
+			$(".submit").removeClass('disabled');
+		},'json');
+	}
+}
+$(function(){
+	<if condition="$eq neq ''">
+	$(".leftnav").find('a').each(function(i){
+		if($(this).html() == '{$eq}'){
+			$(".leftnav").children('a').eq(i).addClass('active');
+		}else{
+			$(".leftnav").children('a').eq(i).removeClass('active');
+		}
+	});
+	</if>
+	$(".syncmenu").click(function(){
+		$(this).removeClass('btn-info').addClass('btn-default');
+		syncmenu();
+	})
+	$(".tips").tooltip();
+})
+
+function syncmenu(){
+	var r = confirm("现有的会话菜单将被删除，并重新生成，请重新关注帐号或24小时后查看效果! 确定开始同步？");
+	if(r == true){
+		$.ajax({
+		   type: "GET",
+		   url: "{:U('ModMenu/syncmenu')}",
+		   async:false,
+		   dataType:"JSON",
+		   success: function(data){
+		     alert(data.errmsg);
+		   }
+		});
+	}
+	$(".syncmenu").removeClass('btn-default').addClass('btn-info').html('开始同步');
+}
+
+</script>
+</block>

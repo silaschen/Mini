@@ -1,0 +1,105 @@
+<extend name="base" />
+<block name="main">
+  <link rel="stylesheet" href="Public/com/jQuery-File-Upload-9.9.3/css/jquery.fileupload.css">
+  <style type="text/css">
+  .showlogo img{max-height: 120px;}
+  </style>
+  <div class="box box-danger">
+    <div class="box-header with-border">
+      <h3 class="box-title">站点设置</h3>
+    </div><!-- /.box-header -->
+    <div class="box-body">
+      <form role="form" id='form' action="{:U('Sys/site')}" method="POST">
+         <div class="form-group">
+          <label>站点名称</label>
+          <input type="text" name='SITE_NAME' class="form-control" placeholder="" value="{:C('SITE_NAME')}">
+        </div>
+        <div class="form-group">
+          <label>站点LOGO</label><a href="javascript:$('#logopic').val('');$('.logopic').html('');" onclick="return confirm('确定清除LOGO？');" class='pull-right'>清除</a><br>
+          <button style="margin-bottom:8px;" type='button' class='btn btn-default fileinput-button'><i class="glyphicon glyphicon-picture"></i> <small>点击上传</small><input data-id="logopic" class="upload" type="file" name="files" accept="image/*" ></button>
+            <div class="progress">
+                <div class="progress-bar progress-bar-success progresslogopic"></div>
+            </div>
+            <div id="files" class="files"></div>
+            <div class='logopic'><?php if(C('SITE_LOGO') != '') echo "<img width='100px' src='".C('SITE_LOGO')."'>";?></div>
+            <input class='hide' name="SITE_LOGO" id='logopic' value="{:C('SITE_LOGO')}">
+        </div>
+        <div class="form-group">
+          <label>微信二维码</label><a href="javascript:$('#qrpic').val('');$('.qrpic').html('');" onclick="return confirm('确定清除二维码？');" class='pull-right'>清除</a><br>
+          <button style="margin-bottom:8px;" type='button' class='btn btn-default fileinput-button'><i class="glyphicon glyphicon-picture"></i> <small>点击上传</small><input data-id='qrpic' class="upload" type="file" name="files" accept="image/*" ></button>
+            <div  class="progress">
+                <div class="progress-bar progress-bar-success progressqrpic"></div>
+            </div>
+            <div id="files" class="files"></div>
+            <div class='qrpic'><?php if(C('SITE_QRPIC') != '') echo "<img width='100px' src='".C('SITE_QRPIC')."'>";?></div>
+            <input class='hide' name="SITE_QRPIC" id='qrpic' value="{:C('SITE_QRPIC')}">
+        </div>
+        <div class="form-group">
+          <label>客服电话</label>
+          <input type="text" name='SITE_TEL' class="form-control" placeholder="" value="{:C('SITE_TEL')}">
+        </div>
+        <div class="form-group">
+          <label>联系地址</label>
+          <input type="address" name='SITE_ADR' class="form-control" placeholder="" value="{:C('SITE_ADR')}">
+        </div>
+        <div class="form-group">
+          <label>管理员邮箱</label>
+          <input type="email" name='SITE_EMAIL' class="form-control" placeholder="" value="{:C('SITE_EMAIL')}">
+        </div>
+     
+      </form>
+    </div><!-- /.box-body -->
+    <div class="box-footer">
+      <button type="button" onclick="savechange();" class="btn btn-success pull-right">确定修改</button>
+    </div>
+  </div>
+<script type="text/javascript">
+function savechange(){
+  if(vr('SITE_NAME') == ''){
+    alert('请填写站点名称!');
+  }else{
+    $("#form").submit();
+  }
+}
+</script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/vendor/jquery.ui.widget.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/load-image.all.min.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/canvas-to-blob.min.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.iframe-transport.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload-process.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload-image.js"></script>
+<script type="text/javascript">
+ $('.upload').click(function(){
+  var w = $(this).attr('data-id');
+  // 上传图片
+    $(this).fileupload({
+        url: "{:U('Common/loadimg')}",
+        dataType: 'JSON',
+        acceptFileTypes: 'jpg,png,gif,jpeg,bmp',
+      maxFileSize: 8000000, // 800kb
+      disableImageResize: /Android(?!.*Chrome)|Opera/.test(window.navigator && navigator.userAgent),
+        imageMaxWidth: 800,
+        // imageMaxHeight: 800,
+        // imageCrop: true,
+        done: function (e, data) {
+          console.log($(this).attr('name'));
+          if(data.result.ret == 1){
+              $("#"+w).val(data.result.file);
+              $("."+w).html("<img width='100px' src='"+data.result.file+"'>");
+            }else{
+              alert(data.result.msg);
+            }
+        },
+        progressall: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            $('.progress'+w).css(
+                'width',
+                progress + '%'
+            );
+        }
+    }).prop('disabled', !$.support.fileInput)
+        .parent().addClass($.support.fileInput ? undefined : 'disabled');
+});
+</script>
+</block>

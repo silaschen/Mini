@@ -1,0 +1,278 @@
+<!-- 可将本段html js 复制到项目模版页面 根据实际情况进行调整 -->
+<script src="Public/com/xsort/app.js"></script>
+<link rel="stylesheet" href="Public/com/xsort/app.css">
+<style type="text/css">
+.screening{top: 45px;}
+.Sort-Sort{padding: 10px 5px !important;}
+.Sort-Sort table{margin-bottom: 15px;}
+.Sort-Sort table tr td{line-height: 45px;}
+</style>
+<!-- screening -->
+<div class="screening">
+    <ul>
+        <li class="Regional">地区 <i class='glyphicon glyphicon-menu-down'></i></li>
+        <li class="Brand">分类 <i class='glyphicon glyphicon-menu-down'></i></li>
+        <li class="Sort">筛选 <i class='glyphicon glyphicon-menu-down'></i></li>
+    </ul>
+</div>
+
+<!-- End screening -->
+<!-- grade -->
+<div class="grade-eject">
+    <ul class="grade-w" id="gradew">
+    </ul>
+    <ul class="grade-t" id="gradet">
+    </ul>
+    <ul class="grade-s" id="grades">
+    </ul>
+</div>
+<!-- End grade -->
+
+<!-- Category -->
+<div class="Category-eject">
+    <ul class="Category-w" id="Categorytw">
+    </ul>
+    <ul class="Category-t" id="Categoryt">
+    </ul>
+    <!-- <ul class="Category-s" id="Categorys"></ul> -->
+</div>
+
+<!-- End Category -->
+<!-- Category -->
+<div class="Sort-eject Sort-height">
+    <ul class="Sort-Sort" id="Sort-Sort">
+        <form method="GET" id='sform' action="{:U('Index/plist')}">
+        <input type="text" name='a1' class="hide" value="{:I('a1')}">
+        <input type="text" name='a2' class="hide" value="{:I('a2')}">
+        <input type="text" name='a3' class="hide" value="{:I('a3')}">
+        <input type="text" name='c1' class="hide" value="{:I('c1')}">
+        <input type="text" name='c2' class="hide" value="{:I('c2')}">
+    
+        <table class='table table-bordered'>
+            <tbody>
+                <tr><td width='90'>关键词:</td><td colspan="2"><input id='keyword' class='form-control' name='word' value="{:I('word')}" placeholder='商品名称关键词'></td></tr>
+                <tr><td>排序方式:</td><td colspan="2"><select class='form-control' name='px'><option value='1'>默认排序</option><option value='2'>价格最低</option><option value='3'>价格最高</option><option value='4'>最新发布</option><option value='5'>销量最高</option><!-- <option value='6'>销量最低</option> --></select></td></tr>
+                <tr><td>价格区间:</td><td><input id='keyword' type='number' placeholder='起始金额' class='form-control' name='bp' value="{:I('bp')}"></td><td><input id='keyword' placeholder='结束金额' type='number' class='form-control' name='ep' value="{:I('ep')}"></td></tr>
+            </tbody>
+        </table>
+        <a class='btn btn-default pull-left btn-lg' onclick="loading(1);" href="{:U('Index/plist')}">清空重置</a>
+        <button class='btn btn-success pull-right btn-lg' onclick="loading(1);$('#sform').submit();"><i class='icon iconfont'>&#xe63f;</i> 确认筛选</button>
+        <!-- <li onclick="fill('px','',1)">默认排序</li>
+        <li onclick="fill('px',1,1)">最新入驻</li>
+        <li onclick="fill('px',3,1)">最早入驻</li>
+        <li onclick="fill('px',2,1)">人气最高</li> -->
+        </form>
+    </ul>
+</div>
+<!-- End Category -->
+<script type="text/javascript">
+var cate = {$cate};
+var area = {$area};
+// 填充搜索参数
+function fill(w,v,s){
+    $("input[name='"+w+"']").val(v);
+    if(s == 1){
+        loading(1);
+        $("#sform").submit();
+    }
+}
+
+// 选择地区
+function areadata(pid,t){
+    var data = area;
+    var str = '';
+    if(t == '#gradew'){
+        
+    }else if(t == '#gradet'){
+        fill('a1',pid,0);
+    }else if(t == '#grades'){
+        fill('a2',pid,0);
+    }
+    for (var i = 0; i < data.length; i++) {
+        if(i == 0){
+            // 不限
+            if(t == '#gradew'){
+                str += "<li onclick=\"fill('a1',0,0);fill('a2',0,0);fill('a3',0,1);\">全部地区</li>";
+            }else if(t == '#gradet'){
+                str += "<li onclick=\"fill('a1',"+pid+",0);fill('a2',0,0);fill('a3',0,1);\">不限</li>";
+            }else if(t == '#grades'){
+                str += "<li onclick=\"fill('a2',"+pid+",0);fill('a3',0,1);\">不限</li>";
+            }
+        }
+        if(data[i].pid == pid){
+            
+            if(t == '#gradew'){
+                str += "<li data-id='"+data[i].id+"' onclick=\"areadata("+data[i].id+",'#gradet')\">"+data[i].name+"</li>";
+            }else if(t == '#gradet'){
+                if(data[i].son > 0){
+                    str += "<li data-id='"+data[i].id+"' onclick=\"areadata("+data[i].id+",'#grades')\">"+data[i].name+"</li>";
+                }else{
+                    str += "<li data-id='"+data[i].id+"' onclick=\"fill('a1',"+data[i].pid+",0);fill('a2',"+data[i].id+",0);fill('a3',0,1);\">"+data[i].name+"</li>";
+                }
+            }else if(t == '#grades'){
+                str += "<li data-id='"+data[i].id+"' onclick=\"fill('a2',"+data[i].pid+",0);fill('a3',"+data[i].id+",1);\">"+data[i].name+"</li>";
+            }
+        }
+    };
+
+    $(t).html(str);
+    if(t == '#grades'){
+        $(".grade-s").css("left","66.96%"); //显示第三级
+    }else{
+        $(".grade-s").css("left","100%"); //隐藏第三级
+    }
+}
+
+areadata(0,'#gradew');
+
+// 选择分类
+function catedata(id,t){
+    var data = cate;
+    var str = '';
+    if(id == 0) str += "<li onclick=\"fill('c1',0,0);fill('c2',0,1);\">全部分类</li>";
+    for (var i = 0; i < data.length; i++) {
+        if(id == 0){
+            if(data[i].son != undefined){
+                str += "<li data-id='"+data[i].id+"' onclick=\"catedata("+data[i].id+",'#Categoryt')\">"+data[i].name+"</li>";
+            }else{
+                str += "<li data-id='"+data[i].id+"' onclick=\"fill('c1',"+data[i].id+",0);fill('c2',0,1);\">"+data[i].name+"</li>";
+            }
+        }else if(id == data[i].id){
+            str += "<li data-id='"+data[i].id+"' onclick=\"fill('c1',"+data[i].id+",0);fill('c2',0,1);\">不限</li>";
+            var son = data[i].son;
+            if(son != undefined){
+                for (var n = 0; n < son.length; n++) {
+                    str += "<li data-id='"+son[n].id+"' onclick=\"fill('c1',"+son[n].pid+",0);fill('c2',"+son[n].id+",1);\">"+son[n].name+"</li>";
+                };
+            }
+        }
+    };
+    $(t).html(str);
+}
+catedata(0,'#Categorytw');
+
+<if condition="$_GET['a1'] gt '0'">
+function show1(){
+    var a1 = vr('a1');
+    var a2 = vr('a2');
+    var a3 = vr('a3');
+    var str = '';
+    for (var i = 0; i < area.length; i++) {
+        if(area[i].id == a1 || area[i].id == a2 || area[i].id == a3){
+            if(str == ''){
+                str = area[i].name;
+            }else{
+                str += ','+area[i].name;
+            }
+        }
+    };
+    if(str != '') $(".Regional").html(str);
+}
+show1();
+</if>
+
+<if condition="$_GET['c1'] gt '0'">
+function show2(){
+    var c1 = vr('c1');
+    var c2 = vr('c2');
+    var str = '';
+    for (var i = 0; i < cate.length; i++) {
+        if(cate[i].id == c1){
+            str = cate[i].name;
+            if(c2 > 0){
+                var son = cate[i].son;
+                for (var n = 0; n < son.length; n++) {
+                    if(son[n].id == c2) str += ','+son[n].name;
+                };
+            }
+        }
+    };
+    if(str != '') $(".Brand").html(str);
+}
+show2();
+</if>
+$(function(){
+    $("#keyword").keyup(function(){
+        if(event.keyCode == 13){
+            $('#sform').submit();
+        }
+    });
+<if condition="$_GET['px'] gt '0'">
+    $("select[name='px']").val({:I('px')});
+</if>
+});
+</script>
+
+<!-- 以下为本页后端完整代码 -->
+<?php
+public function datalist(){
+    if(IS_GET){
+        $this->title = '商品列表';
+        $this->eq = 0;
+        $cate = M('sys_cates')->where(array('pid'=>0,'status'=>1))->order('px desc')->select();
+        for ($i=0; $i < count($cate); $i++) { 
+            $son = M('sys_cates')->where(array('pid'=>$cate[$i]['id'],'status'=>1))->order('px desc')->select();
+            if($son) $cate[$i]['son'] = $son;
+        }
+        $this->cate = json_encode($cate);
+        $area = M('sys_location')->where(array())->field('id,pid,name,lv,son')->select();
+        $this->area = json_encode($area);
+        $word = I('word');
+        $a1 = I('a1');
+        $a2 = I('a2');
+        $a3 = I('a3');
+        $c1 = I('c1');
+        $c2 = I('c2');
+        $px = I('px');
+        $bp = I('bp');
+        $ep = I('ep');
+        if(!$p) $p = 1;
+        $map = array();
+        $map['num'] = array('gt',0); //有库存的
+        $map['status'] = array('gt',0);
+        if($bp && $ep){
+            $map['price'] = array('between',array($bp,$ep));
+        }else if($bp){
+            $map['price'] = array('egt',$bp);
+        }else if($ep){
+            $map['price'] = array('elt',$ep);
+        }
+        if($word) $map['title|name|bh'] = array('like','%'.$word.'%');
+        if($a1 > 0) $map['a1'] = $a1;
+        if($a2 > 0) $map['a2'] = $a2;
+        if($a3 > 0) $map['a3'] = $a3;
+        if($c1 > 0) $map['c1'] = $c1;
+        if($c2 > 0) $map['c2'] = $c2;
+        if($px == 1){
+            $px = 'addtime desc';
+        }else if($px == 2){
+            $px = 'price asc,addtime desc';
+        }else if($px == 3){
+            $px = 'price desc,addtime desc';
+        }else if($px == 4){
+            $px = 'addtime desc';
+        }else if($px == 5){
+            $px = 'sold desc,addtime desc';
+        }else if($px == 6){
+            $px = 'sold asc,addtime desc';
+        }else{
+            $px = 'addtime desc';
+        }
+        $model = M('shop_product');
+        import('@.ORG.Util.Page');// 导入分页类
+        $list = $model->where($map)->order($px)->page($p.',10')->select();
+        $this->assign('list',$list);// 赋值数据集
+        $count  = $model->where($map)->count();// 查询满足要求的总记录数
+        $this->total = $count;
+        $page   = new Page($count,10);// 实例化分页类 传入总记录数和每页显示的记录数
+        $page->setConfig('theme','%upPage%  %linkPage%  %downPage%');
+        $page->rollPage = 3 ;
+        $show   = $page->show();// 分页显示输出
+        $this->assign('page',$show);// 赋值分页输出
+        //分页跳转的时候保证查询条件
+        foreach($map as $key=>$val) {
+            $page->parameter   .=   "$key=".urlencode($val).'&';
+        }
+        $this->display();
+    }
+}

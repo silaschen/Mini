@@ -1,0 +1,73 @@
+  /* pages/section/item2.wxss */
+.guide{width: 100%;margin-bottom:10rpx;}
+.guide image{width: 100%}
+.form-group{margin: 0;}
+#form{
+  margin: 0;
+  border: none;
+  padding:0 20rpx 10rpx 20rpx;
+}
+#form button{margin-top: 10px;}
+.address{font-size: 25rpx;color:#999;margin: 5px 15px;}
+.address text{width: 100%;display: block;line-height: 38rpx;}
+page{
+  background: #f5f5f5;
+  padding-bottom:60rpx;
+}
+/*上传图片  */ 
+.addimg .com view{
+  display: inline-block;
+  width:50%;
+  text-align: center;
+  margin-top:10rpx;
+}
+.addimg .com .pic2{
+  margin:20rpx 0;
+}
+/*上传后片图尺寸  */
+.addimg .com image{
+  width:150rpx;
+  height:150rpx;
+  display: block;
+  margin:0 auto;
+}
+#form .addimg .com button{
+  font-size:30rpx;
+  color:#777;
+  line-height: 80rpx;
+  border-color:#e1e1e1;
+   margin:0 0 20rpx 0;
+}
+
+.addimg .com button image{
+  width:40rpx;
+  height:40rpx;
+  display:inline-block;
+  vertical-align:middle;
+  margin-bottom:6rpx;
+}
+/*支付底部导航  */
+.pay{
+  display: flex;
+  display:-webkit-flex;
+  position: fixed;
+  bottom:0;
+  width:100%;
+  left:0;
+}
+.pay .money{
+  width:30%;
+  background: #fff;
+  text-align: center;
+  line-height: 100rpx;
+  color:#129FE7;
+  font-size:40rpx;
+}
+.pay .money text{
+  font-weight: 800;
+}
+#form .pay button{
+  width:70%;
+  margin:0;
+  border:none;
+}

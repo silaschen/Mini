@@ -1,0 +1,45 @@
+<extend name="Index:base" />
+<block name="main">
+<div id='member-top'>
+	<div style="height:45px">
+		<center>
+			<span style="line-height:45px;margin-left:20px" class="pull-left"><a style="color:#fff" href="javascript:history.go(-1)">返回</a></span>
+			<span style="margin-right:20px;color:#fff;line-height:45px">{$title}</span>
+			<a href="tel:{:C('SITE_TEL')}" style="margin-right:20px;color:#fff;line-height:45px" class='pull-right'>客服</a>
+		</center>
+	</div>
+</div>
+<div class='box1' style='padding:10px'>
+<table class="table table-bordered">
+	<volist name="list" id="vo">
+		<tr>
+			<th colspan="2">
+				违章编号：<span class="text-danger">{$vo.wfxw}
+			</th>
+		</tr>
+		<tr>
+			<td>罚款：{$vo.fkje}</td>
+			<td>扣分：{$vo.wfjfs} 分</td>
+		</tr>
+
+		<tr>
+			<td colspan="2">
+				违章内容：{$vo.wfnr}
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				违章时间：{$vo.wfsj}
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				违章地址：{$vo.wfdz}
+			</td>
+		</tr>
+	</volist>
+</table>
+</div>
+</block>
+<block name="nav">
+</block>

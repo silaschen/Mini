@@ -1,0 +1,88 @@
+.martb{margin-bottom: 25px;}
+.caption{margin-top: 5px;}
+.caption .mt{width:25%;margin:0px 5px 0px 0;}
+.caption .st{line-height: 27px;width: 70%;height: 27px;overflow: hidden;display: block;}
+.mnews{margin:5px 0;position: relative;}
+/*预览区*/
+.mnews .view{width:220px;float: left;}
+.mnews .view dl{width:218px;background-color: #faffeb;
+border:1px solid #d6f098;-moz-border-radius: 3px; /* Firefox */	
+-webkit-border-radius: 3px; /* Safari 、Chrome */	
+border-radius: 3px; /* Opera 10.5+, IE6+ 使用 IE-CSS3*/}
+.mnews .view .cover{width:190px; height: 95px;border: 1px solid #d6f098;background: #FFF; margin: 10px auto; position: relative; }
+.mnews .view .cover .title{color:#4c8506;width:190px;height: 22px;text-indent: 0.5em;opacity:0.8;filter:alpha(opacity=0.8); line-height: 22px;display:none;background-color: #e2f9c5;position: absolute;bottom: 0;left: 0;right: 0;}
+.mnews .view .add{-webkit-border-image: none;
+border-bottom-color: #d6f098;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+border-bottom-style: dotted;
+border-bottom-width: 2px;
+border-left-color: #d6f098;
+border-left-style: dotted;
+border-left-width: 2px;
+border-right-color: #d6f098;
+border-right-style: dotted;
+border-right-width: 2px;
+border-top-color: #d6f098;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-top-style: dotted;
+border-top-width: 2px;
+color: #4c8506;
+display: block;
+font-size: 14px;
+height: 40px;
+line-height: 40px;
+margin: 10px auto;
+text-align: center;
+text-decoration: none;
+width: 188px;}
+.mnews .view .add img{margin: 10px auto}
+.mnews .view .redit{width: 100%;height: 100%;display: none;position: absolute; text-align: center;line-height: 60px;}
+.mnews .act{width:192px;height:45px;background: #FFF;opacity:0.6;filter:alpha(opacity=0.6);display: none; z-index: 66;position: absolute;}
+.mnews .act a{color: #000;text-align: center;line-height: 45px; margin: 0 15px 0 15px;font-size: 12px;font-family: '宋体';}
+.make{width: 800px; margin: 10px auto;}
+.fixmar{margin-top: 15px;display: block;clear: both;padding-top: 15px;}
+
+
+.mnews .view .more{height: 45px; clear: both; margin: 10px 13px; overflow: hidden; }
+.mnews .view .more .mt{float: left;width: 125px;height: 45px; line-height: 20px;color: #4c8506;overflow: hidden;border-bottom:1px dashed #d6f098;}
+.mnews .view .more .p{width: 40px; height: 40px; border:1px solid #d6f098; background: #fff; padding: 1px;float: right; overflow: hidden;}
+.mnews .view .more .p img {height: 40px;}
+/*编辑区*/
+.arrow{background: url('../img/arrow.png') no-repeat left bottom;width: 13px;height: 22px;position: absolute;left:31.5%; top:60px;z-index: 99;}
+.mnews .edit{width: 67%;float: right;background: #FFF; padding:15px 15px;
+border:1px solid #e2e2e2;-moz-border-radius: 3px; /* Firefox */	
+-webkit-border-radius: 3px; /* Safari 、Chrome */	
+border-radius: 3px; /* Opera 10.5+, IE6+ 使用 IE-CSS3*/ overflow: visible;}
+.mnews .edit .e {margin: 10px 15px 20px 15px;clear: both;overflow: hidden;display: block;}
+.mnews .edit .e span{font-size: 13px;color:#666; float: left;padding-bottom: 10px;text-indent: 3px; }
+.mnews .edit .e small{float: right;text-align: right;color: #999}
+.mnews .edit .e .ipt {height: 15px; line-height: 15px;padding:5px 10px;font-size: 12px;}
+.mnews .edit .e .ipt,.mnews .edit .e textarea{clear: both; float: left;width:515px;padding:5px 10px;border:1px solid #e2e2e2;}
+.mnews .edit .e .ipt:focus,.mnews .edit .e textarea:focus{border:1px solid #d6f098;}
+.mnews .edit .e .aintro{}
+.mnews #exec_target{display: none;width: 0;height: 0;}
+.mnews #uploadfile{position:absolute; z-index:100; margin-left:-80px; font-size:30px;opacity:0;filter:alpha(opacity=0); margin-top:5px;}
+#uploadImg{overflow:hidden; background: url('../img/select_file.png') no-repeat 0 5px; width: 160px; height: 30px;display: block; margin: 25px 0 0 -25px;}
+.mnews .showcover{}
+.mnews .showcover img{width: 160px; padding: 2px; background: #FFF;border:1px solid #e2e2e2;margin-left: 16px; margin-top: -10px;}
+/* style fix for chrome & safari  */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	#uploadImg{overflow:hidden; background: url('../img/select_file.png') no-repeat 0 5px; width: 160px; height: 30px; display: block; margin: -30px 0 20px 20px;}
+ 	#uploadfile{position:absolute; z-index:100;left:360px;width: 160px; font-size:20px;opacity:0;filter:alpha(opacity=0); margin-top:-30px;}
+}
+/* style fix for firefox  */
+@-moz-document url-prefix() {
+	#uploadImg{overflow:hidden; background: url('../img/select_file.png') no-repeat 0 5px; width: 160px; height: 30px; display: block; margin: -30px 0 20px 20px;}
+ 	#uploadfile{position:absolute; z-index:100;left:360px;width: 160px; font-size:20px;opacity:0;filter:alpha(opacity=0); margin-top:-30px;}
+}
+/* style fix for opera  */
+@media not screen and (1) {} /* 这一行不要删除，否则下面的不起作用。  */
+
+/* Opera only */
+@media all and (min-width: 0px){
+    #uploadImg{overflow:hidden; background: url('../img/select_file.png') no-repeat 0 5px; width: 160px; height: 30px; display: block; margin: -30px 0 20px 20px;}
+ 	#uploadfile{position:absolute; z-index:100;left:360px;width: 160px; font-size:20px;opacity:0;filter:alpha(opacity=0); margin-top:-30px;}
+}
+/* 测试浏览器版本：chrome 20.0.1132.57 、firefox 12.0、opera 11.62 可用，其他版本未测试  */

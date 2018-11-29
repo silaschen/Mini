@@ -1,0 +1,45 @@
+<extend name="Sys:base" />
+<block name="head">
+<include file="Sys:head" />
+</block>
+<block name="left">
+<include file="Sys:left" />
+</block>
+<block name="main">
+<include file="js" />
+<load href="Public/com/qqFace.js" />
+<load href="Public/com/jquery.shortcuts.js" />
+<div class="nav-tabs-custom">
+    <ul class="nav nav-tabs pull-right">
+      <li class="active"><a href="{:U('Mate/text')}">文本素材</a></li>
+      <li><a href="{:U('Mate/audio')}">音频素材</a></li>
+      <li><a href="{:U('Mate/remot')}">图文素材</a></li>
+     
+      <li class="pull-left header" style="font-size: 15px;"><i class="fa fa-th"></i> {$title}</li>
+    </ul>
+    <div class="tab-content">
+		<div class="tab-pane active">
+			 <table class="table table-bordered">
+			 	<thead><th>ID</th><th>消息内容</th><th>修改</th><th>规则</th><th>设置</th><th>删除</th></thead>
+			 	<tbody>
+			 		<volist name='list' id='vo'>
+			 			<tr>
+			 				<td>{$vo.id}</td>
+			 				<td>{$vo.text}</td>
+			 				<td><a class="label label-info" href="{:U('Mate/texted',array('id'=>$vo['id']))}">修改</a></td>
+			 				<td><if condition="$vo.cmd neq ''"><a href="javascript:delcmd(1,{$vo.id});" class="label label-warning">解除</a></if></td>
+			 				<td><a class="label label-success" href="{:U('Mate/setcmd',array('id'=>$vo['id'],'type'=>1))}">触发</a></td>
+			 				<td><a class="label label-danger" href="javascript:delmate(1,{$vo.id});">删除</a></td>
+			 			</tr>
+			 		</volist>
+			 	</tbody>
+			 </table>
+		</div><!-- /.tab-pane -->
+		<div class="clearfix">
+			<a class="btn btn-info pull-left" data-toggle="modal" data-target="#addtxt">添加文本</a>
+			<ul class="pagination pagination-sm no-margin pull-right">{$page}</ul>
+		</div>
+    </div><!-- /.tab-content -->
+</div>
+<include file="textadd" />
+</block>

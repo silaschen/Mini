@@ -1,0 +1,133 @@
+<extend name="Sys:base" />
+<block name="main">
+  <div class="box box-solid">
+    <div class="box-header with-border">
+      <h3 class="box-title">{$title}</h3>
+    </div><!-- /.box-header -->
+    <div class="box-body">
+      <form method="GET" action="{:U('User/applylist')}" id='search' style="margin-bottom:15px;">
+      <div class="row">
+
+        <div class="col-xs-4 col-md-2">
+          <select name='status' class='form-control'>
+            <option value=''>全部</option>
+            <option value='1'>待审核</option>
+            <option value='2'>已通过</option>
+            <option value="3">已拒绝</option>
+          </select>
+        </div>
+
+        <div class="col-xs-8 col-md-6">
+          <div class="input-group">
+            <input name="word" type='text' class='form-control' value="{:I('word')}" placeholder='昵称/姓名/电话 关键词搜索..'>
+            <span class="input-group-addon" onclick="$('#search').submit();"><i class="fa fa-search"></i></span>
+            <if condition="$_GET['type'] gt '0' OR $_GET['word'] neq '' OR $_GET['status'] neq ''">
+            <a title='清除条件' class="input-group-addon" href="{:U('User/applylist')}"><i class="fa fa-remove"></i></a>
+            </if>
+          </div>
+        </div>
+      </div>
+      </form>
+
+      <table class="table table-bordered">
+        <thead>
+          <th>ID</th>
+          <th>用户</th>
+          <th>姓名</th>
+          <th>电话</th>
+          <th>申请时间</th>
+          <th>审核时间</th>
+          <th>状态</th>
+          <th>操作</th>
+        </thead>
+        <tbody>
+      <volist name="list" id='vo'>
+        <tr>
+          <td>{$vo.id}</td>
+          <td><a href="{:U('User/userlist')}?openid={$vo['openid']}"><if condition="$vo.headimgurl neq ''"><img src='{$vo.headimgurl}' class='img-rounded' width='40'></if></a></td>
+          <td width="100">{$vo.name}</td>
+          <td>{$vo.tel}</td>
+          <td>{$vo.addtime|date='Y-m-d H:i:s',###}</td>
+          <td><if condition="$vo.donetime neq ''">{$vo.donetime|date='Y-m-d H:i:s',###}</if></td>
+          <td><if condition="$vo.status eq 1"><span class="label label-warning">待审核</span><elseif condition="$vo.status eq 2"/><span class="label label-success">已成功</span><elseif condition="$vo.status eq 3"/><span class="label label-danger">已拒绝</span></if></td>
+
+          <td>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown">
+                管理
+                <span class="caret"></span>
+                <span class="sr-only">+</span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+
+
+                <if condition="$vo.status eq 1">
+                  <li><a href="javascript:IptVal('id',{$vo['id']});$('#deal').modal('show')">处理</a></li>
+                </if>
+
+
+              </ul>
+            </div>
+          </td>
+        </tr>
+      </volist>
+        </tbody>
+      </table>
+    </div><!-- /.box-body -->
+    <div class="box-footer clearfix">
+      <ul class="pagination pagination-sm no-margin pull-right">{$page}</ul>
+    </div>  
+  </div>
+
+
+<div class="modal" id='deal'>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <b>审核推荐人申请</b>
+      </div>
+      <div class="modal-body">       
+          <form id="mark">
+            <input type="hidden" name="id">
+                <div class="form-group">
+                    <label>选择处理方式</label>
+                    <select name="res" class="form-control">
+                      <option value="2">已成功</option>
+                      <option value="3">已拒绝</option>
+                    </select>
+                 </div>
+
+                 <div class="form-group">
+                    <label>备注信息:</label>
+                    <textarea name="remark" class="form-control" rows="3"></textarea>
+                 </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary" onclick="DealApply()">确定处理</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+
+<script type="text/javascript">
+function DealApply(){
+  loading2('正在操作...');
+  $.post(location.href,$('#mark').serialize(),function(data){
+        alert(data.msg);
+        if(data.ret == 1){
+          location.reload();
+        }else{
+          loading2('',0);
+        }
+  },'JSON');
+
+}
+</script>
+<script type="text/javascript">
+    SelVal('status',{$_GET['status']});
+
+</script>
+</block>

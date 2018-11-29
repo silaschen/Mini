@@ -1,0 +1,50 @@
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<td>ID</td>
+			<td>{$info.id}</td>	
+			<td>姓名</td>
+			<td>{$info.syr}</td>
+			<td>车辆编号</td>
+			<td>{$info.clbh}</td>
+		</tr>
+
+		<tr>
+			<td>车型</td>
+			<td>{$info.clpp1}</td>
+			<td>罚款</td>
+			<td>{$info.fk}</td>
+			<td>xh</td>
+			<td>{$info.xh}</td>
+		</tr>
+
+		<tr>
+			
+			<td>扣分</td>
+			<td>{$info.kf}</td>
+			<td>hphm</td>
+			<td>{$info.hphm}</td>
+			<td>clxh</td>
+			<td>{$info.clxh}</td>
+		</tr>
+
+		<tr>
+				<td>违章</td>
+				<td>{$info.wz}</td>
+				<td>电话</td>
+				<td>{$info.tel}</td>
+				<td>ccrq</td>
+				<td>{$info.ccrq}</td>
+		</tr>
+
+		<tr>
+			<td>hdzk</td>
+			<td>{$info.hdzk}</td>
+			<td>加入时间</td>
+			<td>{$info.addtime|date="Y-m-d H:i:s",###}</td>
+			<td>状态</td>
+			<td><if condition="$info.status eq '1'"><small class="badge bg-green">正常</small><else/><small class="badge bg-red">冻结</small></if></td>
+
+		</tr>
+	</tbody>
+</table>

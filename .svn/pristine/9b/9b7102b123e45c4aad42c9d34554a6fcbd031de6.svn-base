@@ -1,0 +1,71 @@
+// pages/section/index.js
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    banner: ["https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1502947311703&di=6050efd46dde2e318014ec2568184afd&imgtype=0&src=http%3A%2F%2Fdocs.ebdoor.com%2FImage%2FCompany%2F127%2F1279957_intro1.jpg", "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1502947514256&di=158889d0c3cbcf31e1225df6acb24ee5&imgtype=0&src=http%3A%2F%2Fauto.online.sh.cn%2Fimages%2Fattachement%2Fjpg%2Fsite1%2F20150601%2F0025116acb5d16d6036013.jpg", "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1502947348533&di=a9053b9abecbc99abf50b9f6f14e5583&imgtype=0&src=http%3A%2F%2Ff.hiphotos.baidu.com%2Fmap%2Fpic%2Fitem%2F2f738bd4b31c87010c1ee63e227f9e2f0608ffba.jpg"]
+
+  },
+  // 打开各个窗口
+  OpenWin:function(e){
+    console.log(0);
+  }
+,
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+  
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+  
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+  
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+  
+  }
+})

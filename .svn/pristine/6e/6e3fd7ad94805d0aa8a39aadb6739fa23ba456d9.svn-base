@@ -1,0 +1,105 @@
+<style type="text/css">
+#allmap {height: 390px;width:100%;overflow: hidden;}
+.location{width: 100%;clear: both; overflow: hidden;}
+.location .anchorTR .BMapLib_Drawing_panel{}
+.location .anchorTR .BMapLib_marker{display: none;}
+.location .anchorTR .BMapLib_circle{display: none;}
+.location .anchorTR .BMapLib_polygon{display: none;}
+.location .anchorTR .BMapLib_polyline{display: none;}
+.location .BMap_cpyCtrl,.location .anchorBL{display: none;}
+</style>
+<div class='form-group'>
+    <div class='location'>
+    <link rel="stylesheet" href="http://api.map.baidu.com/library/DrawingManager/1.4/src/DrawingManager_min.css" />
+    <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.4/src/SearchInfoWindow_min.css" />
+    <div id="allmap" style="overflow:hidden;zoom:1;position:relative;"> 
+        <div id="map" style="height:100%;-webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;"></div>
+        <div id="showPanelBtn" style="position:absolute;-webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;display:none"></div>
+        <div id="panelWrap" style="width:0px;position:absolute;overflow:auto;-webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;display:none">
+            <div style="position:absolute;opacity:0.5;" id="showOverlayInfo"></div>
+            <div id="panel" style="position:absolute;display:none"></div>
+        </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript">
+    var map = new BMap.Map('map');
+    var poi = new BMap.Point(116.307852,40.057031);
+    map.centerAndZoom(poi, 13);
+    map.enableScrollWheelZoom();
+    map.addControl(new BMap.NavigationControl({anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_SMALL}));  //仅包含平移和缩放按钮
+    function myFun(result){
+        var cityName = result.name;
+        map.setCenter(cityName);
+    }
+    var myCity = new BMap.LocalCity();
+    myCity.get(myFun);
+    var overlays = [];
+    //回调获得覆盖物信息
+    var overlaycomplete = function(e){
+        overlays.push(e.overlay);
+        if(overlays.length > 1){
+            /*
+            for(var i = overlays.length - 1; i < overlays.length + 1; i++){
+                map.removeOverlay(overlays[i]);
+            }
+            alert('最多可选两处区域!')
+            */
+            var i = overlays.length - 2;
+            map.removeOverlay(overlays[i]);
+        }
+        if (e.drawingMode == BMAP_DRAWING_RECTANGLE) {
+            //e.overlay.getPath().length 
+            var logdeviation = 0.99983155841607307536303544841636;//偏差
+            var latdeviation = 0.999942885671998668452407896263;//偏差
+            var ltx = e.overlay.getPath()[0]['lat']*logdeviation
+            var lty = e.overlay.getPath()[0]['lng']*latdeviation
+            var rbx = e.overlay.getPath()[2]['lat']*logdeviation
+            var rby = e.overlay.getPath()[2]['lng']*latdeviation
+            
+            if((ltx == rbx) && (rby == lty)){
+                clearAll() //删除所有
+                cmdcontent = ''; //清空容器
+            }else if(Math.abs((ltx - rbx)) < 0.000060 && Math.abs((rby - lty)) < 0.000060){
+                clearAll() //删除所有
+                cmdcontent = ''; //清空容器
+                alert('选择的范围太小了!')
+            }else{
+                //赋值容器
+                cmdcontent = ltx+','+lty+','+rbx+','+rby;
+            }
+        }
+
+
+    };
+
+    var styleOptions = {
+        strokeColor:"red",    //边线颜色。
+        fillColor:"red",      //填充颜色。当参数为空时，圆形将没有填充效果。
+        strokeWeight: 2,       //边线的宽度，以像素为单位。
+        strokeOpacity: 0.7,    //边线透明度，取值范围0 - 1。
+        fillOpacity: 0.5,      //填充的透明度，取值范围0 - 1。
+        strokeStyle: 'dashed' //边线的样式，solid或dashed。
+    }
+    //实例化鼠标绘制工具
+    var drawingManager = new BMapLib.DrawingManager(map, {
+        isOpen: false, //是否开启绘制模式
+        enableDrawingTool: true, //是否显示工具栏
+        drawingToolOptions: {
+            anchor: BMAP_ANCHOR_TOP_RIGHT, //位置
+            offset: new BMap.Size(5, 5), //偏离值
+            scale: 0.8 //工具栏缩放比例
+        },
+        rectangleOptions: styleOptions //矩形的样式
+    });
+    //添加鼠标绘制工具监听事件，用于获取绘制结果
+    drawingManager.addEventListener('overlaycomplete', overlaycomplete);
+
+    function clearAll() {
+        for(var i = 0; i < overlays.length; i++){
+            map.removeOverlay(overlays[i]);
+        }
+        overlays.length = 0
+    }
+
+</script>

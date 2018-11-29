@@ -1,0 +1,556 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>IconFont</title>
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="iconfont.css">
+</head>
+<body>
+    <div class="main markdown">
+        <h1>IconFont 图标</h1>
+        <ul class="icon_lists clear">
+            
+                <li>
+                <i class="icon iconfont icon-huiyuanqia"></i>
+                    <div class="name">会员卡</div>
+                    <div class="fontclass">.icon-huiyuanqia</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-home"></i>
+                    <div class="name">home</div>
+                    <div class="fontclass">.icon-home</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-department"></i>
+                    <div class="name">department</div>
+                    <div class="fontclass">.icon-department</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-time"></i>
+                    <div class="name">time</div>
+                    <div class="fontclass">.icon-time</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-edit"></i>
+                    <div class="name">edit</div>
+                    <div class="fontclass">.icon-edit</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-back"></i>
+                    <div class="name">back</div>
+                    <div class="fontclass">.icon-back</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-forward"></i>
+                    <div class="name">forward</div>
+                    <div class="fontclass">.icon-forward</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-person"></i>
+                    <div class="name">person</div>
+                    <div class="fontclass">.icon-person</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-information"></i>
+                    <div class="name">information</div>
+                    <div class="fontclass">.icon-information</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-download"></i>
+                    <div class="name">download</div>
+                    <div class="fontclass">.icon-download</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-upload"></i>
+                    <div class="name">upload</div>
+                    <div class="fontclass">.icon-upload</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-location"></i>
+                    <div class="name">location</div>
+                    <div class="fontclass">.icon-location</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-share"></i>
+                    <div class="name">share</div>
+                    <div class="fontclass">.icon-share</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-picture"></i>
+                    <div class="name">picture</div>
+                    <div class="fontclass">.icon-picture</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-correct"></i>
+                    <div class="name">correct</div>
+                    <div class="fontclass">.icon-correct</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-fault"></i>
+                    <div class="name">fault</div>
+                    <div class="fontclass">.icon-fault</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-refresh"></i>
+                    <div class="name">refresh</div>
+                    <div class="fontclass">.icon-refresh</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-link"></i>
+                    <div class="name">link</div>
+                    <div class="fontclass">.icon-link</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-focus"></i>
+                    <div class="name">focus</div>
+                    <div class="fontclass">.icon-focus</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-focusactive"></i>
+                    <div class="name">focus-active</div>
+                    <div class="fontclass">.icon-focusactive</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-menu"></i>
+                    <div class="name">menu</div>
+                    <div class="fontclass">.icon-menu</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-lock"></i>
+                    <div class="name">lock</div>
+                    <div class="fontclass">.icon-lock</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-sign"></i>
+                    <div class="name">sign</div>
+                    <div class="fontclass">.icon-sign</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-export"></i>
+                    <div class="name">export</div>
+                    <div class="fontclass">.icon-export</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-attention"></i>
+                    <div class="name">attention</div>
+                    <div class="fontclass">.icon-attention</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-ban"></i>
+                    <div class="name">ban</div>
+                    <div class="fontclass">.icon-ban</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-security"></i>
+                    <div class="name">security</div>
+                    <div class="fontclass">.icon-security</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-payment"></i>
+                    <div class="name">payment</div>
+                    <div class="fontclass">.icon-payment</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-mail"></i>
+                    <div class="name">mail</div>
+                    <div class="fontclass">.icon-mail</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-reduce"></i>
+                    <div class="name">reduce</div>
+                    <div class="fontclass">.icon-reduce</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-increase"></i>
+                    <div class="name">increase</div>
+                    <div class="fontclass">.icon-increase</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-search"></i>
+                    <div class="name">search</div>
+                    <div class="fontclass">.icon-search</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-hotel"></i>
+                    <div class="name">hotel</div>
+                    <div class="fontclass">.icon-hotel</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-exit"></i>
+                    <div class="name">exit</div>
+                    <div class="fontclass">.icon-exit</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-file"></i>
+                    <div class="name">file</div>
+                    <div class="fontclass">.icon-file</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-folder"></i>
+                    <div class="name">folder</div>
+                    <div class="fontclass">.icon-folder</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-set"></i>
+                    <div class="name">set</div>
+                    <div class="fontclass">.icon-set</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-phone"></i>
+                    <div class="name">phone</div>
+                    <div class="fontclass">.icon-phone</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-date"></i>
+                    <div class="name">date</div>
+                    <div class="fontclass">.icon-date</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-microphone"></i>
+                    <div class="name">microphone</div>
+                    <div class="fontclass">.icon-microphone</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-car"></i>
+                    <div class="name">car</div>
+                    <div class="fontclass">.icon-car</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-plane"></i>
+                    <div class="name">plane</div>
+                    <div class="fontclass">.icon-plane</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-delete"></i>
+                    <div class="name">delete</div>
+                    <div class="fontclass">.icon-delete</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-arrowup"></i>
+                    <div class="name">arrow-up</div>
+                    <div class="fontclass">.icon-arrowup</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-arrowdown"></i>
+                    <div class="name">arrow-down</div>
+                    <div class="fontclass">.icon-arrowdown</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-check"></i>
+                    <div class="name">check</div>
+                    <div class="fontclass">.icon-check</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-camera"></i>
+                    <div class="name">camera</div>
+                    <div class="fontclass">.icon-camera</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-add"></i>
+                    <div class="name">add</div>
+                    <div class="fontclass">.icon-add</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-uploadthecloud"></i>
+                    <div class="name">Upload-the-cloud</div>
+                    <div class="fontclass">.icon-uploadthecloud</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-myaccount"></i>
+                    <div class="name">myaccount</div>
+                    <div class="fontclass">.icon-myaccount</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-myschedule"></i>
+                    <div class="name">myschedule</div>
+                    <div class="fontclass">.icon-myschedule</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-customerservice"></i>
+                    <div class="name">customer service</div>
+                    <div class="fontclass">.icon-customerservice</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-expenses"></i>
+                    <div class="name">expenses</div>
+                    <div class="fontclass">.icon-expenses</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-addressbook"></i>
+                    <div class="name">address book</div>
+                    <div class="fontclass">.icon-addressbook</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-switch"></i>
+                    <div class="name">switch</div>
+                    <div class="fontclass">.icon-switch</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-add2"></i>
+                    <div class="name">add-2</div>
+                    <div class="fontclass">.icon-add2</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-addpeople"></i>
+                    <div class="name">add-people</div>
+                    <div class="fontclass">.icon-addpeople</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-voice"></i>
+                    <div class="name">voice</div>
+                    <div class="fontclass">.icon-voice</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-else"></i>
+                    <div class="name">else</div>
+                    <div class="fontclass">.icon-else</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-uncommitted"></i>
+                    <div class="name">Uncommitted</div>
+                    <div class="fontclass">.icon-uncommitted</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-pass"></i>
+                    <div class="name">pass</div>
+                    <div class="fontclass">.icon-pass</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-delete1"></i>
+                    <div class="name">delete</div>
+                    <div class="fontclass">.icon-delete1</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-editor"></i>
+                    <div class="name">editor</div>
+                    <div class="fontclass">.icon-editor</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-huiyuanqia1"></i>
+                    <div class="name">会员卡</div>
+                    <div class="fontclass">.icon-huiyuanqia1</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-wodehuiyuanqia"></i>
+                    <div class="name">我的会员卡</div>
+                    <div class="fontclass">.icon-wodehuiyuanqia</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-icon-test"></i>
+                    <div class="name">篮子</div>
+                    <div class="fontclass">.icon-icon-test</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-icon-test1"></i>
+                    <div class="name">背包</div>
+                    <div class="fontclass">.icon-icon-test1</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-icon-test2"></i>
+                    <div class="name">小区</div>
+                    <div class="fontclass">.icon-icon-test2</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-icon-test3"></i>
+                    <div class="name">时钟</div>
+                    <div class="fontclass">.icon-icon-test3</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-icon-test4"></i>
+                    <div class="name">手提包</div>
+                    <div class="fontclass">.icon-icon-test4</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-icon-test5"></i>
+                    <div class="name">出租车</div>
+                    <div class="fontclass">.icon-icon-test5</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-icon-test6"></i>
+                    <div class="name">优惠</div>
+                    <div class="fontclass">.icon-icon-test6</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-icon-test7"></i>
+                    <div class="name">记事本</div>
+                    <div class="fontclass">.icon-icon-test7</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-icon-test8"></i>
+                    <div class="name">地图</div>
+                    <div class="fontclass">.icon-icon-test8</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-icon-test9"></i>
+                    <div class="name">图表</div>
+                    <div class="fontclass">.icon-icon-test9</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-icon-test10"></i>
+                    <div class="name">信息</div>
+                    <div class="fontclass">.icon-icon-test10</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-icon-test11"></i>
+                    <div class="name">沙发</div>
+                    <div class="fontclass">.icon-icon-test11</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-icon-test12"></i>
+                    <div class="name">服务</div>
+                    <div class="fontclass">.icon-icon-test12</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-icon-test13"></i>
+                    <div class="name">房子</div>
+                    <div class="fontclass">.icon-icon-test13</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-icon-test14"></i>
+                    <div class="name">卡车</div>
+                    <div class="fontclass">.icon-icon-test14</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-icon-test15"></i>
+                    <div class="name">更多</div>
+                    <div class="fontclass">.icon-icon-test15</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-icon-test16"></i>
+                    <div class="name">附近的</div>
+                    <div class="fontclass">.icon-icon-test16</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-icon-test17"></i>
+                    <div class="name">汽车</div>
+                    <div class="fontclass">.icon-icon-test17</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-icon-test18"></i>
+                    <div class="name">照相机</div>
+                    <div class="fontclass">.icon-icon-test18</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-icon-test19"></i>
+                    <div class="name">礼物</div>
+                    <div class="fontclass">.icon-icon-test19</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-icon-test20"></i>
+                    <div class="name">卡券</div>
+                    <div class="fontclass">.icon-icon-test20</div>
+                </li>
+            
+        </ul>
+
+        <h2 id="font-class-">font-class引用</h2>
+        <hr>
+
+        <p>font-class是unicode使用方式的一种变种，主要是解决unicode书写不直观，语意不明确的问题。</p>
+        <p>与unicode使用方式相比，具有如下特点：</p>
+        <ul>
+        <li>兼容性良好，支持ie8+，及所有现代浏览器。</li>
+        <li>相比于unicode语意明确，书写更直观。可以很容易分辨这个icon是什么。</li>
+        <li>因为使用class来定义图标，所以当要替换图标时，只需要修改class里面的unicode引用。</li>
+        <li>不过因为本质上还是使用的字体，所以多色图标还是不支持的。</li>
+        </ul>
+        <p>使用步骤如下：</p>
+        <h3 id="-fontclass-">第一步：引入项目下面生成的fontclass代码：</h3>
+
+
+        <pre><code class="lang-js hljs javascript"><span class="hljs-comment">&lt;link rel="stylesheet" type="text/css" href="./iconfont.css"&gt;</span></code></pre>
+        <h3 id="-">第二步：挑选相应图标并获取类名，应用于页面：</h3>
+        <pre><code class="lang-css hljs">&lt;<span class="hljs-selector-tag">i</span> <span class="hljs-selector-tag">class</span>="<span class="hljs-selector-tag">iconfont</span> <span class="hljs-selector-tag">icon-xxx</span>"&gt;&lt;/<span class="hljs-selector-tag">i</span>&gt;</code></pre>
+        <blockquote>
+        <p>"iconfont"是你项目下的font-family。可以通过编辑项目查看，默认是"iconfont"。</p>
+        </blockquote>
+    </div>
+</body>
+</html>

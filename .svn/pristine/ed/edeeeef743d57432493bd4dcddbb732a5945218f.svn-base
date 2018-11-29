@@ -1,0 +1,66 @@
+//app.js
+App({
+  data:{
+    API_URL:'http://192.168.31.210/car/',
+    codes:[{ "id": 1, "num": "A" }, { "id": 2, "num": "B" }, { "id": 3, "num": "C" }, { "id": 4, "num": "D" }, { "id": 5, "num": "E" }, { "id": 6, "num": "F" }, { "id": 7, "num": "G" }, { "id": 8, "num": "H" }, { "id": 9, "num": "J" }, { "id": 10, "num": "K" }, { "id": 11, "num": "L" }, { "id": 12, "num": "M" }, { "id": 13, "num": "N" }, { "id": 14, "num": "P" }, { "id": 15, "num": "Q" }, { "id": 16, "num": "R" }, { "id": 17, "num": "S" }, { "id": 18, "num": "U" }]
+
+  },
+  onLaunch: function () {
+    //调用API从本地缓存中获取数据
+      this.UserLogin(); //初次启用获取用户信息
+  },
+  IsLogin: function () {
+    var that = this;
+    // 检查登录状态
+    wx.checkSession({
+      success: function (e) {   //登录态未过期
+        console.log("没过期");
+      },
+      fail: function () {   //登录态过期了
+        console.log("过期了");
+        that.UserLogin(); //重新获取用户信息
+      }
+    });
+
+  },
+  UserLogin: function () {
+    var that = this;
+    // 获取微信用户资料
+    wx.getUserInfo({
+      success: function (res) {
+        wx.setStorageSync('WxProfile', res.userInfo);
+      }
+    });
+    wx.login({
+      success: function (res) {
+        if (res.code) {
+          wx.setStorage({
+            key: "code",
+            data: res.code
+          });
+          wx.request({
+            url: getApp().data['API_URL'] + '?m=Mini&a=OnLogin&code=' + res.code,
+            method: 'post',
+            data: {'userdata':wx.getStorageSync('WxProfile')},
+            success: function (r) {
+              //console.log(r);
+              if(r.data.ret == 1){
+                // 存储SESSIONKEY
+                wx.setStorageSync('sessionkey', r.data.sessionkey);
+              }else{
+                // 失败
+                console.log(r.data.msg);
+              }
+            }
+          })
+        } else {
+          console.log('获取用户登录态失败！' + res.errMsg)
+          return false;
+        }
+      },
+      fail: function () {
+        return false;
+      }
+    });
+  }
+})

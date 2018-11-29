@@ -1,0 +1,110 @@
+<extend name="base" />
+<block name="main">
+  <link rel="stylesheet" href="Public/com/jQuery-File-Upload-9.9.3/css/jquery.fileupload.css">
+  <style type="text/css">
+  .showlogo img{max-height: 120px;}
+  </style>
+  <div class="box box-danger">
+    <div class="box-header with-border">
+      <h3 class="box-title">站点设置<small style="color: red;">价格单位(RMB)</small>  </h3>
+    </div><!-- /.box-header -->
+    <div class="box-body">
+      <form role="form" id='form' action="{:U('Sys/EditPrice')}" method="POST">
+         <div class="form-group">
+          <label>补办驾驶证价格</label>
+          <input type="number" name='DRIVE_CARD' class="form-control" placeholder="" value="{:C('DRIVE_CARD')}">
+        </div>
+      <div class="form-group">
+          <label>补办行驶证价格</label>
+          <input type="number" name='TRAVEL_CARD' class="form-control" placeholder="" value="{:C('TRAVEL_CARD')}">
+        </div>
+
+
+      <div class="form-group">
+          <label>年审委托书价格</label>
+          <input type="number" name='INSPECT_CARD' class="form-control" placeholder="" value="{:C('INSPECT_CARD')}">
+        </div>
+
+      <div class="form-group">
+        
+          <label>补办车牌照</label>
+          <input type="number" name="REPLATE_CARD" class="form-control" value="{:C('REPLATE_CARD')}">
+
+      </div>
+
+      <div class="form-group">
+        
+          <label>免检标领取</label>
+          <input type="number" name="EXEMPT_CARD" class="form-control" value="{:C('EXEMPT_CARD')}">
+
+      </div>
+
+      <div class="form-group">
+          <label>环保标办理</label>
+          <input type="number" name="GREEN_CARD" class="form-control" value="{:C('GREEN_CARD')}">
+      </div>
+
+      <div class="form-group">
+        
+          <label>代驾帮申车</label>
+          <input type="number" name="CHECK_CARD" class="form-control" value="{:C('CHECK_CARD')}">
+
+      </div>
+
+
+      </form>
+    </div><!-- /.box-body -->
+    <div class="box-footer">
+      <button type="button" onclick="savechange();" class="btn btn-success pull-right">确定修改</button>
+    </div>
+  </div>
+<script type="text/javascript">
+function savechange(){
+  if(vr('DRIVE_CARD') == ''){
+    alert('请填写价格');
+  }else{
+    $("#form").submit();
+  }
+}
+</script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/vendor/jquery.ui.widget.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/load-image.all.min.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/canvas-to-blob.min.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.iframe-transport.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload-process.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload-image.js"></script>
+<script type="text/javascript">
+ $('.upload').click(function(){
+  var w = $(this).attr('data-id');
+  // 上传图片
+    $(this).fileupload({
+        url: "{:U('Common/loadimg')}",
+        dataType: 'JSON',
+        acceptFileTypes: 'jpg,png,gif,jpeg,bmp',
+      maxFileSize: 8000000, // 800kb
+      disableImageResize: /Android(?!.*Chrome)|Opera/.test(window.navigator && navigator.userAgent),
+        imageMaxWidth: 800,
+        // imageMaxHeight: 800,
+        // imageCrop: true,
+        done: function (e, data) {
+          console.log($(this).attr('name'));
+          if(data.result.ret == 1){
+              $("#"+w).val(data.result.file);
+              $("."+w).html("<img width='100px' src='"+data.result.file+"'>");
+            }else{
+              alert(data.result.msg);
+            }
+        },
+        progressall: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            $('.progress'+w).css(
+                'width',
+                progress + '%'
+            );
+        }
+    }).prop('disabled', !$.support.fileInput)
+        .parent().addClass($.support.fileInput ? undefined : 'disabled');
+});
+</script>
+</block>

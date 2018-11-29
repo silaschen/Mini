@@ -1,0 +1,116 @@
+<extend name="base" />
+<block name="main">
+  <!-- 搜索 -->
+  <div class="box box-solid">
+    <div class="box-header with-border">
+      <h3 class="box-title">分类列表</h3>
+    </div>
+    <div class="box-body">
+      <form method="GET" action="{:U('Sys/artcategory')}" id='form' class='form-inline'>
+        <div class="form-group">
+          <div class="input-group">
+            <input name="word" type='text' class='form-control' value="{:I('word')}" placeholder='输入分类名称进行搜索'>
+            <span class="input-group-addon" onclick="$('#form').submit();"><i class="fa fa-search"></i></span>
+            <if condition="$_GET['word'] neq ''">
+            <a title='清除条件' class="input-group-addon" href="{:U('Sys/artcategory')}"><i class="fa fa-remove"></i></a>
+            </if>
+          </div>
+        </div>
+        <a href="{:U('Sys/addartcate')}" class='btn btn-success pull-right'>添加分类</a>
+      </form>
+    </div><!-- /.box-body -->
+  </div>
+  <!-- 列表 -->
+  <div class="box box-solid">
+    <div class="box-body">
+      <table class="table table-bordered">
+        <tbody>
+          <tr>
+            <th>ID</th>
+            <th>名称</th>
+            <th>封面</th>
+            <th>排序</th>
+            <th>添加时间</th>
+            <th>状态</th>
+            <th>操作</th>
+          </tr>
+          <volist name="list" id="vo">
+          <tr>
+            <td>{$vo.id}</td>
+            <td>{$vo.title|default="暂无"}</td>
+            <td><if condition="$vo.pic neq ''"><a href="{$vo.pic}" target='_blank'><i class='fa fa-photo'></i></a></if></td>
+            <td>{$vo.sort|default="0"}</td>
+            <td>{$vo.addtime|date='Y-m-d H:i',###}</td>
+            <td>
+             <span class="label <if condition ="$vo.status eq 1">label-success">正常<else/>label-danger">隐藏</if></span>
+          </td>
+          <td><div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown">
+                  管理
+                  <span class="caret"></span>
+                  <span class="sr-only">+</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="{:U('Sys/addartcate',array('id'=>$vo['id']))}">编辑</a></li>
+                  <if condition="$vo.status eq '1'">
+                  <li><a href="javascript:setstat({$vo.id},0);">隐藏</a></li>
+                  <else/>
+                  <li><a href="javascript:setstat({$vo.id},1);">恢复</a></li>
+                  </if>
+                  <li class="divider"></li>
+                  <li><a href="javascript:setstat({$vo.id},-1);">删除</a></li>
+                </ul>
+              </div>
+          </td>
+          </tr>
+          <volist name="vo.son" id="v">
+            <tr>
+            <td>{$v.id}</td>
+            <td>&nbsp;┠{$v.title|default="暂无"}</td>
+            <td><if condition="$v.pic neq ''"><a href="{$v.pic}" target='_blank'><i class='fa fa-photo'></i></a></if></td>
+            <td>{$v.sort|default="暂无"}</td>
+            <td>{$v.addtime|date='Y-m-d H:i',###}</td>
+            <td>
+             <span class="label <if condition ="$v.status eq 1">label-success">正常<else/>label-danger">隐藏</if></span>
+          </td>
+          <td><div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown">
+                  管理
+                  <span class="caret"></span>
+                  <span class="sr-only">+</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="{:U('Sys/addartcate',array('id'=>$v['id']))}">编辑</a></li>
+                  <if condition="$v.status eq '1'">
+                  <li><a href="javascript:setstat({$v.id},0);">隐藏</a></li>
+                  <else/>
+                  <li><a href="javascript:setstat({$v.id},1);">恢复</a></li>
+                  </if>
+                  <li class="divider"></li>
+                  <li><a href="javascript:setstat({$v.id},-1);">删除</a></li>
+                </ul>
+              </div>
+          </td>
+          </tr>
+          </volist>
+          </volist>
+        </tbody>
+      </table>
+
+    </div><!-- /.box-body -->
+    <div class="box-footer clearfix">
+	    <ul class="pagination pagination-sm no-margin pull-right">{$page}</ul>
+	  </div>    
+  </div>
+<script type="text/javascript">
+function setstat(id,t){
+  var r = confirm("确认操作？");
+  if(r == true){
+    $.post(location.href,{"id":id,"t":t},function(data){
+      alert(data.msg);
+      if(data.ret == 1) location.reload();
+    },'JSON');
+  }
+}
+</script>
+</block>

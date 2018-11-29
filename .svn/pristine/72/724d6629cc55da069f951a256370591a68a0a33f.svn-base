@@ -1,0 +1,7 @@
+.section{margin: 5px 0;clear:both;padding-top: 10px;padding-bottom: 10px;}
+.section .section__title{font-size: 35rpx;text-indent: 10px;}
+.section picker{font-size: 31rpx;}
+.section .radio{clear: both;display: block;padding:0 5px;font-size: 31rpx;margin-bottom: 10px;}
+
+.btn{margin: 0 5px;}
+.remark{padding: 5px;font-size: 27rpx;color: #999}

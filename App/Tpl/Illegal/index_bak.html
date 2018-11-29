@@ -1,0 +1,223 @@
+<extend name="Index:base" />
+<block name="style">
+<load href="Public/com/switch/bootstrapSwitch.js" />
+<load href="Public/com/switch/bootstrap-switch.css" />
+<link href="Public/res/insurance/weui/weui.css" rel="stylesheet">
+<style type="text/css">
+.container{margin: 5px;}
+#selecter{padding: 0}
+#selecter select{padding: 5px 11px;border-bottom: 0;background: #fff url('Public/res/select.png') no-repeat right;color: #1AAD19;padding-right: 10px; height: 30px;background-size: 12px;}
+</style>
+</block>
+<block name="main">
+<div class='container'>
+	<form method="POST" id='form' action="{:U('Illegal/reslist')}" style="overflow: hidden;margin-bottom: 15px;">
+		<center><br><img width="35%;" src="Public/res/illegal/timg.jpg" class="img-rounded"><br><br></center>
+		<div class='form-group'>
+			<div class="input-group">
+			<div class="input-group-addon" id='selecter'>
+				<select id='province' name="province" style="padding-right:15px;"></select>  <select style="padding-right: 20px;margin-right: 10px;" id='cpzm' name="cpzm" ></select>
+          	</div>
+			<input type='url' class='form-control' style="text-transform: uppercase;" maxlength='5' name='cphm' placeholder="5位车牌号码" value="">
+			</div>
+		</div>
+		<div class='form-group'>
+			<div class="input-group">
+			<div class="input-group-addon">车辆类型</div>
+			<select class='form-control' name='type'>
+				<option value='02'>小车</option>
+				<option value='01'>大车</option>
+			</select>
+			</div>
+		</div>
+		<div class='form-group'>
+			<div class="input-group">
+				<div class="input-group-addon">
+					识别代号
+	          	</div>
+				<input type='url' class='form-control' style="text-transform: uppercase;"  name='clsbdh' placeholder="车辆识别代号后6位" value="" maxlength='6'>
+				<a href="#" data-toggle="modal" data-target=".example1" class="input-group-addon"><i class='glyphicon glyphicon-question-sign'></i></a>
+			</div>
+		</div>
+	<!-- 	<div class='form-group'>
+			<div class="input-group">
+				<div class="input-group-addon">
+					发动机号
+	          	</div>
+				<input type='url' class='form-control' style="text-transform: uppercase;"  name='fdjh' placeholder="完整的发动机号" value="">
+				<a href="#" data-toggle="modal" data-target=".example2" class="input-group-addon"><i class='glyphicon glyphicon-question-sign'></i></a>
+			</div>
+		</div> -->
+		
+<!-- 		<div class='form-group' style="display:block" id="zcdate">
+			<div class="input-group">
+				<div class="input-group-addon">
+					注册日期
+				</div>
+				<input type="date" name="appDate" id="appDate" class='form-control'>
+			</div>
+		</div> -->
+		<div class='form-group hide'>
+			<div class="switch pull-left" style='width: 35%;' id='save' data-on="success" data-off="warning" data-on-label="保存" data-off-label="不保存"><input type="checkbox" checked  /></div>
+			<div class="switch pull-right" style='width: 35%;' id='remind' data-on="success" data-off="warning" data-on-label="推送" data-off-label="不推送"><input type="checkbox" checked  /></div>
+		</div>
+		<if condition="$isvip gt '0'">
+		<input type='hidden' name='remind' value='1'>
+		<input type='hidden' name='save' value='1'>
+		<else/>
+		<!-- 非会员不保存车辆及提醒 -->
+	<!-- 	<input type='hidden' name='remind' value='0'>
+		<input type='hidden' name='save' value='1'> -->
+		<input type='hidden' name='remind' value='1'>
+		<input type='hidden' name='save' value='1'>
+		</if>
+		
+		
+	</form>
+	<if condition="$isvip gt  '0'">
+	<!-- <div class='form-group'>
+		<a href="{:U('Illegal/carlist')}" class='btn btn-default btn-block btn-lg'>我的车辆</a>
+	</div> -->
+	</if>
+</div>
+<!-- 示例 -->
+<div class="modal fade example1" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+     <center><img src='Public/res/illegal/se12557269.jpg'></center>
+     <button type="button" class="btn btn-default btn-lg btn-block" data-dismiss="modal">关闭</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade example2" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+     <center><img src='Public/res/illegal/se12557266.jpg'></center>
+     <button type="button" class="btn btn-default btn-lg btn-block" data-dismiss="modal">关闭</button>
+    </div>
+  </div>
+</div>
+</block>
+<block name="nav">
+<nav id='navbar'>
+	<a href="{:U('Index/index')}" class='back'>返回</a>
+	<a href="javascript:Illegal()" class='next'>查询违章</a> 
+</nav>
+</block>
+<block name="js">
+<!-- <load href="Public/res/insurance/common.js" /> -->
+<script type="text/javascript">
+var province = ['豫','鲁','京','陕','晋','浙','沪','川','粤','津','渝','鄂','赣','冀','蒙','苏','辽','吉','皖','湘','黑','琼','贵','桂','云','藏','甘','宁','青','闽','新'];
+var cpzm = ['A','B','C','D','E','F','G','H','J','K','L','M','N','O','P','Q','R','S','T','U','W','X','Y','Z'];
+$(function(){
+	$(province).each(function(){
+		$("#province").append("<option value='"+this+"'>"+this+"</option>");
+	});
+	$(cpzm).each(function(){
+		$("#cpzm").append("<option value='"+this+"'>"+this+"</option>");
+	});
+});
+
+// 违章提醒
+$('#remind').on('switch-change', function (e, data) {
+    var $el = $(data.el)
+      , value = data.value;
+    if(value == true){
+      	$("input[name='remind']").val(1);
+      	if(IsVip()){
+    	
+    		if (confirm("此功能仅限VIP会员使用，是否立即开通？") == true) {
+
+
+    			location.href = "{:U('User/index',array('buy'=>1))}";
+    		}
+    	};
+    }else{
+    	$("input[name='remind']").val(0);
+    	
+    }
+    CheckSet();
+});
+// 保存到我的车辆
+$('#save').on('switch-change', function (e, data) {
+    var $el = $(data.el)
+      , value = data.value;
+    if(value == true){
+    	$("input[name='save']").val(1);
+    	if(IsVip()){
+    			
+    		if (confirm("此功能仅限VIP会员使用，是否立即开通？") == true) {
+    			location.href = "{:U('User/index',array('buy'=>1))}";
+    		}
+    	};
+    	// $("#zcdate").css('display','block');
+    }else{
+    	$("input[name='save']").val(0);
+
+    	// $("#zcdate").css('display','none');
+    }
+    CheckSet();
+});
+//检查是否vip
+function IsVip(){
+
+	//检查是否是vip
+	var vip = "{$isvip}";
+	if (vip < 1) {
+		IptVal('remind',0);
+		
+		$("#remind").bootstrapSwitch('setState',false);
+
+		IptVal('save',1);
+	
+		$("#save").bootstrapSwitch('setState',true);
+		return true;
+	}
+
+
+}
+// 检查设置
+function CheckSet(){
+	if(IptVal('save') == 0){
+		IptVal('remind',0);
+		$("#remind").hide();
+		$("#remind").bootstrapSwitch('setState',false);
+	}else{
+		$("#remind").show();
+	}
+}
+
+function Illegal(){
+	if(IptVal('cphm') == ''){
+		alert('请输入车牌号！');
+	}else if(IptVal('clsbdh') == ''){
+		alert('请输入车辆识别代号！');
+	}else{
+		// var ccdjrq = new Date($("#appDate").val().replace(/-/g, "/"));
+	 //    var sgqk = $("#sgqk").val();
+	 //    var sysDate = new Date(), day = new Date(), lastday = new Date();
+	 //    if (ccdjrq > sysDate) {
+	 //            alert("注册日期超过当前时间，请重新选择！");
+	 //            return;
+	 //    }
+	    if(IptVal('save') == 1){
+		 $.post("{:U('Illegal/reslist')}",$('#form').serialize(),function(data){ 
+		 	if(data.ret == 1){
+		 		location.href = data.msg;
+		 	}
+		 	if(data.ret == 0){
+		 		alert(data.msg);
+		 	}
+		 },'JSON')
+		}else{
+			 $("#form").submit();
+			}
+	    }
+	}
+
+$(function(){
+	IsVip();
+});
+</script>
+</block>

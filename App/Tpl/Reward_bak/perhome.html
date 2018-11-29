@@ -1,0 +1,144 @@
+<extend name="Index:base" />
+<block name="style">
+	<style>
+	.container{margin: 0;padding: 0;}
+		.row {margin:0 auto;}
+		.text{color:#fff;height:35px;line-height:35px;font-size:13px;}
+		.xuanyan{color:#fff;height:25px;line-height:25px;font-size:13px;}
+		.money-list{padding-top:30px;padding-bottom:30px;}
+		.money{float:left;margin-left:5px;margin-right:5px;height:30px;line-height:30px;text-align:center;border:1px solid #FF7880;color:#FF7880;font-size:13px;border-radius:5px;margin-bottom:5px;width:70px;background-color:#fff;}
+		.shang{position:fixed;bottom:10px;height:50px;}
+		body{background-color:#FFF9E9;}
+		.manyi{color:#f65f5f;border:1px solid #f65f5f;float:left;margin-left:5px;margin-right:5px;margin-bottom:5px;padding:1px 4px;border-radius:5px;font-size:12px;}
+	</style>
+</block>
+<block name="main">
+	<div class="container ">
+		<div class="row">
+			<div style="background-image:url('__PUBLIC__/dashang/img/bg.jpg');background-size:100% 100%;height:200px;">
+				<dl style="padding-top:35px;">
+					<dd class="text-center">
+						<img src="{$info.avatar}" style="width:60px;" class="img-circle">
+					</dd>
+					<dd class="text-center text" style="margin-top:10px;">
+						<div>昵称：{$info.name}</div>
+					</dd>
+					<dd class="text-center xuanyan">个人宣言:</dd>
+					<dd class="text-center xuanyan">{$info.intro}</dd>
+				</dl>
+			</div>
+			<div class="money-list">
+				<div class="row">
+					<div class="col-xs-12" style="margin-bottom:10px;">请选择打赏金额</div>
+					<div class="col-xs-12">
+						<div class="money"  data-text="态度还行~" data-num="1" >1  元</div>
+						<div class="money" data-text="服务周到~" data-num="2">2  元</div>
+						<div class="money" data-text="满意" data-num="3">3  元</div>
+						<div class="money" data-text="以后还来~" data-num="5">5  元</div>
+						<div class="money" data-text="下次还点你！" data-num="7">7  元</div>
+						<div class="money" data-text="不错呦，很满意" data-num="10">10  元</div>
+						<div class="money" data-toggle="modal" data-target="#myModal" data-num="">其他金额</div>
+					</div>
+				</div>
+				<div class="row" style="margin-top:20px;">
+					<div class="col-xs-12" style="margin-bottom:10px;">打赏留言:</div>
+					<div class="col-xs-12">
+						<input type="hidden" name="num" value="">
+						<input type="text" class="form-control" rows="3" placeholder="打赏留言~" name="msg">
+						<div style="padding:5px;padding-top:10px;">
+							<div class="manyi" data-val="我很满意"><small>满意</small></div>
+							<div class="manyi" data-val="我很满意+1"><small>满意+1</small></div>
+							<div class="manyi" data-val="我很满意+2"><small>满意+2</small></div>
+
+						</div>
+					
+					</div>
+				</div>
+				
+
+			</div>
+			<div class='form-group' style='padding:5px;'>
+			<button onclick="shang();" class='btn btn-block btn-lg btn-danger'>立即打赏</button>
+			</div>
+			<!-- <div class="text-center col-xs-12 ">
+				<img src="__PUBLIC__/dashang/img/shang.png" style="width:50px;" onclick="shang();" class="shang">
+			</div> -->
+			
+		</div>
+	</div>
+	<!-- 模态框开始 -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">请输入打赏金额</h4>
+	      </div>
+	      <div class="modal-body form-inline">
+		       	<div class="form-inline">
+				  <div class="form-group">
+				    <div class="input-group" style="border-radius: 4px;">
+				      <div class="input-group-addon">￥</div>
+				      <input type="number" class="form-control" placeholder="打赏金额" name="number" style="letter-spacing:10px;color:#000;font-weight:bold;text-align:center;">
+
+				      <div class="input-group-addon">元</div>
+				    </div>
+				  </div>
+				  <small style="color:red;display:none;"></small>
+				</div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">关闭</button>
+	        <button type="button" class="btn btn-danger" onclick="queding();" >确定</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- 模态框结束 -->
+	<script type="text/javascript">
+		$(".money").click(function(){
+			$(".money").css("background-color","#fff");
+			$(this).css("background-color","yellow");
+			var data=$(this).attr("data-text");
+			var money=$(this).attr("data-num");
+			$("input[name='msg']").attr("value",data);
+			$("input[name='num']").attr("value",money);
+		});
+		$(".manyi").click(function(){
+			var data=$(this).attr("data-val");
+			$("input[name='msg']").attr("value",data);
+		});
+		function queding(){
+			var num=$("input[name='number']").val();
+			if(num == ''){
+				msg("请输入打赏金额");
+			}else if(num < 0.01){
+				msg("最低打赏一分钱~");
+			}else if(isNaN(num)){
+				msg("请输入正确的打赏金额~");
+			}
+			else{
+				$("input[name='num']").attr("value",num);
+				$("#myModal").modal('hide')
+			}
+		}
+		/*提示信息*/
+		function msg(data){
+			$(".input-group").css("border","1px solid red");
+			$("small").text(data);
+			$("small").show();
+		}
+		function shang(){
+			var num=$("input[name='num']").val();
+			var b=$("input[name='msg']").val();
+			
+			if(num==''){
+				alert("打赏需要本钱的呦~");
+			}else{
+				alert(num);
+				alert(b);
+			}
+		}
+	</script>
+</block>
+<block name="nav"></block>

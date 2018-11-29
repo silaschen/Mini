@@ -1,0 +1,489 @@
+<?php
+/**
+## 微信打赏 V1.0
+## 2016-08-23
+**/
+class RewardAction extends CommonAction{
+	public $eq = '微信打赏'; //使用中文指定当前左侧栏目位置
+	#人员信息管理#
+	public function perlist(){
+		$this->IsAdm(true);
+		$model = M('reward_person');
+		if(IS_GET){
+			// 信息列表
+			$word = I('word');
+			if($word){
+				$where['name|jobnum']= array('like','%'.$word.'%');
+			}
+			$where['status']=array('neq',-1);
+			$data = $this->pagelist(12,$model,$where);
+			foreach ($data['list'] as $key => $value) {
+				$data['list'][$key]['groupname'] = M('reward_group')->where(array('id'=>$value['gid']))->getField('name');
+			}
+			$this->assign($data);
+			$this->display();
+		}else{
+			if(IS_AJAX){
+				$id = I('post.id');
+				$t = I('post.t');
+				if($id>0){
+				if($t==-2){
+					$wx['openid']='';
+					$wx['headimgurl']='';
+					$wx['nickname']='';
+					$r =$model->where(array('id'=>$id))->save($wx);
+				}else{
+					$r =$model->where(array('id'=>$id))->setField('status',$t);
+				}
+				if($r) exit(json('操作成功!',1));
+				}
+				exit(json('操作失败！'));
+			}
+
+		}
+	}
+
+	#后台为人员提现#
+	public function CashOutByHand(){
+		// AJAX操作
+		$openid = I('post.openid');
+		$money = I('post.money');
+		$r = $this->cashmoney($openid,$money);
+		if($r==1){
+			json("操作成功！",1);
+		}else{
+			json($r);
+		}
+	}
+
+	#添加/修改人员信息#
+	public function peradd(){
+		$this->IsAdm(true);
+		if(IS_GET){
+			$this->title = '添加人员信息';
+			$id = I('id');
+			if($id > 0){
+				$this->title = '修改人员信息';
+				// 读取资料赋值
+				$data['info'] = M('reward_person')->where(array('id'=>$id))->find();
+			}
+			$data['groups'] = M('reward_group')->where(array('status'=>1))->select();
+			$this->assign($data);
+			$this->display();
+		}else{
+			$row = I('post.');
+			if($row){
+				// $name = M('reward_person')->where(array('name'=>$row['name'],'id'=>array('neq',$row['id']),'status'=>array('neq',-1)))->find();
+				// if(isset($name)) alert("人员姓名已经存在！");
+				//$r = save('reward_person',$row);
+				if($row['id']){
+					$r = M('reward_person')->save($row);
+					$r = $row['id'];
+				}else{
+					$r = M('reward_person')->add($row);
+				}
+				if($r){
+					$this->MakeQR($r);
+					alert('操作成功！',U('Reward/perlist'));
+					
+				}else{
+					alert("修改失败！");
+				}
+			}
+		}
+	}
+
+	#生成人员微信二维码 可用于人员添加成功后执行 (永久字符串 参数加前缀 Reward/ScanQR- 用于微信接口识别 R方法跨模块调用处理)#
+	#后台也可生成页面二维码 则无需关注公众号进行打赏#
+	protected function MakeQR($pid){
+		if($pid){
+			$path = "Public/uploads/ercode/reward/";
+			if(!is_dir($path)) mkdir($path,0777,true); //不存在 则创建目录
+			$wxqr = $path."/wx-".$pid."jpg";
+			$pageqr = $path."/page-".$pid.".jpg";
+			//生成页面二维码
+			import('@.ORG.QRcode');
+			QRcode::png(U('Reward/perhome',array('pid'=>$pid),'','',true), $pageqr, 'L', 15, 2);  
+			//生成微信二维码
+			$this->DefineQR("Reward/ScanQR-".$pid);
+			 // import('@.ORG.WeiXin');
+			 // $wx=new WeiXin();
+			 // $wx->makecode("Reward/ScanQR-".$pid,0,$wxqr);
+		}
+	}
+
+	#人员分组管理#
+	public function grouplist(){
+		$this->IsAdm(true);
+		$model = M('reward_group');
+		if(IS_GET){
+			// 信息列表
+			$data = $this->pagelist(12,$model,array('status'=>array('neq',-1)));
+			$this->assign($data);
+			$this->display();
+		}else{
+			//AJAX 删除 禁用 恢复操作
+			if(IS_AJAX){
+					$id = I('post.id');
+					$t = I('post.t');
+					if($id>0){
+						if($t==-1){
+							$row = M('Reward_person')->where(array('gid'=>$id,'status'=>array('neq',-1)))->count();
+							if($row>0) json("该分组下存在人员信息，请删移除该分组下的人员再进行删除分组操作！");
+						}
+					$r =$model->where(array('id'=>$id))->setField('status',$t);
+					if($r) exit(json('操作成功!',1));
+					}
+					exit(json('操作失败！'));
+				}
+			}
+	}
+
+	#添加/修改分组信息#
+	public function groupadd(){
+		$this->IsAdm(true);
+		if(IS_GET){
+			$this->title = '添加分组信息';
+			$id = I('id');
+			if($id > 0){
+				$this->title = '修改分组信息';
+				// 读取资料赋值
+				$info = M('reward_group')->where(array('id'=>$id))->find();
+				$this->assign('info',$info);
+			}
+			$this->display();
+		}else{
+			//新增或保存
+			$row = I('post.');
+			if($row){
+				$name = M('reward_group')->where(array('name'=>$row['name'],'id'=>array('neq',$row['id']),'status'=>array('neq',-1)))->find();
+				if(isset($name)) alert("分组名称已经存在！");
+				$r = save('reward_group',$row);
+				if($r){
+					alert('操作成功！',U('Reward/grouplist'));
+				}else{
+					alert("修改失败！");
+				}
+			}
+		}
+	}
+
+	#打赏记录#
+	public function rewardlogs(){
+		$this->IsAdm(true);
+		$this->title="打赏记录";
+		$model = M('reward_order');
+		// 记录列表 
+		$pid = I('pid'); //人员ID
+		$gid = I('gid'); //分组ID
+		$btime = I('btime'); //开始日期
+		$etime = I('etime'); //结束日期
+		$word = I('word'); //人员名称或打赏用户昵称评价关键词
+		$map = array(); //筛选条件
+		if($pid) $map['pid'] = $pid;
+		if($btime && $etime){
+			$map['bingo_reward_order.addtime'] = array('between',array(strtotime($btime),strtotime($etime)+86400));
+		}else if($btime){
+			$map['bingo_reward_order.addtime'] = array('egt',strtotime($btime));
+		}else if($etime){
+			$map['bingo_reward_order.addtime'] = array('elt',strtotime($etime)+86400);
+		}
+		// 如果有分组ID条件......
+		if($gid > 0){
+			$map['bingo_reward_person.gid'] = $gid;
+		}
+		// 关键词条件....
+		if($word){
+			$map['bingo_reward_order.personname|bingo_reward_order.nickname|bingo_reward_order.remark|bingo_reward_person.jobnum'] = array('like','%'.$word.'%');
+		}
+		//开始查询
+		if(!$p) $p = 1;
+		import('@.ORG.Util.Page');// 导入分页类
+		$data['list'] = $model->field('bingo_reward_order.*,bingo_reward_person.gid,bingo_reward_person.cost')
+								->join('bingo_reward_person ON bingo_reward_order.pid = bingo_reward_person.id')
+								->where($map)
+								->order($order)
+								->group('bingo_reward_order.id')
+								->page($p,6)->select();
+		$count	= $model->where($map)->count();// 查询满足要求的总记录数
+		$this->total = $count;
+		$page 	= new Page($count,6);// 实例化分页类 传入总记录数和每页显示的记录数
+		$page->setConfig('theme','%upPage%  %linkPage%  %downPage%');
+		$page->rollPage = $rollPage;
+		$show	= $page->show();// 分页显示输出
+		$data['page'] = $show;
+		foreach($where as $key=>$val) {
+			$page->parameter   .=   "$key=".urlencode($val).'&';
+		}
+		$data['groups'] = M('reward_group')->where(array('status'=>1))->select();
+		$this->assign($data);
+		$this->display();
+	}
+
+	#提现记录#
+	public function cashlogs(){
+		$this->IsAdm(true);
+		$this->title="提现记录";
+		$model = M('reward_cashlogs');
+		// 记录列表 
+		$pid = I('pid'); //人员ID
+		$gid = I('gid'); //分组ID
+		$btime = I('btime'); //开始日期
+		$etime = I('etime'); //结束日期
+		$word = I('word'); //人员名称或打赏用户昵称评价关键词
+		$map = array(); //筛选条件
+		if($pid) $map['pid'] = $pid;
+		if($btime && $etime){
+			$map['bingo_reward_cashlogs.addtime'] = array('between',array(strtotime($btime),strtotime($etime)+86400));
+		}else if($btime){
+			$map['bingo_reward_cashlogs.addtime'] = array('egt',strtotime($btime));
+		}else if($etime){
+			$map['bingo_reward_cashlogs.addtime'] = array('elt',strtotime($etime)+86400);
+		}
+		// 如果有分组ID条件......
+		if($gid > 0){
+			$map['bingo_reward_person.gid'] = $gid;
+		}
+		// 关键词条件....
+		if($word){
+			$map['bingo_reward_person.name|bingo_reward_person.jobnum'] = array('like','%'.$word.'%');
+		}
+		//开始查询
+		if(!$p) $p = 1;
+		import('@.ORG.Util.Page');// 导入分页类
+		$data['list'] = $model->field('bingo_reward_cashlogs.*,bingo_reward_person.gid,bingo_reward_person.name')
+								->join('bingo_reward_person ON bingo_reward_cashlogs.pid = bingo_reward_person.id')
+								->where($map)
+								->order($order)
+								->group('bingo_reward_cashlogs.id')
+								->page($p,6)->select();
+		$count	= $model->where($map)->count();// 查询满足要求的总记录数
+		$this->total = $count;
+		$page 	= new Page($count,6);// 实例化分页类 传入总记录数和每页显示的记录数
+		$page->setConfig('theme','%upPage%  %linkPage%  %downPage%');
+		$page->rollPage = $rollPage;
+		$show	= $page->show();// 分页显示输出
+		$data['page'] = $show;
+		foreach($where as $key=>$val) {
+			$page->parameter   .=   "$key=".urlencode($val).'&';
+		}
+		$data['groups'] = M('reward_group')->where(array('status'=>1))->select();
+		$this->assign($data);
+		$this->display();
+	}
+
+	#参数设置 (默认打赏金额选项设置 需>=1 元, 自动提现开关 全局手续费率设置 打赏评价标签等)#
+	public function setting(){
+		$this->IsAdm(true);
+		if(IS_GET){
+			$this->title = '参数设置';
+			$info = M('reward_set')->where(array('id'=>1))->find();
+			$this->assign('info',$info);
+			// 读取当前配置项
+			$this->display();
+		}else{
+			$row = I('post.');
+			if(!empty($row)){
+				$r = M('reward_set')->where(array('id'=>1))->save($row);
+				if($r){
+					alert("修改成功！",U('Reward/setting'));
+				}else{
+					alert("没有任何更改！");
+				}
+			}
+		}
+	}
+	/**
+	###################################################################
+	################### 共用函数 #################################
+	###################################################################
+	**/
+	//余额提现
+	protected function cashmoney($openid,$money){
+		if($openid && $money){
+			$user = M('reward_person')->where(array('openid'=>$openid))->find();
+			if(isset($user)){
+				if($money>$user['money']) return "余额不足！";
+				if($money<1) return "提现金额必须大于1元！";
+				if($money<=200){
+					//发送微信红包
+					$r = $this->WxRedPack($user['openid'],$money,"打赏提现");
+				}else{
+					//企业转账
+					$r = $this->WxPayTo($user['openid'],$money,"打赏提现");
+				}
+				if($r['res']){
+					//更新账户余额
+					M('reward_person')->where(array('openid'=>$openid))->setDec('money',$money);
+					$nowmoney = M('Reward_person')->where(array('openid'=>$openid))->getField('money');
+					//写入提现记录
+					$row['pid'] = $user['id'];
+					$row['openid'] = $user['openid'];
+					$row['fee'] = $money;
+					$row['now'] = $nowmoney;
+					$row['addtime'] =time();
+					$res = M('reward_cashlogs')->addd($row);
+					if($res){
+						return 1;
+					}else{
+						return  "保存记录失败！";
+					}
+				}else{
+					dump($r);
+					return "提取失败！";
+				}
+			}
+		}else{
+			return "参数错误！";
+		}
+	}
+	/**
+	###################################################################
+	###################  微信接口处理 #################################
+	###################################################################
+	**/
+	#扫码处理 (通过判断前缀 找到对应模块及方法 传入XML对象)#
+	public function ScanQR($pid){
+		// 回复打赏入口(人员主页)
+		if($pid){
+				$msg=array(
+						array('title'=>'打赏入口',
+							  'intro'=>'点击可对服务进行打赏和评价！',
+							  'pic'=>'http://ssy.vhost.binguo.me/Public/uploads/images/2016-08-04/57a2dc429f94d.jpeg',
+							  'url'=>U('Reward/perhome',array('pid'=>$pid),'','',true)
+							  )
+					);
+		R('Tpl/news_tpl',array($msg));
+		}
+		exit(); //最后中断向下执行
+	}
+
+	/**
+	###################################################################
+	###################  前台部分 #####################################
+	###################################################################
+	**/
+	#人员主页（如果是绑定微信访问本人页面则不显示打赏操作 显示累计及当前赏金金额和提现按钮）#
+	public function perhome(){
+		$this->WxAuth(true); //获取微信资料
+		if(IS_GET){
+			/*if(session('d_id')){ //本人访问，跳转
+				$this->redirect(U('Reward/MoneyInfo'));
+			}*/
+			$id = I('id');
+			$info = M('reward_person')->where(array('id'=>$id,'status'=>1))->find();
+			// 如果该人员尚未绑定微信 则页面提示确认绑定操作
+			
+			$this->assign('info',$info);
+			$this->display();
+		}else{
+			// 绑定微信本人执行手动提现操作
+
+			// 检查权限及金额有效性
+		}
+	}
+	public function MoneyInfo(){
+		$this->title="打赏记录";
+		if(IS_GET){
+
+			session("d_id","1");
+			$where["id"]=session("d_id");;
+			$where['status']="2";
+			$model=M('reward_order');
+			$num=$model->where($where)->field("count(id) as num")->select();
+			$data = $this->pagelist(5,$model,$where);
+			$user=M('reward_person')->where(array("id"=>session('d_id')))->field("headimgurl,nickname,money,total")->find();
+			$this->assign('user',$user);
+			$this->assign($data);
+			$this->assign("num",$num);
+			$this->display();
+			
+	
+		}else if(IS_POST){
+			$num=I('post.num');
+			$where['id']=session('d_id');
+			$where['status']="1";
+			$model=M('reward_person');
+			$money=$model->where($where)->getField("money");
+
+			if(!$money){
+				json("不好意思,用户不存在！");
+			}else if($num>$money || $money=="0"){
+				json("抱歉,您的余额不足");
+			}else if($money<1){
+				json("微信规定最低提现金额1块~~~");
+			}else{
+				$data['money']=(float)($money-$num); // 余额
+
+					$res=$model->where($where)->save($data);//修改数据
+
+					if($res){
+					
+					$log['pid']=session('d_id');
+					$log['openid']=$model->where($where)->getField("openid");
+					$log['fee']=$num;
+					$log['now']=$data['money'];
+					$log['addtime']=time();
+
+					M('reward_cashlogs')->add($log);//添加记录
+					
+					/*提现逻辑*/
+
+					json("恭喜您提现成功！",1);
+
+					}else{
+						json("(⊙o⊙)…系统出了点意外，请重试~");
+					}
+			}
+
+		}
+		
+	}
+	
+	#生成赏金支付订单并返回支付参数#
+	public function MakePay(){
+		// 在用户选择打赏金额后，通过AJAX为微信支付生成参数并返回给前端调用 发起支付请求 
+		//生成订单记录 保存打赏人微信资料到订单 头像 昵称 openid 状态为待支付
+		// 先删除该打赏人openid以前的待支付订单 再生成本次所选
+		$pid = I('pid'); //人员ID
+		$fee = I('fee'); // 打赏金额 
+	}
+
+	#支付通知处理#
+	public function WxPayCallBack(){
+		// 支付结果通知处理 ....
+
+		// 检查有效性
+
+		// 更新打赏订单状态 计入人员收入金额 
+
+		// 执行提现操作 $this->CashOut(xxx,xxx);
+	}
+
+	#赏金提现 默认在用户打赏后自动执行该操作,也可在自动执行失败后 员工手动提现执行#
+	protected function CashOut($pid,$fee){
+		// 执行公众号微信红包转账给人员 (金额大于200使用微信付款方式)
+
+		// 成功则保存提现记录 (不成功 则后续可手动提现或后台提现)
+	}
+
+	//封装分页方法
+	public function pagelist($pagesize,$model,$where,$order='addtime desc',$rollPage=5){
+		$p = I('p');
+		if(!$p) $p = 1;
+		import('@.ORG.Util.Page');// 导入分页类
+		$data['list'] = $model->where($where)->order($order)->page($p,$pagesize)->select();
+		$count	= $model->where($where)->count();// 查询满足要求的总记录数
+		$this->total = $count;
+		$page 	= new Page($count,$pagesize);// 实例化分页类 传入总记录数和每页显示的记录数
+		$page->setConfig('theme','%upPage%  %linkPage%  %downPage%');
+		$page->rollPage = $rollPage;
+		$show	= $page->show();// 分页显示输出
+		$data['page'] = $show;
+		foreach($where as $key=>$val) {
+			$page->parameter   .=   "$key=".urlencode($val).'&';
+		}
+		return $data;
+	}
+
+}

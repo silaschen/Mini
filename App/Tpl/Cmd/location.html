@@ -1,0 +1,63 @@
+<extend name="Sys:base" />
+<block name="head">
+<include file="Sys:head" />
+</block>
+<block name="left">
+<include file="Sys:left" />
+</block>
+<block name="main">
+<include file="Mate:js" />
+<div class="nav-tabs-custom">
+    <ul class="nav nav-tabs pull-right">
+      <li><a href="{:U('Cmd/event')}">事件规则</a></li>
+      <li class='active'><a href="{:U('Cmd/location')}">地理位置</a></li>
+      <li><a href="{:U('Cmd/text')}">文本规则</a></li>
+     
+      <li class="pull-left header" style="font-size: 15px;"><i class="fa fa-th"></i> {$title}</li>
+    </ul>
+    <div class="tab-content">
+		<div class="tab-pane active">
+			 <table class="table table-bordered">
+					<thead><th>位置范围</th><th>回复内容</th><th>预览/追加规则</th><th>状态</th><th>管理</th></thead>
+					<tbody>
+						<volist name='list' id='vo'>
+						  <tr><td>{$vo.ltx},{$vo.lty}</td><td>{$vo.type}</td><td>
+						  	<if condition="$vo.mod neq ''"><span title='进入模块操作 {$vo.mod}' class='glyphicon glyphicon-phone'></span><else/>
+						  	<a href="{:U('Mate/setcmd',array('id'=>$vo['rid'],'type'=>$vo['view']))}" target='_blank'>预览</a></if></td>
+						  	<td><if condition="$vo.status eq '1'"><span class='glyphicon glyphicon-play text-green'></span> 正常<else/><span class='glyphicon glyphicon-pause'></span> 暂停</if></td>
+						  	<td>
+						  	<a class="label label-danger" href="javascript:delforcmd({$vo.id},2);">删除</a>
+						  	<if condition="$vo.status eq '1'">
+						  	<a class="label label-warning" href="javascript:cmdstatus({$vo.id},2,0);">禁用</a>
+						  	<else/>
+						  	<a class="label label-success" href="javascript:cmdstatus({$vo.id},2,1);">启用</a>
+						  	</if>
+						  	<a class="label label-info" href="javascript:locationmodify({$vo.id});">修改</a>
+						  </td></tr>
+						</volist>
+					</tbody>
+				</table>
+		</div><!-- /.tab-pane -->
+		<div class="clearfix">
+			<ul class="pagination pagination-sm no-margin pull-right">{$page}</ul>
+		</div>
+    </div><!-- /.tab-content -->
+</div>
+<style type="text/css">
+#allmap {height: 390px;width:100%;overflow: hidden;}
+.location{width: 100%;clear: both; overflow: hidden;}
+.location .anchorTR .BMapLib_Drawing_panel{}
+.location .anchorTR .BMapLib_marker{display: none;}
+.location .anchorTR .BMapLib_circle{display: none;}
+.location .anchorTR .BMapLib_polygon{display: none;}
+.location .anchorTR .BMapLib_polyline{display: none;}
+.location .BMap_cpyCtrl,.location .anchorBL{display: none;}
+</style>
+<!--百度地图api-->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=023ea5aa58d31c2d2dc6a650bad7795b"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/library/DrawingManager/1.4/src/DrawingManager_min.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.4/src/SearchInfoWindow_min.js"></script>
+<link rel="stylesheet" href="http://api.map.baidu.com/library/DrawingManager/1.4/src/DrawingManager_min.css" />
+<link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.4/src/SearchInfoWindow_min.css" />
+<include file="locationmodify" />
+</block>

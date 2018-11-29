@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>{$title}</title>
+<meta name="author" content="BinGuo.Me">
+<meta http-equiv="cleartype" content="on">
+<meta content="telephone=no" name="format-detection">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="Public/res/32.png" sizes="32x32" rel="icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<load href="Public/res/loader.css" />
+<script type="text/javascript">
+var loader = '<div id="loading"><div class="content"><img src="Public/res/loading.png"><p>正在载入</p></div></div>';
+document.write(loader);
+document.onreadystatechange = completeLoading;
+function completeLoading() {
+    if (document.readyState == "complete") {
+        document.getElementById("loading").style.display="none";
+    }
+}
+</script>
+<script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<load href="Public/res/web.css" />

@@ -1,0 +1,96 @@
+<view class="page">
+  <view class="head" id="head">
+    <view class="headimg">
+      <image src="../../res/tx.jpg"></image>
+    </view>
+    <view class="cont">
+      <view class="clear">
+        <text class="name pull-left">微信名字</text>
+        <button class="kefu pull-right" type="primary" size="mini">
+          <text class="iconfont icon-kefu">  客服</text>
+        </button>
+      </view>
+      <view class="info">这是叙述性信息</view>
+    </view>
+  </view>
+  <view class="section" id="section">
+    <navigator url="../item1/order" class="list clear">
+      <view class="pull-left">
+        <image src="../../res/2.png"></image>
+        <text>补换行驶证</text>
+      </view>
+      <view class="pull-right">
+        <text wx:if="{{num[0]!=0}}">{{num[0]}}</text>
+        <i class="iconfont icon-you"></i>
+      </view>
+    </navigator>
+    <view class="tinyline"></view>
+    <navigator url="../item2/order" class="list clear">
+      <view class="pull-left">
+        <image src="../../res/1.png"></image>
+        <text>补换驾驶证</text>
+      </view>
+      <view class="pull-right">
+        <text wx:if="{{num[1]!=0}}">{{num[1]}}</text>
+        <i class="iconfont icon-you"></i>
+      </view>
+    </navigator>
+    <view class="tinyline"></view>
+    <navigator url="../item3/order" class="list clear">
+      <view class="pull-left">
+        <image src="../../res/3.png"></image>
+        <text>年审委托书</text>
+      </view>
+      <view class="pull-right">
+        <text wx:if="{{num[2]!=0}}">{{num[2]}}</text>
+        <i class="iconfont icon-you"></i>
+      </view>
+    </navigator>
+    <view class="tinyline"></view>
+    <navigator url="../item4/order" class="list clear">
+      <view class="pull-left">
+        <image src="../../res/4.png"></image>
+        <text>补办车牌照</text>
+      </view>
+      <view class="pull-right">
+        <text wx:if="{{num[3]!=0}}">{{num[3]}}</text>
+        <i class="iconfont icon-you"></i>
+      </view>
+    </navigator>
+    <view class="tinyline"></view>
+    <navigator url="../item5/order" class="list clear">
+      <view class="pull-left">
+        <image src="../../res/5.png"></image>
+        <text>六年免检标</text>
+      </view>
+      <view class="pull-right">
+        <text wx:if="{{num[4]!=0}}">{{num[4]}}</text>
+        <i class="iconfont icon-you"></i>
+      </view>
+    </navigator>
+    <view class="tinyline"></view>
+    <navigator url="../item6/order" class="list clear">
+      <view class="pull-left">
+        <image src="../../res/6.png"></image>
+        <text>环保标办理</text>
+      </view>
+      <view class="pull-right">
+        <text wx:if="{{num[5]!=0}}">{{num[5]}}</text>
+        <i class="iconfont icon-you"></i>
+      </view>
+    </navigator>
+    <view class="tinyline"></view>
+    <navigator url="../item7/order" class="list clear">
+      <view class="pull-left">
+        <image src="../../res/7.png"></image>
+        <text>代驾帮审车</text>
+      </view>
+      <view class="pull-right">
+        <text wx:if="{{num[6]!=0}}">{{num[6]}}</text>
+        <i class="iconfont icon-you"></i>
+      </view>
+    </navigator>
+    <view class="tinyline"></view>
+  </view>
+  <include src="../footer.wxml" />
+</view>

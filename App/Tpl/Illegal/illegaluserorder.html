@@ -1,0 +1,96 @@
+<extend name="Index:base" />
+<block name="main">
+<link href="Public/res/insurance/weui/weui.css" rel="stylesheet">
+<style type="text/css">
+.glyphicon-gift{color: #999;}
+</style>
+<div id='member-top'>
+	<div style="height:45px">
+		<center>
+			<span style="line-height:45px;margin-left:20px" class="pull-left"><a style="color:#fff" href="javascript:location.href=document.referrer">返回</a></span>
+			<span style="margin-right:20px;color:#fff;line-height:45px">{$title}</span>
+			<a href="{:U('Illegal/illegaluserorderinfo',array('id'=>$info['id']))}" style="margin-right:20px;color:#fff;line-height:45px" class='pull-right'>详情</a>
+		</center>
+	</div>
+</div>
+<div class='box1' style='padding:10px'>
+	<table class="table table-bordered" >
+		<tr>
+			<td>姓名:&nbsp;&nbsp;{$info.name}</td>
+		</tr>
+		<tr>
+			<td>电话:&nbsp;&nbsp;{$info.tel}</td>
+		</tr>
+		<tr>
+			<td>总金额:&nbsp;&nbsp; {$info.total}</td>
+		</tr>
+		<tr>
+			<td>申请时间:&nbsp;&nbsp; {$info.addtime|date="Y-m-d H:i:s",###}</td>
+		</tr>
+		<if condition="$info.status eq 3">
+			<tr>
+				<td>回执单号：{$info.ticket}</td>
+			</tr>
+		</if>
+		<tr>
+			<td>当前状态:
+			 	<if condition="$info.status eq 0"><span class="label label-default">已取消</span></if>
+			 	<if condition="$info.status eq 1"><span class="label label-danger">待支付</span></if>
+			 	<if condition="$info.status eq 2"><span class="label label-info">待处理</span></if>
+			 	<if condition="$info.status eq 3"><span class="label label-success">已完成</span></if>
+			 </td>
+		</tr>
+
+	</table>
+	<div style='margin-top:10px'>
+	<if condition="$info.status eq 1 ">
+		<a href="javascript:DelMark('{$info.id}','{$info.openid}')" class='btn btn-default pull-left' >取消申请</a>
+		<a class='btn btn-success pull-right' href="javascript:PayIllegal({$info.id})">支付订单</a>
+	</if>
+	<if condition="$info.status eq 2 ">
+		<a href="javascript:DelMark('{$info.id}','{$info.openid}')" class='btn btn-default pull-right' >取消申请</a>
+	</if>
+	</div>
+</div>
+</block>
+<block name="nav">
+
+</block>
+<block name="js">
+<load href="Public/res/insurance/common.js" />
+<include file="Index:TempCallPay" />
+<script type="text/javascript">
+	function DelMark(id,openid){
+		var r = confirm('注意','确定取消申请？',function(){
+			loading2('处理中..');
+			$.post("{:U('Illegal/DelMark')}",{'id':id,"openid":openid},function(data){
+				alert(data.msg);
+				if(data.ret == 1){
+					location.href = "{:U('Illegal/illegaluserorderlist')}";
+				}else{
+					loading2('',0);
+				}
+			},"JSON")
+		});
+	}
+
+function PayIllegal(id){
+	loading(1);
+	$.get("{:U('Illegal/PayIllegal')}",{'id':id},function(data){
+		if(data != '' && data.ret != 1 ){
+			TempPayJSApi = data;
+			TempCallPay();
+		}else{
+			if(data.ret == 1){
+				alert(data.msg);
+			}else{
+				alert('发起支付失败!');
+			}
+		}
+		loading(0);
+	},'JSON');
+}
+function TempPayCancel(){
+}
+</script>
+</block>

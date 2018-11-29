@@ -1,0 +1,139 @@
+<extend name="Sys:base" />
+<block name="main">
+  <div class="box box-solid">
+    <div class="box-header with-border">
+      <h3 class="box-title">{$title}</h3>
+    </div><!-- /.box-header -->
+    <div class="box-body">
+      <form method="GET" action="{:U('Pro/itemlist')}" id='search' style="margin-bottom:15px;">
+      <div class="row">
+        <div class="col-xs-3 col-md-2">
+          <select name='type' class='form-control'>
+            <option value=''>全部</option>
+            <option value='1'>安装</option>
+            <option value='2'>维修</option>
+          </select>
+        </div>
+
+        <div class="col-xs-3 col-md-2">
+          <select name='status' class='form-control'>
+            <option value=''>全部</option>
+            <option value='1'>正常</option>
+            <option value='0'>禁用</option>
+          </select>
+        </div>
+
+        <div class="col-xs-6 col-md-6">
+          <div class="input-group">
+            <input name="word" type='text' class='form-control' value="{:I('word')}" placeholder='标题/简介 关键词搜索..'>
+            <span class="input-group-addon" onclick="$('#search').submit();"><i class="fa fa-search"></i></span>
+            <if condition="$_GET['type'] neq '' OR $_GET['word'] neq '' OR $_GET['status'] neq ''">
+            <a title='清除条件' class="input-group-addon" href="{:U('Pro/itemlist')}"><i class="fa fa-remove"></i></a>
+            </if>
+          </div>
+        </div>
+      </div>
+      </form>
+      <table class="table table-bordered">
+        <thead>
+          <th>ID</th>
+          <th>海报</th>
+          <th>项目</th>
+          <th>价格</th>
+          <th>添加时间</th>
+          <th>状态</th>
+       
+          <th>操作</th>
+        </thead>
+        <tbody>
+      <volist name="list" id='vo'>
+        <tr>
+          <td>{$vo.id}</td>
+          <td><if condition="$vo.cover neq ''"><img src='{$vo.cover}' class='img-rounded' width='40'></if></td>
+          <td>{$vo.title}</td>
+          <td><span class="badge bg-blue">￥{$vo.price}</span></td>
+
+          <td>{$vo.addtime|date='Y-m-d H:i:s',###}</td>
+          <td><if condition="$vo.status eq 1"><span class="label label-success">正常</span><elseif condition="$vo.status eq 0"/><span class="label label-default">禁用</span></if></td>
+        
+      
+          <td>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown">
+                管理
+                <span class="caret"></span>
+                <span class="sr-only">+</span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+               
+                <li><a href="{:U('Pro/additem',array('id'=>$vo['id']))}">编辑</a></li>
+
+                <if condition="$vo.status eq 1">
+                  <li><a href="javascript:setstat({$vo.id},0);">禁用</a></li><elseif condition="$vo.status eq 0"/>
+                  <li><a href="javascript:setstat({$vo.id},1);">启用</a></li>
+                </if>
+
+                <li><a href="javascript:setstat({$vo.id},-1);">删除</a></li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+      </volist>
+        </tbody>
+      </table>
+    </div><!-- /.box-body -->
+    <div class="box-footer clearfix">
+      <ul class="pagination pagination-sm no-margin pull-left">{$page}</ul>
+      <a href="{:U('Pro/additem')}" class="btn btn-success pull-right">添加新项目</a>
+    </div>  
+  </div>
+<!-- 查看详情 -->
+<div class="modal" id='detail'>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title">会员详情</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered" id='showuser'>
+          
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">关闭</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+
+<script type="text/javascript">
+function setstat(id,t){
+  var r = null;
+  if(t == 0){
+    r = confirm('您确认禁用此项目吗？');
+  }else if(t == 1){
+    r = confirm('您确认启用此项目吗？');
+  }else if(t == -1){
+    r = confirm('您确认删除此项目吗？');
+  }
+  if(r == true){
+    loading2('操作中...');
+    $.post(location.href,{'id':id,'t':t},function(data){
+        alert(data.msg);
+        if(data.ret == 1){
+          location.reload();
+        }else{
+          loading2('',0);
+        }
+    },'JSON');
+  }
+}
+$('.intro').popover();
+</script>
+<script type="text/javascript">
+    SelVal('type',{$_GET['type']});
+    SelVal('status',{$_GET['status']});
+
+</script>
+</block>

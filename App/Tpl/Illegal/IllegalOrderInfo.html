@@ -1,0 +1,27 @@
+<table class="table table-bordered" >
+	<if condition="$ticket neq ''">
+		<tr>
+			<td colspan="6">
+				回执单号：{$ticket}
+			</td>
+		</tr>
+	</if>
+	<tr>
+		<td>违章编号</td>
+		<td>罚款金额</td>
+		<td>违规扣分</td>
+		<td>违规事件</td>
+		<td>违规区域</td>
+		<td>违规时间</td>
+	</tr>
+	<volist name="list" id="vo">
+	<tr>
+        <td>{$vo.wfxw}</td>
+        <td>{$vo.fkje}</td>
+        <td>{$vo.wfjfs}</td>
+        <td>{$vo.wfnr}</td>
+        <td>{$vo.wfdz}</td>
+        <td>{$vo.wfsj}</td>
+	</tr>
+	</volist>
+</table>

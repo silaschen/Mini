@@ -1,0 +1,1766 @@
+[ 2017-08-23T08:47:26+08:00 ] 192.168.31.129 /car/?m=Mini&a=CountOrder&sessionkey=829a8f88f0cfaa5b
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000743s ]
+NOTIC: [2] mysql_connect():  E:\phpStudy\WWW\car\Core\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+ERR: ����Ŀ�����������ܾ����޷����ӡ�
+
+
+[ 2017-08-23T08:47:30+08:00 ] 192.168.31.210 /car/?m=Mini&a=CountOrder&sessionkey=3efbbacc06739a66
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001721s ]
+
+[ 2017-08-23T08:47:30+08:00 ] 192.168.31.129 /car/?m=Mini&a=UserInfo&type=2&sessionkey=829a8f88f0cfaa5b
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001130s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001207s ]
+
+[ 2017-08-23T08:47:34+08:00 ] 192.168.31.210 /car/?m=Mini&a=UserInfo&type=1&sessionkey=3efbbacc06739a66
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001093s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001186s ]
+
+[ 2017-08-23T08:47:34+08:00 ] 192.168.31.129 /car/?m=Mini&a=UserInfo&type=2&sessionkey=829a8f88f0cfaa5b
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000943s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001033s ]
+
+[ 2017-08-23T08:47:39+08:00 ] 192.168.31.129 /car/?m=Mini&a=UserInfo&type=1&sessionkey=829a8f88f0cfaa5b
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000933s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001007s ]
+
+[ 2017-08-23T08:47:41+08:00 ] 192.168.31.210 /car/?m=Mini&a=UserInfo&type=3&sessionkey=3efbbacc06739a66
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001176s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001483s ]
+
+[ 2017-08-23T08:47:49+08:00 ] 192.168.31.171 /car/?m=Mini&a=UserInfo&type=1&sessionkey=4d055384fca4fde4
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000659s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000732s ]
+
+[ 2017-08-23T08:48:22+08:00 ] 192.168.31.210 /car/?m=Mini&a=UploadFile
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000915s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000997s ]
+NOTIC: [8] Undefined index: thumb E:\phpStudy\WWW\car\App\Lib\Action\CommonAction.class.php 第 576 行.
+NOTIC: [8] Undefined index: thumb E:\phpStudy\WWW\car\App\Lib\Action\CommonAction.class.php 第 578 行.
+NOTIC: [8] Undefined index: del E:\phpStudy\WWW\car\App\Lib\Action\CommonAction.class.php 第 583 行.
+
+[ 2017-08-23T08:48:39+08:00 ] 192.168.31.171 /car/?m=Mini&a=CountOrder&sessionkey=4d055384fca4fde4
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001107s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001181s ]
+
+[ 2017-08-23T08:48:59+08:00 ] 192.168.31.210 /car/?m=Mini&a=UploadFile
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001259s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001336s ]
+NOTIC: [8] Undefined index: thumb E:\phpStudy\WWW\car\App\Lib\Action\CommonAction.class.php 第 576 行.
+NOTIC: [8] Undefined index: thumb E:\phpStudy\WWW\car\App\Lib\Action\CommonAction.class.php 第 578 行.
+NOTIC: [8] Undefined index: del E:\phpStudy\WWW\car\App\Lib\Action\CommonAction.class.php 第 583 行.
+
+[ 2017-08-23T08:49:01+08:00 ] 192.168.31.210 /car/?m=Mini&a=UploadFile
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000708s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000783s ]
+NOTIC: [8] Undefined index: thumb E:\phpStudy\WWW\car\App\Lib\Action\CommonAction.class.php 第 576 行.
+NOTIC: [8] Undefined index: thumb E:\phpStudy\WWW\car\App\Lib\Action\CommonAction.class.php 第 578 行.
+NOTIC: [8] Undefined index: del E:\phpStudy\WWW\car\App\Lib\Action\CommonAction.class.php 第 583 行.
+
+[ 2017-08-23T08:49:09+08:00 ] 192.168.31.210 /car/?m=Mini&a=UploadFile
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001105s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001181s ]
+NOTIC: [8] Undefined index: thumb E:\phpStudy\WWW\car\App\Lib\Action\CommonAction.class.php 第 576 行.
+NOTIC: [8] Undefined index: thumb E:\phpStudy\WWW\car\App\Lib\Action\CommonAction.class.php 第 578 行.
+NOTIC: [8] Undefined index: del E:\phpStudy\WWW\car\App\Lib\Action\CommonAction.class.php 第 583 行.
+
+[ 2017-08-23T08:49:30+08:00 ] 192.168.31.210 /car/?m=Inspect&a=MakeOrder&sessionkey=3efbbacc06739a66
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001127s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001210s ]
+
+[ 2017-08-23T08:49:39+08:00 ] 192.168.31.210 /car/?m=Inspect&a=MakeOrder&sessionkey=3efbbacc06739a66
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001507s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001630s ]
+
+[ 2017-08-23T08:49:44+08:00 ] 192.168.31.171 /car/?m=Mini&a=OnLogin&code=071HQLQL1vr483193BSL174XQL1HQLQk
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000968s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001059s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.005135s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000652s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/4h0Uv4XOMvOlfvUnxic40mMh68qq0CUHVdLckALa4n2jXNq2tzAQ649ibKl5LYsQkf1dj7VAefKGia1mIMFDQLxtg/0',`nickname`='卢巽',`sex`=1,`city`='',`province`='',`country`='BY' WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) [ RunTime:0.000376s ]
+
+[ 2017-08-23T08:49:44+08:00 ] 192.168.31.210 /car/?m=Mini&a=UserInfo&type=1&sessionkey=3efbbacc06739a66
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001152s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001238s ]
+
+[ 2017-08-23T08:49:47+08:00 ] 192.168.31.171 /car/?m=Mini&a=CountOrder&sessionkey=9f7ae0af3e03733f
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000807s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004158s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000251s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003660s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000201s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003688s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000188s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.004264s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000276s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.003692s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000283s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003850s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000200s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.003825s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000228s ]
+
+[ 2017-08-23T08:49:51+08:00 ] 192.168.31.171 /car/?m=Mini&a=UserInfo&type=1&sessionkey=9f7ae0af3e03733f
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000775s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004029s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000359s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.003668s ]
+SQL: SELECT * FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000395s ]
+
+[ 2017-08-23T08:50:18+08:00 ] 0.0.0.0 /car/User-userlist.html?openid=ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001204s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001304s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000774s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000833s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004898s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) AND ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) ORDER BY type desc,addtime desc LIMIT 0,15   [ RunTime:0.000522s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE ( `status` >= 0 ) AND ( `type` >= 0 ) AND ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000227s ]
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 39 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001179s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001257s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 185 行.
+NOTIC: [8] Undefined index: word E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 185 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 280 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.019157s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019220s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000691s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000612s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000507s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000739s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002701s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001003s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001062s ]
+
+[ 2017-08-23T08:50:20+08:00 ] 0.0.0.0 /car/Travel-orderlist.html
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000937s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001022s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000714s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004102s ]
+SQL: SELECT a.id,b.nickname,a.name,a.tel,a.adr,a.cphm,a.status,a.addtime,a.paytime,b.headimgurl,a.fee,a.sfz1,a.sfz2,a.openid FROM bingo_car_xszlist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( a.status >= 0 ) ORDER BY a.addtime desc LIMIT 0,15   [ RunTime:0.000654s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bingo_car_xszlist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( a.status >= 0 ) LIMIT 1   [ RunTime:0.000274s ]
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\TravelAction.class.php 第 119 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001033s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001091s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\792430e861db91ab0d54e0197916f022.php 第 188 行.
+NOTIC: [8] Undefined index: word E:\phpStudy\WWW\car\App\Runtime\Cache\792430e861db91ab0d54e0197916f022.php 第 188 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\792430e861db91ab0d54e0197916f022.php 第 188 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\792430e861db91ab0d54e0197916f022.php 第 354 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\792430e861db91ab0d54e0197916f022.php 第 354 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.042466s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042533s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000745s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000526s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000386s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000592s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002414s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000724s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000781s ]
+
+[ 2017-08-23T08:50:23+08:00 ] 0.0.0.0 /car/Drive-orderlist.html
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000915s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000997s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000663s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000723s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.004736s ]
+SQL: SELECT a.id,b.nickname,a.name,a.tel,a.adr,a.cphm,a.status,a.addtime,a.paytime,b.headimgurl,a.fee,a.cardimg,a.sfz1,a.sfz2,a.video,a.openid FROM bingo_car_drivelist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( a.status >= 0 ) ORDER BY a.addtime desc LIMIT 0,15   [ RunTime:0.000466s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bingo_car_drivelist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( a.status >= 0 ) LIMIT 1   [ RunTime:0.000250s ]
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\DriveAction.class.php 第 119 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000994s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001053s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\d2245d088d6ace51d04a4f8c558b66b3.php 第 186 行.
+NOTIC: [8] Undefined index: word E:\phpStudy\WWW\car\App\Runtime\Cache\d2245d088d6ace51d04a4f8c558b66b3.php 第 186 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\d2245d088d6ace51d04a4f8c558b66b3.php 第 186 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\d2245d088d6ace51d04a4f8c558b66b3.php 第 356 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\d2245d088d6ace51d04a4f8c558b66b3.php 第 356 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.021533s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021594s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000548s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000489s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000384s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000572s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002145s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000719s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000778s ]
+
+[ 2017-08-23T08:50:26+08:00 ] 0.0.0.0 /car/Inspect-orderlist.html
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000936s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001021s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000659s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000722s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.004288s ]
+SQL: SELECT a.id,b.nickname,a.name,a.tel,a.adr,a.cphm,a.status,a.addtime,a.paytime,b.headimgurl,a.fee,a.xcz2,a.sfz1,a.sfz2,a.xcz1,a.wtadr,a.openid FROM bingo_car_wtslist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( a.status >= 0 ) ORDER BY a.addtime desc LIMIT 0,15   [ RunTime:0.000390s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bingo_car_wtslist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( a.status >= 0 ) LIMIT 1   [ RunTime:0.000239s ]
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\InspectAction.class.php 第 118 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001012s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001071s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\6d5a7b5da14ff511968e0e1edb2ed679.php 第 188 行.
+NOTIC: [8] Undefined index: word E:\phpStudy\WWW\car\App\Runtime\Cache\6d5a7b5da14ff511968e0e1edb2ed679.php 第 188 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\6d5a7b5da14ff511968e0e1edb2ed679.php 第 188 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\6d5a7b5da14ff511968e0e1edb2ed679.php 第 359 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\6d5a7b5da14ff511968e0e1edb2ed679.php 第 359 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.042618s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042683s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000566s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000490s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000388s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000572s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002169s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000747s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000806s ]
+
+[ 2017-08-23T08:50:35+08:00 ] 192.168.31.210 /car/?m=Mini&a=UserInfo&type=3&sessionkey=3efbbacc06739a66
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000745s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000844s ]
+
+[ 2017-08-23T08:50:54+08:00 ] 192.168.31.210 /car/?m=Mini&a=OnLogin&code=061u8jxj137Zoy0SbYxj1aqhxj1u8jxK
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000768s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004034s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000407s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/9eSN7cAL2SSgC2oBI3WCcszgFeuUBE7lia6HaGzzeDDRONIPCSfrA0hz5MEloN48lyEVCDEjZFN6XNrJEWSqXfQ/0',`nickname`='飞过天空',`sex`=1,`city`='Alameda County',`province`='California',`country`='US' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000217s ]
+
+[ 2017-08-23T08:50:55+08:00 ] 192.168.31.129 /car/?m=Mini&a=CountOrder&sessionkey=829a8f88f0cfaa5b
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000932s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001012s ]
+
+[ 2017-08-23T08:51:01+08:00 ] 192.168.31.210 /car/?m=Mini&a=UserInfo&type=3&sessionkey=a9ac201c2f90cb48
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000913s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001023s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004055s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000369s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003683s ]
+SQL: SELECT * FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000297s ]
+
+[ 2017-08-23T08:51:01+08:00 ] 192.168.31.129 /car/?m=Mini&a=UserInfo&type=1&sessionkey=829a8f88f0cfaa5b
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001175s ]
+
+[ 2017-08-23T08:51:04+08:00 ] 192.168.31.129 /car/?m=Mini&a=CountOrder&sessionkey=829a8f88f0cfaa5b
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000751s ]
+
+[ 2017-08-23T08:51:09+08:00 ] 192.168.31.129 /car/?m=Mini&a=CountOrder&sessionkey=829a8f88f0cfaa5b
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001179s ]
+
+[ 2017-08-23T08:51:26+08:00 ] 192.168.31.210 /car/?m=Mini&a=UploadFile
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000763s ]
+NOTIC: [8] Undefined index: thumb E:\phpStudy\WWW\car\App\Lib\Action\CommonAction.class.php 第 576 行.
+NOTIC: [8] Undefined index: thumb E:\phpStudy\WWW\car\App\Lib\Action\CommonAction.class.php 第 578 行.
+NOTIC: [8] Undefined index: del E:\phpStudy\WWW\car\App\Lib\Action\CommonAction.class.php 第 583 行.
+
+[ 2017-08-23T08:51:28+08:00 ] 192.168.31.210 /car/?m=Mini&a=UploadFile
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000945s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001022s ]
+NOTIC: [8] Undefined index: thumb E:\phpStudy\WWW\car\App\Lib\Action\CommonAction.class.php 第 576 行.
+NOTIC: [8] Undefined index: thumb E:\phpStudy\WWW\car\App\Lib\Action\CommonAction.class.php 第 578 行.
+NOTIC: [8] Undefined index: del E:\phpStudy\WWW\car\App\Lib\Action\CommonAction.class.php 第 583 行.
+
+[ 2017-08-23T08:51:31+08:00 ] 192.168.31.210 /car/?m=Mini&a=UploadFile
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000756s ]
+NOTIC: [8] Undefined index: thumb E:\phpStudy\WWW\car\App\Lib\Action\CommonAction.class.php 第 576 行.
+NOTIC: [8] Undefined index: thumb E:\phpStudy\WWW\car\App\Lib\Action\CommonAction.class.php 第 578 行.
+NOTIC: [8] Undefined index: del E:\phpStudy\WWW\car\App\Lib\Action\CommonAction.class.php 第 583 行.
+
+[ 2017-08-23T08:51:33+08:00 ] 192.168.31.210 /car/?m=Mini&a=UploadFile
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001140s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001221s ]
+NOTIC: [8] Undefined index: thumb E:\phpStudy\WWW\car\App\Lib\Action\CommonAction.class.php 第 576 行.
+NOTIC: [8] Undefined index: thumb E:\phpStudy\WWW\car\App\Lib\Action\CommonAction.class.php 第 578 行.
+NOTIC: [8] Undefined index: del E:\phpStudy\WWW\car\App\Lib\Action\CommonAction.class.php 第 583 行.
+
+[ 2017-08-23T08:51:34+08:00 ] 192.168.31.129 /car/?m=Mini&a=OnLogin&code=021Go4BS1klxJ91JLyES1c4cBS1Go4B6
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000746s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.005474s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000678s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/4h0Uv4XOMvOlfvUnxic40mMh68qq0CUHVdLckALa4n2jXNq2tzAQ649ibKl5LYsQkf1dj7VAefKGia1mIMFDQLxtg/0',`nickname`='卢巽',`sex`=1,`city`='',`province`='',`country`='BY' WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) [ RunTime:0.000861s ]
+
+[ 2017-08-23T08:51:35+08:00 ] 192.168.31.210 /car/?m=Inspect&a=MakeOrder&sessionkey=a9ac201c2f90cb48
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001390s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.004788s ]
+SQL: INSERT INTO `bingo_car_wtslist` (`cphm`,`tel`,`adr`,`name`,`a1`,`a2`,`a3`,`sfz1`,`sfz2`,`wtadr`,`xcz1`,`xcz2`,`status`,`addtime`,`orderid`,`cpm`,`openid`,`fee`) VALUES ('豫A54464','26541469854','北京','陈伟',11,1101,110101,'http://192.168.31.210/car/Public/uploads/images/2017-08-23/599cd18e239bb.jpg','http://192.168.31.210/car/Public/uploads/images/2017-08-23/599cd190a8628.jpg','郑州','http://192.168.31.210/car/Public/uploads/images/2017-08-23/599cd1931ca3f.jpg','http://192.168.31.210/car/Public/uploads/images/2017-08-23/599cd19588143.jpg',1,1503449494,'31840c1208524fc79d479e26844c5f5b',0,'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ','200') [ RunTime:0.000428s ]
+
+[ 2017-08-23T08:51:37+08:00 ] 192.168.31.129 /car/?m=Mini&a=CountOrder&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000714s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000805s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004327s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000252s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.004292s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000226s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003900s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000198s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.003793s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000211s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.004347s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000378s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.004212s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000236s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.003817s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000205s ]
+
+[ 2017-08-23T08:51:37+08:00 ] 192.168.31.210 /car/?m=Inspect&a=orderinfo&id=82&sessionkey=a9ac201c2f90cb48
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001763s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.004230s ]
+SQL: SELECT * FROM `bingo_car_wtslist` WHERE ( `id` = 82 ) LIMIT 1   [ RunTime:0.000415s ]
+SQL: SHOW COLUMNS FROM `bingo_sys_location` [ RunTime:0.003521s ]
+SQL: SELECT `name` FROM `bingo_sys_location` WHERE ( `id` = 11 ) LIMIT 1   [ RunTime:0.000345s ]
+SQL: SELECT `name` FROM `bingo_sys_location` WHERE ( `id` = 1101 ) LIMIT 1   [ RunTime:0.000239s ]
+SQL: SELECT `name` FROM `bingo_sys_location` WHERE ( `id` = 110101 ) LIMIT 1   [ RunTime:0.000219s ]
+
+[ 2017-08-23T08:51:40+08:00 ] 192.168.31.129 /car/?m=Mini&a=UserInfo&type=1&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000755s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004310s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000356s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004537s ]
+SQL: SELECT * FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000370s ]
+
+[ 2017-08-23T08:51:41+08:00 ] 0.0.0.0 /car/Inspect-orderlist.html
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000972s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001057s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000821s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000886s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.004909s ]
+SQL: SELECT a.id,b.nickname,a.name,a.tel,a.adr,a.cphm,a.status,a.addtime,a.paytime,b.headimgurl,a.fee,a.xcz2,a.sfz1,a.sfz2,a.xcz1,a.wtadr,a.openid FROM bingo_car_wtslist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( a.status >= 0 ) ORDER BY a.addtime desc LIMIT 0,15   [ RunTime:0.000480s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bingo_car_wtslist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( a.status >= 0 ) LIMIT 1   [ RunTime:0.000245s ]
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\InspectAction.class.php 第 118 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000956s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001015s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\6d5a7b5da14ff511968e0e1edb2ed679.php 第 188 行.
+NOTIC: [8] Undefined index: word E:\phpStudy\WWW\car\App\Runtime\Cache\6d5a7b5da14ff511968e0e1edb2ed679.php 第 188 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\6d5a7b5da14ff511968e0e1edb2ed679.php 第 188 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\6d5a7b5da14ff511968e0e1edb2ed679.php 第 359 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\6d5a7b5da14ff511968e0e1edb2ed679.php 第 359 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.021977s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022036s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000557s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000489s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000385s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000599s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002179s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001185s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001281s ]
+
+[ 2017-08-23T08:51:45+08:00 ] 192.168.31.129 /car/?m=Mini&a=UserInfo&type=2&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000751s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004214s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000357s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003885s ]
+SQL: SELECT * FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000391s ]
+
+[ 2017-08-23T08:51:48+08:00 ] 192.168.31.129 /car/?m=Mini&a=CountOrder&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000691s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000770s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004496s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000293s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003862s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000213s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003849s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000215s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.003931s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000355s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.004217s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000203s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.004080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000241s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.003897s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000218s ]
+
+[ 2017-08-23T08:51:49+08:00 ] 192.168.31.129 /car/?m=Travel&a=myorder&status=&sessionkey=2be69ea79b2771f1&p=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000752s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004051s ]
+SQL: SELECT * FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) AND ( `status` >= 0 ) LIMIT 0,6   [ RunTime:0.000449s ]
+
+[ 2017-08-23T08:51:49+08:00 ] 192.168.31.129 /car/?m=Travel&a=myorder&status=2&sessionkey=2be69ea79b2771f1&p=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000938s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001031s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.003966s ]
+SQL: SELECT * FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) AND ( `status` = 2 ) LIMIT 0,6   [ RunTime:0.000380s ]
+
+[ 2017-08-23T08:51:49+08:00 ] 192.168.31.129 /car/?m=Travel&a=myorder&status=1&sessionkey=2be69ea79b2771f1&p=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000664s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000738s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) AND ( `status` = 1 ) LIMIT 0,6   [ RunTime:0.000383s ]
+
+[ 2017-08-23T08:51:51+08:00 ] 192.168.31.129 /car/?m=Travel&a=myorder&status=&sessionkey=2be69ea79b2771f1&p=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000745s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004119s ]
+SQL: SELECT * FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) AND ( `status` >= 0 ) LIMIT 6,6   [ RunTime:0.000406s ]
+
+[ 2017-08-23T08:51:53+08:00 ] 192.168.31.129 /car/?m=Mini&a=CountOrder&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000694s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000775s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004104s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000266s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003790s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000212s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003894s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000213s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.003780s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000215s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.003794s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000201s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003907s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000208s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.004350s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000267s ]
+
+[ 2017-08-23T08:51:55+08:00 ] 192.168.31.129 /car/?m=Mini&a=UserInfo&type=1&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000971s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001070s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004224s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000452s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.003700s ]
+SQL: SELECT * FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000324s ]
+
+[ 2017-08-23T08:51:58+08:00 ] 192.168.31.129 /car/?m=Travel&a=MakeOrder&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004194s ]
+SQL: INSERT INTO `bingo_car_xszlist` (`cphm`,`tel`,`adr`,`name`,`a1`,`a2`,`a3`,`sfz1`,`sfz2`,`status`,`addtime`,`orderid`,`openid`,`fee`,`cpm`) VALUES ('豫Apv555','15515551555','裕鸿国际','小名',41,4101,410101,'http://192.168.31.210/car/Public/uploads/images/2017-08-22/599bfe1c3ecd8.jpg','http://192.168.31.210/car/Public/uploads/images/2017-08-22/599bfe2114dbc.jpg',1,1503449517,'b919760e5aa714bbb86495faa079c787','ozFkd0X2wtDeEyBkDoNfk3jTwq9g',200,0) [ RunTime:0.000311s ]
+
+[ 2017-08-23T08:51:59+08:00 ] 192.168.31.129 /car/?m=Travel&a=orderinfo&id=76&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000739s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004179s ]
+SQL: SELECT * FROM `bingo_car_xszlist` WHERE ( `id` = 76 ) LIMIT 1   [ RunTime:0.000396s ]
+SQL: SHOW COLUMNS FROM `bingo_sys_location` [ RunTime:0.003518s ]
+SQL: SELECT `name` FROM `bingo_sys_location` WHERE ( `id` = 41 ) LIMIT 1   [ RunTime:0.000219s ]
+SQL: SELECT `name` FROM `bingo_sys_location` WHERE ( `id` = 4101 ) LIMIT 1   [ RunTime:0.000205s ]
+SQL: SELECT `name` FROM `bingo_sys_location` WHERE ( `id` = 410101 ) LIMIT 1   [ RunTime:0.000200s ]
+
+[ 2017-08-23T08:52:04+08:00 ] 192.168.31.129 /car/?m=Mini&a=CountOrder&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000754s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004142s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000247s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003760s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000201s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003781s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000197s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.004504s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000252s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.003968s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000189s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003734s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000195s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.003775s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000197s ]
+
+[ 2017-08-23T08:52:05+08:00 ] 192.168.31.129 /car/?m=Travel&a=myorder&status=&sessionkey=2be69ea79b2771f1&p=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000666s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000741s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004147s ]
+SQL: SELECT * FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) AND ( `status` >= 0 ) LIMIT 0,6   [ RunTime:0.000461s ]
+
+[ 2017-08-23T08:52:05+08:00 ] 192.168.31.129 /car/?m=Travel&a=myorder&status=2&sessionkey=2be69ea79b2771f1&p=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000713s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000788s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004081s ]
+SQL: SELECT * FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) AND ( `status` = 2 ) LIMIT 0,6   [ RunTime:0.000386s ]
+
+[ 2017-08-23T08:52:05+08:00 ] 192.168.31.129 /car/?m=Travel&a=myorder&status=1&sessionkey=2be69ea79b2771f1&p=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000912s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000983s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004106s ]
+SQL: SELECT * FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) AND ( `status` = 1 ) LIMIT 0,6   [ RunTime:0.000408s ]
+
+[ 2017-08-23T08:52:06+08:00 ] 192.168.31.129 /car/?m=Mini&a=CountOrder&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000744s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004255s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000250s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.004314s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000335s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.004112s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000241s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.003940s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000211s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.004153s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000197s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003815s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000208s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.003860s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000197s ]
+
+[ 2017-08-23T08:52:07+08:00 ] 192.168.31.129 /car/?m=Travel&a=myorder&status=&sessionkey=2be69ea79b2771f1&p=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000668s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000742s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004192s ]
+SQL: SELECT * FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) AND ( `status` >= 0 ) LIMIT 0,6   [ RunTime:0.000465s ]
+
+[ 2017-08-23T08:52:07+08:00 ] 192.168.31.129 /car/?m=Travel&a=myorder&status=2&sessionkey=2be69ea79b2771f1&p=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000712s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000797s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004123s ]
+SQL: SELECT * FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) AND ( `status` = 2 ) LIMIT 0,6   [ RunTime:0.000403s ]
+
+[ 2017-08-23T08:52:07+08:00 ] 192.168.31.129 /car/?m=Travel&a=myorder&status=1&sessionkey=2be69ea79b2771f1&p=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000703s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000789s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.003990s ]
+SQL: SELECT * FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) AND ( `status` = 1 ) LIMIT 0,6   [ RunTime:0.000399s ]
+
+[ 2017-08-23T08:52:09+08:00 ] 192.168.31.129 /car/?m=Travel&a=myorder&status=&sessionkey=2be69ea79b2771f1&p=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000672s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000746s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004157s ]
+SQL: SELECT * FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) AND ( `status` >= 0 ) LIMIT 6,6   [ RunTime:0.000406s ]
+
+[ 2017-08-23T08:52:11+08:00 ] 192.168.31.129 /car/?m=Travel&a=myorder&status=&sessionkey=2be69ea79b2771f1&p=3
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000741s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004081s ]
+SQL: SELECT * FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) AND ( `status` >= 0 ) LIMIT 12,6   [ RunTime:0.000403s ]
+
+[ 2017-08-23T08:52:18+08:00 ] 192.168.31.129 /car/?m=Mini&a=CountOrder&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000756s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004153s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000247s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003752s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000199s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003782s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000246s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.003728s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000203s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.003725s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000186s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003787s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000194s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.003924s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000275s ]
+
+[ 2017-08-23T08:52:19+08:00 ] 192.168.31.129 /car/?m=Mini&a=CountOrder&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000771s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000846s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004285s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000256s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003782s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000212s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003787s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000410s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.004169s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000220s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.003770s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000200s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003879s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000208s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.004083s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000215s ]
+
+[ 2017-08-23T08:52:35+08:00 ] 192.168.31.129 /car/?m=Mini&a=CountOrder&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000664s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004199s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000248s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003922s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000201s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003774s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000239s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.003728s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000204s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.003728s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000186s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003709s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000196s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.003891s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000273s ]
+
+[ 2017-08-23T08:52:42+08:00 ] 192.168.31.129 /car/?m=Mini&a=UserInfo&type=5&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000756s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004235s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000373s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.004121s ]
+SQL: SELECT * FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000326s ]
+
+[ 2017-08-23T08:52:47+08:00 ] 192.168.31.210 /car/?m=Mini&a=OnLogin&code=0615fArz1uaeYd0Lkbuz1CaPrz15fArB
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000778s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004133s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000424s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/9eSN7cAL2SSgC2oBI3WCcszgFeuUBE7lia6HaGzzeDDRONIPCSfrA0hz5MEloN48lyEVCDEjZFN6XNrJEWSqXfQ/0',`nickname`='飞过天空',`sex`=1,`city`='Alameda County',`province`='California',`country`='US' WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) [ RunTime:0.000203s ]
+
+[ 2017-08-23T08:52:52+08:00 ] 192.168.31.129 /car/?m=Mini&a=UserInfo&type=3&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000696s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000781s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004744s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000389s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.004488s ]
+SQL: SELECT * FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000385s ]
+
+[ 2017-08-23T08:52:53+08:00 ] 192.168.31.210 /car/?m=Mini&a=CountOrder&sessionkey=1096cf7bdd35db6f
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000795s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004326s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000257s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.004020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000499s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.004571s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000308s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.003965s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000233s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.004073s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000206s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003784s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000272s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.004004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000295s ]
+
+[ 2017-08-23T08:52:55+08:00 ] 192.168.31.210 /car/?m=Travel&a=myorder&status=&sessionkey=1096cf7bdd35db6f&p=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000870s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000971s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004224s ]
+SQL: SELECT * FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) AND ( `status` >= 0 ) LIMIT 0,6   [ RunTime:0.000406s ]
+
+[ 2017-08-23T08:52:55+08:00 ] 192.168.31.210 /car/?m=Travel&a=myorder&status=1&sessionkey=1096cf7bdd35db6f&p=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001690s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001939s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.005325s ]
+SQL: SELECT * FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) AND ( `status` = 1 ) LIMIT 0,6   [ RunTime:0.000656s ]
+
+[ 2017-08-23T08:52:55+08:00 ] 192.168.31.210 /car/?m=Travel&a=myorder&status=2&sessionkey=1096cf7bdd35db6f&p=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000811s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004919s ]
+SQL: SELECT * FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) AND ( `status` = 2 ) LIMIT 0,6   [ RunTime:0.000652s ]
+
+[ 2017-08-23T08:52:57+08:00 ] 192.168.31.210 /car/?m=Mini&a=CountOrder&sessionkey=1096cf7bdd35db6f
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000820s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004165s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000247s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003777s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000206s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003764s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000290s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.003842s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000209s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.004256s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000250s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003844s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000221s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.003772s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000212s ]
+
+[ 2017-08-23T08:53:06+08:00 ] 192.168.31.210 /car/?m=Mini&a=UserInfo&type=4&sessionkey=1096cf7bdd35db6f
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001807s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004212s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000360s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.003786s ]
+SQL: SELECT * FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000315s ]
+
+[ 2017-08-23T08:53:12+08:00 ] 192.168.31.129 /car/?m=Mini&a=UserInfo&type=7&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000790s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004075s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000358s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.003654s ]
+SQL: SELECT * FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000284s ]
+
+[ 2017-08-23T08:53:19+08:00 ] 192.168.31.210 /car/?m=Mini&a=UserInfo&type=3&sessionkey=1096cf7bdd35db6f
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000844s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000939s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004234s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000358s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.004384s ]
+SQL: SELECT * FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000384s ]
+
+[ 2017-08-23T08:53:21+08:00 ] 192.168.31.129 /car/?m=Mini&a=UserInfo&type=4&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000903s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000979s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004127s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000357s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.003819s ]
+SQL: SELECT * FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000302s ]
+
+[ 2017-08-23T08:53:25+08:00 ] 192.168.31.210 /car/?m=Mini&a=UserInfo&type=7&sessionkey=1096cf7bdd35db6f
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001104s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001209s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004728s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000457s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.003856s ]
+SQL: SELECT * FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000299s ]
+
+[ 2017-08-23T08:53:28+08:00 ] 0.0.0.0 /car/Inspect-orderlist.html
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001265s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001371s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000771s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000831s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.004380s ]
+SQL: SELECT a.id,b.nickname,a.name,a.tel,a.adr,a.cphm,a.status,a.addtime,a.paytime,b.headimgurl,a.fee,a.xcz2,a.sfz1,a.sfz2,a.xcz1,a.wtadr,a.openid FROM bingo_car_wtslist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( a.status >= 0 ) ORDER BY a.addtime desc LIMIT 0,15   [ RunTime:0.000437s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bingo_car_wtslist a LEFT JOIN bingo_user_list b ON a.openid=b.openid WHERE ( a.status >= 0 ) LIMIT 1   [ RunTime:0.000228s ]
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\InspectAction.class.php 第 118 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001146s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001205s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\6d5a7b5da14ff511968e0e1edb2ed679.php 第 188 行.
+NOTIC: [8] Undefined index: word E:\phpStudy\WWW\car\App\Runtime\Cache\6d5a7b5da14ff511968e0e1edb2ed679.php 第 188 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\6d5a7b5da14ff511968e0e1edb2ed679.php 第 188 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\6d5a7b5da14ff511968e0e1edb2ed679.php 第 359 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\car\App\Runtime\Cache\6d5a7b5da14ff511968e0e1edb2ed679.php 第 359 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.023888s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023952s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000853s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000716s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000614s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000796s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003131s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000940s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000996s ]
+
+[ 2017-08-23T08:53:29+08:00 ] 0.0.0.0 /car/Sys-index.html
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001036s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001116s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000734s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004398s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1502640000 AND 1502726400 ) ) LIMIT 1   [ RunTime:0.000325s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1502726400 AND 1502812800 ) ) LIMIT 1   [ RunTime:0.000243s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1502812800 AND 1502899200 ) ) LIMIT 1   [ RunTime:0.000212s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1502899200 AND 1502985600 ) ) LIMIT 1   [ RunTime:0.000212s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1502985600 AND 1503072000 ) ) LIMIT 1   [ RunTime:0.000212s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1503072000 AND 1503158400 ) ) LIMIT 1   [ RunTime:0.000211s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1503158400 AND 1503244800 ) ) LIMIT 1   [ RunTime:0.000202s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1503244800 AND 1503331200 ) ) LIMIT 1   [ RunTime:0.000219s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1503331200 AND 1503417600 ) ) LIMIT 1   [ RunTime:0.000210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1503417600 AND 1503504000 ) ) LIMIT 1   [ RunTime:0.000224s ]
+SQL: SHOW COLUMNS FROM `bingo_sys_logs` [ RunTime:0.003666s ]
+SQL: SELECT * FROM `bingo_sys_logs` WHERE ( `uid` = 1 ) ORDER BY addtime desc LIMIT 0,10   [ RunTime:0.000744s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_sys_logs` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000263s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000192s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.004224s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` LIMIT 1   [ RunTime:0.000183s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.003755s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` LIMIT 1   [ RunTime:0.000178s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003857s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` LIMIT 1   [ RunTime:0.000174s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001374s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001434s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.017272s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017342s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000808s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000726s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000605s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000797s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003089s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000953s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001008s ]
+
+[ 2017-08-23T08:53:39+08:00 ] 192.168.31.129 /car/?m=Mini&a=CountOrder&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000754s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004399s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000283s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003786s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000216s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003798s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000210s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.003852s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000230s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.004971s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000265s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.005275s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000263s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.005334s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000226s ]
+
+[ 2017-08-23T08:53:39+08:00 ] 192.168.31.129 /car/?m=Mini&a=CountOrder&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000790s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000858s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004286s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000242s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.004537s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000235s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.005293s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000299s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.004012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000224s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.003794s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000201s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003785s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000206s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.005103s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000228s ]
+
+[ 2017-08-23T08:53:42+08:00 ] 192.168.31.129 /car/?m=Mini&a=UserInfo&type=5&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000762s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004226s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000355s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.003798s ]
+SQL: SELECT * FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000289s ]
+
+[ 2017-08-23T08:53:44+08:00 ] 192.168.31.210 /car/?m=Mini&a=CountOrder&sessionkey=1096cf7bdd35db6f
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000785s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004122s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000261s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003790s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000217s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003786s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000213s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.004394s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000251s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.003769s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000189s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003728s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000197s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.004050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0ZgRAuFKM2uJmQGO8VSYVOQ' ) LIMIT 1   [ RunTime:0.000224s ]
+
+[ 2017-08-23T08:53:45+08:00 ] 192.168.31.129 /car/?m=Mini&a=UserInfo&type=1&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000896s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000972s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004090s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000367s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.003674s ]
+SQL: SELECT * FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000328s ]
+
+[ 2017-08-23T08:53:58+08:00 ] 192.168.31.129 /car/?m=Mini&a=CountOrder&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000661s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000763s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004202s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000257s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003819s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000213s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003789s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000218s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.003794s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000216s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.003802s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000199s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003802s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000207s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.004287s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000253s ]
+
+[ 2017-08-23T08:54:08+08:00 ] 192.168.31.129 /car/?m=Mini&a=CountOrder&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000661s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000734s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004539s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000269s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003757s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000212s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003792s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000217s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.003739s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000216s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.003739s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000198s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003722s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000207s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.004017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000221s ]
+
+[ 2017-08-23T08:54:11+08:00 ] 192.168.31.129 /car/?m=Mini&a=UserInfo&type=3&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000747s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004129s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000369s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.004045s ]
+SQL: SELECT * FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000366s ]
+
+[ 2017-08-23T08:54:26+08:00 ] 192.168.31.129 /car/?m=Mini&a=UserInfo&type=6&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000748s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004236s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000357s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003715s ]
+SQL: SELECT * FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000284s ]
+
+[ 2017-08-23T08:54:50+08:00 ] 192.168.31.129 /car/?m=Mini&a=CountOrder&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000741s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000256s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003785s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000217s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003905s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000211s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.003797s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000216s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.003760s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000199s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.004243s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.004076s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000212s ]
+
+[ 2017-08-23T08:54:55+08:00 ] 192.168.31.129 /car/?m=Mini&a=CountOrder&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000745s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004164s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000260s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003784s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000216s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003874s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000217s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.003800s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000223s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.003790s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000211s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003760s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000208s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.003800s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000237s ]
+
+[ 2017-08-23T08:54:58+08:00 ] 192.168.31.129 /car/?m=Mini&a=UserInfo&type=1&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000749s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004130s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000371s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.003689s ]
+SQL: SELECT * FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000317s ]
+
+[ 2017-08-23T08:55:02+08:00 ] 192.168.31.129 /car/?m=Mini&a=UserInfo&type=2&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000932s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001007s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004152s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000365s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003688s ]
+SQL: SELECT * FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000300s ]
+
+[ 2017-08-23T08:55:05+08:00 ] 192.168.31.129 /car/?m=Mini&a=UserInfo&type=1&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000748s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004508s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000401s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.003780s ]
+SQL: SELECT * FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000321s ]
+
+[ 2017-08-23T08:55:49+08:00 ] 192.168.31.129 /car/?m=Mini&a=CountOrder&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000897s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000975s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004147s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000259s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003754s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000211s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003790s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000208s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.004224s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000233s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.003824s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000199s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003757s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000208s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.003742s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000209s ]
+
+[ 2017-08-23T08:55:58+08:00 ] 192.168.31.129 /car/?m=Mini&a=CountOrder&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000680s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000756s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004101s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000261s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003810s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000212s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003778s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000210s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.003769s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000221s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.003830s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000200s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003787s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000207s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.003919s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000215s ]
+
+[ 2017-08-23T08:56:06+08:00 ] 192.168.31.129 /car/?m=Mini&a=UserInfo&type=5&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000661s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000735s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004043s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000366s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.003727s ]
+SQL: SELECT * FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000289s ]
+
+[ 2017-08-23T08:56:11+08:00 ] 192.168.31.129 /car/?m=Mini&a=UserInfo&type=6&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000786s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004135s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000352s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003718s ]
+SQL: SELECT * FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000284s ]
+
+[ 2017-08-23T08:56:14+08:00 ] 192.168.31.129 /car/?m=Mini&a=UserInfo&type=1&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000930s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001009s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004099s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000353s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.003695s ]
+SQL: SELECT * FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000306s ]
+
+[ 2017-08-23T08:56:20+08:00 ] 192.168.31.129 /car/?m=Mini&a=CountOrder&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000673s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000747s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004049s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000247s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003806s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000199s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003801s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000195s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.003765s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000204s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.003764s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000186s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003777s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000195s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.004231s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000208s ]
+
+[ 2017-08-23T08:56:22+08:00 ] 192.168.31.129 /car/?m=Mini&a=UserInfo&type=1&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000659s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000734s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004092s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000370s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.003669s ]
+SQL: SELECT * FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000319s ]
+
+[ 2017-08-23T08:56:27+08:00 ] 192.168.31.129 /car/?m=Mini&a=CountOrder&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000663s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000739s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000256s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003803s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000211s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003790s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000210s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.004370s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000249s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.003808s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000188s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003722s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000196s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.003948s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000215s ]
+
+[ 2017-08-23T08:56:35+08:00 ] 192.168.31.129 /car/?m=Mini&a=UserInfo&type=1&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000739s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004129s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000353s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.003656s ]
+SQL: SELECT * FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000304s ]
+
+[ 2017-08-23T08:56:51+08:00 ] 0.0.0.0 /car/Sys-index.html
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001066s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001156s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000663s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000725s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004328s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1502640000 AND 1502726400 ) ) LIMIT 1   [ RunTime:0.000283s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1502726400 AND 1502812800 ) ) LIMIT 1   [ RunTime:0.000206s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1502812800 AND 1502899200 ) ) LIMIT 1   [ RunTime:0.000210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1502899200 AND 1502985600 ) ) LIMIT 1   [ RunTime:0.000213s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1502985600 AND 1503072000 ) ) LIMIT 1   [ RunTime:0.000210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1503072000 AND 1503158400 ) ) LIMIT 1   [ RunTime:0.000216s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1503158400 AND 1503244800 ) ) LIMIT 1   [ RunTime:0.000203s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1503244800 AND 1503331200 ) ) LIMIT 1   [ RunTime:0.000211s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1503331200 AND 1503417600 ) ) LIMIT 1   [ RunTime:0.000210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1503417600 AND 1503504000 ) ) LIMIT 1   [ RunTime:0.000210s ]
+SQL: SHOW COLUMNS FROM `bingo_sys_logs` [ RunTime:0.003638s ]
+SQL: SELECT * FROM `bingo_sys_logs` WHERE ( `uid` = 1 ) ORDER BY addtime desc LIMIT 0,10   [ RunTime:0.000581s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_sys_logs` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000252s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000175s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003835s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` LIMIT 1   [ RunTime:0.000180s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.003898s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` LIMIT 1   [ RunTime:0.000180s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003842s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` LIMIT 1   [ RunTime:0.000175s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001055s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001125s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.016383s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016454s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000697s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000597s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000512s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000691s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002652s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000908s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000967s ]
+
+[ 2017-08-23T08:57:35+08:00 ] 192.168.31.129 /car/?m=Mini&a=CountOrder&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000743s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004711s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000297s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003919s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000215s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003805s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000209s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.003777s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000441s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.004085s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000237s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003802s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000209s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.003793s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000220s ]
+
+[ 2017-08-23T08:59:55+08:00 ] 192.168.31.129 /car/?m=Mini&a=CountOrder&sessionkey=2be69ea79b2771f1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000903s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000978s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004072s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000256s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003885s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000214s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003765s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000275s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.003983s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000229s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.003864s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000210s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003748s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000209s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.003912s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000216s ]
+
+[ 2017-08-23T09:00:33+08:00 ] 192.168.31.171 /car/?m=Mini&a=OnLogin&code=001D9FUR1yvU8a1wPcUR1tZvUR1D9FUV
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000754s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004738s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000538s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/4h0Uv4XOMvOlfvUnxic40mMh68qq0CUHVdLckALa4n2jXNq2tzAQ649ibKl5LYsQkf1dj7VAefKGia1mIMFDQLxtg/0',`nickname`='卢巽',`sex`=1,`city`='',`province`='',`country`='BY' WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) [ RunTime:0.000229s ]
+
+[ 2017-08-23T09:02:01+08:00 ] 192.168.31.171 /car/?m=Mini&a=OnLogin&code=0813xgcg0Zc1KB1oF8bg05cycg03xgcM
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000911s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000987s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004071s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000411s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/4h0Uv4XOMvOlfvUnxic40mMh68qq0CUHVdLckALa4n2jXNq2tzAQ649ibKl5LYsQkf1dj7VAefKGia1mIMFDQLxtg/0',`nickname`='卢巽',`sex`=1,`city`='',`province`='',`country`='BY' WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) [ RunTime:0.000245s ]
+
+[ 2017-08-23T09:02:08+08:00 ] 192.168.31.171 /car/?m=Mini&a=OnLogin&code=061H7WbM1zmfe21HVm9M1jL1cM1H7Wb9
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000766s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004013s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000396s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/4h0Uv4XOMvOlfvUnxic40mMh68qq0CUHVdLckALa4n2jXNq2tzAQ649ibKl5LYsQkf1dj7VAefKGia1mIMFDQLxtg/0',`nickname`='卢巽',`sex`=1,`city`='',`province`='',`country`='BY' WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) [ RunTime:0.000213s ]
+
+[ 2017-08-23T09:04:12+08:00 ] 192.168.31.171 /car/?m=Mini&a=OnLogin&code=081VjtE91noEpS1CQIC91oRvE91VjtEW
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000915s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000995s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004112s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000398s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/4h0Uv4XOMvOlfvUnxic40mMh68qq0CUHVdLckALa4n2jXNq2tzAQ649ibKl5LYsQkf1dj7VAefKGia1mIMFDQLxtg/0',`nickname`='卢巽',`sex`=1,`city`='',`province`='',`country`='BY' WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) [ RunTime:0.000214s ]
+
+[ 2017-08-23T09:05:04+08:00 ] 192.168.31.171 /car/?m=Mini&a=OnLogin&code=001AKZce2EDSuA0e2fee2JXRce2AKZc8
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000666s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000739s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004148s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000399s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/4h0Uv4XOMvOlfvUnxic40mMh68qq0CUHVdLckALa4n2jXNq2tzAQ649ibKl5LYsQkf1dj7VAefKGia1mIMFDQLxtg/0',`nickname`='卢巽',`sex`=1,`city`='',`province`='',`country`='BY' WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) [ RunTime:0.000212s ]
+
+[ 2017-08-23T09:05:37+08:00 ] 192.168.31.171 /car/?m=Mini&a=OnLogin&code=0811IvdY08fQhZ1pRZeY0iUHdY01Ivd2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000663s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004115s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000397s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/4h0Uv4XOMvOlfvUnxic40mMh68qq0CUHVdLckALa4n2jXNq2tzAQ649ibKl5LYsQkf1dj7VAefKGia1mIMFDQLxtg/0',`nickname`='卢巽',`sex`=1,`city`='',`province`='',`country`='BY' WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) [ RunTime:0.000212s ]
+
+[ 2017-08-23T09:05:40+08:00 ] 192.168.31.171 /car/?m=Mini&a=CountOrder&sessionkey=7952c7ced4d2ca53
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000765s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.003960s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000258s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003648s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000211s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003683s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000208s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.003849s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000223s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.003657s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000200s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003633s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000208s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.003781s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000215s ]
+
+[ 2017-08-23T09:06:41+08:00 ] 192.168.31.171 /car/?m=Mini&a=OnLogin&code=081tb0aI17nuF40fFSdI1UP6aI1tb0aZ
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001476s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004097s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000424s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/4h0Uv4XOMvOlfvUnxic40mMh68qq0CUHVdLckALa4n2jXNq2tzAQ649ibKl5LYsQkf1dj7VAefKGia1mIMFDQLxtg/0',`nickname`='卢巽',`sex`=1,`city`='',`province`='',`country`='BY' WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) [ RunTime:0.000222s ]
+
+[ 2017-08-23T09:06:45+08:00 ] 192.168.31.171 /car/?m=Mini&a=CountOrder&sessionkey=3365269eaafbf4e6
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000744s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004052s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000257s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003645s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000209s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003717s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000212s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.003770s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000227s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.003663s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000199s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003630s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000207s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.003627s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000210s ]
+
+[ 2017-08-23T09:06:47+08:00 ] 192.168.31.171 /car/?m=Mini&a=UserInfo&type=2&sessionkey=3365269eaafbf4e6
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000696s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000777s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.003956s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000366s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003605s ]
+SQL: SELECT * FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000300s ]
+
+[ 2017-08-23T09:09:56+08:00 ] 192.168.31.171 /car/?m=Mini&a=OnLogin&code=021PpeQ61iJIWQ1bYNT61Y1VP61PpeQ8
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000909s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000989s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004506s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000408s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/4h0Uv4XOMvOlfvUnxic40mMh68qq0CUHVdLckALa4n2jXNq2tzAQ649ibKl5LYsQkf1dj7VAefKGia1mIMFDQLxtg/0',`nickname`='卢巽',`sex`=1,`city`='',`province`='',`country`='BY' WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) [ RunTime:0.000218s ]
+
+[ 2017-08-23T09:09:59+08:00 ] 192.168.31.171 /car/?m=Mini&a=CountOrder&sessionkey=eba341c7013f4c17
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000672s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000755s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004600s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000280s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.004228s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000225s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.004113s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000226s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.004125s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000231s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.004168s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000211s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.004069s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000453s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.004570s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000250s ]
+
+[ 2017-08-23T09:10:01+08:00 ] 192.168.31.171 /car/?m=Mini&a=UserInfo&type=2&sessionkey=eba341c7013f4c17
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000738s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004072s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000390s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003610s ]
+SQL: SELECT * FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000305s ]
+
+[ 2017-08-23T09:10:52+08:00 ] 0.0.0.0 /car/Sys-index.html
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001070s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001161s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000694s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000752s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004184s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1502640000 AND 1502726400 ) ) LIMIT 1   [ RunTime:0.000261s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1502726400 AND 1502812800 ) ) LIMIT 1   [ RunTime:0.000221s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1502812800 AND 1502899200 ) ) LIMIT 1   [ RunTime:0.000209s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1502899200 AND 1502985600 ) ) LIMIT 1   [ RunTime:0.000211s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1502985600 AND 1503072000 ) ) LIMIT 1   [ RunTime:0.000209s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1503072000 AND 1503158400 ) ) LIMIT 1   [ RunTime:0.000213s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1503158400 AND 1503244800 ) ) LIMIT 1   [ RunTime:0.000212s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1503244800 AND 1503331200 ) ) LIMIT 1   [ RunTime:0.000239s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1503331200 AND 1503417600 ) ) LIMIT 1   [ RunTime:0.000475s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE (  (`addtime` BETWEEN 1503417600 AND 1503504000 ) ) LIMIT 1   [ RunTime:0.000291s ]
+SQL: SHOW COLUMNS FROM `bingo_sys_logs` [ RunTime:0.003762s ]
+SQL: SELECT * FROM `bingo_sys_logs` WHERE ( `uid` = 1 ) ORDER BY addtime desc LIMIT 0,10   [ RunTime:0.000603s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_sys_logs` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000416s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000354s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.004656s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` LIMIT 1   [ RunTime:0.000219s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.003719s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` LIMIT 1   [ RunTime:0.000180s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.004111s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` LIMIT 1   [ RunTime:0.000198s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001224s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001303s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.017018s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017090s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000933s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000633s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000584s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000712s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003015s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000942s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000998s ]
+
+[ 2017-08-23T09:15:15+08:00 ] 192.168.31.171 /car/?m=Mini&a=OnLogin&code=071vlyJ02kW5mX0iXHG02l1qJ02vlyJa
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000898s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000974s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004074s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000388s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/4h0Uv4XOMvOlfvUnxic40mMh68qq0CUHVdLckALa4n2jXNq2tzAQ649ibKl5LYsQkf1dj7VAefKGia1mIMFDQLxtg/0',`nickname`='卢巽',`sex`=1,`city`='',`province`='',`country`='BY' WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) [ RunTime:0.000202s ]
+
+[ 2017-08-23T09:15:18+08:00 ] 192.168.31.171 /car/?m=Mini&a=CountOrder&sessionkey=b70690e84c4b4b94
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000739s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004031s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000250s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003633s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000200s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003636s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000199s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.003636s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000207s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.003642s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000188s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003610s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000196s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.003638s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000200s ]
+
+[ 2017-08-23T09:15:20+08:00 ] 192.168.31.171 /car/?m=Mini&a=UserInfo&type=2&sessionkey=b70690e84c4b4b94
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000732s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004004s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000403s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003630s ]
+SQL: SELECT * FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000292s ]
+
+[ 2017-08-23T09:15:43+08:00 ] 192.168.31.129 /car/?m=Mini&a=OnLogin&code=001cnGYx0jUeIf1Fx3Xx0bnJYx0cnGYV
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000659s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000734s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004098s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000395s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/4h0Uv4XOMvOlfvUnxic40mMh68qq0CUHVdLckALa4n2jXNq2tzAQ649ibKl5LYsQkf1dj7VAefKGia1mIMFDQLxtg/0',`nickname`='卢巽',`sex`=1,`city`='',`province`='',`country`='BY' WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) [ RunTime:0.000214s ]
+
+[ 2017-08-23T09:15:44+08:00 ] 192.168.31.129 /car/?m=Mini&a=CountOrder&sessionkey=dd5367fcf1a2e156
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000739s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.003929s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000247s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003674s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000201s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003695s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000205s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.003716s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000208s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.003633s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000188s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003649s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000196s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.003760s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000290s ]
+
+[ 2017-08-23T09:15:53+08:00 ] 192.168.31.129 /car/?m=Mini&a=UserInfo&type=2&sessionkey=dd5367fcf1a2e156
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000668s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000743s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004211s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000413s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003655s ]
+SQL: SELECT * FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000300s ]
+
+[ 2017-08-23T09:19:23+08:00 ] 192.168.31.171 /car/?m=Mini&a=OnLogin&code=071L7zf40cq7lE1kdVd40A1Nf40L7zf0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000898s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004040s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000387s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/4h0Uv4XOMvOlfvUnxic40mMh68qq0CUHVdLckALa4n2jXNq2tzAQ649ibKl5LYsQkf1dj7VAefKGia1mIMFDQLxtg/0',`nickname`='卢巽',`sex`=1,`city`='',`province`='',`country`='BY' WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) [ RunTime:0.000202s ]
+
+[ 2017-08-23T09:23:11+08:00 ] 192.168.31.171 /car/?m=Mini&a=OnLogin&code=061rjl7i0qJ97A1ZlJ6i01F27i0rjl7I
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000960s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001044s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004119s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000415s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/4h0Uv4XOMvOlfvUnxic40mMh68qq0CUHVdLckALa4n2jXNq2tzAQ649ibKl5LYsQkf1dj7VAefKGia1mIMFDQLxtg/0',`nickname`='卢巽',`sex`=1,`city`='',`province`='',`country`='BY' WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) [ RunTime:0.000230s ]
+
+[ 2017-08-23T09:23:14+08:00 ] 192.168.31.171 /car/?m=Mini&a=CountOrder&sessionkey=35d41ab3002bb7d4
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000683s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000761s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004031s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000259s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003655s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000214s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003665s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000209s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.004129s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000239s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.003747s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000200s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003789s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000211s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.004984s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000241s ]
+
+[ 2017-08-23T09:23:16+08:00 ] 192.168.31.171 /car/?m=Mini&a=UserInfo&type=2&sessionkey=35d41ab3002bb7d4
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000672s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000746s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004352s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000445s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003725s ]
+SQL: SELECT * FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000308s ]
+
+[ 2017-08-23T09:23:56+08:00 ] 192.168.31.171 /car/?m=Mini&a=OnLogin&code=0116jElU1oTAlU0GY2kU1OpElU16jElH
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000674s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000749s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004635s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000566s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/4h0Uv4XOMvOlfvUnxic40mMh68qq0CUHVdLckALa4n2jXNq2tzAQ649ibKl5LYsQkf1dj7VAefKGia1mIMFDQLxtg/0',`nickname`='卢巽',`sex`=1,`city`='',`province`='',`country`='BY' WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) [ RunTime:0.000226s ]
+
+[ 2017-08-23T09:23:59+08:00 ] 192.168.31.171 /car/?m=Mini&a=CountOrder&sessionkey=766a0d733c5a8a48
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000809s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004925s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000529s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.004843s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.005951s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000796s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.004537s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000293s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.004254s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000432s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003886s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000276s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.004827s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000317s ]
+
+[ 2017-08-23T09:24:01+08:00 ] 192.168.31.171 /car/?m=Mini&a=UserInfo&type=2&sessionkey=766a0d733c5a8a48
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000778s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000865s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.003962s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000366s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003595s ]
+SQL: SELECT * FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000302s ]
+
+[ 2017-08-23T09:24:30+08:00 ] 192.168.31.171 /car/?m=Mini&a=OnLogin&code=011h65s42b5lgK0r0Mv420Tbs42h65sM
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000749s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004173s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000550s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/4h0Uv4XOMvOlfvUnxic40mMh68qq0CUHVdLckALa4n2jXNq2tzAQ649ibKl5LYsQkf1dj7VAefKGia1mIMFDQLxtg/0',`nickname`='卢巽',`sex`=1,`city`='',`province`='',`country`='BY' WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) [ RunTime:0.000699s ]
+
+[ 2017-08-23T09:24:33+08:00 ] 192.168.31.171 /car/?m=Mini&a=CountOrder&sessionkey=b0aedc566df3aba5
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000745s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.004098s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000309s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003733s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000217s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003732s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000208s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.003811s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000262s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.003652s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000206s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003635s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000211s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.004025s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000233s ]
+
+[ 2017-08-23T09:24:35+08:00 ] 192.168.31.171 /car/?m=Mini&a=UserInfo&type=2&sessionkey=b0aedc566df3aba5
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000684s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000761s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004093s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000365s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003595s ]
+SQL: SELECT * FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000300s ]
+
+[ 2017-08-23T09:25:24+08:00 ] 192.168.31.171 /car/?m=Mini&a=OnLogin&code=021nZ42s1J5RVp0BxGZr1DJL1s1nZ42i
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000971s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001058s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004006s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000406s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/4h0Uv4XOMvOlfvUnxic40mMh68qq0CUHVdLckALa4n2jXNq2tzAQ649ibKl5LYsQkf1dj7VAefKGia1mIMFDQLxtg/0',`nickname`='卢巽',`sex`=1,`city`='',`province`='',`country`='BY' WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) [ RunTime:0.000233s ]
+
+[ 2017-08-23T09:25:29+08:00 ] 192.168.31.171 /car/?m=Mini&a=CountOrder&sessionkey=7c13253e617b4c16
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000765s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.003947s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000258s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003643s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000299s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.003813s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000208s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.003690s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000216s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.003631s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000199s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.003640s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000208s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.004440s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000303s ]
+
+[ 2017-08-23T09:25:31+08:00 ] 192.168.31.171 /car/?m=Mini&a=UserInfo&type=2&sessionkey=7c13253e617b4c16
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000744s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004183s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000386s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003657s ]
+SQL: SELECT * FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000306s ]
+
+[ 2017-08-23T09:26:39+08:00 ] 0.0.0.0 /car/User-userlist.html
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001039s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001117s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000668s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000727s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004133s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `status` >= 0 ) ORDER BY addtime desc LIMIT 0,15   [ RunTime:0.000452s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_user_list` WHERE ( `status` >= 0 ) LIMIT 1   [ RunTime:0.000215s ]
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given E:\phpStudy\WWW\car\App\Lib\Action\UserAction.class.php 第 33 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001347s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001410s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 185 行.
+NOTIC: [8] Undefined index: word E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 185 行.
+NOTIC: [8] Undefined index: type E:\phpStudy\WWW\car\App\Runtime\Cache\2044b99f2fef8a019cb31e215b6844e5.php 第 280 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.020506s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020574s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000819s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001120s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000693s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000807s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003620s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000986s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001043s ]
+
+[ 2017-08-23T09:26:52+08:00 ] 192.168.31.171 /car/?m=Mini&a=OnLogin&code=071xX4BR0vHYIa2uzZzR0sQnBR0xX4B3
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000756s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000832s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004182s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000405s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/4h0Uv4XOMvOlfvUnxic40mMh68qq0CUHVdLckALa4n2jXNq2tzAQ649ibKl5LYsQkf1dj7VAefKGia1mIMFDQLxtg/0',`nickname`='卢巽',`sex`=1,`city`='',`province`='',`country`='BY' WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) [ RunTime:0.000261s ]
+
+[ 2017-08-23T09:26:55+08:00 ] 192.168.31.171 /car/?m=Mini&a=CountOrder&sessionkey=82c34a1a621ece87
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000790s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.005118s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000447s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.004809s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000566s ]
+SQL: SHOW COLUMNS FROM `bingo_car_wtslist` [ RunTime:0.024132s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_wtslist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000336s ]
+SQL: SHOW COLUMNS FROM `bingo_car_cpzlist` [ RunTime:0.003688s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_cpzlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000218s ]
+SQL: SHOW COLUMNS FROM `bingo_car_mjblist` [ RunTime:0.003743s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_mjblist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000336s ]
+SQL: SHOW COLUMNS FROM `bingo_car_greenlist` [ RunTime:0.004413s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_greenlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000392s ]
+SQL: SHOW COLUMNS FROM `bingo_car_checklist` [ RunTime:0.004502s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bingo_car_checklist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000238s ]
+
+[ 2017-08-23T09:26:58+08:00 ] 192.168.31.171 /car/?m=Mini&a=UserInfo&type=2&sessionkey=82c34a1a621ece87
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000765s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004247s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000394s ]
+SQL: SHOW COLUMNS FROM `bingo_car_drivelist` [ RunTime:0.003641s ]
+SQL: SELECT * FROM `bingo_car_drivelist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000598s ]
+
+[ 2017-08-23T09:32:53+08:00 ] 192.168.31.171 /car/?m=Mini&a=OnLogin&code=001t2VNn1tzavk0fnEPn1o69On1t2VNY
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000972s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001068s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004071s ]
+SQL: SELECT * FROM `bingo_user_list` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) LIMIT 1   [ RunTime:0.000397s ]
+SQL: UPDATE `bingo_user_list` SET `headimgurl`='https://wx.qlogo.cn/mmopen/4h0Uv4XOMvOlfvUnxic40mMh68qq0CUHVdLckALa4n2jXNq2tzAQ649ibKl5LYsQkf1dj7VAefKGia1mIMFDQLxtg/0',`nickname`='卢巽',`sex`=1,`city`='',`province`='',`country`='BY' WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) [ RunTime:0.000215s ]
+
+[ 2017-08-23T09:33:03+08:00 ] 192.168.31.171 /car/?m=Mini&a=UserInfo&type=1&sessionkey=7b20ea481b81ff8c
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000932s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001008s ]
+SQL: SHOW COLUMNS FROM `bingo_user_list` [ RunTime:0.004032s ]
+SQL: SELECT * FROM `bingo_user_list` LIMIT 1   [ RunTime:0.000369s ]
+SQL: SHOW COLUMNS FROM `bingo_car_xszlist` [ RunTime:0.003592s ]
+SQL: SELECT * FROM `bingo_car_xszlist` WHERE ( `openid` = 'ozFkd0X2wtDeEyBkDoNfk3jTwq9g' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000325s ]
+

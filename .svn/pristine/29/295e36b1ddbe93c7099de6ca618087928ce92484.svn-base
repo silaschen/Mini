@@ -1,0 +1,14 @@
+.price{padding: 19px 5px;font-size: 33rpx;}
+.price .pull-right{color: #009ffe;font-weight: 600}
+.wrap{overflow: hidden;}
+
+#intro{overflow: hidden;padding: 10px 5px;line-height: 39rpx;font-size: 27rpx;color: #999}
+#intro text{width: 100%;overflow: hidden;clear: both;display: block;margin-bottom: 5px;}
+#intro .child{text-indent: 10px;}
+.link{text-align: center;font-size: 33rpx;display: block;overflow: hidden;width: 50%;line-height: 50px;padding: 0;margin: 0}
+navigator.pull-left{box-shadow: 1px 0 0px #eee;}
+.form-group{padding: 5px;margin-top: 10px}
+
+#ShowMsg{margin: 55px 10px;text-align: center}
+#ShowMsg text{display: block;clear: both;line-height: 35px;overflow: hidden;margin: 10px auto 25px auto;font-size: 33rpx;}
+.btn{text-align: center;color: #999;width: 100%;overflow: hidden;display: block}

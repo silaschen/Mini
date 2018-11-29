@@ -1,0 +1,33 @@
+<script type="text/javascript">
+function getarea(f,t,m){
+  if(m == undefined) m = false;
+  var id = $("select[name='"+f+"']").val();
+  if(id == 0 || id == undefined){
+    $("select[name='"+t+"']").html("<option value='0'>全部地区</option>").show();
+    return;
+  }
+  $.ajax({
+    url:"{:U('Common/location')}",
+    data:{"id":id},
+    type:"GET",
+    dataType:"JSON",
+    async:false,
+    success:function(data){
+      if(data){
+        if(m){
+          var str = "<option value='0'>全部地区</option>";
+        }else{
+          var str = '';
+        }
+        for (var i = 0; i < data.length; i++) {
+          str += "<option value='"+data[i].id+"'>"+data[i].name+"</option>";
+        };
+        $("select[name='"+t+"']").html(str).show();
+        if(f == 'a1') getarea('a2','a3',m);
+      }else{
+        $("select[name='"+t+"']").html('');
+      }
+    }
+  });
+}
+</script>

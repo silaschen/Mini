@@ -1,0 +1,304 @@
+<include file="Common:header" />
+<load href="__PUBLIC__/js/manage.js" />
+</head>
+<body>
+<div class="container">
+	<include file="Dash:left" />
+	<div class='col-md-9'>
+	<div class="panel panel-primary">
+	  <div class="panel-heading">{$title}</div>
+	  <div class="panel-body">
+	  	<ul class="nav nav-tabs subnav">
+		  <li class='active'><a href="{$siteurl}ModMenu{$xt}man">简洁模式</a></li>
+		  <li><a href="{$siteurl}ModMenu{$xt}edit">详细模式</a></li>
+		  <button type="button" class="btn btn-info fr syncmenu">开始同步</button>
+		</ul>
+		<div class='cl ov'>
+			<div class='col-md-6 editarea'>
+				
+			</div>
+			<div class='col-md-6 demomenu'>
+				<div class='son s1'></div>
+				<div class='son s2'></div>
+				<div class='son s3'></div>
+				<div class='main'>
+					<volist name='list' id='vo'>
+						<span id="menu{$vo.id}" class='par' onclick="showson({$vo.id},{$i});">{$vo.name}</span>
+					</volist>
+				</div>
+			</div>
+			<div id='tips'></div>
+			<div class='cl form-group mt ml'>
+		<button type="button" class="btn btn-warning mr savenow" style='display:none;' onclick='save();'>保存当前</button>
+		<button type="button" class="btn btn-default mr" onclick='addmain();'>添加主菜单</button>
+			</div>
+		</div>
+	  </div>
+	</div>
+	</div>
+<include file="Common:footer" />
+</div>
+
+<!-- 修改某一项 -->
+<div class="modal fade" id="modifymenu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <b class="modal-title" id="myModalLabel">修改菜单属性</b>
+      </div>
+      <div class="modal-body">
+      	<input class='hide' name='mid' value=''>
+        <div class='form-group'>
+        	<label>按钮名称</label>
+        	<input type='text' class='form-control' name='text'>
+        </div>
+        <div class='form-group'>
+        	<select class='form-control' name='type'>
+        		<option value='1'>跳转URL</option>
+        		<option value='2'>点击事件</option>
+        	</select>
+        </div>
+        <div class='form-group'>
+        	<label>值 （跳转URL 请填写http开头的网址）</label>
+        	<input type='text' class='form-control' name='value'>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" onclick="saveone();">保存</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){
+	<if condition="$eq neq ''">
+	$(".leftnav").find('a').each(function(i){
+		if($(this).html() == '{$eq}'){
+			$(".leftnav").children('a').eq(i).addClass('active');
+		}else{
+			$(".leftnav").children('a').eq(i).removeClass('active');
+		}
+	});
+	</if>
+	addmain();
+	$(".syncmenu").click(function(){
+		loading('.syncmenu');
+		$(this).removeClass('btn-info').addClass('btn-default');
+		syncmenu();
+	})
+})
+
+function saveone(){
+	var id = vr('mid');
+	var name = vr('text');
+	var type = sr('type');
+	var value = vr('value');
+	if(name == ''){
+		alert('请填写名称!');
+	}else if(value == ''){
+		alert('请填写值！');
+	}else{
+		$.ajax({
+		   type: "POST",
+		   url: SITE_URL+'ModMenu'+XT+'readone',
+		   async:false,
+		   data:{"id":id,"name":name,"type":type,"value":value},
+		   dataType:"JSON",
+		   success: function(data){
+		   	alert(data.msg);
+		     if(data.ret == 1){
+		     	window.location.reload();
+		     }
+		   }
+		});
+	}
+}
+
+function openw(id){
+	$.ajax({
+	   type: "GET",
+	   url: SITE_URL+'ModMenu'+XT+'readone',
+	   async:false,
+	   data:{"id":id},
+	   dataType:"JSON",
+	   success: function(data){
+	     if(data != ''){
+	     	$("input[name='mid']").val(data.id);
+	     	$("input[name='text']").val(data.name);
+	     	$("input[name='value']").val(data.value);
+	     	if(data.type == 'VIEW'){
+	     		$("select[name='type']").val(1);
+	     	}else{
+	     		$("select[name='type']").val(2);
+	     	}
+	     	$("#modifymenu").modal('show');
+	     }
+	   }
+	});
+}
+
+function syncmenu(){
+	var r = confirm("现有的会话菜单将被删除，并重新生成，请重新关注帐号或24小时后查看效果! 确定开始同步？");
+	if(r == true){
+		$.ajax({
+		   type: "GET",
+		   url: SITE_URL+'ModMenu'+XT+'syncmenu',
+		   async:false,
+		   dataType:"JSON",
+		   success: function(data){
+		     alert(data.errmsg);
+		   }
+		});
+	}
+	$(".syncmenu").removeClass('btn-default').addClass('btn-info').html('开始同步');
+}
+
+function showson(id,w){
+	$.get(SITE_URL+'ModMenu'+XT+'getson',{"id":id},function(data){
+		if(data){
+			var str = '';
+			for (var i = 0; i < data.length; i++) {
+				str += "<p onclick='openw("+data[i].id+");'>"+data[i].name+"</p>";
+			};
+			$(".s1").hide();$(".s2").hide();$(".s3").hide();
+			$(".s"+w).html(str).fadeIn('slow');
+		}
+	},'json')
+}
+</script>
+<script type="text/javascript">
+var number = Date.parse(new Date());
+function addmain(){
+	var mid = $("div[class^='m_']").length;
+	$(".savenow").show();
+	if(mid > 2){
+		tip('warning','最多可添加三个一级菜单。');
+	}else{
+		var li = "<div class='m_"+number+" form-group cl ov'><label for='mname' class='mr_a'>+ 名称:</label><input name='mname' class='form-control mr_a n_"+number+"' type='text' /><label for='mtype' class='mr_a'>事件类型:</label><select name='mtype' onchange='changetype("+number+");' class='form-control mr_a t_"+number+" mt_"+number+"'><option value='CLICK'>点击</option><option value='VIEW'>跳转</option><option value='SON'>父级菜单</option></select><label for='mvalue' class='mr_a'>值:</label><input name='mvalue' class='form-control mi_"+number+" mr_a v_"+number+"' type='text' /><a class='addson mr label label-success' onclick='addson("+number+");'>添加子菜单</a><a onclick='delmain("+number+");' class='label label-danger'>删除</a></div>";
+		$(".editarea").append(li);
+		number = (number*1)+1;
+	}
+}
+
+function addson(id){
+	var type = $(".m_"+id).children("select[name='mtype']").val();
+	if(type != 'SON'){
+		tip('warning','请先设为父级菜单方可添加子菜单!');
+	}else{
+		var sn = $(".s_"+id).length;
+		if(sn > 4){
+			tip('warning','最多可添加五个子菜单!');
+		}else{
+			var li = "<div id='son' class='s_"+id+" sm_"+sn+" form-group col-md-10 fr cl'><label for='sname' class='mr_a'> - 名称:</label><input name='sname' class='form-control mr_a n_"+id+"' type='text' /><label for='stype' class='mr_a'>事件类型:</label><select name='stype' class='form-control mr_a t_"+id+"'><option value='CLICK'>点击</option><option value='VIEW'>跳转</option></select><label for='svalue' class='mr_a'>值:</label><input name='svalue' class='form-control mr_a v_"+id+"' type='text' /><a onclick='delson("+sn+");' class='label label-danger'>删除</a></div>";
+			$(".m_"+id).after(li);
+		}
+	}
+}
+
+function changetype(id){
+	var i = $(".mt_"+id).val();
+	if(i == 'VIEW'){
+		$(".s_"+id).remove();
+		$(".mi_"+id).attr('disabled',false).val('');
+	}else if(i == 'CLICK'){
+		$(".s_"+id).remove();
+		$(".mi_"+id).attr('disabled',false).val('');
+	}else{
+		$(".mi_"+id).val('无需设置').attr('disabled',true);
+	}
+}
+
+function save(){
+	var ck = true;//check
+	$(".editarea").find("div").each(function(){
+		var mn = $(this).children("input[name='mname']");
+		var mt = $(this).children("select[name='mtype']");
+		var mv = $(this).children("input[name='mvalue']");
+		var sn = $(this).children("input[name='sname']");
+		var st = $(this).children("select[name='stype']");
+		var sv = $(this).children("input[name='svalue']");
+		if(mn.val() == ''){
+			mn.css('border-color','#f00');
+			ck = false;
+		}else{
+			mn.css('border-color','#e2e2e2');
+		}
+		if(mv.val() == ''){
+			mv.css('border-color','#f00');
+			ck = false;
+		}else{
+			mv.css('border-color','#e2e2e2');
+		}
+		if(sn.val() == ''){
+			sn.css('border-color','#f00');
+			ck = false;
+		}else{
+			sn.css('border-color','#e2e2e2');
+		}
+		if(sv.val() == ''){
+			sv.css('border-color','#f00');
+			ck = false;
+		}else{
+			sv.css('border-color','#e2e2e2');
+		}
+	})
+	//save
+	var pid = 0;
+	if(ck == true){
+		var r = confirm('注意，原有的菜单记录将被删除并且保存后您需要点击同步以更新菜单。');
+		if(r == true){
+			$.ajax({
+			   type: "GET",
+			   url: SITE_URL+'ModMenu'+XT+'dellall',
+			   async:false,
+			   dataType:"JSON",
+			   success: function(data){
+			     if(data.ret == 0){
+			     	tip('warning',lang[data.msg]);
+			     	return false;
+			     }
+			   }
+			});
+			$(".editarea").find("div").each(function(){
+				var mn = $(this).children("input[name='mname']").val();
+				var mt = $(this).children("select[name='mtype']").val();
+				var mv = $(this).children("input[name='mvalue']").val();
+				var sn = $(this).children("input[name='sname']").val();
+				var st = $(this).children("select[name='stype']").val();
+				var sv = $(this).children("input[name='svalue']").val();
+				if(mn == undefined){
+					var json = "n="+sn+"&t="+st+"&v="+sv+"&pid="+pid;
+				}else if(sn == undefined){
+					var json = "n="+mn+"&t="+mt+"&v="+mv+"&pid=0";
+				}
+				$.ajax({
+				   type: "POST",
+				   url: SITE_URL+'ModMenu'+XT+'add',
+				   async:false,
+				   data: json,
+				   success: function(msg){
+				     if(sn == undefined) pid = msg;
+				   }
+				});
+
+			})
+			window.location.reload();
+		}
+	}
+}
+
+function delmain(id){
+	$(".m_"+id).remove();
+	$(".s_"+id).remove();
+	if($(".editarea").find("div").length == 0) $(".savenow").hide();
+}
+
+function delson(sn){
+	$(".sm_"+sn).remove();
+}
+</script>
+
+</body>
+</html>

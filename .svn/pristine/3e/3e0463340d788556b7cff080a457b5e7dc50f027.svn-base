@@ -1,0 +1,123 @@
+<extend name="Index:base" />
+<block name="top">
+<nav id='top'>
+  <a href="{:back(U('Index/index'))}" class='lb'>返回</a>
+  <span class='title'>前端示例</span>
+  <a href="tel:{:C('SITE_TEL')}" class='rb'>客服</a>
+</nav>
+</block>
+<block name="main">
+<div class='container'>
+    <div class='wrap box'>
+      <form id='ApplyForm'>
+      <div class='form-group'>
+        <label>姓名</label>
+        <input class='form-control' type='text' name='name' placeholder="填写提示..">
+      </div>
+      <div class='form-group'>
+        <select class='form-control' name='gender'><option value='1'>选项一</option><option value='1'>选项二</option></select>
+      </div>
+      <div class='form-group'>
+        <div class="input-group">
+          <div class="input-group-addon"><i class='glyphicon glyphicon-user'></i></div>
+          <input type="number" name='age' class="form-control" placeholder="年龄">
+          <div class="input-group-addon"><b class='text-danger'>*</b></div>
+        </div>
+      </div>
+      <div class='form-group'>
+        <div class="input-group">
+          <div class="input-group-addon"><i class='glyphicon glyphicon-phone'></i></div>
+          <input type="tel" name='tel' class="form-control" placeholder="请输入电话">
+        </div>
+      </div>
+      <div class='form-group'>
+        <button type='button' onclick="ApplyForm();" class='btn btn-block btn-primary btn-lg ApplyForm'>确定</button>
+      </div>
+      <div class='form-group'>
+        <button class='btn btn-block btn-default btn-lg'>取消</button>
+      </div>
+      <div class='form-group'>
+        <button class='btn btn-block btn-success btn-lg' onclick="loading(1);">Loading</button>
+      </div>
+      <div class='form-group'>
+        <button class='btn btn-block btn-success btn-lg' onclick="loading(1,'请稍后..')">自定义内容</button>
+      </div>
+      <p class='alert alert-success'> 内容BOX<br>内容BOX<br>内容BOX<br>内容BOX<br>内容BOX<br>内容BOX</p>
+      </form>
+      <!-- table -->
+      <table class='table table-bordered'>
+        <thead><th>ID</th><th>姓名</th><th>电话</th><th>电话</th></thead>
+        <tbody>
+          <tr><td>1</td><td>张三</td><td>13566552255</td>
+              <td>
+              <div class="dropdown">
+                <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  管理
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">修改</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">删除</a></li>
+                </ul>
+              </div>
+              </td>
+          </tr>
+          <tr><td>1</td><td>张三</td><td>13566552255</td>
+              <td>
+              <div class="dropdown">
+                <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  管理
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">修改</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">删除</a></li>
+                </ul>
+              </div>
+              </td>
+          </tr>
+          <tr><td>1</td><td>张三</td><td>13566552255</td>
+              <td>
+              <div class="dropdown">
+                <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  管理
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">修改</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">删除</a></li>
+                </ul>
+              </div>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+</block>
+<block name="js">
+<script type="text/javascript">
+function ApplyForm(){
+  if(IptVal('name') == ''){
+    alert('请输入姓名!');
+  }else if(IptVal('tel') == ''){
+    alert('请输入电话号码!');
+  }else{
+    //loading(1);
+    $(".ApplyForm").attr('disabled',true);
+    // 发送ajax请求
+    $.post("{:U('Index/ApplyForm')}",$("#ApplyForm").serialize(),function(data){
+      alert(data.msg);
+      if(data.ret == 1){
+        location.href = "{:U('Index/index')}";
+      }
+      //loading(0);
+      $(".ApplyForm").attr('disabled',false);
+    },'JSON');
+  }
+}
+</script>
+</block>

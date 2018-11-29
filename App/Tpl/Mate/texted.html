@@ -1,0 +1,93 @@
+<extend name="Sys:base" />
+<block name="head">
+<include file="Sys:head" />
+</block>
+<block name="left">
+<include file="Sys:left" />
+</block>
+<block name="main">
+<include file="js" />
+<load href="Public/com/qqFace.js" />
+<load href="Public/com/jquery.shortcuts.js" />
+<div class="nav-tabs-custom">
+    <ul class="nav nav-tabs pull-right">
+      <li class="active"><a href="{:U('Mate/text')}">文本素材</a></li>
+      <li><a href="{:U('Mate/audio')}">音频素材</a></li>
+      <li><a href="{:U('Mate/remot')}">图文素材</a></li>
+     
+      <li class="pull-left header" style="font-size: 15px;"><i class="fa fa-th"></i> {$title}</li>
+    </ul>
+    <div class="tab-content">
+		<div class="tab-pane active">
+			<div class='view well'>{$info.v}</div>
+	        <div class="btn-group">
+	          <button type="button" class="btn btn-default emotion">表情</button>
+	          <button type="button" class="btn btn-default addlink">链接</button>
+	          <button type="button" class="btn btn-default addbr">换行</button>
+	        </div>
+
+	        <div class="addlink_a" style="display:none;">
+	          <br>
+	          <div class='tip_a'></div>
+	          <label>链接文字</label>
+	          <input class='form-control' type='text' name='link_name'>
+	          <label>链接地址</label>
+	          <input class='form-control' type='text' name='link_href'>
+	          <br>
+	          <center><a id="addlink_b" class="btn btn-info">插入链接</a></center>
+	          <br>
+	        </div>
+	        <textarea class="form-control" rows="3" name='textbox' id='textbox'>{$info.o}</textarea>
+
+		</div><!-- /.tab-pane -->
+		<div class="clearfix"><br>
+			<a href="javascript:history.go(-1);" class='btn btn-default pull-left'>返回</a>
+			<button type="button" class="btn btn-success pull-right" onclick='savetext({$info.id});'>确定</button>
+		</div>
+    </div><!-- /.tab-content -->
+</div>
+
+<script type="text/javascript">
+$(function(){
+  $('.emotion').qqFace(); //表情
+  $("#textbox").bind('input propertychange', function() {
+    if($(this).val().length > 600){
+      alert('请勿超过600字，超出部分将被截断。');
+      $(".view").html(forview($("#textbox").val()))
+    }else{
+      $(".view").html(forview($("#textbox").val()))
+    }
+  })
+  $('.addbr').click(function(){
+        $("#textbox").insertContent($("#textbox").selectionRange()+"<br/>");
+        $(".view").html(forview($("#textbox").val()))
+    });
+    $('.addlink').click(function(){
+      var offset = $(this).position();
+    var top = offset.top + $(this).outerHeight();
+    $(".addlink_a").css('top',top);
+    $(".addlink_a").css('left',offset.left);
+    $(".addlink_a").show();
+    })
+    $('#addlink_b').click(function(){
+      var txt = $("input[name='link_name']").val()
+      var href = $("input[name='link_href']").val()
+ 	if(href == ''){
+		alert('请填写链接URL！');
+	}else if(!cpreg(href,'url')){
+		alert('请填写以http://开头的完整url！');
+	}else{
+        if(txt == '') txt = href;
+        var url = "<a href=\""+href+"\">"+txt+"<\/a>";
+        $("#textbox").insertContent($("#textbox").selectionRange()+url);
+            $(".view").html(forview($("#textbox").val()))
+      }
+    })
+    $("#textbox").focus(function(){
+      $(".addlink_a").hide()
+    })
+
+  $('textarea').shortcuts();
+})
+</script>
+</block>

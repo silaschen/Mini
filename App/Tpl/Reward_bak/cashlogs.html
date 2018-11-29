@@ -1,0 +1,127 @@
+<extend name="Sys:base" />
+<block name="main">
+  <!-- 搜索 -->
+  <div class="box box-danger">
+    <div class="box-header with-border">
+      <h3 class="box-title">提现记录</h3>
+     
+    </div>
+    <div class="box-body">
+    <div class="row">
+      <form method="GET" action="{:U('Reward/cashlogs')}" id='form'>
+        <div class="col-xs-4 col-md-2">
+          <select id="group" name='gid' class='form-control' ">
+            <option value=''>人员分组</option>
+            <volist name="groups" id="group">
+            <option value='{$group.id}'>{$group.name}</option>
+            </volist>
+          </select>
+        </div>
+          <div class="col-xs-4 col-md-3">
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="date" class="form-control" name="btime" value="{:I('btime')}">
+            </div><!-- /.input group -->
+          </div>
+        </div>
+         <div class="col-xs-4 col-md-3">
+          <div class="form-group">
+              <input type="date" class="form-control" name="etime" value="{:I('etime')}">
+          </div>
+        </div>
+        <div class="col-xs-4 col-md-3">
+          <div class="input-group">
+            <input name="word" type='text' class='form-control' value="{:I('word')}" placeholder='关键词搜索..'>
+            <span class="input-group-addon" onclick="$('#form').submit();"><i class="fa fa-search"></i></span>
+            <if condition="($_GET['word'] neq '')||($_GET['gid'] neq '')||($_GET['btime'] neq '')||($_GET['etime'] neq '')">
+            <a title='清除条件' class="input-group-addon" href="{:U('Reward/cashlogs')}"><i class="fa fa-remove"></i></a>
+            </if>
+          </div>
+        </div>
+        <div class="col-xs-4 col-md-3">
+        </div>
+      </form>
+      </div>
+    </div><!-- /.box-body -->
+  </div>
+  <!-- 列表 -->
+  <div class="box box-solid">
+    <div class="box-body">
+      <table class="table table-bordered">
+        <tbody>
+          <tr>
+            <th>ID</th>
+            <th>人员姓名</th>
+            <th>所属分组</th>
+            <th>提现金额</th>
+            <th>剩余金额</th>
+            <th>提取时间</th>
+
+          </tr>
+          <volist name="list" id="vo">
+          <tr>
+            <td>{$vo.id}</td>
+             <td>{$vo.name}</td>
+            <td>{:zd('reward_group',array('id'=>$vo['gid']),'name')}</td>
+            <td><span class="label label-danger">{$vo.fee|default=0}</span></td>
+            <td><span class="label label-success">{$vo.now}</span></td>
+          
+           <td>{$vo.addtime|date='Y-m-d H:i',###}</td>
+            
+          </tr>
+          </volist>
+        </tbody>
+      </table>
+
+<!-- Modal-->
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="jfModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+       
+      </div>
+      <div class="modal-body ">
+          <div class="form-group">
+            <label>关注二维码：</label>
+          <img src="http://pic.baike.soso.com/p/20131211/20131211091752-393669037.jpg" alt="..." width="460px" class="img-thumbnail col-sm-12">
+          <a href="">下载</a>
+          </div>
+          <div class="form-group">
+            <label>页面二维码：</label>
+          <img width="460px" src="http://pic.baike.soso.com/p/20131211/20131211091752-393669037.jpg" alt="..." class="img-thumbnail col-sm-12">
+          <a href="">下载</a>
+          </div>
+      </div>
+      <div class="modal-footer">
+      
+      </div>
+    </div>
+  </div>
+</div>
+    </div><!-- /.box-body -->
+    <div class="box-footer clearfix">
+	    <ul class="pagination pagination-sm no-margin pull-right">{$page}</ul>
+	  </div>    
+  </div>
+<script type="text/javascript">
+$(function(){
+  $('#group').val("{$Think.get.gid}");
+});
+function model(){
+  $('#modal').modal('show');
+}
+function setstat(id,t){
+  var r = confirm("确认操作？");
+  if(r == true){
+    $.post(location.href,{"id":id,"t":t},function(data){
+      alert(data.msg);
+      if(data.ret == 1) location.reload();
+    },'JSON');
+  }
+}
+</script>
+</block>

@@ -1,0 +1,125 @@
+<extend name="Sys:base" />
+<block name="main">
+  <link rel="stylesheet" href="Public/com/jQuery-File-Upload-9.9.3/css/jquery.fileupload.css">
+  <div class="box box-solid">
+    <div class="box-header with-border">
+      <h3 class="box-title">{$title}</h3><a href="{:U('Pro/itemlist')}" class='btn btn-default btn-xs pull-right'>返回列表</a>
+    </div><!-- /.box-header -->
+    <div class="box-body">
+         <form id='form'>
+          <input name='id' class='hide' value='{$info.id}'>
+            <div class='form-group'>
+              <label>项目标题：</label>
+              <input type='text' name='title' class='form-control' value='{$info.title}'>
+            </div>
+       
+
+          <div class='form-group'>
+            <label>所属分类</label>
+            <select class='form-control' name='type'>
+                <option value="1">安装</option>
+                <option value="2">维修</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>价格</label>
+            <input type="number" name="price" value="{$info.price}" class="form-control">
+          </div>
+
+
+            <div class='form-group'>
+              <label>封面图片：</label>
+                <a href="javascript:$('#cover').val('');$('.showcover').html('');" onclick="return confirm('确定清除封面？');" class='pull-right'>清除封面</a> <br>
+                  <button type='button' class='btn btn-success btn-sm fileinput-button'><i class="glyphicon glyphicon-picture"></i> <small>推荐尺寸 400*300 点击上传</small><input  id="uploadcover" type="file" name="files" accept="image/*" ></button>
+                    <div id="progress" class="progress">
+                        <div class="progress-bar progress-bar-success"></div>
+                    </div>
+                    <div id="files" class="files">
+                    </div>
+                    <div class='showcover'>
+                    <if condition="$info.cover neq ''">
+                    <img src='{$info.cover}'>
+                    </if>
+                    </div>
+                <input class='hide' name='cover' id='cover' value='{$info.cover}'>
+            </div>
+
+            <div class='form-group'>
+              <label>项目服务说明：</label>
+                <textarea  name="intro" style="width:100%;min-height:260px;">{$info.intro}</textarea>
+            </div>
+
+         </form>
+    </div><!-- /.box-body -->
+    <div class="box-footer clearfix">
+      <button type="button" onclick="savepro();" class="btn btn-success pull-right pro">确定</button>
+    </div>   
+  </div>
+
+<script type="text/javascript">
+function savepro(){
+  if(IptVal('title') == ''){
+    alert('请填写项目标题!');
+  }else if(IptVal('price') == ''){
+    alert('请填写价格');
+  }else if(TexVal('intro') == ''){
+    alert('请填写项目介绍');
+  }else{
+    loading2("操作中...");
+    $.post(location.href,$("#form").serializeArray(),function(data){
+        alert(data.msg);
+        if (data.ret == 1) {
+          location.href = "{:U('Pro/itemlist')}";
+        }else{
+          loading2("",0);
+        }
+
+    },'JSON');
+
+  }
+}
+</script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/vendor/jquery.ui.widget.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/load-image.all.min.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/canvas-to-blob.min.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.iframe-transport.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload-process.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload-image.js"></script>
+<script type="text/javascript">
+$(function(){
+ <if condition="$info.type gt 0">
+    SelVal('type',{$info['type']});
+ </if>
+ 
+    $('#uploadcover').fileupload({
+        url: "{:U('Common/loadimg')}",
+        dataType: 'JSON',
+        acceptFileTypes: 'jpg,png,gif,jpeg,bmp',
+      maxFileSize: 8000000, // 800kb
+      disableImageResize: /Android(?!.*Chrome)|Opera/.test(window.navigator && navigator.userAgent),
+        imageMaxWidth: 400, //自动裁剪保持该宽度
+         imageMaxHeight: 300,
+         imageCrop: true,
+        done: function (e, data) {
+          if(data.result.ret == 1){
+              $("input[name='cover']").val(data.result.file);
+              $(".showcover").html("<img src='"+data.result.file+"'>");
+            }else{
+              alert(data.result.msg);
+            }
+        },
+        progressall: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            $('#progress .progress-bar').css(
+                'width',
+                progress + '%'
+            );
+        }
+    }).prop('disabled', !$.support.fileInput)
+        .parent().addClass($.support.fileInput ? undefined : 'disabled');
+
+});
+</script>
+</block>

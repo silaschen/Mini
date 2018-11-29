@@ -1,0 +1,123 @@
+<extend name="base" />
+<block name="main">
+  <link rel="stylesheet" href="Public/com/jQuery-File-Upload-9.9.3/css/jquery.fileupload.css">
+  <div class="box box-solid">
+    <div class="box-header with-border">
+      <h3 class="box-title">添加/编辑文章</h3><a href="{:U('Sys/artlist')}" class='btn btn-default btn-xs pull-right'>返回列表</a>
+    </div><!-- /.box-header -->
+    <div class="box-body">
+         <form method="POST" action="{:U('Sys/addart')}" id='form'>
+          <input name='id' class='hide' value='{$info.id}'>
+            <div class='form-group'>
+              <label>文章标题：</label>
+              <input type='text' name='title' class='form-control' value='{$info.title}'>
+            </div>
+            <div class='form-group'>
+            <label>所属分类</label>
+            <select class='form-control' name='cateid'>
+            <option value='{$info.cateid}'>{$info.catename|default="暂无分类"}</option>
+              <volist name='cates' id='ca'>
+                <if condition="$ca.parid eq 0">  
+                <option value='{$ca.id}'>{$ca.title}</option>
+                </if>
+                <volist name='cates' id='cc'>
+                <if condition="$cc['parid'] eq $ca['id'] ">
+                <option value='{$cc.id}'>┠{$cc.title}</option>
+                </if>
+                </volist>
+              </volist>
+            </select>
+          </div>
+            <div class='form-group'>
+              <label>封面图片：</label>
+                <a href="javascript:$('#cover').val('');$('.showcover').html('');" onclick="return confirm('确定清除封面？');" class='pull-right'>清除封面</a> <br>
+                  <button type='button' class='btn btn-success btn-sm fileinput-button'><i class="glyphicon glyphicon-picture"></i> <small>推荐尺寸 400*300 点击上传</small><input  id="uploadcover" type="file" name="files" accept="image/*" ></button>
+                    <div id="progress" class="progress">
+                        <div class="progress-bar progress-bar-success"></div>
+                    </div>
+                    <div id="files" class="files">
+                    </div>
+                    <div class='showcover'>
+                    <if condition="$info.cover neq ''">
+                    <img src='{$info.cover}'>
+                    </if>
+                    </div>
+                <input class='hide' name='cover' id='cover' value='{$info.cover}'>
+            </div>
+            <div class='form-group'>
+              <label>内容：</label>
+                <textarea id="editor_id" name="content" style="width:100%;min-height:260px;"></textarea>
+            </div>
+            <div class='form-group'>
+              <label>显示模板：</label>
+              <input type='text' name='tmp' class='form-control' value='{$info.tmp}' placeholder="文章显示的模板留空为默认">
+            </div>
+            <div class='form-group'>
+              <label>浏览量：</label>
+              <input type='number' name='views' class='form-control' value='{$info.views}' placeholder="">
+            </div>
+         </form>
+    </div><!-- /.box-body -->
+    <div class="box-footer clearfix">
+      <button type="button" onclick="saveart();" class="btn btn-success pull-right saveart">确定</button>
+    </div>   
+  </div>
+<div class='hide temp'>{$info.content}</div>
+<script charset="utf-8" src="Public/com/kindeditor/kindeditor.js"></script>
+<script charset="utf-8" src="Public/com/kindeditor/lang/zh_CN.js"></script>
+<script type="text/javascript">
+KindEditor.ready(function(K) {
+    window.editor = K.create('#editor_id',{
+      uploadJson:"{:U('Common/loadimg',array('body'=>1))}"
+    });
+    editor.html($('.temp').html());
+});
+function saveart(){
+  $("#editor_id").val(editor.html());
+  if(vr('title') == ''){
+    alert('请填写标题!');
+  }else{
+    $(".saveart").addClass('disabled');
+    $("#form").submit();
+  }
+}
+</script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/vendor/jquery.ui.widget.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/load-image.all.min.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/canvas-to-blob.min.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.iframe-transport.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload-process.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload-image.js"></script>
+<script type="text/javascript">
+$(function(){
+    $('#uploadcover').fileupload({
+        url: "{:U('Common/loadimg')}",
+        dataType: 'JSON',
+        acceptFileTypes: 'jpg,png,gif,jpeg,bmp',
+      maxFileSize: 8000000, // 800kb
+      disableImageResize: /Android(?!.*Chrome)|Opera/.test(window.navigator && navigator.userAgent),
+        imageMaxWidth: 400, //自动裁剪保持该宽度
+        // imageMaxHeight: 300,
+        // imageCrop: true,
+        done: function (e, data) {
+          if(data.result.ret == 1){
+              $("input[name='cover']").val(data.result.file);
+              $(".showcover").html("<img src='"+data.result.file+"'>");
+            }else{
+              alert(data.result.msg);
+            }
+        },
+        progressall: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            $('#progress .progress-bar').css(
+                'width',
+                progress + '%'
+            );
+        }
+    }).prop('disabled', !$.support.fileInput)
+        .parent().addClass($.support.fileInput ? undefined : 'disabled');
+
+});
+</script>
+</block>

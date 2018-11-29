@@ -1,0 +1,129 @@
+<extend name="Sys:base" />
+<block name="main">
+  <div class="nav-tabs-custom">
+    <ul class="nav nav-tabs pull-right">
+      <li class="active"><a href="{:U('Sys/accesslist')}">权限列表</a></li>
+      <li><a href="{:U('Sys/group')}">管理组</a></li>
+      <li class="pull-left header" style="font-size: 15px;"><i class="fa fa-th"></i> {$title}</li>
+    </ul>
+    <div class="tab-content">
+    <div class="tab-pane active">
+       <table class="table table-bordered">
+        <thead><th>ID</th><th>名称</th><th>操作</th><th>状态</th><th>操作</th></thead>
+        <tbody>
+      <volist name="list" id='vo'>
+        <tr>
+          <td>{$vo.id}</td>
+          <td>{$vo.title}</td>
+          <td>{$vo.name}</td>
+
+          <td><if condition="$vo.status eq '1'"><span class='badge bg-green'>正常</span><else/><span class='badge bg-red'>禁用</span></if></td>
+          <td>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown">
+                管理
+                <span class="caret"></span>
+                <span class="sr-only">+</span>
+              </button>
+              <ul class="dropdown-menu" role="menu"> 
+                <li><a data-id='{$vo.id}' data-title='{$vo.title}' data-name='{$vo.name}' href="javascript:modify({$vo.id});">修改</a></li>
+                <if condition="$vo.status eq '1'">
+                <li><a href="javascript:setstat({$vo.id},0);">禁用</a></li>
+                <else/>
+                <li><a href="javascript:setstat({$vo.id},1);">启用</a></li>
+                </if>
+                <li class="divider"></li>
+                <li><a href="javascript:setstat({$vo.id},-1);">删除</a></li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+      </volist>
+        </tbody>
+      </table>
+    </div><!-- /.tab-pane -->
+    <div class="clearfix">
+      <a href="javascript:modify(0)" class="btn btn-success pull-left">录入新权限</a>
+      <ul class="pagination pagination-sm no-margin pull-right">{$page}</ul>
+    </div>
+    </div><!-- /.tab-content -->
+</div>
+<script type="text/javascript">
+function setstat(id,t){
+  if(t == -1){
+    var r = confirm("确定删除该操作？");
+  }else if(t == 1){
+    var r = confirm("确定启用该操作？");
+  }else if(t == 0){
+    var r = confirm("确定禁用该操作？");
+  }
+  if(r == true){
+    $.post(location.href,{"id":id,"t":t},function(data){
+      alert(data.msg);
+      if(data.ret == 1) location.reload();
+    },'JSON');
+  }
+}
+</script>
+
+<div class="modal" id="addrule">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <b class="modal-title">录入/修改权限</b>
+      </div>
+      <div class="modal-body">
+        <input class='hide' name='id'>
+        <div class='form-group'>
+          <label>名称：</label>
+          <input type='text' class='form-control' name='title' >
+        </div>
+        <div class='form-group'>
+          <label>操作:</label>
+          <input type='text' class='form-control' name='name' placeholder="填写方式为:(控制器名/方法名)  例:Sys/index" >
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">关闭</button>
+        <button type="button" onclick="saverule();" class="btn btn-success pull-right saverule">确认保存</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+<script type="text/javascript">
+function modify(id){
+  $("input[name='id']").val('');
+  $("input[name='title']").val('');
+  $("input[name='name']").val('');
+  if(id > 0){
+    var w = $("a[data-id='"+id+"']");
+    $("input[name='id']").val(id);
+    $("input[name='title']").val(w.attr('data-title'));
+    $("input[name='name']").val(w.attr('data-name'));
+  }
+  $("#addrule").modal('show');
+}
+
+function saverule(){
+  var title = vr('title');
+  var name = vr('name');
+  var id = vr('id');
+  if(title == ''){
+    alert('请填写操作!');
+  }else if(name == ''){
+    alert('请填写名称!');
+  }else{
+    loading2('处理中..');
+    $.post("{:U('Sys/RuleAdd')}",{"id":id,"name":name,"title":title},function(data){
+      alert(data.msg);
+      if(data.ret == 1){
+        location.reload();
+      }else{
+        loading2('',0);
+      }
+    },'JSON');
+  }
+}
+</script>
+</block>

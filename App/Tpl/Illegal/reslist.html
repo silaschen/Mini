@@ -1,0 +1,323 @@
+<extend name="Index:base" />
+<block name="style">
+<link rel="stylesheet" href="Public/com/jQuery-File-Upload-9.9.3/css/jquery.fileupload.css">
+<style type="text/css">
+#car-info{background: #fff;width: 100%;clear: both;overflow: hidden;display: block;padding: 10px 5px;border-top: 3px solid #009213;border-bottom: 1px solid #eee;}
+#car-info .roof{width: 100%;overflow: hidden;border-bottom: 1px solid #eee;padding: 10px 0;clear: both;display: block;margin-bottom: 10px;}
+#car-info .roof h3{margin: 0;padding-left: 15px;color: #0081D0;}
+#car-info .row > div{text-align: center;font-size: 15px;}
+#car-info .row > div:first-child{border-right: 1px solid #eee;}
+#car-info .row > div:last-child{border-left: 1px solid #eee;}
+#car-info .row > div b{font-size: 18px;color: #0081D0;}
+.box{background: #fff;clear: both;overflow: hidden;width: 100%;padding: 10px 15px;margin: 10px 0;}
+.wzjf{line-height: 35px;}
+.wzjf label{float: left;font-size: 16px;}
+.wzjf small{float: right;color: #ccc;}
+.item table{margin-bottom: 0;}
+.item table small{color: #ccc;}
+.item table span{color: #FD9310;}
+.item table a{color: #999;width: 100%;display: block;}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{border-top:0;}
+.btnav{position: fixed;bottom: 0;left: 0;right: 0;background: #fff;border-top: 1px solid #ddd;overflow: hidden;}
+.btnav .agreement{width: 80%;height: 25px;line-height: 25px;display: block;padding-left: 5px;color: #999;float: left;}
+.btnav .act{display: block;overflow: hidden;width: 100%;clear: both;height: 55px;line-height: 27px;padding: 0 5px;position: relative;}
+.btnav .act .zje{float: left;}
+.btnav .act .zje b{color: #F4645F;font-size: 18px;}
+.btnav .act .btn{padding: 10px 20px;position: absolute;right: 5px;top: 5px;}
+</style>
+</block>
+<block name="main">
+<!-- 违章概况 -->
+<div id="car-info">
+	<div class='roof'><h3 class='pull-left'>{$hpzm}{$cphm}</h3><a href="{:U('Illegal/carlist')}" class='btn btn-default pull-right'>返回</a></div>
+	<div class='row'>
+		<div class="col-xs-4"><span>未处理<br><b>{$wjf}</b></span></div>
+		<div class="col-xs-4"><span>共扣分<br><b>{$score}</b></span></div>
+		<div class="col-xs-4"><span>共罚款<br><b>{$total}元</b></span></div>
+	</div>
+</div>
+<!-- 违章列表 -->
+<if condition="$count gt 0">
+<!-- 违章信息 -->
+<input class='hide' value="" name='total'>
+<input class='hide' value="{$type}" name='type'>
+<input class='hide' value="{$cphm}" name='cphm'>
+<volist name="info" id='vo'>
+<div class='box item'>
+<input class='hide' value="{$vo.wfjfs}" name='fen{$i}'>
+<input class='hide' value="{$vo.wfxwdm}" name='id{$i}'>
+<input class='hide' value="{$vo.fkje}" name='fkje{$i}'>
+<input class='hide' value="{$vo.wfxw}" name='info{$i}'>
+<input class='hide' value="{$vo.wfsj}" name='occur_date{$i}'>
+<input class='hide' value="{$vo.wfdz}" name='occur_area{$i}'>
+<table class="table table-condensed">
+<tbody>
+<tr><td><small>{$vo.wfxw}</small></td><td align='center'><small>扣分</small></td><td align='center'><small>罚款</small></td></tr>
+<tr><td><if condition="$vo.disable eq 2 "><span style="color:green">已缴费</span><else/><span>未处理</span></if></td><td align='center'><span>{$vo.wfjfs}分</span></td><td align='center'><span>{$vo.fkje}元</span></td></tr>
+<tr><td colspan='3'><label>{$vo.wfdz}</label></td></tr>
+<tr><td colspan='3'><label>{$vo.wfsj}</label></td></tr>
+<if condition="$vo.disable eq ''">
+<tr><td colspan='3'>
+<div class="checkbox" style='width:100%;'>
+    <label style='width:100%;' class='text-success'>
+      <input name="wz" style='-webkit-appearance:checkbox' value='{$i}' type="checkbox"> 选中在线缴费<if condition="$VipCar elt '1'"><small class='pull-right'>(手续费20元)</small></if>
+    </label>
+  </div>
+</td></tr>
+</if>
+<!-- 违章照片 -->
+<if condition="$vo.spdz neq ''">
+<tr><td colspan='3'>
+    <center>
+<button data-toggle="collapse" class='btn btn-success btn-sm' data-target="#wz{$i}" aria-expanded="false" aria-controls="wz{$i}"><i class='glyphicon glyphicon-picture'></i> 点击查看违章照片</button>
+    <div class="collapse" id="wz{$i}"><br>
+        <img src="{$vo.spdz}">
+    </div>
+    </center>
+</td></tr>  
+</if>
+</tbody>
+</table>
+</div>
+</volist>
+<else/>
+<div class='box'>
+    <center><img src='Public/res/illegal/success.gif'><Br><br>恭喜您，暂无违章信息.</center>
+</div>
+</if>
+<p class='well well-sm' style='margin:10px 5px;'><small>暂不支持缴费的违章（有扣分，未知扣分，未知罚款，0元0分，火车站/机场 部分高速 部分外地违章）</small></p>
+</block>
+<block name="nav">
+<!-- 底部操作按钮 -->
+<if condition="$count gt '0'">
+<div class='btnav'>
+<div class='act'>
+    <b class='zje text-info'>有{$acount}条违章可在线处理</b>
+    <a href="javascript:setall();" class='nextbtn pull-right btn btn-success'><span class='total'><!-- 有{$list['count']}条违章可在线处理 -->全选</span></a>
+</div>
+</div>
+</if>
+<div class="modal fade" id="xinxi" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <b class="modal-title">违章缴费</b>
+      </div>
+      <div class="modal-body">
+        <div class='form-group'>
+            <label>姓名</label>
+            <input class='form-control' type='text' name='name' value="{$info.name}">
+        </div>
+        <div class='form-group'>
+            <label>电话</label>
+            <input class='form-control' type='tel' name='tel' value="{$info.tel}">
+        </div>
+        <div class='form-group'>
+          <div>
+           <label>上传身份证或驾驶证 </label> 
+            </div>
+          <div>
+             <button style="height:100px;width:100px" class='btn btn-success btn-sm fileinput-button'><i class="glyphicon glyphicon-picture"></i> <small>点击上传</small><input  id="uploadcover" type="file" name="file" accept="image/*" ></button>
+             <div class='showcover1 pull-right'>
+            </div>
+            </div>
+            <div id="files" class="files">
+            </div>
+            
+            <input class='hide' name='sfz' id='cover' value=''>
+            <div>示例图片</div>
+            <div>
+              <img src='Public/res/illegal/2182582202972969929.jpg' width="100px" height="80px">
+              <img src='Public/res/illegal/s2.jpg' width="100px" height="80px">
+            </div>
+        </div>
+         <div class='form-group' style="margin-top:10px">
+           <div>
+           <label>上传行驶证正/副本 </label> 
+            </div>
+            <div>
+              <button style="height:100px;width:100px" class='btn btn-success btn-sm fileinput-button'><i class="glyphicon glyphicon-picture"></i> <small>点击上传</small><input  id="uploadcover2" type="file" name="file" accept="image/*" ></button>
+              <div class='showcover2 pull-right' >
+              </div>
+            </div>
+            <div id="files" class="files">
+            </div>
+            <input class='hide' name='xsz' id='cover' value=''>
+            <div>示例图片</div>
+            <div>
+              <img src='Public/res/illegal/xsz.jpg' width="200px">
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">取消</button>
+        <button type="button" onclick="apply();" class="btn btn-success pull-right BuyVip">确认继续</button>
+      </div>
+    </div>
+  </div>
+</div>
+<input type='hidden' name="isvip" value="{$isvip}">
+  <div id="loading" style='display:none;'><div class="lllcontent"><div class="loader-inner ball-clip-rotate"><div></div></div><p>加载中..</p></div></div>
+</div>
+</block>
+<block name="js">
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/vendor/jquery.ui.widget.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/load-image.all.min.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/canvas-to-blob.min.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.iframe-transport.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload-process.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload-image.js"></script>
+<script type="text/javascript">
+$(function(){
+    $("input[name='agree']").change(function(){
+        var i = $("input[name='agree']:checked").val();
+        if(i == 1){
+            $(".act").show();
+        }else{
+            $(".act").fadeOut('slow');
+        }
+    });
+
+        $('#uploadcover').fileupload({
+        url: "{:U('Common/loadimg')}",
+        dataType: 'JSON',
+        acceptFileTypes: 'jpg,png,gif,jpeg,bmp',
+      maxFileSize: 8000000, // 800kb
+      disableImageResize: /Android(?!.*Chrome)|Opera/.test(window.navigator && navigator.userAgent),
+        // imageMaxWidth: 400, //自动裁剪保持该宽度
+        // imageMaxHeight: 300,
+        // imageCrop: true,
+        done: function (e, data) {
+          if(data.result.ret == 1){
+              $("input[name='sfz']").val(data.result.file);
+              $(".showcover1").html("<img width='100px' height='100px' src='"+data.result.file+"'>");
+            }else{
+              alert(data.result.msg);
+            }
+        },
+        progressall: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            $('#progress .progress-bar').css(
+                'width',
+                progress + '%'
+            );
+        }
+    }).prop('disabled', !$.support.fileInput)
+        .parent().addClass($.support.fileInput ? undefined : 'disabled');
+
+         $('#uploadcover2').fileupload({
+        url: "{:U('Common/loadimg')}",
+        dataType: 'JSON',
+        acceptFileTypes: 'jpg,png,gif,jpeg,bmp',
+      maxFileSize: 8000000, // 800kb
+      disableImageResize: /Android(?!.*Chrome)|Opera/.test(window.navigator && navigator.userAgent),
+        // imageMaxWidth: 400, //自动裁剪保持该宽度
+        // imageMaxHeight: 300,
+        // imageCrop: true,
+        done: function (e, data) {
+          if(data.result.ret == 1){
+              $("input[name='xsz']").val(data.result.file);
+              $(".showcover2").html("<img width='100px'  height='100px' src='"+data.result.file+"'>");
+            }else{
+              alert(data.result.msg);
+            }
+        },
+        progressall: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            $('#progress .progress-bar').css(
+                'width',
+                progress + '%'
+            );
+        }
+    }).prop('disabled', !$.support.fileInput)
+        .parent().addClass($.support.fileInput ? undefined : 'disabled');
+});
+$.fn.stringifyArray = function(array) {
+    return JSON.stringify(array)
+}
+var IsVip = IptVal('isvip');
+var wzord = new Array();
+function reselect(){
+    var money = 0; //总金额
+    var sxf = 0; //手续费
+    wzord = new Array(); //先重置已选
+    $("input[name='wz']:checked").each(function(){
+        var m = new Array();
+        var i = $(this).val();
+        // 判断是否是会员
+        if(IsVip > 0){
+            money = money+vr('fkje'+i)*1;
+        }else{
+            money = money+vr('fkje'+i)*1+20; //每一笔加上1元手续费
+            sxf = sxf*1+20;
+        }
+        wzord.push({"fkje":vr('fkje'+i),"id":vr('id'+i),"info":vr('info'+i),"fen":vr('fen'+i),"occur_area":vr('occur_area'+i),"occur_date":vr('occur_date'+i)});
+    });
+    if(money > 0){
+        if(sxf > 0){
+            var num = $("input[name='wz']:checked").length;
+            $(".zje").html('共计:<b>'+money+'元</b><br>其中手续费:'+sxf+'元');
+            $('input[name=total]').val(money);
+            $(".total").html('下一步');
+        }else{
+            $(".zje").html('共计:<span id="ze"><b>'+money+'元</b></span><br>(无手续费) ');
+            $('input[name=total]').val(money);
+            $(".total").html('下一步');
+        }
+        $(".nextbtn").attr("href","javascript:xinxi();");
+    }else{
+        $(".zje").html('');
+        $(".total").html('全选'); //清空
+        $(".nextbtn").attr("href","javascript:setall();");
+    }
+}
+
+function setall(){
+    if($("input[name='wz']").length > 0){
+        $("input[name='wz']").prop('checked',true);
+        reselect();
+    }else{
+        alert('暂无可在线处理的违章信息!');
+    }
+}
+
+// 提交违章处理订单
+function apply(){
+    var tmp = $(".total").html();
+    loading('.total');
+    $(".nextbtn").addClass('disabled').attr('href','javascript:void(0);');
+    var json = $('').stringifyArray(wzord);
+    var type = IptVal('type');
+    var cphm = IptVal('cphm');
+    var total = IptVal('total');
+    var name = IptVal('name');
+    var tel = IptVal('tel');
+    var xsz = IptVal('xsz');
+    var sfz = IptVal('sfz');
+    $.post("{:U('Illegal/makeorder')}",{"json":json,'type':type,'cphm':cphm,'total':total,'name':name,'tel':tel,'sfz':sfz,'xsz':xsz},function(data){
+        loading2('处理中...');
+        if(data.ret == 1){
+            location.href = data.msg;
+        }else{
+            alert(data.msg);
+            loading2('',0);
+        }
+    },'JSON');
+}
+$(function(){
+    $("input[name='wz']").click(function(){
+        reselect();
+    });
+})
+
+function xinxi(){
+    $('#xinxi').modal()
+}
+
+
+
+
+</script>
+</block>

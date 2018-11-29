@@ -1,0 +1,146 @@
+<extend name="Sys:base" />
+<block name="main">
+<div class="box box-solid">
+    <div class="box-header with-border">
+      <h3 class="box-title">{$title}</h3>
+    </div>
+    <div class="box-body">
+		<form method="GET" action="{:U('Dbsc/orderlist')}" id='form' style="margin-bottom:10px;">
+	      <div class="row">
+	      	<div class="col-xs-6 col-md-3">
+	        	<select class='form-control' name='status'>
+	        		<option>全部</option>
+	        		<option value='1' <if condition="$_GET['status'] eq '1'">selected</if>>待支付</option>
+	        		<option value='2' <if condition="$_GET['status'] eq '2'">selected</if>>待处理</option>
+	        		<option value='5' <if condition="$_GET['status'] eq '5'">selected</if>>已完成</option>
+	        	</select>
+	        </div>
+	        <div class="col-xs-6 col-md-3">
+	          <div class="input-group">
+	            <input name="word" type='text' class='form-control' value="{:I('word')}" placeholder='姓名/电话/地址关键词搜索..'>
+	            <span class="input-group-addon" onclick="$('#form').submit();"><i class="fa fa-search"></i></span>
+	            <if condition="$_GET['word'] neq '' OR $_GET['status'] neq '' OR $_GET['id'] neq ''">
+	            <a title='清除条件' class="input-group-addon" href="{:U('UserSys/userlist')}"><i class="fa fa-remove"></i></a>
+	            </if>
+	          </div>
+	        </div>
+	      </div>
+		</form>
+    	<table class='table table-bordered'>
+    		<thead>
+    			<th>ID</th><th>车牌</th><th>姓名</th><th>电话</th><th>地址</th><th>支付时间</th><th>申请时间</th><th>状态</th><th>操作</th>
+    		</thead>
+    		<tbody>
+    			<volist name="list" id='vo'>
+    				<tr>
+    					<td>{$vo.id}</td>
+                      <td>{$vo.cphm}</td>
+    					<td>{$vo.name}</td>
+    					<td>{$vo.tel}</td>
+    					<td>{:area($vo['a2'])}{:area($vo['a3'])}{$vo.adr}</td>
+    					<td><if condition="$vo.paytime neq ''">{$vo.paytime|date='Y-m-d H:i:s',###}</if></td>
+    					<td>{$vo.addtime|date='Y-m-d H:i:s',###}</td>
+    					<td><if condition="$vo.status eq '5'"><span class='label label-success'>完成</span><elseif condition="$vo.status eq '2'"/><span class='label label-info'>待处理</span><elseif condition="$vo.status eq '1'"/><span class='label label-warning'>待支付</span><else/><span class='label label-default'>取消</span></if></td>
+    					<td>
+    						<div class="btn-group">
+				                <button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown">
+				                  管理
+				                  <span class="caret"></span>
+				                  <span class="sr-only">+</span>
+				                </button>
+				                <ul class="dropdown-menu" role="menu">
+				                	<li><a href="javascript:loadpage('{:U('Dbsc/OrderInfo',array('id'=>$vo['id']))}');">详情</a></li>
+				                  <if condition="$vo.status eq '2'">
+				                  <li><a href="javascript:HandleOrder({$vo.id});">寄出</a></li>
+				                  </if>
+									<if condition="$vo.status eq '2' OR $vo.status eq '3'">
+									<li class="divider"></li>
+									<li><a href="javascript:SetStat({$vo.id},0);">取消</a></li>
+				              		</if>
+				                </ul>
+			              	</div>
+    					</td>
+    				</tr>
+    			</volist>
+    		</tbody>
+    	</table>
+    </div>
+    <div class="box-footer">
+    	<ul class="pagination pagination-sm no-margin pull-left">{$page}</ul>
+    </div>
+</div>
+
+<div class="modal" id='HandleOrder'>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title">完成寄出</h4>
+      </div>
+      <div class="modal-body">
+      	<input type='hidden' name='id'>
+        <div class='form-group'>
+        	<label>快递公司</label>
+        	<input type='text' class='form-control' name='kdname'>
+        </div>
+        <div class='form-group'>
+        	<label>快递单号</label>
+        	<input type='text' class='form-control' name='kdno'>
+        </div>
+        <div class='form-group'>
+        	<label>备注</label>
+        	<textarea class='form-control' name='res' placeholder='选填'></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">取消</button>
+        <button type="button" onclick="DoneOrder();" class="btn btn-success DoneOrder">确认完成</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+
+<script type="text/javascript">
+function SetStat(id,stat){
+	if(stat == 0){
+		var r = confirm("确认取消该订单？");
+	}else{
+		var r = true;
+	}
+	if(!r) return false;
+	loading2('处理中..');
+	$.post(location.href,{"id":id,"stat":stat},function(data){
+		if(data.ret == 1){
+			location.reload();
+		}else{
+			alert(data.msg);
+		}
+		loading2('',0);
+	},'JSON');
+}
+
+// 处理订单
+function HandleOrder(id){
+	IptVal('id',id);
+	$("#HandleOrder").modal('show');
+}
+
+// 完成订单
+function DoneOrder(){
+	var id = IptVal('id');
+	if(id == ''){
+		alert('参数错误,请刷新重试!');
+	}else{
+		$(".DoneOrder").attr('disabled',true);
+		$.post("{:U('Dbsc/DoneOrder')}",{"id":id,"kdname":IptVal('kdname'),'kdno':IptVal('kdno'),'res':TexVal('res')},function(data){
+			alert(data.msg);
+			if(data.ret == 1){
+				location.reload();
+			}else{
+				$(".DoneOrder").attr('disabled',false);
+			}
+		},'JSON');
+	}
+}
+</script>
+</block>

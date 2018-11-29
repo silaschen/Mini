@@ -1,0 +1,65 @@
+<!-- addaudio -->
+<div class="modal fade" id="addaudio" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <b>添加音频素材</b>
+      </div>
+      <div class="modal-body mtext">
+
+        <div class='tip_a'></div>
+        <div class='form-group'>
+          <input type='text' class='form-control' value='' name='title' placeholder="填写音频标题...">
+        </div>
+        <div class='form-group'>
+          <input type='text' class='form-control' value='' name='intro' placeholder="填写音频简介...">
+        </div>
+        <div class='form-group'>
+          <input type='text' class='form-control' value='' name='wlink' placeholder="填写WIFI环境音频文件地址...">
+        </div>
+        <div class='form-group'>
+          <input type='text' class='form-control' value='' name='nlink' placeholder="填写普通网络环境音频文件地址...">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" onclick='addaudio();'>确定</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /.addaudio -->
+<script type="text/javascript">
+function addaudio(id){
+  if(id == undefined) id = '';
+  if(id == ''){
+     var tipw = '.tip_a';
+     var title = vr('title');
+     var intro = vr('intro');
+     var wlink = vr('wlink');
+     var nlink = vr('nlink');
+   }else{
+      var tipw = '.tip_c';
+      var title = vr('etitle');
+      var intro = vr('eintro');
+      var wlink = vr('ewlink');
+      var nlink = vr('enlink');
+   }
+  if(title == ''){
+   alert("请填写标题!");
+  }else if(wlink == ''){
+    alert("请填写wifi环境下音频文件地址!");
+  }else if(cpreg(wlink,'url') == false){
+    alert("WIFI环境音频文件地址格式错误!请填写以http:// 开头的音频文件地址");
+  }else if(cpreg(nlink,'url') == false){
+    alert("普通网络环境音频文件地址格式错误!请填写以http:// 开头的音频文件地址");
+  }else{
+    callme(url[25],2,"id="+id+"&title="+title+"&intro="+intro+"&wlink="+wlink+"&nlink="+nlink,function(data){
+      alert(lang[data.msg]);
+      if(data.ret == 1){
+        location.reload();
+      }
+    })
+  }
+}
+</script>

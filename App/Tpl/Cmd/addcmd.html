@@ -1,0 +1,54 @@
+<include file="Common:header" />
+<load href="__PUBLIC__/js/manage.js" />
+</head>
+<body>
+<div class="container">
+  <include file="Dash:left" />
+  <div class='col-md-9'>
+  <div class="panel panel-primary">
+    <div class="panel-heading">{$title}</div>
+    <div class="panel-body">
+      <ul class="nav nav-tabs subnav">
+      <li><a href="{$siteurl}Cmd{$xt}text">文本规则</a></li>
+      <li><a href="{$siteurl}Cmd{$xt}news">地理位置规则</a></li>
+      <li><a href="{$siteurl}Cmd{$xt}news">事件规则</a></li>
+      <a class="btn btn-info fr" href="{$siteurl}Cmd{$xt}text">返回管理</a>
+    </ul>
+
+    <div class='cl'>
+      <div id='tips'></div>
+              <div class='view well'>{$info.v}</div>
+              <div class='form-group'>
+                <div class="btn-group" data-toggle="buttons">
+                  <label class="btn btn-primary active" onclick="changecmdset(1,'#cmdbox');">
+                    <input type="radio" name="options" id="option1">  文本规则
+                  </label>
+                  <label class="btn btn-primary" onclick="changecmdset(2,'#cmdbox');">
+                    <input type="radio" name="options" id="option2"> 地理位置规则
+                  </label>
+                  <label class="btn btn-primary" onclick="changecmdset(3,'#cmdbox');">
+                    <input type="radio" name="options" id="option3"> 事件规则
+                  </label>
+                </div>
+              </div>
+              <div class='form-group' id='cmdbox'>
+
+              </div>
+            <center><button type="button" class="btn btn-success" onclick="setcmd({$info.id},{$type});">确定</button></center>
+    </div>
+    </div>
+  </div>
+  </div>
+<include file="Common:footer" />
+</div>
+<script type="text/javascript">
+$(function(){
+  changecmdset(1,'#cmdbox'); //初始化载入
+})
+</script>
+<!--百度地图api-->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=023ea5aa58d31c2d2dc6a650bad7795b"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/library/DrawingManager/1.4/src/DrawingManager_min.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.4/src/SearchInfoWindow_min.js"></script>
+</body>
+</html>

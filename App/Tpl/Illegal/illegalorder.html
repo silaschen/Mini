@@ -1,0 +1,172 @@
+<extend name="Sys:base" />
+<block name="main">
+  <include file="Common:js" />
+  <!-- 列表 -->
+  <div class="box box-solid">
+    <div class="box-header with-border">
+      <h3 class="box-title">{$title}</h3>
+    </div>
+    <div class="box-body">
+     <form method="GET" action="{:U('Illegal/illegalorder')}" id='form'>
+      <div class="row">
+        <div class="col-xs-3">
+          <div class="input-group">
+            <input name="word" type='text' class='form-control' value="{:I('word')}" placeholder='号牌/姓名/关键词搜索'>
+            <span class="input-group-addon" onclick="$('#form').submit();"><i class="fa fa-search"></i></span>
+            <if condition="$_GET['start'] neq '' OR $_GET['end'] neq '' OR  $_GET['word'] neq ''">
+            <a title='清除条件' class="input-group-addon" href="{:U('Illegal/illegalorder')}"><i class="fa fa-remove"></i></a>
+            </if>
+          </div>
+        </div>
+      </div>
+      </form>
+      <table class="table table-bordered">
+        <tbody>
+          <tr>
+            <th>ID</th>
+            <th>车牌</th>
+            <th>姓名</th>
+            <th>电话</th>
+            <th>总金额</th>
+            <th>扣分</th>
+            <th>身份证/驾照</th>
+            <th>行驶证</th>
+            <th>提交时间</th>
+            <th>处理时间</th>
+            <th>状态</th>
+            <th>操作</th>
+          </tr>
+          <volist name="list" id="vo">
+          <tr>
+            <td>{$vo.id}</td>
+            <td>{$vo.hphm}</td>
+            <td>{$vo.name}</td>
+            <td>{$vo.tel}</td>
+            <td>{$vo.total}</td>
+            <td>{$vo.kf}</td>
+            <td><a href="javascript:ShowSfz('{$vo.sfz}')" ><img src="{$vo.sfz}" width="50px"></a></td>
+            <td><a href="javascript:ShowXsz('{$vo.xsz}')" ><img src="{$vo.xsz}" width="50px"></a></td>
+            <td>{$vo.addtime|date="Y-m-d H:i",###}</td>
+            <td><if condition="$vo.donetime neq ''">{$vo.donetime|date="Y-m-d H:i",###}</if></td>
+            <td>
+              <if condition="$vo.status eq '0'"><span class="label label-default">已取消</span></if>
+              <if condition="$vo.status eq '1'"><span class="label label-info">待支付</span></if>
+              <if condition="$vo.status eq '2'"><span class="label label-warning">待处理</span></if>
+              <if condition="$vo.status eq '3'"><span class="label label-success">已完成</span></if>
+            </td>
+            <td>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown">
+                  管理
+                  <span class="caret"></span>
+                  <span class="sr-only">+</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+ 			            <li><a href="javascript:loadpage('{:U('Illegal/IllegalOrderInfo',array('id'=>$vo['id']))}')">详情</a></li>
+                  <if condition="$vo.status eq 2"><li><a href="javascript:Done({$vo.id})" >处理</a></li></if>
+                  <if condition="$vo.status neq 0"><li><a href="javascript:Setstat({$vo.id},0)">取消</a></li></if>
+                  <li class="divider"></li>
+                  <li><a href="javascript:Setstat({$vo.id},-1)">删除</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          </volist>
+        </tbody>
+      </table>  
+    </div><!-- /.box-body -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="done">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">违章代缴处理</h4>
+      </div>
+      <div class="modal-body">
+        <form id="Doenform">
+          <label>回执单号</label>
+          <input name="ticket" type="text" class="form-control">
+          <input name="id" type="hidden" class="form-control">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" onclick='DoneIllegal()'>确定</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal fade example1" tabindex="-1" role="dialog" aria-hidden="true" id='sfz' style="margin-top:100px">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+     <center><div id="showsfz"></div></center>
+     <button type="button" class="btn btn-default btn-lg btn-block" data-dismiss="modal">关闭</button>
+    </div>
+  </div>
+</div>
+<div class="modal fade example1" tabindex="-1" role="dialog" aria-hidden="true" id='xsz' style="margin-top:100px">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+     <center><div id="showxsz"></div></center>
+     <button type="button" class="btn btn-default btn-lg btn-block" data-dismiss="modal">关闭</button>
+    </div>
+  </div>
+</div>
+    <div class="box-footer clearfix">
+	    <ul class="pagination pagination-sm no-margin pull-left">{$page}</ul>
+	  </div>    
+  </div>
+<script type="text/javascript">
+ function Setstat(id,t){
+  if(t == -1){
+    var r = confirm('确定删除订单？');
+  }else if(t == 0){
+    var r = confirm('取消订单并退款？');
+  }else{
+    var r = true;
+  }
+  if(r == true){
+    loading2('处理中...');
+    $.get('{:U("Illegal/illegalorder")}',{'id':id,'t':t},function(data){
+      alert(data.msg);
+      if(data.ret == 1){
+        location.reload();
+      }else{
+        loading2('',0);
+      }
+    },"JSON");
+  }
+ }
+
+function Done(id){
+  $("#done").modal();
+  IptVal('id',id);
+}
+
+function DoneIllegal(){
+  if(IptVal('ticket') == ''){
+    alert('请输入回执单号');
+  }else{
+    loading2('处理中...');
+    $.post(location.href,$("#Doenform").serialize(),function(data){
+      alert(data.msg);
+      if(data.ret == 1){
+        location.reload();
+      }else{
+        loading2('',0);
+      }
+    },"JSON")
+  }
+}
+
+ function ShowSfz(sfz){
+    $("#sfz").modal();
+    $("#showsfz").html("<img src="+sfz+" width='1000px'>");
+ }
+
+  function ShowXsz(xsz){
+    $("#xsz").modal();
+    $("#showxsz").html("<img src="+xsz+" width='1000px'>");
+ }
+</script>
+</block>

@@ -1,0 +1,44 @@
+<extend name="Sys:base" />
+<block name="main">
+  <link rel="stylesheet" href="Public/com/jQuery-File-Upload-9.9.3/css/jquery.fileupload.css">
+  <style type="text/css">
+  .showlogo img{max-height: 120px;}
+  </style>
+  <div class="box box-danger">
+    <div class="box-header with-border">
+      <h3 class="box-title">参数设置</h3>
+    </div><!-- /.box-header -->
+    <div class="box-body">
+      <form role="form" id='form' action="{:U('Reward/setting')}" method="POST">
+        <input class='hide' name='id' value='{$info.id}'>
+         <div class="form-group">
+          <label>打赏费率：</label><small>可设置负数</small>
+          <input type="number" name='csot' class="form-control" placeholder="" value="{$info.cost}">
+        </div>
+        <div class="form-group">
+          <label>打赏金额：</label><small>多个以|隔开,单位元</small>
+          <input type="text" name='moneys' class="form-control" placeholder="" value="{$info.moneys}">
+        </div>
+  
+          <div class="form-group">
+          <label>打赏评价：</label><small>多个以|隔开</small>
+          <input type="text" name='remarks' class="form-control" placeholder="" value="{$info.remarks}">
+        </div>
+      </form>
+    </div><!-- /.box-body -->
+    <div class="box-footer">
+      <button type="button" onclick="savechange();" class="btn btn-success pull-right">确定修改</button>
+    </div>
+  </div>
+<script type="text/javascript">
+
+function savechange(){
+
+  if(vr('cost') == ''){
+    alert('请设置打赏费率!');
+  }else{
+    $("#form").submit();
+  }
+}
+</script>
+</block>

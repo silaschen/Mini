@@ -1,0 +1,34 @@
+<extend name="Sys:base" />
+<block name="main">
+  <div class="nav-tabs-custom">
+    <ul class="nav nav-tabs pull-right">
+      <li><a href="{:U('Sys/accesslist')}">权限列表</a></li>
+      <li class="active"><a href="{:U('Sys/group')}">管理组</a></li>
+      <li class="pull-left header" style="font-size: 15px;"><i class="fa fa-th"></i> {$title}</li>
+    </ul>
+    <div class="tab-content">
+    <div class="tab-pane active">
+       <table class="table table-bordered">
+        <thead>
+          <th>ID</th>
+          <th>名称</th>
+          <th>操作</th>
+        </thead>
+        <tbody>
+      <volist name="list" id='vo'>
+        <tr>
+          <td>{$vo.id}</td>
+          <td>{$vo.name}</td>
+          <td>{$vo.title}</td>
+        </tr>
+      </volist>
+        </tbody>
+      </table>
+    </div><!-- /.tab-pane -->
+    <div class="clearfix">
+      <a href="{:U('Sys/group')}" class='btn btn-default pull-left'>返回</a>
+      <ul class="pagination pagination-sm no-margin pull-right">{$page}</ul>
+    </div>
+    </div><!-- /.tab-content -->
+</div>
+</block>

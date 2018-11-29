@@ -1,0 +1,91 @@
+<extend name="base" />
+<block name="main">
+<link rel="stylesheet" href="Public/com/jQuery-File-Upload-9.9.3/css/jquery.fileupload.css">
+  <div class="box box-solid">
+    <div class="box-header with-border">
+      <h3 class="box-title">首页轮播广告设置</h3>
+    </div><!-- /.box-header -->
+    <div class="box-body">
+      <form role="form" id='form' action="{:U('Sys/advs')}" method="POST">
+      <div class="alert alert-info alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <h4><i class="icon fa fa-ban"></i> 填写示例</h4>
+        imgUrl$$linkUrl  (图片地址$$链接地址)
+      </div>
+      <div class='form-group'>
+              <button type='button' class='btn btn-success btn-sm fileinput-button'><i class="glyphicon glyphicon-picture"></i> <small>推荐尺寸 520*290 点击上传</small><input  id="uploadcover" type="file" name="files" accept="image/*" ></button>
+                <div id="progress" class="progress">
+                    <div class="progress-bar progress-bar-success"></div>
+                </div>
+                <div id="files" class="files"></div>
+                <div class='showcover'></div>
+            <input class='form-control' id='cover' value='' placeholder="上传后获取图片地址">
+        </div>
+        <div class="form-group">
+          <label>轮播图1</label>
+          <input type="url" name='adv1' class="form-control" placeholder="">
+        </div>
+       	<div class="form-group">
+          <label>轮播图2</label>
+          <input type="url" name='adv2' class="form-control" placeholder="">
+        </div>
+        <div class="form-group">
+          <label>轮播图3</label>
+          <input type="url" name='adv3' class="form-control" placeholder="">
+        </div>
+        <div class="form-group">
+          <label>轮播图4</label>
+          <input type="url" name='adv4' class="form-control" placeholder="">
+        </div>
+        <div class="form-group">
+          <label>轮播图5</label>
+          <input type="url" name='adv5' class="form-control" placeholder="">
+        </div>
+      </form>
+    </div><!-- /.box-body -->
+    <div class="box-footer">
+	    <button type="button" onclick="$('#form').submit();"  class="btn btn-info pull-right">确定修改</button>
+	  </div>
+  </div>
+  <script type="text/javascript">
+  var res = {$res};
+  for (var i = 0; i < res.length; i++) {
+    var id = i*1+1;
+    $("input[name='adv"+id+"']").val(res[i].pic+'$$'+res[i].url);
+  }
+  </script>
+  <script src="Public/com/jQuery-File-Upload-9.9.3/js/vendor/jquery.ui.widget.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/load-image.all.min.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/canvas-to-blob.min.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.iframe-transport.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload-process.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload-image.js"></script>
+<script type="text/javascript">
+$(function(){
+    $('#uploadcover').fileupload({
+        url: "{:U('Common/loadimg')}",
+        dataType: 'JSON',
+        acceptFileTypes: 'jpg,png,gif,jpeg,bmp',
+      maxFileSize: 8000000, // 800kb
+        done: function (e, data) {
+          if(data.result.ret == 1){
+              $("#cover").val(data.result.file);
+              $(".showcover").html("<img src='"+data.result.file+"'>");
+            }else{
+              alert(data.result.msg);
+            }
+        },
+        progressall: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            $('#progress .progress-bar').css(
+                'width',
+                progress + '%'
+            );
+        }
+    }).prop('disabled', !$.support.fileInput)
+        .parent().addClass($.support.fileInput ? undefined : 'disabled');
+
+});
+</script>
+</block>

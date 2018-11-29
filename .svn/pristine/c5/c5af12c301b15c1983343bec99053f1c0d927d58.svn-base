@@ -1,0 +1,41 @@
+<script type="text/javascript">
+var TempPayJSApi;
+<if condition="$payjsapi neq ''">
+TempPayJSApi = {$payjsapi};
+</if>
+var TempPayDone = function(){
+    // 支付成功后的操作 可重写
+	location.reload();
+};
+var TempPayCancel = function(){
+    
+};
+function TempJSApiCall(){ 
+    WeixinJSBridge.invoke(
+        'getBrandWCPayRequest',
+         TempPayJSApi
+        ,
+        function(res){
+            if(res.err_msg == 'get_brand_wcpay_request:ok'){
+            	TempPayDone();
+            }else{
+                TempPayCancel();
+            }
+        }
+    );
+}
+
+// 发起支付请求 (先获取支付参数 赋值给 TempPayJSApi);
+function TempCallPay(){
+    if (typeof WeixinJSBridge == "undefined"){
+        if( document.addEventListener ){
+            document.addEventListener('WeixinJSBridgeReady', TempJSApiCall, false);
+        }else if (document.attachEvent){
+            document.attachEvent('WeixinJSBridgeReady', TempJSApiCall); 
+            document.attachEvent('onWeixinJSBridgeReady', TempJSApiCall);
+        }
+    }else{
+        TempJSApiCall();
+    }
+}
+</script>

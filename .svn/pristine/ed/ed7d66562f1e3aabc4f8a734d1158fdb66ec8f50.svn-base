@@ -1,0 +1,53 @@
+<extend name="Sys:base" />
+<block name="main">
+<style type="text/css">
+.checkbox-inline{padding: 10px }
+</style>
+  <div class="nav-tabs-custom">
+    <ul class="nav nav-tabs pull-right">
+      <li><a href="{:U('Sys/accesslist')}">权限列表</a></li>
+      <li class="active"><a href="{:U('Sys/group')}">管理组</a></li>
+      <li class="pull-left header" style="font-size: 15px;"><i class="fa fa-th"></i> {$title}</li>
+    </ul>
+    <div class="tab-content">
+    <div class="tab-pane active">
+      <table class="table table-bordered">
+        <thead>
+          <th style="width:60px;">ID</th>
+          <th>管理员名称</th>
+          <th>操作</th>
+        </thead>
+        <tbody>
+      <volist name="list" id='vo'>
+        <tr>
+        <td>{$vo.id}</td>
+        <td>{$vo.user}</td>
+        <td><a href="javascript:del({$vo.id},{$vo.group_id});" class='label label-success'>移除管理员</a></td>
+        </tr>
+      </volist>
+        </tbody>
+      </table>
+    </div><!-- /.tab-pane -->
+    <div class="clearfix box-footer">
+      <a href="{:U('Sys/group')}" class='btn btn-default pull-left'>返回</a>
+      <ul class="pagination pagination-sm no-margin pull-right">{$page}</ul>
+    </div>
+    </div><!-- /.tab-content -->
+</div>
+<script type="text/javascript">
+function del(id,gid){
+  var r = confirm("确定移除该管理员?");
+  if(r == true){
+    loading2('处理中..');
+    $.post(location.href,{"id":id,"gid":gid},function(data){
+      alert(data.msg);
+      if(data.ret == 1){
+        location.reload();
+      }else{
+        loading2('',0);
+      }
+    },'JSON');
+  }
+}
+</script>
+</block>

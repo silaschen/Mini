@@ -1,0 +1,36 @@
+<extend name="Index:base" />
+<block name="top">
+  <nav id='top'>
+    <a href="{:back(U('Index/artlist'))}" class='lb'><i class='icon iconfont'>&#xe6b0;</i> 返回</a>
+    <span class='title'>最新动态</span>
+    <a href="tel:{:C('SITE_TEL')}" class='rb'>客服 <i class='icon iconfont'>&#xe61c;</i></a>
+  </nav>
+</block>
+<block name="main">
+<style type="text/css">
+.container{margin-top:50px;}
+.box{border:0;background-color: transparent;}
+.table{background: #fff;}
+.table a{width: 100%;display: block;overflow: hidden;color: #666}
+.table a small{color: #999;}
+.table a p{overflow: hidden; display: block; margin-top: 15px;}
+</style>
+<div class='container'>
+    <div class='box'>
+      <if condition="$list neq ''">
+      <table class="table table-bordered">
+        <tbody>
+          <volist name="list" id="vo">
+            <tr><td width='30%'><a href="{:U('Index/artinfo',array('id'=>$vo['id']))}"><if condition="$vo.cover neq ''"><img src='{$vo.cover}'><else/><img src='Public/res/img-loading.gif'></if></a></td><td><a href="{:U('Index/artinfo',array('id'=>$vo['id']))}"><b>{$vo.title}</b><br> <p><if condition="$vo.from neq ''"><small class='pull-left'>来源:{$vo.from}</small><else/><small class='pull-left'>{$vo.addtime|date='Y-m-d',###}</small></if><small class='pull-right'><i class='glyphicon glyphicon-eye-open'></i> {$vo.views}</small></p></a></td></tr>
+          </volist>
+      </tbody>
+      </table>
+      <else/>
+      <p class='text-center text-muted'><Br>暂无相关内容</p>
+      </if>
+    </div>
+    <div class="clearfix">
+      <center><ul class="pagination no-margin">{$page}</ul></center>
+    </div> 
+</div>
+</block>

@@ -1,0 +1,51 @@
+<!-- audioedit -->
+<div class="modal fade" id="audioedit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <b>修改音频素材</b>
+      </div>
+      <div class="modal-body mtext">
+
+        <div class='tip_c'></div>
+        <div class='form-group'>
+          <input type='text' class='form-control' value='' name='etitle' placeholder="填写音频标题...">
+        </div>
+        <div class='form-group'>
+          <input type='text' class='form-control' value='' name='eintro' placeholder="填写音频简介...">
+        </div>
+        <div class='form-group'>
+          <input type='text' class='form-control' value='' name='ewlink' placeholder="填写WIFI环境音频文件地址...">
+        </div>
+        <div class='form-group'>
+          <input type='text' class='form-control' value='' name='enlink' placeholder="填写普通网络环境音频文件地址...">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" onclick='saveaudio();'>确定</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /.audioedit -->
+<script type="text/javascript">
+var editid = '';
+function editaudio(id){
+    editid = id;
+    
+    callme(url[25],1,"id="+id,function(data){
+        $("input[name='etitle']").val(data.title);
+        $("input[name='eintro']").val(data.intro);
+        $("input[name='ewlink']").val(data.wlink);
+        $("input[name='enlink']").val(data.nlink);
+        $("#audioedit").modal('show');
+    })
+}
+
+function saveaudio(){
+  if(editid){
+    addaudio(editid);
+  }
+}
+</script>

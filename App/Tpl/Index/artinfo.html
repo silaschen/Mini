@@ -1,0 +1,28 @@
+<extend name="Index:base" />
+<block name="top">
+  <nav id='top'>
+    <a href="{:back(U('Index/artlist'))}" class='lb'><i class='icon iconfont'>&#xe6b0;</i> 返回</a>
+    <span class='title'>阅读详情</span>
+    <a href="tel:{:C('SITE_TEL')}" class='rb'>客服 <i class='icon iconfont'>&#xe61c;</i></a>
+  </nav>
+</block>
+<block name="main">
+<style type="text/css">
+.container{margin-top:55px;}
+.content{padding:5px;margin-bottom: 10px;overflow: hidden;}
+.box{overflow: hidden;}
+</style>
+<div class='container'>
+    <div class='box'>
+        <b class='text-red'>{$info.title}</b>
+        <p><small class='text-muted'>阅读:{$info.views}<if condition="$info.from neq ''">&nbsp;&nbsp;来源：{$info.from}</if>
+        </p>
+      <div class='content'>
+      {$info.content}
+      </div>
+      <span class="pull-right clearfix">  
+        <small>{$info.addtime|date='Y-m-d',###}</small>
+      </span>
+    </div>
+</div>
+</block>

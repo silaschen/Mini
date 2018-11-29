@@ -1,0 +1,46 @@
+<extend name="Index:base"/>
+<block name="style">
+<style type="text/css">
+#kefulist{background: #fff;}
+#kefulist .info{line-height: 30px;width: 100%;display: block;text-align: right;}
+</style>
+</block>
+<block name="main">
+<div class='container' style="margin-right: 5px;margin-left: 5px;">
+<div class="alert alert-warning">联系在线车务助理，获得更多精准代办服务!</div>
+	<table class='table table-bordered' id='kefulist'>
+		<tbody>
+			<volist name="list" id="vo">
+			<tr>
+			<td width='100'><if condition="$vo.cover neq ''"><img src="{$vo.cover}" class="img-circle" width='60' /></if></td>
+			<td><div class='info'><b class='pull-left'>{$vo.name}</b> <if condition="$vo.ercodeimg neq ''"><a href="javascript:ShowWxQR('{$vo.ercodeimg}');" class='btn btn-success btn-xs'>加我微信</a></if><br><a class='pull-left' href="tel:{$vo.tel}">电话：{$vo.tel}</a><a href="tel:{$vo.tel}" class='btn btn-info btn-xs'>拨打电话</a></div></td>
+	      	</tr>
+		    </volist>
+		</tbody>
+	</table>
+
+</div>
+<!-- 显示二维码 -->
+<div class="modal fade ShowWxQR" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+    	<div class="modal-body">
+	     
+	    </div>
+    	<div class="modal-footer">
+	     <button type="button" class="btn btn-default btn-lg btn-block" data-dismiss="modal">关闭</button>
+	    </div>
+    </div>
+    
+  </div>
+</div>
+<script type="text/javascript">
+function ShowWxQR(url){
+	$(".ShowWxQR > .modal-sm > .modal-content > .modal-body").html("<center><img src='"+url+"'></center><p class='text-center'>手指长按识别二维码加我微信</p>");
+	$(".ShowWxQR").modal('show');
+}
+</script>
+</block>
+
+<block name="nav">
+</block>

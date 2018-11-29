@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{$title}</title>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<link rel="stylesheet" href="Public/com/AdminLTE/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/ionicons/2.0.1/css/ionicons.min.css">
+<link rel="stylesheet" href="Public/com/AdminLTE/css/AdminLTE.css">
+<link rel="stylesheet" href="Public/com/AdminLTE/css/skins/skin-red.css">
+<!-- jQuery 2.1.4 -->
+<script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="Public/com/AdminLTE/bootstrap/js/bootstrap.min.js"></script>
+<script src="Public/com/common.js"></script>
+<style type="text/css">
+/*loading*/
+#mask{position: fixed;z-index: 999999;top: 0;bottom: 0;left: 0;right: 0;display: none;}
+#mask .loading{padding: 10px 15px;background: #333;opacity: 0.75;text-align: center;color: #FFF;line-height: 23px;position: fixed;left:0;right: 0;bottom: 0;top: 0;width: 120px;height: 65px;z-index: 999999;margin: auto;border-radius: 4px;}
+</style>
+<!--[if lt IE 9]>
+<script src="//cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body class="hold-transition skin-red sidebar-mini">
+<div class="wrapper">
+  <block name="head"><include file="Sys:head" /></block>
+  <!-- Left side column. contains the logo and sidebar -->
+  <block name="left"><include file="Sys:left" /></block>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <block name="menu"></block>
+    <!-- Main content -->
+    <section class="content">
+    <block name="main"></block>
+    </section><!-- /.content -->
+  </div><!-- /.content-wrapper -->
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="pull-right hidden-xs">值得信赖的移动互联网开发服务商!</div>
+    <!-- Default to the left -->
+    <a href="http://binguo.me/wx/" target='_blank'>&copy; 宾果智造</a>
+  </footer>
+</div><!-- ./wrapper -->
+<!-- AdminLTE App -->
+<script src="Public/com/AdminLTE/js/app.min.js"></script>
+<div id="mask"><div class='loading'></div></div>
+</body>
+</html>

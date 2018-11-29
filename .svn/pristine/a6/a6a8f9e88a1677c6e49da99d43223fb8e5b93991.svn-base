@@ -1,0 +1,25 @@
+<extend name="base" />
+<block name="main">
+  <div class="box box-danger">
+    <div class="box-header with-border">
+      <h3 class="box-title">添加组权限</h3>
+      <a href="javascript:history.go(-1)" style="padding-top:0px;padding-bottom:0px;" type="button" class="btn btn-default pull-right">返回</a>
+    </div><!-- /.box-header -->
+    <form role="form" id='form' action="{:U('Sys/RuleAdd')}" method="POST">
+    <div class="box-body">
+        <div class='form-group'>
+          <label>权限名称:</label>
+          <input type='text' class='form-control' name='name' placeholder="填写方式为:(控制器名/方法名)  例:Sys/index" >
+        </div>
+       <div class='form-group'>
+          <label>操作内容：</label>
+          <input type='text' class='form-control' name='title' >
+        </div>
+        </div> 
+    <div class="box-footer">
+	    <button type="submit" class="btn btn-default pull-right">确认添加</button>
+	  </div>
+    </div><!-- /.box-body -->
+    </form>
+  </div>
+</block>

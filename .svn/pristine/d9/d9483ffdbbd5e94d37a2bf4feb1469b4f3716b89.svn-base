@@ -1,0 +1,137 @@
+<extend name="Sys:base" />
+<block name="main">
+  <div class="box box-solid">
+    <div class="box-header with-border">
+      <h3 class="box-title">{$title}</h3>
+    </div><!-- /.box-header -->
+    <div class="box-body">
+      <form method="GET" action="{:U('Drive/orderlist')}" id='search' style="margin-bottom:15px;">
+      <div class="row">
+
+        <div class="col-xs-3 col-md-2">
+          <select name='status' class='form-control'>
+            <option value=''>全部</option>
+            <option value='1'>待支付</option>
+            <option value='2'>已支付</option>
+            <option value="3">已发出</option>
+            <option value="4">已成功</option>
+            <option value="0">已取消</option>
+          </select>
+        </div>
+
+        <div class="col-xs-6 col-md-6">
+          <div class="input-group">
+            <input name="word" type='text' class='form-control' value="{:I('word')}" placeholder='姓名/昵称 关键词搜索..'>
+            <span class="input-group-addon" onclick="$('#search').submit();"><i class="fa fa-search"></i></span>
+            <if condition="$_GET['type'] neq '' OR $_GET['word'] neq '' OR $_GET['status'] neq ''">
+            <a title='清除条件' class="input-group-addon" href="{:U('Drive/orderlist')}"><i class="fa fa-remove"></i></a>
+            </if>
+          </div>
+        </div>
+      </div>
+      </form>
+      <table class="table table-bordered">
+        <thead>
+          <th>ID</th>
+          <th>用户</th>
+          <th>车牌</th>
+          <th>车主</th>
+          <th>电话</th>
+          <th>金额</th>
+          <th>一寸照</th>
+          <th>身份证1</th>
+          <th>身份证2</th>
+          <th>付款时间</th>
+          <th>添加时间</th>
+          <th>状态</th>
+          <th>操作</th>
+        </thead>
+        <tbody>
+      <volist name="list" id='vo'>
+        <tr>
+          <td>{$vo.id}</td>
+          <td><if condition="$vo.headimgurl neq ''"><img src='{$vo.headimgurl}' class='img-rounded' width='40'></if></td>
+          <td>{$vo.cphm}</td>
+          <td>{$vo.name}</td><td>{$vo.tel}</td>
+          <td><span class="badge bg-blue">￥{$vo.fee}</span></td>
+          <td><if condition="$vo.cardimg neq ''"><img src="{$vo['cardimg']}" width="45"></if></td>
+          <td><if condition="$vo.sfz1 neq ''"><img src="{$vo['sfz1']}" width="45"></if></td>
+           <td><if condition="$vo.sfz2 neq ''"><img src="{$vo['sfz2']}" width="45"></if></td>
+          <td><if condition="$vo['paytime'] neq ''">{$vo.paytime|date='Y-m-d H:i:s',###}</if></td>
+          <td>{$vo.addtime|date='Y-m-d H:i:s',###}</td>
+          <td><if condition="$vo.status eq 1"><span class="label label-warning">代付款</span><elseif condition="$vo.status eq 2"/><span class="label label-success">已支付</span><elseif condition="$vo.status eq 3"/><span class="label label-info">aws</span></if></td>
+          <td>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown">
+                管理
+                <span class="caret"></span>
+                <span class="sr-only">+</span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+               
+                <li><a href="{:U('Pro/additem',array('id'=>$vo['id']))}">详情</a></li>
+
+
+                <li><a href="javascript:setstat({$vo.id},-1);">删除</a></li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+      </volist>
+        </tbody>
+      </table>
+    </div><!-- /.box-body -->
+    <div class="box-footer clearfix">
+      <ul class="pagination pagination-sm no-margin pull-left">{$page}</ul>
+    </div>  
+  </div>
+<!-- 查看图片 -->
+<div class="modal fade" id="img" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <b>图片详情</b>
+      </div>
+      <div class="modal-body">
+          
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script type="text/javascript">
+function setstat(id,t){
+  var r = null;
+  if(t == 0){
+    r = confirm('您确认禁用此项目吗？');
+  }else if(t == 1){
+    r = confirm('您确认启用此项目吗？');
+  }else if(t == -1){
+    r = confirm('您确认删除此项目吗？');
+  }
+  if(r == true){
+    loading2('操作中...');
+    $.post(location.href,{'id':id,'t':t},function(data){
+        alert(data.msg);
+        if(data.ret == 1){
+          location.reload();
+        }else{
+          loading2('',0);
+        }
+    },'JSON');
+  }
+}
+$('.intro').popover();
+</script>
+<script type="text/javascript">
+    SelVal('type',{$_GET['type']});
+    SelVal('status',{$_GET['status']});
+
+</script>
+</block>

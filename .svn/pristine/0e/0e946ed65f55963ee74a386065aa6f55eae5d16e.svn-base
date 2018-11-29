@@ -1,0 +1,204 @@
+var Common = require("../../res/common.js");
+var App = getApp();
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    'Province': [],
+    'City': [],
+    'Area': [],
+    'A1': 0,
+    'A2': 0,
+    'A3': 0,
+    sfz: [],
+    carCert: []
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    //初始化地区数据
+    this.setData({ 'Province': Common.AreaData1, 'City': Common.GetData(2, Common.AreaData1[0].id) });
+    this.setData({ 'Area': Common.GetData(3, this.data.City[0].id) })
+  },
+  SetArea: function (e) {
+    //  console.log(e);
+    var i = e.currentTarget.dataset.id;
+    var n = e.detail.value; //序号
+    if (i == 1) {
+      var City = Common.GetData(2, this.data.Province[n].id);
+      var Area = Common.GetData(3, City[0].id);
+      this.setData({ 'A1': n, 'City': City, 'Area': Area, 'A2': 0, 'A3': 0 })
+    } else if (i == 2) {
+      var Area = Common.GetData(3, this.data.City[n].id);
+      this.setData({ 'Area': Area, 'A2': n, 'A3': 0 })
+    } else {
+      this.setData({ 'A3': n })
+    }
+  },
+  SubmitData: function (e) {
+    console.log(e);
+    var formid = e.detail.formId;
+    var cphm = e.detail.value.cphm;
+    var tel = e.detail.value.tel;
+    var adr = e.detail.value.adr;
+    var name = e.detail.value.name;
+    if (cphm.length != 5) {
+      Common.ErrTips('请填写五位车牌号码！')
+    } else if (tel == '') {
+      Common.ErrTips('请填写联系电话！')
+    } else if (name == '') {
+      Common.ErrTips('请填写车主姓名！')
+    } else if (adr == '') {
+      Common.ErrTips('请填写详细地址！')
+    } else {
+      var a1 = this.data.Province[this.data.A1].id;
+      var a2 = this.data.City[this.data.A2].id;
+      var a3 = this.data.Area[this.data.A3].id;
+      wx.request({
+        url: App.data['API_URL'] + '?m=Little&a=SaveDbscOrder&sessionkey=' + wx.getStorageSync('sessionkey'),
+        data: { 'formid': formid, 'cphm': cphm, 'tel': tel, 'adr': adr, 'name': name, 'a1': a1, 'a2': a2, 'a3': a3 },
+        method: 'POST',
+        fail: function () {
+          Common.ErrTips('请求失败！')
+        },
+        success: function (r) {
+          console.log(r);
+          if (r.data.ret == 1) {
+            // 跳转到支付页
+            wx.navigateTo({ url: 'pay?id=' + r.data.msg });
+          } else {
+            Common.ErrTips(r.data.msg)
+          }
+        }
+      })
+    }
+  },
+  //选择身份证图片
+  ChooseSfz: function () {
+    var that = this;
+    wx.chooseImage({
+      count: 2, // 默认9
+      sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+      sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+      success: function (res) {
+        // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+        var tempFilePaths = res.tempFilePaths;
+        var len = that.data.sfz.length;
+        if (len == 1 && tempFilePaths.length == 1) {
+          that.setData({
+            sfz: that.data.sfz.concat(tempFilePaths)
+          })
+        } else {
+          that.setData({
+            sfz: tempFilePaths
+          })
+        }
+      }
+    })
+  },
+  //删除身份证
+  DelSfz: function (e) {
+    var index = e.target.dataset.id;
+    if (this.data.sfz.length == 2) {
+      if (index == 0) {
+        this.setData({
+          sfz: [this.data.sfz[1]]
+        })
+      } else {
+        this.setData({
+          sfz: [this.data.sfz[0]]
+        })
+      }
+    } else {
+      this.setData({
+        sfz: []
+      })
+    }
+  },
+  //选择行车证
+  ChooseCarCert: function () {
+    var that = this;
+    wx.chooseImage({
+      count: 2, // 默认9
+      sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+      sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+      success: function (res) {
+        // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+        var tempFilePaths = res.tempFilePaths;
+        var len = that.data.carCert.length;
+        if (len == 1 && tempFilePaths.length == 1) {
+          that.setData({
+            carCert: that.data.carCert.concat(tempFilePaths)
+          })
+        } else {
+          that.setData({
+            carCert: tempFilePaths
+          })
+        }
+      }
+    })
+  },
+  //删除行车证
+  DelCert: function (e) {
+    var index = e.target.dataset.id;
+    if (this.data.carCert.length == 2) {
+      if (index == 0) {
+        this.setData({
+          carCert: [this.data.carCert[1]]
+        })
+      } else {
+        this.setData({
+          carCert: [this.data.carCert[0]]
+        })
+      }
+    } else {
+      this.setData({
+        carCert: []
+      })
+    }
+  },
+  //预览图片
+  PreviewImg: function (res) {
+    var ty = res.currentTarget.dataset.type;
+    var id = res.currentTarget.id;
+    if (ty == "sfz") {
+      wx.previewImage({
+        current: this.data.sfz[id], // 当前显示图片的http链接
+        urls: this.data.sfz, // 需要预览的图片http链接列表
+      })
+    } else {
+      wx.previewImage({
+        current: this.data.carCert[id], // 当前显示图片的http链接
+        urls: this.data.carCert, // 需要预览的图片http链接列表
+      })
+    }
+  },
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  },
+  CallUs: function () {
+    wx.makePhoneCall({
+      phoneNumber: '037168901001'
+    })
+  }
+})

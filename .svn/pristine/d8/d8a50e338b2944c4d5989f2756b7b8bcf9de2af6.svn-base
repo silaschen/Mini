@@ -1,0 +1,123 @@
+<?php 
+/**
+* 驾驶证.补办前后台主要业务代码
+
+*/
+class DriveAction extends MiniAction
+{
+	#补换驾驶证#
+	public function MakeOrder(){
+		$this->IsCached();
+		$data = json_decode(file_get_contents("php://input"),true);
+		//do something...
+		$data['status'] = 1;
+		$data['addtime'] = NOW_TIME;
+		$data['orderid'] = md5(NOW_TIME.$data['cphm'].$this->openid);
+		$data['cphm'] = '豫A'.$data['cphm'];
+		$data['openid'] = $this->openid;
+		$data['fee'] = 300;
+		$r = M('car_drivelist')->add($data);
+		if($r){
+			exit(json_encode(array('code'=>1,'id'=>$r)));
+		}else{
+			exit(json_encode(array('code'=>0)));
+		}
+
+	}
+
+	#我的订单.驾驶证#
+	public function DriveOrder(){
+		$this->IsCached();
+		$p = I('p',1);
+		$status = I('status');
+		$map = array();
+		$map['openid'] = $this->openid;
+		if($status){
+			$map['status'] = $status;
+		}else{
+			$map['status'] = array('egt',0);
+		}
+		$list = M('car_dblist')->where($map)->page($p.',6')->select();
+		if(!$list) exit(json_encode(array('code'=>0)));
+		exit(json_encode(array('code'=>1,'list'=>$list)));
+
+	}
+
+
+	#支付参数#
+	public function GetPay(){
+		$this->IsCached();
+		$data = json_decode(file_get_contents("php://input"),true);
+		$order = M('car_drivelist')->where(array('id'=>$data['id'],'status'=>1,'openid'=>$this->openid))->find();
+		if(!$order) exit(json_encode(array('code'=>0,'msg'=>'订单信息不存在')));
+		$this->PayConf($order['orderid'],$order['fee'],'','','');
+
+
+
+
+	}
+
+	#补办驾驶证订单#
+	public function orderlist(){
+		$this->IsAdm(true);
+		if (IS_GET) {
+			$this->title = "车险代办列表列表";
+			$this->eq = "订单管理";
+			$p = I('p',1);
+			$id = I('id');
+			$word = I('word');
+			$type = I('type');
+			$status = I('status');
+			$map = array();
+			if($word) $map['b.nickname|a.name'] = array('like',"%".$word."%");
+			if($status != ''){
+				$map['a.status'] = $status;
+			}else{
+				$map['a.status'] = array('EGT',0);
+			}
+			import('@.ORG.Util.Page');
+			$model = M('car_drivelist');
+			$list = $model->where($map)->alias("a")->join('bingo_user_list b ON a.openid=b.openid')
+			->order('a.addtime desc')->where($map)->page($p.',15')->field("a.id,b.nickname,a.name,a.tel,a.adr,a.cphm,a.status,a.addtime,a.paytime,b.headimgurl,a.fee,a.cardimg,a.sfz1,a.sfz2")->select();
+			$this->assign('list',$list);
+			$count	=  $model->alias("a")->join('bingo_user_list b ON a.openid=b.openid')
+			->where($map)->count();// 查询满足要求的总记录数
+			$this->total = $count;
+			$page 	= new Page($count,15);// 实例化分页类 传入总记录数和每页显示的记录数
+			$page->setConfig('theme','%upPage%  %linkPage%  %downPage%');
+			$page->rollPage = 5 ;
+			$show	= $page->show();// 分页显示输出
+			$this->assign('page',$show);// 赋值分页输出
+			//分页跳转的时候保证查询条件
+			foreach($map as $key=>$val) {
+				$page->parameter   .=   "$key=".urlencode($val).'&';
+			}
+			$this->display();
+		}else{
+			$id = I('id');
+			$t = I('t');
+			$info = M('item_list')->where(array('id'=>$id))->find();
+			if(!$info) json('项目不存在');
+			$res = M('item_list')->where(array('id'=>$id))->setField('status',$t);
+			if($res){
+				json('操作成功',1);
+			}else{
+				json('操作失败，请稍后再试');
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+

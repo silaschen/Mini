@@ -1,0 +1,155 @@
+<extend name="Index:base" />
+<block name="style">
+	<link rel="stylesheet" href="Public/com/swiper/swiper3.1.0.min.css"> 
+	<script src="__PUBLIC__/com/swiper/swiper3.1.0.jquery.min.js"></script>
+	<style>
+		.row{margin:0px;}
+		.col-xs-12{padding:0px;margin:0px;}
+		dl{margin-bottom: 0px;padding-top:20px;background-color:#D73A44;}
+		.text{color:#fff;height:30px;line-height:30px;font-size:13px;}
+		.shouru{color:#fff ;height:30px;line-height:30px;font-size:13px;}
+
+		.col-xs-12 ul li{display:block;padding-left:10px;padding-right:10px;border-bottom:1px solid #eee;background-color:#fff;height:70px;}
+		.col-xs-12 li .nick{height:40px;line-height:40px;color:#000;}
+		.col-xs-12 li .time{height:30px;line-heihgt:30px;color:#B1B1B1;}
+		.col-xs-12 li .money{color:#000;height:40px;line-height:40px;}
+		.tixian{border:1px solid #fff;padding:2px 4px;}
+		.none{border-bottom:1px solid #eee;background-color:#fff;height:70px;line-height:70px;text-align:center;}
+
+		.swiper-pagination{width:100%;}
+		.swiper-pagination-bullet-active{background-color: green;}
+		.swiper-pagination-bullet{height:60px;padding-top:5px;}
+	</style>
+</block>
+<block name="main">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<dl>
+					<dd class="text-center">
+						<img src="{$user.headimgurl}" style="width:60px;" class="img-circle">
+					</dd>
+					<dd class="text-center text" style="margin-top:10px;">
+						<div>昵称：{$user.nickname}</div>
+					</dd>
+					<dd class="text-center shouru" onclick="tixian();" style="border:1px solid #fff;width:35px;margin:0 auto;">提现</dd>
+				
+				</dl>
+			</div>
+				
+		</div>	
+		<!-- <div class="row swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+			<div class="col-xs-6 text-center swiper-pagination-bullet" style="background-color:#a93b47;color:#FDCA83;">
+				<div style="font-size:18px;">{$user.total}元</div>
+				<div><small>收到{$num[0]['num']}个</small></div>
+			</div>
+			<div class="col-xs-6 text-center swiper-pagination-bullet" style="background-color:#B73340;color:#fff;">
+				<div style="font-size:18px;" class="last-money" data-money="{$user.money}">{$user.money}元</div>
+
+				<div><small class="shouru">我的收入</small></div>
+			</div>
+		</div> -->
+		<div class="swiper-pagination"></div>
+		<!-- 开始 -->
+		<div class="swiper-container col-xs-12">
+	        <div class="swiper-wrapper">
+	            <div class="swiper-slide">
+						<ul >
+							<empty name="list" >
+								<li class="none">
+									暂时还有打赏记录~ 再接再厉~
+								</li>
+							<else />
+								<foreach name="list" item="vo">
+									<li>
+										<div class="row">
+											<div class="pull-left">
+												<div class="nick">{$vo.nickname}</div>
+												<div class="time"><small>{$vo.paytime|date="Y-m-d H:i:s",###}</small></div>
+												
+											</div>
+											<div class="pull-right" >
+												<div class="money">+{$vo.fee}元</div>
+												<div class="time"><small>{$vo.remark}</small></div>
+											</div>
+										</div>
+									</li>
+								</foreach>
+							</empty>
+						</ul>
+	            </div>
+	            <div class="swiper-slide">
+						<ul >
+							<empty name="list" >
+								<li class="none">
+									暂时还有打赏记录~ 再接再厉~
+								</li>
+							<else />
+								<foreach name="list" item="vo">
+									<li>
+										<div class="row">
+											<div class="pull-left">
+												<div class="nick">{$vo.nickname}</div>
+												<div class="time"><small>{$vo.paytime|date="Y-m-d H:i:s",###}</small></div>
+												
+											</div>
+											<div class="pull-right" >
+												<div class="money">+{$vo.fee}元</div>
+												<div class="time"><small>{$vo.remark}</small></div>
+											</div>
+										</div>
+									</li>
+								</foreach>
+							</empty>
+						</ul>
+	            </div>
+	        </div>
+	        <!-- Add Pagination -->
+	     
+	    </div>
+		<!-- 结束 -->
+
+		<div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"  style="margin-top:500px;">
+			<span class="" style="background-color:green;width:100px;height:300px;"></span>
+			<span class="" style="background-color:green;width:100px;height:300px;"></span>
+		</div>
+
+
+
+
+		
+		<!-- 分页开始 -->
+		<nav class="text-center">
+		  <ul class="pagination ">
+		    {$page}
+		  </ul>
+		</nav>
+		<!-- 分页结束 -->
+		
+		
+
+		
+	</div>
+	<script type="text/javascript">
+		var swiper = new Swiper('.swiper-container', {
+	        pagination: '.swiper-pagination',
+	        paginationClickable: true
+	    });
+	</script>
+	<script type="text/javascript">
+		function tixian(){
+			var num=$(".last-money").attr("data-money");
+			if(num == ''){
+				alert("您没有可提现的余额~");
+			}else{
+				$.post("{:U('Reward/MoneyInfo')}",{"num":num},function(data){
+					alert(data.msg);
+					window.location.reload();
+				},'JSON');
+			}
+		}
+	</script>
+</block>
+<block name="nav">
+	
+</block>

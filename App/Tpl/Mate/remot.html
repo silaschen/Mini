@@ -1,0 +1,87 @@
+<extend name="Sys:base" />
+<block name="head">
+<include file="Sys:head" />
+</block>
+<block name="left">
+<include file="Sys:left" />
+</block>
+<block name="main">
+<include file="js" />
+<load href="Public/com/vgrid/jquery.easing.min.js" />
+<load href="Public/com/vgrid/jquery.vgrid.min.js" />
+<load href="Public/com/vgrid/morenews.css" />
+<style type="text/css">
+.thumbnail{margin-bottom: 0}
+.caption{overflow: hidden;clear:both;}
+.caption > a{float: left;width: 20%;}
+</style>
+<div class="nav-tabs-custom">
+    <ul class="nav nav-tabs pull-right">
+      <li><a href="{:U('Mate/text')}">文本素材</a></li>
+      <li><a href="{:U('Mate/audio')}">音频素材</a></li>
+      <li class='active'><a href="{:U('Mate/remot')}">图文素材</a></li>
+     
+      <li class="pull-left header" style="font-size: 15px;"><i class="fa fa-th"></i> {$title}</li>
+    </ul>
+    <div class="tab-content">
+		<div class="tab-pane active">
+			 <ul class="list-group waterfall">
+				<volist name='list' id='vo'>		
+					<div class="col-md-3">
+						<div class='json'>
+						{$vo.content}
+						</div>
+						<div class='clearfix'><a class="label label-danger" href="javascript:delmate(5,{$vo.id});">删除</a>
+<if condition="$vo.cmd neq ''"><a href="javascript:delcmd(5,{$vo.id});" class="label label-warning">解除</a></if>
+<a class="label label-success" href="{:U('Mate/setcmd',array('id'=>$vo['id'],'type'=>5))}">触发</a>
+<a class="label label-info" href="{:U('Mate/addremot',array('id'=>$vo['id']))}" >修改</a></div>
+					</div>
+				</volist>
+			</ul>
+		</div><!-- /.tab-pane -->
+		<div class="clearfix">
+			<a class="btn btn-info pull-left" href="{:U('Mate/addremot')}">添加素材</a>
+			<ul class="pagination pagination-sm no-margin pull-right">{$page}</ul>
+		</div>
+    </div><!-- /.tab-content -->
+</div>
+<script type="text/javascript">
+var vg = $(".waterfall").vgrid({
+		easing: "easeOutQuint",
+		useLoadImageEvent: true,
+		useFontSizeListener: true,
+		time: 400,
+		delay: 20,
+		wait: 500,
+		fadeIn: {
+			time: 500,
+			delay: 50
+		},
+		onStart: function(){
+		},
+		onFinish: function(){
+		}
+	});
+$(function(){
+	$(".waterfall").find('.json').each(function(){
+		var json = eval($(this).html());
+		var str = '';
+		for(i=0;i<json.length;i++){
+			if(json[i].cover == '') json[i].cover = 'Public/res/defaultthumb.jpg'; //默认缩略图
+			if(i == 0 ){
+				str += "<a href='"+json[i].url+"' target='_blank' title='"+json[i].intro+"' class='thumbnail'><img src='"+json[i].cover+"'/>"+json[i].title+"</a><div class='caption'>";
+			}else{
+				str += "<a href='"+json[i].url+"' target='_blank' title='"+json[i].title+"' class='thumbnail' style='margin-bottom:5px;'><img src='"+json[i].cover+"' alt='"+json[i].intro+"'></a>";
+			}
+		}
+		str += '</div>';
+		$(this).html(str)
+	})
+
+
+	$(window).load(function(e){
+		vg.vgrefresh();
+	});
+})
+</script>
+</block>

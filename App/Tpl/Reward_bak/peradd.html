@@ -1,0 +1,123 @@
+<extend name="Sys:base" />
+<block name="main">
+  <link rel="stylesheet" href="Public/com/jQuery-File-Upload-9.9.3/css/jquery.fileupload.css">
+  <style type="text/css">
+  .showlogo img{max-height: 120px;}
+  </style>
+  <div class="box box-danger">
+    <div class="box-header with-border">
+      <h3 class="box-title">添加/修改人员</h3>
+    </div><!-- /.box-header -->
+    <div class="box-body">
+      <form role="form" id='form' action="{:U('Reward/peradd')}" method="POST">
+        <input class='hide' name='id' value='{$info.id}'>
+         <div class="form-group">
+          <label>人员名称：</label>
+          <input type="text" name='name' class="form-control" placeholder="" value="{$info.name}">
+        </div>
+        <div class="form-group">
+          <label>人员头像：</label><a href="javascript:$('#logopic').val('');$('.logopic').html('');" onclick="return confirm('确定清除头像？');" class='pull-right'>清除</a><br>
+          <button style="margin-bottom:8px;" type='button' class='btn btn-default fileinput-button'><i class="glyphicon glyphicon-picture"></i> <small>点击上传</small><input data-id="logopic" class="upload" type="file" name="files" accept="image/*" ></button>
+            <div class="progress">
+                <div class="progress-bar progress-bar-success progresslogopic"></div>
+            </div>
+            <div id="files" class="files"></div>
+            <div class='logopic'><notempty name="info.avatar"><img width='100px' src="{$info.avatar}"></notempty></div>
+            <input class='hide' name="avatar" id='logopic' value="{$info.avatar}">
+        </div>
+        <div class="form-group">
+          <label>所属分组：</label>
+          <select id="group" name="gid" class="form-control">
+            <option  value="">请选择分组</option>
+            <volist name = "groups" id="group">
+            <option value="{$group.id}">{$group.name}</option>
+            </volist>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>费率：</label>
+          <input type="number" name='cost' class="form-control" placeholder="留空使用全局设置" value="{$info.cost}">
+        </div>
+        <div class="form-group">
+          <label>工号：</label>
+          <input type="text" name='jobnum' class="form-control" placeholder="" value="{$info.jobnum}">
+        </div>
+           <div class='form-group'>
+        <label>人员简介：</label>
+          <textarea id="editor_id" name="intro" style="width:100%;min-height:210px;"></textarea>
+      </div>
+      <div class='hide temp'>{$info.intro}</div>
+      </form>
+    </div><!-- /.box-body -->
+    <div class="box-footer">
+      <button type="button" onclick="savechange();" class="btn btn-success pull-right">确定修改</button>
+    </div>
+  </div>
+<script type="text/javascript">
+$(function(){
+
+  $('#group').val("{$info.gid}");
+  KindEditor.ready(function(K) {
+      window.editor = K.create('#editor_id',{
+        uploadJson:"{:U('Common/loadimg',array('body'=>1))}"
+      });
+      editor.html($('.temp').html());
+  });
+  });
+function savechange(){
+  $("#editor_id").val(editor.html());
+  if(vr('name') == ''){
+    alert('请填写人员名称!');
+  }else if(vr('avatar') == ''){
+    alert('请上传人员头像!');
+  }else if(sr('gid') == ''){
+    alert('请选择人员分组!');
+  }else{
+    $("#form").submit();
+  }
+}
+</script>
+
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/vendor/jquery.ui.widget.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/load-image.all.min.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/canvas-to-blob.min.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.iframe-transport.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload-process.js"></script>
+<script src="Public/com/jQuery-File-Upload-9.9.3/js/jquery.fileupload-image.js"></script>
+<script charset="utf-8" src="Public/com/kindeditor/kindeditor.js"></script>
+<script charset="utf-8" src="Public/com/kindeditor/lang/zh_CN.js"></script>
+<script type="text/javascript">
+ $('.upload').click(function(){
+  var w = $(this).attr('data-id');
+  // 上传图片
+    $(this).fileupload({
+        url: "{:U('Common/loadimg')}",
+        dataType: 'JSON',
+        acceptFileTypes: 'jpg,png,gif,jpeg,bmp',
+        maxFileSize: 8000000, // 800kb
+        disableImageResize: /Android(?!.*Chrome)|Opera/.test(window.navigator && navigator.userAgent),
+        imageMaxWidth: 800,
+        // imageMaxHeight: 800,
+        // imageCrop: true,
+        done: function (e, data) {
+          console.log($(this).attr('name'));
+          if(data.result.ret == 1){
+              $("#"+w).val(data.result.file);
+              $("."+w).html("<img width='100px' src='"+data.result.file+"'>");
+            }else{
+              alert(data.result.msg);
+            }
+        },
+        progressall: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            $('.progress'+w).css(
+                'width',
+                progress + '%'
+            );
+        }
+    }).prop('disabled', !$.support.fileInput)
+        .parent().addClass($.support.fileInput ? undefined : 'disabled');
+});
+</script>
+</block>

@@ -1,0 +1,58 @@
+<aside class="main-sidebar">
+  <section class="sidebar">
+    <ul class="sidebar-menu">
+      <li><a href="{:U('Sys/index')}"><i class="fa fa-bar-chart"></i> <span>管理概况</span></a></li>
+
+
+    <li class="treeview">
+      <a href="#"><i class="fa fa-clone"></i> <span>会员管理</span><i class="fa fa-angle-left pull-right"></i></a>
+      <ul class="treeview-menu">
+          <li><a href="{:U('User/userlist')}">会员列表</a></li>
+
+        </ul>
+      </li>
+
+      <li><a href="{:U('Pro/orderlist')}"><i class="fa fa-bar-chart"></i> <span>代办订单</span></a></li>
+
+
+      <li class="treeview hide">
+      <a href="#"><i class="fa fa-clone"></i> <span>文章管理</span><i class="fa fa-angle-left pull-right"></i></a>
+      <ul class="treeview-menu">
+          <li><a href="{:U('Sys/artlist')}">文章列表</a></li>
+          <li><a href="{:U('Sys/artcategory')}">分类管理</a></li>
+        </ul>
+      </li>
+
+
+      <li class="treeview">
+        <a href="#"><i class="fa fa-cog"></i> <span>系统设置</span> <i class="fa fa-angle-left pull-right"></i></a>
+        <ul class="treeview-menu">
+      <!--     <li><a href="{:U('Mate/text')}">微信素材</a></li>
+          <li><a href="{:U('Cmd/text')}">回复规则</a></li>
+          <li><a href="{:U('ModMenu/edit')}">微信菜单</a></li> -->
+          <li><a href="{:U('Sys/site')}">站点设置</a></li>
+          <li><a href="{:U('Sys/advs')}">轮播广告</a></li>
+       <!--    <li><a href="{:U('Sys/vendor')}">微信配置</a></li> -->
+          <li><a href="{:U('Sys/group')}">权限控制</a></li>
+          <li><a href="{:U('Sys/admin')}">系统管理员</a></li>
+        </ul>
+      </li>
+    </ul><!-- /.sidebar-menu -->
+  </section>
+  <!-- /.sidebar -->
+</aside>
+<if condition="$eq egt '0' OR $eq neq ''">
+<script type="text/javascript">
+if(!isNaN('{$eq}')){
+  $(".sidebar-menu > li").eq({$eq}).addClass('active');
+}else{
+  $(".sidebar-menu > li").each(function(){
+    var txt = $.trim($(this).children('a').text());
+    if(txt == '{$eq}'){
+      $(this).addClass('active');
+      return;
+    }
+  });
+}
+</script>
+</if>

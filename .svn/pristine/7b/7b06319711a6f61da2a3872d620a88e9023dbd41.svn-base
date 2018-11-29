@@ -1,0 +1,9 @@
+.top{background: #009ffe;color: #fff;overflow: hidden;padding: 5px;}
+.top .avtar{width: 60px;height: 60px;margin: 10px 10px 5px 10px;display: block;border-radius: 50%;border:1px solid #fff;float: left}
+.top .info{margin: 10px 10px 5px 10px;font-size: 33rpx;}
+.top .info view{line-height: 30px;}
+
+.list{margin: 5px 0;}
+.list .item{background: #fff;padding: 5px 10px;font-size: 31rpx;line-height: 25px;margin-bottom: 10px;}
+.list .item .adr{color: #999;font-size: 27rpx;}
+.list .item .tinyline{margin: 5px 0;}

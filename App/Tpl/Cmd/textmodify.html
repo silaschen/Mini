@@ -1,0 +1,49 @@
+<!-- textmodify -->
+<div class="modal fade" id="textmodify" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <b>修改文本规则</b>
+      </div>
+      <div class="modal-body mtext">
+
+        <div class='tip_b'></div>
+        <textarea class="form-control" rows="3" name='textbox' id='textbox'></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" onclick='savetextcmd();'>确定</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /.textmodify -->
+<script type="text/javascript">
+var editid = '';
+function textmodify(id){
+  callme(url[28],1,"id="+id+"&type=1",function(data){
+    if(data){
+      editid = id;
+      $("#textbox").val(data.keyword);
+      $("#textmodify").modal('show');
+    }
+  })
+}
+
+function savetextcmd(){
+  if(editid != ''){
+    var keyword = tr('textbox');
+    if(keyword == ''){
+      alert("请填写内容!");
+    }else{
+      callme(url[29],2,"id="+editid+"&type=1&cmd="+keyword,function(data){
+        if(data.ret == 1){
+          location.reload();
+        }else{
+          alert(lang[data.msg]);
+        }
+      })
+    }
+  }
+}
+</script>

@@ -1,0 +1,6 @@
+.guide{width: 100%}
+.guide image{width: 100%}
+.form-group{margin: 0;}
+#form button{margin-top: 10px;}
+.address{font-size: 25rpx;color:#999;margin: 5px 15px;}
+.address text{width: 100%;display: block;line-height: 38rpx;}

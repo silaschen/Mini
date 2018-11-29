@@ -1,0 +1,29 @@
+<view class="top">
+    <image src="{{WxProfile.avatarUrl}}" class='avtar'></image>
+    <view class="info">
+        <view class="nickname">{{WxProfile.nickName}}
+            <contact-button class="pull-right" type="default-light" size="10"> 客服</contact-button>
+        </view>
+        <view class="area">{{WxProfile.province}} {{WxProfile.city}}</view>
+    </view>
+</view>
+
+<view class="list">
+    <view class="item" wx:for="{{list}}">
+        <view class="cphm">{{item.cphm}}
+            <text class="pull-right label-green" wx:if="{{item.status == 5}}">完成</text>
+            <text class="pull-right label-gray" wx:if="{{item.status == 0}}">取消</text>
+            <text class="pull-right label-blue" wx:if="{{item.status == 2}}">等待邮寄</text>
+            <text class="pull-right label-blue" wx:if="{{item.status == 3}}">资料已收</text>
+        </view>
+        <view class="adr">车主：{{item.name}} [{{item.tel}}]</view>
+        <view class="adr">地址：{{item.adr}}</view>
+        <view class="adr" wx:if="{{item.kdname}}">快递：{{item.kdname}}</view>
+        <view class="adr" wx:if="{{item.kdno}}">单号：{{item.kdno}}</view>
+        <view class="tinyline"></view>
+        <view class="adr">申请时间  {{item.addtime}}</view>
+    </view>
+
+</view>
+
+<include src="../footer.wxml"/>

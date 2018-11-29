@@ -1,0 +1,208 @@
+var Common = require("../../res/common.js");
+var App = getApp();
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+      cartype: [{ 'id': 1, 'name': '营运客车' }, { 'id': 2, 'name': '货车,大中型客车' }, { 'id': 3, 'name': '7座以下非营运小客车' }, { 'id': 4, 'name': '摩托车' }, { 'id': 5, 'name': '其他机动车' }, { 'id': 6, 'name':'面包车和7座（含）以上非营运小客车'}],
+      carindex:2,
+      date:'2017-01-01',
+      end:new Date().getFullYear()+'-01-01',
+      acc:0,
+      result:0,
+      resdate:''
+  },
+  SetAcc:function(e){
+    //console.log(e);
+      this.setData({ "acc": e.detail.value });
+  },
+  CarChange:function(e){
+      //console.log(e.detail.value);
+      this.setData({ "carindex": e.detail.value});
+  },
+  DateChange:function(e){
+      //console.log(e);
+      this.setData({ "date": e.detail.value });
+  },
+  Count:function(){
+      var cllx = this.data.cartype[this.data.carindex].id;
+      var appdate = this.data.date;
+      if (appdate == "") {
+          Common.ErrTips('请选择登记日期!');
+          return;
+      }
+      var ccdjrq = new Date(appdate.replace(/-/g, "/"));
+      var sgqk = this.data.acc;
+      var sysDate = new Date(), day = new Date(), lastday = new Date();
+      if (ccdjrq > sysDate) {
+          Common.ErrTips("注册日期超过当前时间，请重新选择！");
+          return;
+      }
+
+      if (cllx == "1") {
+          //取5年内的最后一天比较
+          lastday = this.cal_lastday(ccdjrq, 5);
+          if (sysDate <= lastday) {
+              this.cal_jyqz(ccdjrq, sysDate, 12, 0);
+              return;
+          }
+          //每6个月检验一次
+          this.cal_jyqz(ccdjrq, sysDate, 6, 0);
+          return;
+      }
+
+      if (cllx == "2") {
+          //取10年内的最后一天比较
+          lastday = this.cal_lastday(ccdjrq, 10);
+          if (sysDate <= lastday) {
+              this.cal_jyqz(ccdjrq, sysDate, 12, 0);
+              return;
+          }
+          //每6个月检验一次
+          this.cal_jyqz(ccdjrq, sysDate, 6, 0);
+          return;
+      }
+
+      if (cllx == "3") {
+          //取6年内的最后一天比较
+          lastday = this.cal_lastday(ccdjrq, 6);
+
+          if (sysDate <= lastday) {
+              if (sgqk == "0" && ccdjrq >= new Date("2010/09/01"))
+                  this.cal_jyqz(ccdjrq, sysDate, 24, 1);
+              else
+                  this.cal_jyqz(ccdjrq, sysDate, 24, 0);
+
+              return;
+          }
+          //15年内
+          lastday = this.cal_lastday(ccdjrq, 15);
+          if (sysDate <= lastday) {
+              this.cal_jyqz(ccdjrq, sysDate, 12, 0);
+              return;
+          }
+          //每6个月检验一次
+          this.cal_jyqz(ccdjrq, sysDate, 6, 0);
+          return;
+      }
+
+      if (cllx == "4") {
+          //取6年内的最后一天比较
+          lastday = this.cal_lastday(ccdjrq, 4);
+          if (sysDate <= lastday) {
+              this.cal_jyqz(ccdjrq, sysDate, 24, 0);
+              return;
+          }
+          this.cal_jyqz(ccdjrq, sysDate, 12, 0);
+          return;
+      }
+
+      if (cllx == "5") {
+          this.cal_jyqz(ccdjrq, sysDate, 12, 0);
+          return;
+      }
+
+      if (cllx == "6") {
+          //取6年内的最后一天比较
+          lastday = this.cal_lastday(ccdjrq, 6);
+          if (sysDate <= lastday) {
+              this.cal_jyqz(ccdjrq, sysDate, 24, 0);
+              return;
+          }
+          //15年内
+          lastday = this.cal_lastday(ccdjrq, 15);
+          if (sysDate <= lastday) {
+              this.cal_jyqz(ccdjrq, sysDate, 12, 0);
+              return;
+          }
+          //每6个月检验一次
+          this.cal_jyqz(ccdjrq, sysDate, 6, 0);
+          return;
+      }
+  },
+  cal_jyqz:function(ccdjrq, sysDate, interval, sfmj) {
+        var day = new Date();
+        if(sysDate.getFullYear() == ccdjrq.getFullYear() && sysDate.getMonth() == ccdjrq.getMonth())
+            day = new Date(sysDate.getFullYear() + interval / 12, sysDate.getMonth() + 1, 1);
+        else
+            day = new Date(sysDate.getFullYear(), sysDate.getMonth()
+            + (12 * (sysDate.getFullYear() - ccdjrq.getFullYear() + 2)
+                + ccdjrq.getMonth() - sysDate.getMonth()) % interval
+            + 1, 1);
+
+        var last = new Date(day - 86400000);
+
+        if(last >= new Date("2014/09/01") && sfmj == "1") {
+            var msg = '您的爱车属于6年内免检车辆。本轮检验周期内，请于' + last.getFullYear() + "年" + (last.getMonth() + 1) + "月" + last.getDate() + "日 前携带相关材料到车管所为爱车领取检验标志。";
+            var tit = '免检';
+        }else {
+            var msg = '您的爱车不属于6年内免检车辆。本轮检验周期内，请于' + last.getFullYear() + "年" + (last.getMonth() + 1) + "月" + last.getDate() + "日 前至检验机构参加安全技术检验。";
+            var tit = '非免检';
+        }
+        wx.showModal({
+            title: tit,
+            content: msg,
+            showCancel:false
+        })
+},
+cal_lastday: function(ccdjrq, year) {
+    return new Date(new Date(ccdjrq.getFullYear() + year, ccdjrq.getMonth() + 1, 1) - 86400000);
+},
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+  
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+  
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+  
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+  
+  }
+})

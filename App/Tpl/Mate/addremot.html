@@ -1,0 +1,114 @@
+<extend name="Sys:base" />
+<block name="head">
+<include file="Sys:head" />
+</block>
+<block name="left">
+<include file="Sys:left" />
+</block>
+<block name="main">
+<include file="js" />
+<style type="text/css">
+.liarea{overflow: hidden;clear: both;}
+.liarea li{list-style: none;text-align: center;}
+.mb{margin-bottom: 10px;}
+</style>
+<load href="Public/com/vgrid/morenews.css" />
+<div class="nav-tabs-custom">
+    <ul class="nav nav-tabs pull-right">
+      <li><a href="{:U('Mate/text')}">文本素材</a></li>
+      <li><a href="{:U('Mate/audio')}">音频素材</a></li>
+      <li class='active'><a href="{:U('Mate/remot')}">图文素材</a></li>
+     
+      <li class="pull-left header" style="font-size: 15px;"><i class="fa fa-th"></i> {$title}</li>
+    </ul>
+    <div class="tab-content">
+		<div class="tab-pane active">
+			 <div class="alert alert-info">你可以在URL中使用以下变量符：<code>{#}</code> 本站访问地址 <code>{*}</code> 模块分隔符 <code>{@}</code> 请求用户的OPENID</div>
+			<div class='liarea'>
+				<if condition="$id neq ''">
+					<volist name='info' id='vo' key='k'>
+						
+						<li class='a_{$k} col-md-4'>
+						<input class='form-control mb' name='title' placeholder="设置标题..." value="{$vo.title}" />
+						<input class='form-control mb' name='intro' placeholder="设置简介..." value="{$vo.intro}"/>
+						<input class='form-control mb' name='cover' placeholder="填写缩略图URL..." value="{$vo.cover}" />
+						<input class='form-control mb' name='url' placeholder="填写页面浏览URL..." value="{$vo.url}"/>
+						<if condition="$k gt '0'">
+							<a class='text-center' href='#' onclick='del(this)'><span class='glyphicon glyphicon-remove cr'></span></a>
+						</if>
+						</li>
+					</volist>
+					<else/>
+					<li class='a_1 col-md-4'>
+					<input class='form-control mb' name='title' placeholder="设置标题..." />
+					<input class='form-control mb' name='intro' placeholder="设置简介..." />
+					<input class='form-control mb' name='cover' placeholder="填写缩略图URL..." />
+					<input class='form-control mb' name='url' placeholder="填写页面浏览URL..." />
+					</li>
+				</if>
+			</div>
+			<center><br><a class='btn btn-default' id='add_li'><span class='glyphicon glyphicon-plus'></span> 增加一条</a>
+				<br><br>
+			</center>
+		</div><!-- /.tab-pane -->
+		<div class="clearfix">
+			<a class="btn btn-info pull-left" href="javascript:history.go(-1);">返回</a>
+			<a class='btn btn-success pull-right' data-loading-text="正在加载..." id='subremot'><span class='glyphicon glyphicon-open'></span> 确定保存</a>
+		</div>
+    </div><!-- /.tab-content -->
+</div>
+<script type="text/javascript">
+function del(w){
+	$(w).parent().remove();
+}
+$(function(){
+	<if condition="$id neq ''">
+	var now = 10;
+	<else/>
+	var now = 1;
+	</if>
+	
+	$("#add_li").click(function(){
+		var much = $("li[class^='a_']").size()
+		if(much > 9){
+			alert("最多支持10篇文章!");
+		}else{
+			now = now*1+1;
+			var li = "<li class='a_"+now+" col-md-4'><input class='form-control mb' name='title' placeholder=\"设置标题...\" /><input class='form-control mb' name='intro' placeholder=\"设置简介...\" /><input class='form-control mb' name='cover' placeholder=\"填写缩略图URL...\" /><input class='form-control mb' name='url' placeholder=\"填写页面浏览URL...\" /><a class='text-center' href='#' onclick='del(this)'><span class='glyphicon glyphicon-remove cr'></span></a></li>";
+			$(".liarea").append(li);
+		}
+	})
+	$("#subremot").click(function(){
+		<if condition="$id neq ''">
+		var id = "{$id}";
+		<else/>
+		var id = '';
+		</if>
+		var check = true;
+		var json = '';
+		$(".liarea").find("li").each(function(){
+			var title = $(this).children("input[name='title']").val()
+			var intro = $(this).children("input[name='intro']").val()
+			var cover = $(this).children("input[name='cover']").val()
+			var url = $(this).children("input[name='url']").val()
+			if(title == ''){
+				alert("请填写标题!");check = false;
+			}else if(url == ''){
+				alert("请填写URL!");check = false;
+			}else{
+				json += '{"title":"'+title+'","intro":"'+intro+'","cover":"'+cover+'","url":"'+url+'"},';
+			}
+		})
+		if(check == true){
+			$.post(url[26],{"json":json,"id":id},function(data){
+				alert(lang[data.msg]);
+				if(data.ret == 1){
+					location.href = mateurl[5];
+				}
+			},'json')
+		}
+	})
+
+})
+</script>
+</block>
